@@ -57,18 +57,18 @@ class HomePage extends React.Component{
                     <Row>
                         <Col sm = {12} xs = {12} md = {6}>
                             <Row>
-                                <Col>
+                                <Col sm = {6} xs = {12}>
                                     <ThemeCard />
                                 </Col>
-                                <Col>  
+                                <Col sm = {6} xs = {12}>  
                                     <ThemeCard />
                                 </Col>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col sm = {6} xs = {12}>
                                     <ThemeCard />
                                 </Col>
-                                <Col>  
+                                <Col sm = {6} xs = {12}>  
                                     <ThemeCard />
                                 </Col>
                             </Row>
@@ -83,32 +83,32 @@ class HomePage extends React.Component{
                         <h1> People </h1>
                     </Row>
                     <Row style = {{padding: "25px", display:"flex"}}>
-                        <Col>
-                            <Card style={{ width: '16rem', backgroundColor: "#2B3E50", border: "0px" }}>
+                        <Col sm = {6} xs = {12} md = {3}>
+                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
                                 <Card.Img variant="top" src=  {require("./placeholder.svg")} />
                                 <Card.Body>
                                     <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col >
-                            <Card style={{ width: '16rem', backgroundColor: "#2B3E50", border: "0px" }}>
+                        <Col sm = {6} xs = {12} md = {3}>
+                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
                                 <Card.Img variant="top" src= {require("./placeholder.svg")} />
                                 <Card.Body>
                                     <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col>
-                            <Card style={{ width: '16rem', backgroundColor: "#2B3E50", border: "0px" }}>
+                        <Col sm = {6} xs = {12} md = {3}>
+                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
                                 <Card.Img variant="top" src=  {require("./placeholder.svg")} />
                                 <Card.Body>
                                     <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col>
-                            <Card style={{ width: '16rem', backgroundColor: "#2B3E50", border: "0px" }}>
+                        <Col sm = {6} xs = {12} md = {3}>
+                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
                                 <Card.Img variant="top" src=  {require("./placeholder.svg")} />
                                 <Card.Body>
                                     <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>

@@ -5,7 +5,7 @@ import {Redirect} from "react-router-dom"
 const FeaturedProjectCard = (props) => {
 
     return(
-        <Col>
+        <Col sm = {6} xs = {12} md = {4}>
             <Card>
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
