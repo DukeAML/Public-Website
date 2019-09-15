@@ -38,7 +38,7 @@ class HomePage extends React.Component{
                                 position:"relative",
                                 paddingBottom: "100px",
                                 paddingTop: "80px"}}>
-                        <Image src = {require("./DAML_LargeLogo.png")} width = "66%"/>
+                        <Image sm = {0} xs = {0} src = {require("./DAML_LargeLogo.png")} style = {{maxWidth:"80%"}} fluid/>
                     </Row>
                     <Row>
                         <Col style = {{display:"flex", justifyContent: "center"}}>
