@@ -1,6 +1,6 @@
 import React from "react";
 import Canvas from "./Canvas";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Jumbotron } from "react-bootstrap";
 
 class Animation extends React.Component {
   constructor(props) {
@@ -25,23 +25,11 @@ class Animation extends React.Component {
   render() {
     return (
       <div>
-        <Container style={{display: 'flex', justifyContent: 'center', textAlign: "center"}}>
-          <Row>
-            <Canvas angle={this.state.angle} />
-          </Row>
-        </Container>
-        <Container>
-          <Row style={{display: 'flex', justifyContent: 'center', textAlign: "center"}}>
-            <Col></Col>
-            <Col>
-              <Button variant="warning" size="lg" block>Browse Projects</Button>
-            </Col>
-            <Col></Col>
-            <Col>
-              <Button variant="success" size="lg" block>Sign Up</Button>
-            </Col>
-            <Col></Col>
-          </Row>
+        <Container style={{display: 'flex', justifyContent: 'center', textAlign: "center", width:"100%", height : "100%"}}>
+         
+            <Row >
+              <Canvas angle={this.state.angle} />
+            </Row>
         </Container>
       </div>
       );

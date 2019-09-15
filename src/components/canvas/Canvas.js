@@ -17,7 +17,7 @@ function Circle(x, y, dx, dy, radius, borderColor, fillColor, ctx) {
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.strokeStyle = "black"
-        c.lineWidth = 14;
+        c.lineWidth = 3;
         c.stroke();
         c.fillStyle = this.fillColor
         c.fill();
@@ -42,9 +42,9 @@ function Signal(startX, startY, endX, endY) {
         c.beginPath();
         c.arc(this.currentX, this.currentY, 10, 0, Math.PI * 2, false);
         c.strokeStyle = "black"
-        c.lineWidth = 1;
+        c.lineWidth = 2;
         c.stroke();
-        c.fillStyle = "#CB4B16"
+        c.fillStyle = "#5CB85C"
         c.fill();
     }
 
@@ -64,6 +64,16 @@ function Signal(startX, startY, endX, endY) {
 
         this.draw(c)
     }
+}
+
+let widthResponse;
+let heightResponse;
+if(window.innerWidth < 770){
+    widthResponse = 0
+    heightResponse = 0
+} else {
+    widthResponse = window.innerWidth
+    heightResponse = window.innerHeight
 }
 /////////////////////////////////////////////////////////////
 
@@ -295,7 +305,7 @@ class Canvas extends React.Component{
             c.beginPath();
             c.moveTo(startXPosition, startYPosition);
             c.lineTo(endXPosition, endYPosition);
-            c.strokeStyle = "white";
+            c.strokeStyle = "#DF691A";
             c.stroke();
         }
 
@@ -307,7 +317,7 @@ class Canvas extends React.Component{
             c.beginPath();
             c.moveTo(startXPosition, startYPosition);
             c.lineTo(endXPosition, endYPosition);
-            c.strokeStyle = "white";
+            c.strokeStyle = "#DF691A";
             c.stroke();
         }
 
@@ -319,7 +329,7 @@ class Canvas extends React.Component{
             c.beginPath();
             c.moveTo(startXPosition, startYPosition);
             c.lineTo(endXPosition, endYPosition);
-            c.strokeStyle = "white";
+            c.strokeStyle = "#DF691A";
             c.stroke();
         }
 
@@ -344,18 +354,18 @@ class Canvas extends React.Component{
         const ouputLayerXPos = 4 * width / 5;
         const outputLayerVerticalSpacing = 40;
 
-        var inputTop = new Circle(firstLayerXPos, yPos - firstVerticalSpacing, 0, 0, 13, "white", "red");
-        var inputMiddle = new Circle(firstLayerXPos, yPos, 0, 0, 13, "white", "red");
-        var inputBottom = new Circle(firstLayerXPos, yPos + firstVerticalSpacing, 0, 0, 13, "white", "red");
+        var inputTop = new Circle(firstLayerXPos, yPos - firstVerticalSpacing, 0, 0, 13, "white", "#ABB6C2");
+        var inputMiddle = new Circle(firstLayerXPos, yPos, 0, 0, 13, "white", "#ABB6C2");
+        var inputBottom = new Circle(firstLayerXPos, yPos + firstVerticalSpacing, 0, 0, 13, "white", "#ABB6C2");
         inputTop.draw(c);
         inputMiddle.draw(c);
         inputBottom.draw(c);
 
-        var l2Top = new Circle(secondLayerXPos, yPos - 2 * secondVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l2North = new Circle(secondLayerXPos, yPos - secondVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l2Middle = new Circle(secondLayerXPos, yPos, 0, 0, 13, "white", "#B58900");
-        var l2South = new Circle(secondLayerXPos, yPos + secondVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l2Bottom = new Circle(secondLayerXPos, yPos + 2 * secondVerticalSpacing, 0, 0, 13, "white", "#B58900");
+        var l2Top = new Circle(secondLayerXPos, yPos - 2 * secondVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l2North = new Circle(secondLayerXPos, yPos - secondVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l2Middle = new Circle(secondLayerXPos, yPos, 0, 0, 13, "white", "#2B3E50");
+        var l2South = new Circle(secondLayerXPos, yPos + secondVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l2Bottom = new Circle(secondLayerXPos, yPos + 2 * secondVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
         l2Top.draw(c);
         l2North.draw(c);
         l2Middle.draw(c);
@@ -363,11 +373,11 @@ class Canvas extends React.Component{
         l2Bottom.draw(c);
 
 
-        var l3Top = new Circle(thirdLayerXPos, yPos - 2 * thirdVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l3North = new Circle(thirdLayerXPos, yPos - thirdVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l3Middle = new Circle(thirdLayerXPos, yPos, 0, 0, 13, "white", "#B58900");
-        var l3South = new Circle(thirdLayerXPos, yPos + thirdVerticalSpacing, 0, 0, 13, "white", "#B58900");
-        var l3Bottom = new Circle(thirdLayerXPos, yPos + 2 * thirdVerticalSpacing, 0, 0, 13, "white", "#B58900");
+        var l3Top = new Circle(thirdLayerXPos, yPos - 2 * thirdVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l3North = new Circle(thirdLayerXPos, yPos - thirdVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l3Middle = new Circle(thirdLayerXPos, yPos, 0, 0, 13, "white", "#2B3E50");
+        var l3South = new Circle(thirdLayerXPos, yPos + thirdVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
+        var l3Bottom = new Circle(thirdLayerXPos, yPos + 2 * thirdVerticalSpacing, 0, 0, 13, "white", "#2B3E50");
         l3Top.draw(c);
         l3North.draw(c);
         l3Middle.draw(c);
@@ -399,7 +409,7 @@ class Canvas extends React.Component{
 
     render(){
         return(
-            <canvas width= {window.innerWidth*4/5} height= {window.innerHeight*3/5} ref={this.canvasRef} />
+            <canvas width= {3.5*widthResponse/7}  height= {heightResponse*4/5} ref={this.canvasRef} />
         )
     }
 }
