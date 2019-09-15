@@ -12,7 +12,7 @@ class ProjectDisplayPage extends React.Component{
     }
 
     getProjectData = async () => {
-        let response = await axios.get(`https://dsapple.herokuapp.com/project/${this.props.match.params.id}`)
+        let response = await axios.get(`https://dukeappml.herokuapp.com/project/${this.props.match.params.id}`)
         console.log(response);
         this.setState({project:response.data.project, requests:response.data.requests, teamMembers: response.data.teamMembers}) 
     }

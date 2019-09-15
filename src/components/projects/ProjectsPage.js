@@ -19,7 +19,7 @@ class ProjectsPage extends React.Component {
 
     // Get all projects in the database
     getProjects = async () => {
-        let response = await axios.get("https://dsapple.herokuapp.com/projects")
+        let response = await axios.get("https://dukeappml.herokuapp.com/projects")
         console.log(response);
         this.setState({featuredProjects:response.data.slice(0,3), projects: response.data})        
     }
