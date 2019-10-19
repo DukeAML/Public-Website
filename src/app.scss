@@ -1,0 +1,49 @@
+// Theme colors
+$main-grey: #2f3e4e;
+$dark-grey: #1e2c3a;
+$light-grey: #617489;
+$main-white: #f0efe5;
+
+// Inset shadow settings
+$shadow-color: rgb(0, 0, 0, 0.3);
+$inset-top: inset 0 20px 30px -20px $shadow-color;
+$inset-bottom: inset 0 -20px 30px -20px $shadow-color;
+$inset-shadow: $inset-top, $inset-bottom;
+
+body,
+header {
+  font-family: "Noto Sans", sans-serif;
+  background-color: $main-grey;
+  color: $main-white;
+}
+
+.title {
+  font-family: "Roboto Mono", monospace !important;
+  font-size: 3rem;
+}
+
+.main-bg {
+  background-color: #2f3e4e;
+}
+
+.people-accordion > .card .card-header {
+  width: 100%;
+  background-color: $main-grey;
+  border-style: none;
+  color: $main-white !important;
+  & :hover {
+    text-decoration: none !important;
+  }
+  border: none;
+}
+
+.person-details {
+  background-color: $dark-grey;
+  height: 10vh;
+}
+
+.inset {
+  -moz-box-shadow: $inset-shadow;
+  -webkit-box-shadow: $inset-shadow;
+  box-shadow: $inset-shadow;
+}
