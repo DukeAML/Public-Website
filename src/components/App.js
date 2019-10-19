@@ -15,7 +15,6 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Navigation />
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/project/:id" component={ProjectDisplayPage} />
