@@ -409,7 +409,7 @@ class Canvas extends React.Component{
 
     render(){
         return(
-            <canvas width= {3.5*widthResponse/7}  height= {heightResponse*4/5} ref={this.canvasRef} />
+            <canvas width= {600}  height= {325} ref={this.canvasRef} />
         )
     }
 }
