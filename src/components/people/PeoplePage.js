@@ -11,15 +11,9 @@ import {
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 
-import Canvas from "../canvas/Canvas";
-
-import Animation from "../canvas/Animation";
-
 import Footer from "../tools/Footer";
 
-import ThemeCard from "./ThemeCard";
-
-class HomePage extends React.Component {
+class PeoplePage extends React.Component {
   state = { redirect: false };
 
   handleSignUpClick = () => {};
@@ -39,12 +33,25 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <Container style={{ height: "100%", paddingBottom: "60px" }} />
-        <div className="title"> About </div>
+        <Container
+          fluid
+          style={{ height: "100%", paddingBottom: "60px" }}
+        ></Container>
+        <Container fluid style={{ padding: "25px" }}>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              fontFamily: "Raleway"
+            }}
+          >
+            <h1> People </h1>
+          </Row>
+        </Container>
         <Footer />
       </div>
     );
   }
 }
 
-export default HomePage;
+export default PeoplePage;

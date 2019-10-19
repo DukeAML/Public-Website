@@ -1,0 +1,11 @@
+body,
+header {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #2f3e4e;
+  color: #f0efe5;
+}
+
+.title {
+  font-family: "Roboto Mono", monospace !important;
+  font-size: 300px;
+}
