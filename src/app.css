@@ -7,5 +7,15 @@ header {
 
 .title {
   font-family: "Roboto Mono", monospace !important;
-  font-size: 300px;
+  font-size: 3rem;
+}
+
+.main-bg {
+  background-color: #2f3e4e;
+}
+
+.people-accordion > .card,
+.card-header {
+  background-color: #2f3e4e;
+  border-style: none;
 }
