@@ -10,6 +10,12 @@ $inset-top: inset 0 20px 30px -20px $shadow-color;
 $inset-bottom: inset 0 -20px 30px -20px $shadow-color;
 $inset-shadow: $inset-top, $inset-bottom;
 
+// Image/icon imports
+$github: url(./components/tools/Icons/github.svg);
+$github-hover: url(./components/tools/Icons/github-hover.svg);
+$linkedin: url(./components/tools/Icons/linkedin.svg);
+$linkedin-hover: url(./components/tools/Icons/linkedin-hover.svg);
+
 body,
 header {
   font-family: "Noto Sans", sans-serif;
@@ -61,4 +67,39 @@ header {
   to {
     opacity: 1;
   }
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  margin: 0.1rem;
+  & :hover,
+  :focus {
+    cursor: pointer;
+  }
+  background-repeat: no-repeat;
+  & :active {
+    box-shadow: 0 5px 5px black;
+  }
+}
+
+.github-icon {
+  @extend .icon;
+  background-image: $github;
+}
+
+.github-icon:hover {
+  background-image: $github-hover !important;
+  cursor: pointer;
+}
+
+.linkedin-icon {
+  @extend .icon;
+  background-image: $linkedin;
+}
+
+.linkedin-icon:hover {
+  background-image: $linkedin-hover !important;
+  cursor: pointer;
 }
