@@ -15,6 +15,7 @@ import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
 import ThemeCard from "./ThemeCard";
+import ImageAccordion from "../tools/ImageAccordion"
 
 import "./HomePage.css"
 
@@ -76,6 +77,16 @@ class HomePage extends React.Component {
                 <Animation />
               </Col>
             </Row>
+            </Container>
+          </Container>
+
+          {/** APPLICATIONS SECTION */}
+          <Container fluid>
+            <Container>
+              <h3 className = "homepageTitle" style = {{marginBottom:"20px", marginTop:"20px"}}>
+                Bring ML To Your Field
+              </h3> 
+              <ImageAccordion />
             </Container>
           </Container>
 
