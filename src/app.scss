@@ -39,11 +39,26 @@ header {
 
 .person-details {
   background-color: $dark-grey;
-  height: 10vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.person-details-text {
+  animation: opac 1s;
 }
 
 .inset {
   -moz-box-shadow: $inset-shadow;
   -webkit-box-shadow: $inset-shadow;
   box-shadow: $inset-shadow;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
