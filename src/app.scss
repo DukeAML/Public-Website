@@ -5,7 +5,7 @@ $light-grey: #617489;
 $main-white: #f0efe5;
 
 // Inset shadow settings
-$shadow-color: rgb(0, 0, 0, 0.3);
+$shadow-color: rgba(0, 0, 0, 0.3);
 $inset-top: inset 0 20px 30px -20px $shadow-color;
 $inset-bottom: inset 0 -20px 30px -20px $shadow-color;
 $inset-shadow: $inset-top, $inset-bottom;
