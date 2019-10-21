@@ -103,3 +103,16 @@ header {
   background-image: $linkedin-hover !important;
   cursor: pointer;
 }
+
+a.homepage-link {
+  color: $main-white;
+}
+
+.box-shadowed {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 15vh;
+  background-color: $dark-grey;
+  box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
+    inset 0px 4px 30px rgba(0, 0, 0, 0.15);
+}

@@ -6,43 +6,61 @@ import {
   FormControl,
   Button,
   NavDropdown,
-  Container
+  Container,
+  Row,
+  Col,
+  Image
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar
-        style={{ backgroundColor: "#2B3E50", marginTop: "10px" }}
-        expand="lg"
+      <Container
+        fluid
+        style={{
+          padding: "1rem",
+          marginBottom: "10px",
+          backgroundColor: "#1e2c3a"
+        }}
       >
-        <Container>
-          <Navbar.Brand style={{ color: "white" }}>
-            <span>
-              <Link to="/" style={{ color: "white" }}>
-                Duke Applied ML
-              </Link>
-            </span>
-          </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            style={{ backgroundColor: "white" }}
-          />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto"></Nav>
-            <Nav>
-              <Nav.Link>
-                <Link to="/projects" style={{ color: "white" }}>
-                  Projects
-                </Link>
-              </Nav.Link>
-              <Nav.Link style={{ color: "white" }}>GPUs</Nav.Link>
-              <Button variant="primary">Login</Button>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        <Row style={{ fontSize: "20px" }}>
+          {" "}
+          <Col xs={6}>
+            <Link to="/">
+              <Image
+                src={require("../homepage/images/DAML-logo-square.svg")}
+                style={{ maxHeight: "40px", height: "80%" }}
+              />
+            </Link>
+          </Col>
+          <Col
+            className="justify-content-end"
+            xs={6}
+            style={{
+              alignItems: "center",
+              display: "flex"
+            }}
+          >
+            <Row>
+              <Col xs={6}>
+                <div style={{ padding: "0 1rem 0 0", float: "right" }}>
+                  <Link to="/projects" className="homepage-link">
+                    Projects
+                  </Link>
+                </div>
+              </Col>
+              <Col xs={6}>
+                <div style={{ padding: "0 0 0 0" }}>
+                  <Link to="/people" className="homepage-link">
+                    People
+                  </Link>
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

@@ -14,6 +14,7 @@ import {
 import { Link, Redirect } from "react-router-dom";
 
 import Footer from "../tools/Footer";
+import Navigation from "../tools/Navigation";
 import withWindowDimensions from "./withWindowDimensions";
 
 import Details from "./Details";
@@ -147,18 +148,21 @@ class PeoplePage extends React.Component {
     let people = this.makePeopleGrid(peopleInfo, this.props.windowWidth);
 
     return (
-      <Container fluid style={{ padding: 0 }}>
-        <Row
-          style={{
-            display: "flex",
-            justifyContent: "center"
-          }}
-        >
-          <div className="title"> People </div>
-        </Row>
-        <center>{people}</center>
-        <Footer />
-      </Container>
+      <div>
+        <Navigation />
+        <Container fluid style={{ padding: 0 }}>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            <div className="title"> People </div>
+          </Row>
+          <center>{people}</center>
+          <Footer />
+        </Container>
+      </div>
     );
   }
 }

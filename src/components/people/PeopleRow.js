@@ -76,7 +76,7 @@ class PeopleRow extends React.Component {
         <Row>
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
-              <div className="person-details inset">
+              <div className="person-details box-shadowed">
                 <div className="person-details-text">{this.state.current}</div>
               </div>
             </AnimateHeight>
