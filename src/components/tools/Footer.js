@@ -1,15 +1,14 @@
 import React from "react";
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-class Footer extends React.Component{
-
-    render(){
-        return(
-            <Container fluid style ={{display: 'flex', justifyContent: 'center', backgroundColor: "black", padding:"20px"}}>
-                (C) Yasa Baig
-            </Container>
-        )
-    }
+class Footer extends React.Component {
+  render() {
+    return (
+      <Container fluid className="footer">
+        <center>(C) Yasa Baig</center>
+      </Container>
+    );
+  }
 }
 
 export default Footer;

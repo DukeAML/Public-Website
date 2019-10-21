@@ -131,3 +131,11 @@ a.homepage-link {
   box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
     inset 0px 4px 30px rgba(0, 0, 0, 0.15);
 }
+
+.footer {
+  font-family: "Roboto Mono", monospace;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 12vh;
+  background-color: $dark-grey;
+}
