@@ -50,10 +50,7 @@ class HomePage extends React.Component {
             {/**Navigation Area */}
             <Col md={2} sm={4} xs={4} style={{ textAlign: "center" }}>
               <Link to="/">
-                <Image
-                  src={require("./images/DAML-logo-square.svg")}
-                  style={{ maxHeight: "40px" }}
-                />
+                <div className="daml-icon" />
               </Link>
             </Col>
             <Col

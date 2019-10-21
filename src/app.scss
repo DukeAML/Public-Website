@@ -16,6 +16,9 @@ $github-hover: url(./components/tools/Icons/github-hover.svg);
 $linkedin: url(./components/tools/Icons/linkedin.svg);
 $linkedin-hover: url(./components/tools/Icons/linkedin-hover.svg);
 
+$daml: url(./components/homepage/images/DAML-logo-square.svg);
+$daml-hover: url(./components/homepage/images/DAML-logo-square-hover.svg);
+
 body,
 header {
   font-family: "Noto Sans", sans-serif;
@@ -72,7 +75,6 @@ header {
 .icon {
   height: 2rem;
   width: 2rem;
-  display: flex;
   margin: 0.1rem;
   & :hover,
   :focus {
@@ -82,6 +84,7 @@ header {
   & :active {
     box-shadow: 0 5px 5px black;
   }
+  justify-content: center;
 }
 
 .github-icon {
@@ -101,6 +104,18 @@ header {
 
 .linkedin-icon:hover {
   background-image: $linkedin-hover !important;
+  cursor: pointer;
+}
+
+.daml-icon {
+  @extend .icon;
+  height: 3rem !important;
+  width: 3rem !important;
+  background-image: $daml;
+}
+
+.daml-icon:hover {
+  background-image: $daml-hover !important;
   cursor: pointer;
 }
 

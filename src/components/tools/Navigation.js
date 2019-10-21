@@ -26,12 +26,16 @@ class Navigation extends React.Component {
       >
         <Row style={{ fontSize: "20px" }}>
           {" "}
-          <Col xs={6}>
+          <Col
+            xs={6}
+            style={{
+              alignItems: "center",
+              display: "flex",
+              padding: "0.2rem 0 0 1rem"
+            }}
+          >
             <Link to="/">
-              <Image
-                src={require("../homepage/images/DAML-logo-square.svg")}
-                style={{ maxHeight: "40px", height: "80%" }}
-              />
+              <div className="daml-icon" />
             </Link>
           </Col>
           <Col
