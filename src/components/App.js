@@ -10,6 +10,7 @@ import ProjectsPage from "./projects/ProjectsPage";
 import Navigation from "./tools/Navigation";
 import ProjectDisplayPage from "./projectdisplay/ProjectDisplayPage";
 import PeoplePage from "./people/PeoplePage";
+import IndividualProject from "./projects/individual-pages/IndividualProject";
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
+        <Route exact path="/project1" component={IndividualProject} />
       </BrowserRouter>
     );
   }

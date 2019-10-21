@@ -31,6 +31,10 @@ header {
   font-size: 2rem;
 }
 
+h3 {
+  font-family: "Roboto Mono", monospace !important;
+}
+
 .main-bg {
   background-color: #2f3e4e;
 }
@@ -151,4 +155,8 @@ a.homepage-link {
 
 .theme-button.btn:hover {
   background-color: $main-grey;
+}
+
+.theme-button.btn:active {
+  background-color: $dark-grey !important;
 }

@@ -21,19 +21,19 @@ const projects = [
     title: "Lorem",
     description: "Interesting project",
     img: "./img",
-    link: "/link"
+    link: "/project1"
   },
   {
     title: "Lorem",
     description: "Interesting project",
     img: "./img",
-    link: "/link"
+    link: "/project1"
   },
   {
     title: "Lorem",
     description: "Interesting project",
     img: "./img",
-    link: "/link"
+    link: "/project1"
   }
 ];
 
