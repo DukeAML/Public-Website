@@ -2,109 +2,80 @@ import React from "react";
 import {
   Container,
   Row,
-  Card,
+  Col,
+  Spinner,
+  Jumbotron,
   Table,
-  tr,
   td,
   thead,
-  tbody,
-  Spinner,
-  Button
+  tr,
+  Button,
+  Card
 } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
 
-import client from "../../api/api";
-import axios from "axios";
-
-import FeaturedProjectCard from "./FeaturedProjectCard";
-import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
+import ProjectCard from "./ProjectCard";
+
+const projects = [
+  {
+    title: "Lorem",
+    description: "Interesting project",
+    img: "./img",
+    link: "/link"
+  },
+  {
+    title: "Lorem",
+    description: "Interesting project",
+    img: "./img",
+    link: "/link"
+  },
+  {
+    title: "Lorem",
+    description: "Interesting project",
+    img: "./img",
+    link: "/link"
+  }
+];
 
 class ProjectsPage extends React.Component {
-  state = {
-    featuredProjects: [],
-    projects: [],
-    redirectURL: "",
-    redirect: false
-  };
+  state = {};
 
-  // Get all projects in the database
-  getProjects = async () => {
-    let response = await axios.get("https://dukeappml.herokuapp.com/projects");
-    console.log(response);
-    this.setState({
-      featuredProjects: response.data.slice(0, 3),
-      projects: response.data
-    });
-  };
-
-  // Upon component mounting, query the database for data.
-  componentDidMount() {
-    this.getProjects();
-  }
-
-  generateFeaturedProjects() {}
+  componentDidMount() {}
 
   render() {
-    if (this.state.projects.length === 0) {
-      return (
-        <Container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "200px"
-          }}
-        >
-          <Spinner animation="grow" />
-        </Container>
-      );
-    }
-
-    if (this.state.redirect) {
-      return <Redirect push to={`/project/${this.state.redirectURL}`} />;
-    }
+    const projectCards = projects.map((project, key) => (
+      <Col md={12} lg={4} style={{ padding: "1rem" }}>
+        <ProjectCard
+          key={key}
+          title={project.title}
+          description={project.description}
+          img={project.img}
+          link={project.link}
+        />
+      </Col>
+    ));
 
     return (
       <div>
         <Navigation />
-        <Container style={{ marginTop: "25px", marginBottom: "50px" }}>
-          <h3> Featured </h3>
-          <Row>
-            {this.state.featuredProjects.map(card => (
-              <FeaturedProjectCard
-                title={card.title}
-                description={card.description}
-              />
-            ))}
+        <Container>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            <div className="title"> Current Projects </div>
           </Row>
-          <h3 style={{ marginTop: "20px" }}> All Projects</h3>
-          <Table hover size="sm">
-            <thead style={{ backgroundColor: "#DF691A" }}>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Client</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.projects.map(project => {
-                return (
-                  <tr
-                    onClick={() => {
-                      this.setState({ redirectURL: project.uid });
-                      this.setState({ redirect: true });
-                    }}
-                  >
-                    <td>{project.title}</td>
-                    <td>{project.description.substring(0, 50)}</td>
-                    <td>{project.submitter}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            {projectCards}
+          </Row>
         </Container>
-        <Footer />
       </div>
     );
   }

@@ -17,7 +17,6 @@ class App extends React.Component {
       <BrowserRouter>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
-        <Route exact path="/project/:id" component={ProjectDisplayPage} />
         <Route exact path="/people" component={PeoplePage} />
       </BrowserRouter>
     );
@@ -25,3 +24,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// <Route exact path="/project/:id" component={ProjectDisplayPage} />

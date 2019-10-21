@@ -28,7 +28,7 @@ header {
 
 .title {
   font-family: "Roboto Mono", monospace !important;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .main-bg {
@@ -138,4 +138,17 @@ a.homepage-link {
   padding-bottom: 1rem;
   height: 12vh;
   background-color: $dark-grey;
+}
+
+.theme-button {
+  background-color: $dark-grey;
+  border: none;
+  & :hover,
+  :focus {
+    background-color: $light-grey;
+  }
+}
+
+.theme-button.btn:hover {
+  background-color: $main-grey;
 }
