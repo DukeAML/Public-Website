@@ -19,15 +19,23 @@ const IndividualProject = props => {
   return (
     <div>
       <Navigation />
-      <Container fluid style={{ padding: "2rem" }}>
+      <Container
+        fluid
+        style={{ padding: "2rem", display: "flex", justifyContent: "center" }}
+      >
         <Row>
           <Col sm={12} md={6}>
             <Image src={placeholder} fluid />
           </Col>
-          <Col sm={12} md={6}>
-            <Card>
-              <Card.Body>
-                <Card.Title className="title">{props.name}</Card.Title>
+          <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
+            <Card className="individual-project-card">
+              <Card.Body
+                className="individual-project-card"
+                style={{ padding: "1rem" }}
+              >
+                <Card.Title style={{ padding: 0 }} className="title">
+                  Title
+                </Card.Title>
                 <Card.Text>
                   <p>
                     {" "}

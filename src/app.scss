@@ -169,3 +169,19 @@ a.homepage-link {
 .theme-button.btn:active {
   background-color: $dark-grey !important;
 }
+
+.card-body.project-card {
+  background-color: #f0f1f2;
+  padding: 1rem;
+}
+
+.card,
+.card-body,
+.image {
+  border: none;
+  color: $dark-grey;
+}
+
+.card-body.individual-project-card {
+  background-color: #f0f1f2;
+}

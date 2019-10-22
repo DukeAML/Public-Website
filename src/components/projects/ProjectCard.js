@@ -27,8 +27,10 @@ class ProjectCard extends React.Component {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Card style={{ width: "100%", maxWidth: "30rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
+          <Card.Body className="project-card">
+            <Card.Title style={{ padding: 0 }}>
+              <h4>{this.props.title}</h4>
+            </Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
             <Link to={this.props.link}>
               <Button className="theme-button">See more</Button>
