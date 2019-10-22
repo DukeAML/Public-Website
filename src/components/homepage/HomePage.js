@@ -93,6 +93,7 @@ class HomePage extends React.Component {
           >
             {/**Icon */}
             <Image
+              fluid
               className="main-graphic"
               src={require("./images/DAML-logo.svg")}
             />
