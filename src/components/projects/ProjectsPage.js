@@ -14,6 +14,7 @@ import {
 } from "react-bootstrap";
 
 import Navigation from "../tools/Navigation";
+import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -58,23 +59,26 @@ class ProjectsPage extends React.Component {
     return (
       <div>
         <Navigation />
-        <Container>
-          <Row
-            style={{
-              display: "flex",
-              justifyContent: "center"
-            }}
-          >
-            <div className="title"> Current Projects </div>
-          </Row>
-          <Row
-            style={{
-              display: "flex",
-              justifyContent: "center"
-            }}
-          >
-            {projectCards}
-          </Row>
+        <Container fluid style={{ padding: "0" }}>
+          <Container style={{ minHeight: "100%" }}>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
+              <div className="title"> Current Projects </div>
+            </Row>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
+              {projectCards}
+            </Row>
+          </Container>
+          <Footer />
         </Container>
       </div>
     );

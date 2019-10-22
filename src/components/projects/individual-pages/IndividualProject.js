@@ -6,6 +6,15 @@ import Navigation from "../../tools/Navigation";
 
 import placeholder from "../images/placeholder.jpg";
 
+/* props:
+
+
+- image url (image)
+- title (name)
+-
+
+*/
+
 const IndividualProject = props => {
   return (
     <div>

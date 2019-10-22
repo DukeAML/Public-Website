@@ -17,6 +17,8 @@ import Footer from "../tools/Footer";
 import ThemeCard from "./ThemeCard";
 import ImageAccordion from "../tools/ImageAccordion";
 
+import IndustryBuckets from "./IndustryBuckets";
+
 import "./HomePage.scss";
 
 class HomePage extends React.Component {
@@ -150,9 +152,10 @@ class HomePage extends React.Component {
             >
               Bring ML To Your Field
             </h3>
-            <ImageAccordion />
+            <IndustryBuckets />
           </Container>
         </Container>
+        <Footer />
       </div>
     );
   }

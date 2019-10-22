@@ -44,3 +44,29 @@ a.homepage-link:hover {
   text-decoration: none !important;
   color: $light-grey;
 }
+
+.list-group-item {
+  background-color: #f0f1f2;
+  padding: 0.5rem;
+}
+
+.card {
+  border: none;
+  background-color: $main-grey;
+  color: $dark-grey;
+}
+
+.card-title {
+  background-color: #f0f1f2;
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.industry-card {
+  & :hover {
+    cursor: pointer;
+  }
+}
