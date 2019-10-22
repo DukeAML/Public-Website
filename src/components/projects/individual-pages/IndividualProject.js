@@ -13,13 +13,12 @@ const IndividualProject = props => {
       <Container fluid style={{ padding: "2rem" }}>
         <Row>
           <Col sm={12} md={6}>
-            <Image src={placeholder} />
+            <Image src={placeholder} fluid />
           </Col>
           <Col sm={12} md={6}>
             <Card>
               <Card.Body>
-                <Card.Title className="title">Title</Card.Title>
-                <Card.Text>{props.description}</Card.Text>
+                <Card.Title className="title">{props.name}</Card.Title>
                 <Card.Text>
                   <p>
                     {" "}
@@ -31,9 +30,9 @@ const IndividualProject = props => {
             </Card>
           </Col>
         </Row>
-        <Row>
+        <Row style={{ padding: "1rem 0 1rem 0" }}>
           <Col xs={12}>
-            <h3>Abstract</h3>
+            <h3>{props.abstract}</h3>
           </Col>
         </Row>
       </Container>
