@@ -23,52 +23,70 @@ const buckets = [
   {
     title: "Finance",
     details:
-      "Wasted time depositing checks in banks;Inaccurate risk analysis of Bond Portfolios;Bad timing in investing"
+      "Wasted time depositing checks in banks;Inaccurate risk analysis of Bond Portfolios;Bad timing in investing",
+    img: "finance.jpeg"
   },
   {
     title: "Food",
     details:
-      "Long restaurant wait times;Inefficient delivery scheduling;Unpopular items on the menu;Inefficient inventory management;Long wait times to check;Non-optimal food layout;Inefficient delivery/pick-up scheduling"
+      "Long restaurant wait times;Inefficient delivery scheduling;Unpopular items on the menu;Inefficient inventory management;Long wait times to check;Non-optimal food layout;Inefficient delivery/pick-up scheduling",
+    img: "food.jpeg"
   },
-  { title: "Transportation", details: "Unknown parking availability" },
+  {
+    title: "Transportation",
+    details: "Unknown parking availability",
+    img: "realestate.jpeg"
+  },
   {
     title: "Agriculture",
     details:
-      "Inaccurate weather predictions; Inefficient use of water; Unknown pricing of crops/Volume of Market; Inefficient timelines for growing stuff"
+      "Inaccurate weather predictions; Inefficient use of water; Unknown pricing of crops/Volume of Market; Inefficient timelines for growing stuff",
+    img: "transportation.jpeg"
   },
   {
     title: "Sports",
     details:
-      "Guessing play calls; Analysis of past averages and prediction of future success"
+      "Guessing play calls; Analysis of past averages and prediction of future success",
+    img: "sports.jpeg"
   },
   {
     title: "Real Estate",
     details:
-      "Limited/Inaccurate information about housing options; Slow matching with appropriate homes/owners"
+      "Limited/Inaccurate information about housing options; Slow matching with appropriate homes/owners",
+    img: "realestate.jpeg"
   },
   {
     title: "Entertainment",
-    details: "Poor recommendations;Inefficient ticket pricing"
+    details: "Poor recommendations;Inefficient ticket pricing",
+    img: "entertainment.jpeg"
   },
   {
     title: "Shopping",
-    details: "Poor recommendations; Inefficient ticket pricing"
+    details: "Poor recommendations; Inefficient ticket pricing",
+    img: "shopping.jpeg"
   },
   {
     title: "Manufacturing",
     details:
-      "Difficult to set up new plant efficiently; Bad at predicting throughput; Poor error analysis"
+      "Difficult to set up new plant efficiently; Bad at predicting throughput; Poor error analysis",
+    img: "manufacturing.jpeg"
   },
   {
     title: "Administration",
     details:
-      "Inefficient matching of employee records; Bad at choosing candidates for job; Repetitive tasks"
+      "Inefficient matching of employee records; Bad at choosing candidates for job; Repetitive tasks",
+    img: "administration.jpeg"
   },
-  { title: "Commodities", details: "Oil pricing lag; Poor supply-chain" },
+  {
+    title: "Commodities",
+    details: "Oil pricing lag; Poor supply-chain",
+    img: "commodities.jpeg"
+  },
   {
     title: "Education",
     details:
-      "Disconnected students; Deindividualized learning; Evaluating performance"
+      "Disconnected students; Deindividualized learning; Evaluating performance",
+    img: "education.jpeg"
   }
 ];
 
@@ -106,7 +124,10 @@ class IndustryBuckets extends React.Component {
           onClick={() => this.handleClickBucket(key)}
           className="industry-card"
         >
-          <Card.Img variant="top" src={placeholder} />
+          <Card.Img
+            variant="top"
+            src={require(`./industry-bucket-images/${bucket.img}`)}
+          />
           <Card.Body>
             <Card.Title>
               <h4>{bucket.title}</h4>
