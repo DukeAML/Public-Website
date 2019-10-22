@@ -47,10 +47,19 @@ class HomePage extends React.Component {
         <Container fluid style={{ marginBottom: "10px" }}>
           <Row
             className="justify-content-md-center"
-            style={{ fontSize: "20px" }}
+            style={{ fontSize: "1.5rem" }}
           >
             {/**Navigation Area */}
-            <Col md={2} sm={4} xs={4} style={{ textAlign: "center" }}>
+            <Col
+              md={2}
+              sm={4}
+              xs={4}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
               <Link to="/">
                 <div className="daml-icon" />
               </Link>
