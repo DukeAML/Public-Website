@@ -7,13 +7,15 @@ import { Row, Col, Image } from "react-bootstrap";
 function Person(props) {
   return (
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
-      <Image
-        src={props.src}
-        fluid
-        roundedCircle
-        style={{ width: "120px" }}
-        onClick={props.onClick}
-      />
+      <div className="person-image">
+        <Image
+          src={props.src}
+          fluid
+          roundedCircle
+          style={{ width: "120px" }}
+          onClick={props.onClick}
+        />
+      </div>
       <Row>
         <Col xl={12}>
           <center>
