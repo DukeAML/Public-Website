@@ -21,82 +21,236 @@ import Details from "./Details";
 import Person from "./Person";
 import PeopleRow from "./PeopleRow";
 
-// Import individual thumbnails
-import yasabaig from "./headshots/yasa-baig.jpeg";
+// DS = data science
+// CRM = client management
+// PS = implementation
+//
 
 // Compose array of person objects with necessary info
 const peopleInfo = [
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink pineapple juice. Interesting"
+    name: "Luke	Truitt",
+    school: "Undergraduate",
+    study: "ECE, CS",
+    team: "CRM",
+    email: "luke.truitt@duke.edu",
+    linkedin: "https://www.linkedin.com/in/luke-truitt/",
+    github: "https://github.com/luke-truitt/"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink lemon juice. Zesty"
+    name: "Varun Nair",
+    school: "Undergraduate",
+    study: "CS, Math",
+    team: "DS",
+    email: "varun.nair.1@duke.edu",
+    linkedin: "https://www.linkedin.com/in/varunnair18/",
+    img: "",
+    github: "https://github.com/varunnair18/"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink bug juice. Grody"
+    name: "Mary	Gooneratne",
+    school: "Undergraduate",
+    study: "ECE, CS",
+    team: "CRM",
+    email: "mary.gooneratne@duke.edu",
+    linkedin: "https://www.linkedin.com/in/marygooneratne/",
+    img: "Gooteratne.jpg",
+    github: "https://github.com/marygooneratne/"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink apple juice. Wow"
+    name: "Daniel	Tao",
+    school: "Undergraduate",
+    study: "CS, Stats",
+    team: "DS",
+    email: "chaofan.tao@duke.edu",
+    linkedin: "",
+    github: "https://github.com/danieltao/",
+    img: ""
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink pineapple juice. Interesting"
+    name: "Anna	Yanchencko",
+    school: "Post-Graduate",
+    study: "Statistics",
+    team: "DS",
+    email: "anna.yanchenko@duke.edu",
+    linkedin: "https://www.linkedin.com/in/anna-yanchenko/",
+    github: "https://github.com/aky4wn/",
+    img: "Yanchencko.jpg"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink lemon juice. Zesty"
+    name: "Ching Lung	Hsu",
+    school: "Post-Graduate",
+    study: "Statistics",
+    team: "DS",
+    email: "chinglung.hsu@duke.edu",
+    linkedin: "",
+    img: ""
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink bug juice. Grody"
+    name: "David	Rein",
+    school: "Undergraduate",
+    study: "CS, Math",
+    team: "",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/idavidrein/",
+    img: ""
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink apple juice. Wow"
+    name: "Jia Rong	Chua",
+    school: "Masters",
+    study: "Economics",
+    team: "",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/jiarongchua/",
+    img: ""
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink pineapple juice. Interesting"
+    name: "Lindsay	Wu",
+    school: "Masters",
+    study: "Statistics",
+    team: "",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/bingruo-lindsay-wu-b98854150/",
+    img: "Wu.jpg"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink lemon juice. Zesty"
+    name: "Olivier Binette",
+    school: "Post-Graduate",
+    study: "Statistics",
+    team: "",
+    email: "",
+    linkedin: "",
+    img: "Binette.jpg"
   },
   {
-    name: "Yasa Baig",
-    team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink bug juice. Grody"
+    name: "Qingying	Luo",
+    school: "Undergraduate",
+    study: "Statistics",
+    team: "",
+    email: "",
+    linkedin: "",
+    img: "Luo.jpg"
   },
   {
-    name: "Yasa Baig",
+    name: "Ryan	Middlemiss",
+    school: "Undergraduate",
+    study: "ECE, Economics",
+    team: "",
+    email: "",
+    linkedin: "",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Yishu	Gong",
+    school: "Post-Graduate",
+    study: "",
+    team: "DS",
+    email: "",
+    linkedin: "",
+    img: "Gong.png",
+    github: "https://github.com/yishu0524/"
+  },
+  {
+    name: "Zhiyue	Zhang",
+    school: "Post-Graduate",
+    study: "",
+    team: "DS",
+    email: "",
+    linkedin: "",
+    img: ""
+  },
+  {
+    name: "Alina	Barnett",
+    school: "Post-Graduate",
+    study: "Computer Science",
+    team: "DS",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/hang-yang/",
+    img: ""
+  },
+  {
+    name: "Hang	Yang",
+    school: "",
+    study: "",
+    team: "DS",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/hang-yang/",
+    img: "Yang.jpg"
+  },
+  {
+    name: "Morris	Greenberg",
+    school: "",
+    study: "",
+    team: "DS",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/morris-greenberg-1b9abb63/",
+    img: "Greenberg.jpg"
+  },
+  {
+    name: "Phoebe	Klett",
+    school: "",
+    study: "",
+    team: "DS",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/phoebe-klett-644009134/",
+    img: ""
+  },
+  {
+    name: "Rachel	Williamson",
+    school: "",
+    study: "",
+    team: "",
+    email: "",
+    linkedin: "",
+    img: "Williamson.jpg"
+  },
+  {
+    name: "Tima	Alqabandi",
+    school: "",
+    study: "",
+    team: "",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
+    img: "Alqabandi.jpg"
+  },
+  {
+    name: "Yasa	Baig",
+    school: "Undergraduate",
+    study: "Physics, CS",
     team: "Implementation",
-    src: yasabaig,
-    details: "Yasa likes to drink apple juice. Wow"
+    email: "",
+    linkedin: "https://www.linkedin.com/in/yasab/",
+    img: "Baig.jpg",
+    github: "https://github.com/yasab27/"
+  },
+  {
+    name: "Ben	Levy",
+    school: "",
+    study: "",
+    team: "CRM",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/ben-levy1/",
+    img: "Levy.jpg"
+  },
+  {
+    name: "Shuyi	Fan",
+    school: "",
+    study: "",
+    team: "",
+    email: "CRM",
+    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
+    img: "Fan.jpg"
+  },
+  {
+    name: "Nicole	Moiseyev",
+    school: "Undergraduate",
+    study: "Neuroscience, CS",
+    team: "Implementation",
+    email: "",
+    linkedin: "",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
   }
 ];
 

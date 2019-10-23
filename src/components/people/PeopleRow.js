@@ -44,7 +44,9 @@ class PeopleRow extends React.Component {
         key={key}
         name={person.name}
         team={person.team}
-        src={person.src}
+        linkedin={person.linkedin}
+        github={person.github}
+        img={person.img}
         onClick={() => this.handleShowDetails(person.details, key)}
       />
     ));
