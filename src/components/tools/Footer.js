@@ -5,7 +5,14 @@ class Footer extends React.Component {
   render() {
     return (
       <Container fluid className="footer" style={{ margin: "2rem 0 0 0" }}>
-        <center>(C) Yasa Baig</center>
+        <center>
+          Questions, comments? Contact us:
+          <br />
+          <a className="contact" href="mailto: info@duke.aml">
+            Email
+          </a>{" "}
+          • (320)-333-8531
+        </center>
       </Container>
     );
   }

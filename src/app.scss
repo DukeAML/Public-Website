@@ -38,6 +38,12 @@ header {
   margin: 0;
 }
 
+a.contact {
+  color: $light-grey !important;
+  & :hover {
+  }
+}
+
 h3,
 h4 {
   font-family: "Roboto Mono", monospace !important;
