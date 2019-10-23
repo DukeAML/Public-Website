@@ -57,8 +57,8 @@ function Signal(startX, startY, endX, endY) {
       return false;
     }
 
-    this.currentX += 1;
-    this.currentY += slope;
+    this.currentX += 0.7;
+    this.currentY += 0.7*slope;
 
     this.draw(c);
   };
@@ -90,7 +90,7 @@ class Canvas extends React.Component {
   }
 
   updateAnimationState() {
-    if (this.state.frameCounter >= this.state.width / 5.0 / 2.0 - 0.5) {
+    if (this.state.frameCounter >= (10/7)*this.state.width / 5.0 / 2.0 - 0.5) {
       this.setState({ frameCounter: 0 });
       console.log(this.state.stageCounter);
       if (this.state.stageCounter >= 2) {
@@ -529,7 +529,7 @@ class Canvas extends React.Component {
   }
 
   render() {
-    return <canvas width={540} height={350} ref={this.canvasRef} />;
+    return <canvas width={500} height={350}  ref={this.canvasRef} />;
   }
 }
 
