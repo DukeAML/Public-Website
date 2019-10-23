@@ -24,10 +24,8 @@ import PeopleRow from "./PeopleRow";
 // DS = data science
 // CRM = client management
 // PS = implementation
-//
 
-// Compose array of person objects with necessary info
-const peopleInfo = [
+const CRM = [
   {
     name: "Luke	Truitt",
     school: "Undergraduate",
@@ -36,16 +34,6 @@ const peopleInfo = [
     email: "luke.truitt@duke.edu",
     linkedin: "https://www.linkedin.com/in/luke-truitt/",
     github: "https://github.com/luke-truitt/"
-  },
-  {
-    name: "Varun Nair",
-    school: "Undergraduate",
-    study: "CS, Math",
-    team: "DS",
-    email: "varun.nair.1@duke.edu",
-    linkedin: "https://www.linkedin.com/in/varunnair18/",
-    img: "",
-    github: "https://github.com/varunnair18/"
   },
   {
     name: "Mary	Gooneratne",
@@ -57,6 +45,39 @@ const peopleInfo = [
     img: "Gooteratne.jpg",
     github: "https://github.com/marygooneratne/"
   },
+  {
+    name: "Ben	Levy",
+    school: "",
+    study: "",
+    team: "CRM",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/ben-levy1/",
+    img: "Levy.jpg"
+  },
+  {
+    name: "Shuyi	Fan",
+    school: "",
+    study: "",
+    team: "",
+    email: "CRM",
+    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
+    img: "Fan.jpg"
+  }
+];
+
+// Compose array of person objects with necessary info
+const DS = [
+  {
+    name: "Varun Nair",
+    school: "Undergraduate",
+    study: "CS, Math",
+    team: "DS",
+    email: "varun.nair.1@duke.edu",
+    linkedin: "https://www.linkedin.com/in/varunnair18/",
+    img: "",
+    github: "https://github.com/varunnair18/"
+  },
+
   {
     name: "Daniel	Tao",
     school: "Undergraduate",
@@ -213,7 +234,10 @@ const peopleInfo = [
     email: "",
     linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
     img: "Alqabandi.jpg"
-  },
+  }
+];
+
+const PS = [
   {
     name: "Yasa	Baig",
     school: "Undergraduate",
@@ -224,24 +248,7 @@ const peopleInfo = [
     img: "Baig.jpg",
     github: "https://github.com/yasab27/"
   },
-  {
-    name: "Ben	Levy",
-    school: "",
-    study: "",
-    team: "CRM",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/ben-levy1/",
-    img: "Levy.jpg"
-  },
-  {
-    name: "Shuyi	Fan",
-    school: "",
-    study: "",
-    team: "",
-    email: "CRM",
-    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
-    img: "Fan.jpg"
-  },
+
   {
     name: "Nicole	Moiseyev",
     school: "Undergraduate",
@@ -253,6 +260,8 @@ const peopleInfo = [
     github: "https://github.com/nicolemoiseyev/"
   }
 ];
+
+const peopleInfo = [CRM, DS, PS];
 
 class PeoplePage extends React.Component {
   state = { redirect: false, details: {}, collapse: false };
@@ -299,22 +308,53 @@ class PeoplePage extends React.Component {
   }
 
   render() {
-    let people = this.makePeopleGrid(peopleInfo, this.props.windowWidth);
+    let CRMgrid = this.makePeopleGrid(CRM, this.props.windowWidth);
+    let DSgrid = this.makePeopleGrid(DS, this.props.windowWidth);
+    let PSgrid = this.makePeopleGrid(PS, this.props.windowWidth);
+
+    let window = this.props.windowWidth;
+    let padding;
+
+    // dynamically determine left and right padding around people grid
+    if (window >= 992) {
+      // lg or xl
+      padding = 20;
+    } else if (window >= 768) {
+      // m
+      padding = 5;
+    } else if (window >= 576) {
+      // s
+      padding = 10;
+    } else {
+      // xs
+      padding = 0;
+    }
 
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: 0, margin: 0}}>
-          <Row
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              margin: 0
-            }}
-          >
-            <div className="title" style = {{marginRight: 0, marginLeft:0}}> Our Members </div>
-          </Row>
-          <center>{people}</center>
+        <Container fluid style={{ padding: 0 }}>
+          <div className="title" style={{ padding: "0 0 1rem 0" }}>
+            <center>Our Members</center>
+          </div>
+          <div className="team" style={{ padding: `0 ${padding}%` }}>
+            Client Management Team
+            <hr />
+          </div>
+          <center>{CRMgrid}</center>
+
+          <div className="team" style={{ padding: `0 ${padding}%` }}>
+            Implementation Team
+            <hr />
+          </div>
+          <center>{PSgrid}</center>
+
+          <div className="team" style={{ padding: `0 ${padding}%` }}>
+            Data Science Team
+            <hr />
+          </div>
+          <center>{DSgrid}</center>
+
           <Footer />
         </Container>
       </div>

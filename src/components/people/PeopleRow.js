@@ -62,6 +62,7 @@ class PeopleRow extends React.Component {
 
   render() {
     let columns = this.makePeopleRow(this.props.people);
+
     let window = this.props.windowWidth;
     let padding;
 

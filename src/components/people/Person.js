@@ -107,7 +107,6 @@ function Person(props) {
       </Row>
       <div style={{ color: "#f0efe5" }}>
         <div style={{ fontSize: "1.5rem" }}>{props.name} </div>
-        {props.team === "" ? "" : props.team + " Team"}
       </div>
     </Col>
   );
