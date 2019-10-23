@@ -136,14 +136,8 @@ class HomePage extends React.Component {
                   alignItems: "center"
                 }}
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.Lorem Ipsum has been the industry 's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages.
+               We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
+
               </Col>
               <Col md={6} sm={12}>
                 <Animation />
