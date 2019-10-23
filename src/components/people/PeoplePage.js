@@ -311,7 +311,7 @@ class PeoplePage extends React.Component {
               justifyContent: "center"
             }}
           >
-            <div className="title"> Our Members </div>
+            <div className="title" style = {{marginRight: 0, marginLeft:0}}> Our Members </div>
           </Row>
           <center>{people}</center>
           <Footer />
