@@ -85,7 +85,7 @@ class PeopleRow extends React.Component {
 
     if (current != null) {
       school =
-        current.school != null ? (
+        current.school != "" ? (
           <div>
             <b>School</b>: {current.school}{" "}
           </div>
@@ -93,7 +93,7 @@ class PeopleRow extends React.Component {
           ""
         );
       studying =
-        current.study != null ? (
+        current.study != "" ? (
           <div>
             <b>Studying</b>: {current.study}{" "}
           </div>
@@ -115,7 +115,7 @@ class PeopleRow extends React.Component {
 
     return (
       <div>
-        <Row style={{ padding: `0 ${padding}%`, margin: 0}}>{columns}</Row>
+        <Row style={{ padding: `0 ${padding}%`, margin: 0 }}>{columns}</Row>
         <Row>
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
