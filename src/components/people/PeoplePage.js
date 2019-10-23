@@ -21,8 +21,6 @@ import Details from "./Details";
 import Person from "./Person";
 import PeopleRow from "./PeopleRow";
 
-// Import individual thumbnails
-
 // DS = data science
 // CRM = client management
 // PS = implementation
@@ -36,8 +34,7 @@ const peopleInfo = [
     study: "ECE, CS",
     team: "CRM",
     email: "luke.truitt@duke.edu",
-    linkedin: "https://www.linkedin.com/in/luke-truitt/",
-    img: "./headshots/Truitt.jpg"
+    linkedin: "https://www.linkedin.com/in/luke-truitt/"
   },
   {
     name: "Varun Nair",
@@ -55,7 +52,7 @@ const peopleInfo = [
     team: "CRM",
     email: "mary.gooneratne@duke.edu",
     linkedin: "",
-    img: "./headshots/Gooteratne.jpg"
+    img: "Gooteratne.jpg"
   },
   {
     name: "Daniel	Tao",
@@ -73,7 +70,7 @@ const peopleInfo = [
     team: "DS",
     email: "anna.yanchenko@duke.edu",
     linkedin: "",
-    img: "./headshots/Yanchencko.jpg"
+    img: "Yanchencko.jpg"
   },
   {
     name: "Ching Lung	Hsu",
