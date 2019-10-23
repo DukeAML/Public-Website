@@ -55,6 +55,32 @@ const headshots = {
 
 function Person(props) {
   console.log(props.img);
+  console.log(props.linkedIn);
+
+  const linkedin =
+    props.linkedin != "" ? (
+      <a
+        className="github-icon button ripple"
+        style={{ float: "left" }}
+        target="_blank"
+        href={props.github}
+      ></a>
+    ) : (
+      ""
+    );
+
+  const github =
+    props.github != "" ? (
+      <a
+        className="linkedin-icon button"
+        style={{ float: "left" }}
+        target="_blank"
+        href={props.linkedin}
+      ></a>
+    ) : (
+      ""
+    );
+
   return (
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
       <div className="person-image">
@@ -73,25 +99,15 @@ function Person(props) {
         <Col xl={12}>
           <center>
             <div style={{ display: "inline-block", padding: "0.5rem 0 0 0" }}>
-              <Link to="/">
-                <div
-                  className="github-icon button ripple"
-                  style={{ float: "left" }}
-                ></div>
-              </Link>
-              <Link to="/">
-                <div
-                  className="linkedin-icon button"
-                  style={{ float: "left" }}
-                ></div>
-              </Link>
+              {linkedin}
+              {github}
             </div>
           </center>
         </Col>
       </Row>
       <div style={{ color: "#f0efe5" }}>
         <div style={{ fontSize: "1.5rem" }}>{props.name} </div>
-        {props.team} Team
+        {props.team === "" ? "" : props.team + " Team"}
       </div>
     </Col>
   );

@@ -51,7 +51,7 @@ const peopleInfo = [
     study: "ECE, CS",
     team: "CRM",
     email: "mary.gooneratne@duke.edu",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/marygooneratne/",
     img: "Gooteratne.jpg"
   },
   {
@@ -69,7 +69,7 @@ const peopleInfo = [
     study: "Statistics",
     team: "DS",
     email: "anna.yanchenko@duke.edu",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/anna-yanchenko/",
     img: "Yanchencko.jpg"
   },
   {
@@ -84,34 +84,34 @@ const peopleInfo = [
   {
     name: "David	Rein",
     school: "Undergraduate",
-    study: "",
+    study: "CS, Math",
     team: "",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/idavidrein/",
     img: ""
   },
   {
     name: "Jia Rong	Chua",
     school: "Masters",
-    study: "",
+    study: "Economics",
     team: "",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jiarongchua/",
     img: ""
   },
   {
     name: "Lindsay	Wu",
     school: "Masters",
-    study: "",
+    study: "Statistics",
     team: "",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bingruo-lindsay-wu-b98854150/",
     img: "Wu.jpg"
   },
   {
     name: "Olivier Binette",
     school: "Post-Graduate",
-    study: "",
+    study: "Statistics",
     team: "",
     email: "",
     linkedin: "",
@@ -120,7 +120,7 @@ const peopleInfo = [
   {
     name: "Qingying	Luo",
     school: "Undergraduate",
-    study: "",
+    study: "Statistics",
     team: "",
     email: "",
     linkedin: "",
@@ -129,7 +129,7 @@ const peopleInfo = [
   {
     name: "Ryan	Middlemiss",
     school: "Undergraduate",
-    study: "",
+    study: "ECE, Economics",
     team: "",
     email: "",
     linkedin: "",
@@ -137,61 +137,61 @@ const peopleInfo = [
   },
   {
     name: "Yishu	Gong",
-    school: "Undergraduate",
+    school: "Post-Graduate",
     study: "",
-    team: "",
+    team: "DS",
     email: "",
     linkedin: "",
     img: "Gong.png"
   },
   {
     name: "Zhiyue	Zhang",
-    school: "Undergraduate",
+    school: "Post-Graduate",
     study: "",
-    team: "",
+    team: "DS",
     email: "",
     linkedin: "",
     img: ""
   },
   {
     name: "Alina	Barnett",
-    school: "Undergraduate",
-    study: "",
-    team: "",
+    school: "Post-Graduate",
+    study: "Computer Science",
+    team: "DS",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: ""
   },
   {
     name: "Hang	Yang",
-    school: "Undergraduate",
+    school: "",
     study: "",
-    team: "",
+    team: "DS",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: "Yang.jpg"
   },
   {
     name: "Morris	Greenberg",
-    school: "Undergraduate",
+    school: "",
     study: "",
-    team: "",
+    team: "DS",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/morris-greenberg-1b9abb63/",
     img: "Greenberg.jpg"
   },
   {
     name: "Phoebe	Klett",
-    school: "Undergraduate",
+    school: "",
     study: "",
-    team: "",
+    team: "DS",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/phoebe-klett-644009134/",
     img: ""
   },
   {
     name: "Rachel	Williamson",
-    school: "Undergraduate",
+    school: "",
     study: "",
     team: "",
     email: "",
@@ -200,29 +200,29 @@ const peopleInfo = [
   },
   {
     name: "Tima	Alqabandi",
-    school: "Undergraduate",
+    school: "",
     study: "",
     team: "",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
     img: "Alqabandi.jpg"
   },
   {
     name: "Yasa	Baig",
     school: "Undergraduate",
-    study: "",
-    team: "",
+    study: "Physics, CS",
+    team: "Implementation",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/yasab/",
     img: "Baig.jpg"
   },
   {
     name: "Ben	Levy",
-    school: "Undergraduate",
+    school: "",
     study: "",
-    team: "",
+    team: "CRM",
     email: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/ben-levy1/",
     img: "Levy.jpg"
   },
   {
@@ -230,15 +230,15 @@ const peopleInfo = [
     school: "",
     study: "",
     team: "",
-    email: "",
-    linkedin: "",
+    email: "CRM",
+    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
     img: "Fan.jpg"
   },
   {
     name: "Nicole	Moiseyev",
     school: "Undergraduate",
-    study: "",
-    team: "",
+    study: "Neuroscience, CS",
+    team: "Implementation",
     email: "",
     linkedin: "",
     img: "Moiseyev.jpg"
