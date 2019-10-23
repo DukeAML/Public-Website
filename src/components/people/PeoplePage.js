@@ -34,7 +34,8 @@ const peopleInfo = [
     study: "ECE, CS",
     team: "CRM",
     email: "luke.truitt@duke.edu",
-    linkedin: "https://www.linkedin.com/in/luke-truitt/"
+    linkedin: "https://www.linkedin.com/in/luke-truitt/",
+    github: "https://github.com/luke-truitt/"
   },
   {
     name: "Varun Nair",
@@ -43,7 +44,8 @@ const peopleInfo = [
     team: "DS",
     email: "varun.nair.1@duke.edu",
     linkedin: "https://www.linkedin.com/in/varunnair18/",
-    img: ""
+    img: "",
+    github: "https://github.com/varunnair18/"
   },
   {
     name: "Mary	Gooneratne",
@@ -52,7 +54,8 @@ const peopleInfo = [
     team: "CRM",
     email: "mary.gooneratne@duke.edu",
     linkedin: "https://www.linkedin.com/in/marygooneratne/",
-    img: "Gooteratne.jpg"
+    img: "Gooteratne.jpg",
+    github: "https://github.com/marygooneratne/"
   },
   {
     name: "Daniel	Tao",
@@ -61,6 +64,7 @@ const peopleInfo = [
     team: "DS",
     email: "chaofan.tao@duke.edu",
     linkedin: "",
+    github: "https://github.com/danieltao/",
     img: ""
   },
   {
@@ -70,6 +74,7 @@ const peopleInfo = [
     team: "DS",
     email: "anna.yanchenko@duke.edu",
     linkedin: "https://www.linkedin.com/in/anna-yanchenko/",
+    github: "https://github.com/aky4wn/",
     img: "Yanchencko.jpg"
   },
   {
@@ -133,7 +138,8 @@ const peopleInfo = [
     team: "",
     email: "",
     linkedin: "",
-    img: "Middlemiss.png"
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
   },
   {
     name: "Yishu	Gong",
@@ -142,7 +148,8 @@ const peopleInfo = [
     team: "DS",
     email: "",
     linkedin: "",
-    img: "Gong.png"
+    img: "Gong.png",
+    github: "https://github.com/yishu0524/"
   },
   {
     name: "Zhiyue	Zhang",
@@ -214,7 +221,8 @@ const peopleInfo = [
     team: "Implementation",
     email: "",
     linkedin: "https://www.linkedin.com/in/yasab/",
-    img: "Baig.jpg"
+    img: "Baig.jpg",
+    github: "https://github.com/yasab27/"
   },
   {
     name: "Ben	Levy",
@@ -241,7 +249,8 @@ const peopleInfo = [
     team: "Implementation",
     email: "",
     linkedin: "",
-    img: "Moiseyev.jpg"
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
   }
 ];
 

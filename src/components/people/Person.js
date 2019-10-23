@@ -57,8 +57,8 @@ function Person(props) {
   console.log(props.img);
   console.log(props.linkedIn);
 
-  const linkedin =
-    props.linkedin != "" ? (
+  const github =
+    props.github != null ? (
       <a
         className="github-icon button ripple"
         style={{ float: "left" }}
@@ -69,8 +69,8 @@ function Person(props) {
       ""
     );
 
-  const github =
-    props.github != "" ? (
+  const linkedin =
+    props.linkedin != null ? (
       <a
         className="linkedin-icon button"
         style={{ float: "left" }}
