@@ -35,13 +35,13 @@ const buckets = [
   {
     title: "Transportation",
     details: "Unknown parking availability",
-    img: "realestate.jpeg"
+    img: "transportation.jpeg"
   },
   {
     title: "Agriculture",
     details:
       "Inaccurate weather predictions; Inefficient use of water; Unknown pricing of crops/Volume of Market; Inefficient timelines for growing stuff",
-    img: "transportation.jpeg"
+    img: "agriculture.jpeg"
   },
   {
     title: "Sports",

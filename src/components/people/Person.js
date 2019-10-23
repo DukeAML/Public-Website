@@ -9,7 +9,7 @@ function Person(props) {
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
       <div className="person-image">
         <Image
-          src={props.src}
+          src={require(props.img)}
           fluid
           roundedCircle
           style={{ width: "120px" }}
