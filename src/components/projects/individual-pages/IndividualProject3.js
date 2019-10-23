@@ -23,9 +23,9 @@ const IndividualProject = props => {
         fluid
         style={{ padding: "2rem", display: "flex", justifyContent: "center" }}
       >
-        <Row>
+          <Row>
           <Col sm={12} md={6}>
-            <Image src={placeholder} fluid />
+            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Primary_Laos2.jpg/1280px-Primary_Laos2.jpg"} fluid />
           </Col>
           <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
             <Card className="individual-project-card">
@@ -34,17 +34,17 @@ const IndividualProject = props => {
                 style={{ padding: "1rem" }}
               >
                 <Card.Title style={{ padding: 0 }} className="title">
-                  fMRI Disease Detection
+                  Digital Fidget
                 </Card.Title>
                 <Card.Text>
                     {" "}
                     <Container>
                       <Row>
-                        <b> Team: </b>Varun Nair, Hang Yang, Morris Greenberg, Ram Gollupudy
+                        <b> Team: </b> Mary Gooneratne, Jia Rong Chua, Phoebe Klett, Jaiveer Katariya, Himanshu Jain
                       </Row>
                       <Row style={{ padding: "1rem 0 1rem 0" }}>
                         <b> Abstract: </b> 
-                        Functional Magnetic Resonance Imaging, or fMRI, has emerged as a powerful tool in studying the function of brain regions. However, using data analysis techniques on fMRI data to predict the onset of neurodegenerative and mental illnesses has been challenging, largely due to the shortage of high-quality labeled data and the difficulty of extracting meaningful features. In this project, we utilize the Human Connectome Project, which contains a dataset of fMRI data labeled with the behavioral states of healthy subjects. By applying modern deep learning techniques on this dataset, we hope to build a classifier with strong predictive power on classifying behavioral states whose features contain significant correlations to a variety of neurodegenerative and mental illnesses.
+                        There is a trend of large increase in Attention Deficit Hyperactivity Disorder (ADHD). Research has shown positive impact of fidget toys on students with ADHD. By replacing fidget toys with a similar app on a wearable device, user data from device sensors (e.g. heart rate, motion, location) can be collected to identify patterns of fidgeting. The project seeks to utilize ANOVA analysis to see user behavior differences and machine learning models to classify human activities in an effort to generate user behavior time series for children with ADHD.
                       </Row>
                     </Container>
                 </Card.Text>
@@ -52,7 +52,6 @@ const IndividualProject = props => {
             </Card>
           </Col>
         </Row>
-       
       </Container>
     </div>
   );

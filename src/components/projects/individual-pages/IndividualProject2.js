@@ -23,9 +23,9 @@ const IndividualProject = props => {
         fluid
         style={{ padding: "2rem", display: "flex", justifyContent: "center" }}
       >
-        <Row>
+                <Row>
           <Col sm={12} md={6}>
-            <Image src={placeholder} fluid />
+            <Image src={"https://images.pexels.com/photos/2692467/pexels-photo-2692467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"} fluid />
           </Col>
           <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
             <Card className="individual-project-card">
@@ -34,17 +34,17 @@ const IndividualProject = props => {
                 style={{ padding: "1rem" }}
               >
                 <Card.Title style={{ padding: 0 }} className="title">
-                  fMRI Disease Detection
+                  VR Sickness Detection
                 </Card.Title>
                 <Card.Text>
                     {" "}
                     <Container>
                       <Row>
-                        <b> Team: </b>Varun Nair, Hang Yang, Morris Greenberg, Ram Gollupudy
+                        <b> Team: </b> Tima, Daniel, Alina
                       </Row>
                       <Row style={{ padding: "1rem 0 1rem 0" }}>
                         <b> Abstract: </b> 
-                        Functional Magnetic Resonance Imaging, or fMRI, has emerged as a powerful tool in studying the function of brain regions. However, using data analysis techniques on fMRI data to predict the onset of neurodegenerative and mental illnesses has been challenging, largely due to the shortage of high-quality labeled data and the difficulty of extracting meaningful features. In this project, we utilize the Human Connectome Project, which contains a dataset of fMRI data labeled with the behavioral states of healthy subjects. By applying modern deep learning techniques on this dataset, we hope to build a classifier with strong predictive power on classifying behavioral states whose features contain significant correlations to a variety of neurodegenerative and mental illnesses.
+                        VR sickness is caused when the optical flow of the VR set (what people see) is different from the actual motion perceived by the subject (what people feel). The project is aimed to build a model to detect when there would be a sickness, given the input of the 360 videos simulating the usage of VR. The methods used include flowNet, decision tree, and autoencoder networks. The output could be publications, and the potential applications include pilot training, gaming, and general VR uses.
                       </Row>
                     </Container>
                 </Card.Text>
@@ -52,7 +52,6 @@ const IndividualProject = props => {
             </Card>
           </Col>
         </Row>
-       
       </Container>
     </div>
   );

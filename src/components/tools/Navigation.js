@@ -19,7 +19,8 @@ class Navigation extends React.Component {
       <Container
         fluid
         style={{
-          padding: "0.6rem",
+          paddingTop: "0.6rem",
+          paddingBottom: "0.6rem",
           marginBottom: "10px",
           backgroundColor: "#1e2c3a"
         }}
@@ -43,11 +44,13 @@ class Navigation extends React.Component {
                 Projects
               </Link>
             </div>
+
             <div style={{ padding: "0 0 0 0" }}>
               <Link to="/people" className="homepage-link">
                 People
               </Link>
             </div>
+            
           </Col>
         </Row>
       </Container>
