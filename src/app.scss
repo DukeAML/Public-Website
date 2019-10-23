@@ -63,11 +63,12 @@ h4 {
   background-color: $dark-grey;
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 .person-details-text {
   animation: opac 1s;
+  font-size: 1.2rem;
+  clear: left;
 }
 
 .inset {

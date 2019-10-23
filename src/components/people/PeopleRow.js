@@ -10,27 +10,35 @@ import Person from "./Person";
 class PeopleRow extends React.Component {
   constructor() {
     super();
-    this.state = { in: false, current: null, lastClicked: null };
+    this.state = {
+      in: false,
+      current: null,
+      lastClicked: null,
+      currIndex: null
+    };
   }
 
-  handleShowDetails(details, key) {
+  handleShowDetails(person, key) {
     if (key == this.state.lastClicked) {
       // close the details panel
       this.setState({
         current: null,
+        currIndex: null,
         in: false,
         lastClicked: null
       });
     } else if (this.state.lastClicked != null) {
       // replace info in details panel with new info
       this.setState({
-        current: details,
+        current: person,
+        currIndex: key,
         lastClicked: key
       });
     } else {
       this.setState({
-        current: details,
+        current: person,
         in: true,
+        currIndex: key,
         lastClicked: key
       });
     }
@@ -39,7 +47,7 @@ class PeopleRow extends React.Component {
   }
 
   makePeopleRow(people) {
-    return people.map((person, key) => (
+    return people.map((person, key, index) => (
       <Person
         key={key}
         name={person.name}
@@ -47,7 +55,7 @@ class PeopleRow extends React.Component {
         linkedin={person.linkedin}
         github={person.github}
         img={person.img}
-        onClick={() => this.handleShowDetails(person.details, key)}
+        onClick={() => this.handleShowDetails(person, key)}
       />
     ));
   }
@@ -72,6 +80,39 @@ class PeopleRow extends React.Component {
       padding = 0;
     }
 
+    let { current } = this.state;
+    let school, studying, name;
+
+    if (current != null) {
+      school =
+        current.school != null ? (
+          <div>
+            <b>School</b>: {current.school}{" "}
+          </div>
+        ) : (
+          ""
+        );
+      studying =
+        current.study != null ? (
+          <div>
+            <b>Studying</b>: {current.study}{" "}
+          </div>
+        ) : (
+          ""
+        );
+      name = current.name;
+    } else {
+      school = "";
+      studying = "";
+      name = "";
+    }
+
+    let marginLeft = this.props.colWidth * this.state.currIndex;
+
+    console.log(
+      "col width" + this.props.colWidth + "index " + this.state.currIndex
+    );
+
     return (
       <div>
         <Row style={{ padding: `0 ${padding}%` }}>{columns}</Row>
@@ -79,7 +120,17 @@ class PeopleRow extends React.Component {
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
               <div className="person-details box-shadowed">
-                <div className="person-details-text">{this.state.current}</div>
+                <div
+                  className="person-details-text"
+                  style={{
+                    textAlign: "left",
+                    padding: `0 ${padding}%`
+                  }}
+                >
+                  <div className="title">{name}</div>
+                  {school}
+                  {studying}
+                </div>
               </div>
             </AnimateHeight>
           </Col>
