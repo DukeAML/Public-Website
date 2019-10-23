@@ -304,11 +304,12 @@ class PeoplePage extends React.Component {
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: 0 }}>
+        <Container fluid style={{ padding: 0, margin: 0}}>
           <Row
             style={{
               display: "flex",
-              justifyContent: "center"
+              justifyContent: "center",
+              margin: 0
             }}
           >
             <div className="title" style = {{marginRight: 0, marginLeft:0}}> Our Members </div>

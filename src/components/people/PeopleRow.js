@@ -74,7 +74,7 @@ class PeopleRow extends React.Component {
 
     return (
       <div>
-        <Row style={{ padding: `0 ${padding}%` }}>{columns}</Row>
+        <Row style={{ padding: `0 ${padding}%`, margin: 0}}>{columns}</Row>
         <Row>
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
