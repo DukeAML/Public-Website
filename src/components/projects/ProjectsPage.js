@@ -17,24 +17,26 @@ import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
 
+
+
 const projects = [
   {
-    title: "Lorem",
-    description: "Interesting project",
-    img: "./img",
+    title: "fMRI Disease Detection",
+    description: "Using modern image processing technology to better predict neurological illness.",
+    img: "https://upload.wikimedia.org/wikipedia/commons/0/03/T1-weighted-MRI.png",
     link: "/project1"
   },
   {
-    title: "Lorem",
-    description: "Interesting project",
-    img: "./img",
-    link: "/project1"
+    title: "VR Sickness Detection",
+    description: "Predicting virtual reality sickness through the use of artificial intelligence.",
+    img: "https://images.pexels.com/photos/2692467/pexels-photo-2692467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    link: "/project2"
   },
   {
-    title: "Lorem",
-    description: "Interesting project",
-    img: "./img",
-    link: "/project1"
+    title: "Digital Fidget",
+    description: "Helping detect patterns of fidgeting for children with ADHD",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Primary_Laos2.jpg/1280px-Primary_Laos2.jpg",
+    link: "/project3"
   }
 ];
 

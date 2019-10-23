@@ -11,6 +11,8 @@ import Navigation from "./tools/Navigation";
 import ProjectDisplayPage from "./projectdisplay/ProjectDisplayPage";
 import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
+import IndividualProject2 from "./projects/individual-pages/IndividualProject2";
+import IndividualProject3 from "./projects/individual-pages/IndividualProject3";
 
 class App extends React.Component {
   render() {
@@ -20,6 +22,8 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/project1" component={IndividualProject} />
+        <Route exact path="/project2" component={IndividualProject2} />
+        <Route exact path="/project3" component={IndividualProject3} />
       </BrowserRouter>
     );
   }
