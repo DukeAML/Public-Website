@@ -327,7 +327,7 @@ class PeoplePage extends React.Component {
       padding = 10;
     } else {
       // xs
-      padding = 0;
+      padding = 5;
     }
 
     return (
@@ -337,19 +337,19 @@ class PeoplePage extends React.Component {
           <div className="title" style={{ padding: "0 0 1rem 0" }}>
             <center>Our Members</center>
           </div>
-          <div className="team" style={{ padding: `0 ${padding}%` }}>
+          <div className="team" style={{ padding: `1rem ${padding}%` }}>
             Client Management Team
             <hr />
           </div>
           <center>{CRMgrid}</center>
 
-          <div className="team" style={{ padding: `0 ${padding}%` }}>
+          <div className="team" style={{ padding: `1rem ${padding}%` }}>
             Implementation Team
             <hr />
           </div>
           <center>{PSgrid}</center>
 
-          <div className="team" style={{ padding: `0 ${padding}%` }}>
+          <div className="team" style={{ padding: `1rem ${padding}%` }}>
             Data Science Team
             <hr />
           </div>

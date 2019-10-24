@@ -78,7 +78,7 @@ class PeopleRow extends React.Component {
       padding = 10;
     } else {
       // xs
-      padding = 0;
+      padding = 5;
     }
 
     let { current } = this.state;
