@@ -8,26 +8,26 @@ import { Row, Col, Image } from "react-bootstrap";
 
 // This is ugly, will fix later. sry
 import placeholder from "./headshots/profile-placeholder.svg";
-import truitt from "./headshots/truitt.jpg";
-import nair from "./headshots/nair.jpg";
-import gooneratne from "./headshots/gooneratne.jpg";
-import yanchencko from "./headshots/yanchencko.jpg";
-import rein from "./headshots/rein.jpg";
-import chua from "./headshots/chua.jpg";
-import wu from "./headshots/wu.jpg";
-import binette from "./headshots/binette.jpg";
-import luo from "./headshots/luo.jpg";
-import middlemiss from "./headshots/middlemiss.png";
-import gong from "./headshots/gong.png";
-import greenberg from "./headshots/greenberg.jpg";
-import yang from "./headshots/yang.jpg";
-import klett from "./headshots/klett.jpg";
-import williamson from "./headshots/williamson.jpg";
-import alqabandi from "./headshots/alqabandi.jpg";
-import baig from "./headshots/baig.jpg";
-import levy from "./headshots/levy.jpg";
-import moiseyev from "./headshots/moiseyev.jpg";
-import fan from "./headshots/fan.jpg";
+import truitt from "./headshots/Truitt.jpg";
+import nair from "./headshots/Nair.jpg";
+import gooneratne from "./headshots/Gooneratne.jpg";
+import yanchencko from "./headshots/Yanchencko.jpg";
+import rein from "./headshots/Rein.jpg";
+import chua from "./headshots/Chua.jpg";
+import wu from "./headshots/Wu.jpg";
+import binette from "./headshots/Binette.jpg";
+import luo from "./headshots/Luo.jpg";
+import middlemiss from "./headshots/Middlemiss.png";
+import gong from "./headshots/Gong.png";
+import greenberg from "./headshots/Greenberg.jpg";
+import yang from "./headshots/Yang.jpg";
+import klett from "./headshots/Klett.jpg";
+import williamson from "./headshots/Williamson.jpg";
+import alqabandi from "./headshots/Alqabandi.jpg";
+import baig from "./headshots/Baig.jpg";
+import levy from "./headshots/Levy.jpg";
+import moiseyev from "./headshots/Moiseyev.jpg";
+import fan from "./headshots/Fan.jpg";
 
 // compose dictionary of headshots for people that have headshots
 const headshots = {
