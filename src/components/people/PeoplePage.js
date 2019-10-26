@@ -283,6 +283,20 @@ class PeoplePage extends React.Component {
       padding = 5;
     }
 
+    // center titles on mobile
+
+    let DStitle, PStitle, CRMtitle;
+
+    if (window <= 576) {
+      DStitle = <center> Data Science Team </center>;
+      PStitle = <center> Implementation Team </center>;
+      CRMtitle = <center> Client Management Team </center>;
+    } else {
+      DStitle = "Data Science Team";
+      PStitle = "Implementation Team";
+      CRMtitle = "Client Management Team";
+    }
+
     return (
       <div>
         <Navigation />
@@ -290,20 +304,20 @@ class PeoplePage extends React.Component {
           <div className="title" style={{ padding: "0 0 1rem 0" }}>
             <center>Our Members</center>
           </div>
-          
+
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            Data Science Team
+            {DStitle}
             <hr />
           </div>
           <center>{DSgrid}</center>
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            Implementation Team
+            {PStitle}
             <hr />
           </div>
           <center>{PSgrid}</center>
 
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            Client Management Team
+            {CRMtitle}
             <hr />
           </div>
           <center>{CRMgrid}</center>
