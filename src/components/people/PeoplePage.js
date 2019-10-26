@@ -27,18 +27,18 @@ import PeopleRow from "./PeopleRow";
 
 const CRM = [
   {
-    name: "Luke	Truitt",
-    school: "Undergraduate",
-    study: "ECE, CS",
+    name: "Ben	Levy",
+    school: "Fuqua School of Business",
+    study: "MBA",
     team: "CRM",
-    email: "luke.truitt@duke.edu",
-    linkedin: "https://www.linkedin.com/in/luke-truitt/",
-    github: "https://github.com/luke-truitt/"
+    email: "ben.levy@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ben-levy1/",
+    img: "Levy.jpg"
   },
   {
     name: "Mary	Gooneratne",
     school: "Undergraduate",
-    study: "ECE, CS",
+    study: "Electrical and Computer Engineering",
     team: "CRM",
     email: "mary.gooneratne@duke.edu",
     linkedin: "https://www.linkedin.com/in/marygooneratne/",
@@ -46,22 +46,40 @@ const CRM = [
     github: "https://github.com/marygooneratne/"
   },
   {
-    name: "Ben	Levy",
-    school: "",
-    study: "",
-    team: "CRM",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/ben-levy1/",
-    img: "Levy.jpg"
-  },
-  {
     name: "Shuyi	Fan",
-    school: "",
-    study: "",
-    team: "",
-    email: "CRM",
+    school: "Fuqua School of Business",
+    study: "QMS",
+    team: "CRM",
+    email: "shuyi.fan@duke.edu",
     linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
     img: "Fan.jpg"
+  },
+  {
+    name: "Rachel	Williamson",
+    school: "Fuqua School of Business",
+    study: "QMS",
+    team: "CRM",
+    email: "rachel.williamson@duke.edu",
+    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
+    img: "Williamson.jpg"
+  },
+  {
+    name: "Bree Wang",
+    school: "Fuqua School of Business",
+    study: "QMS",
+    team: "CRM",
+    email: "bree.wang@duke.edu",
+    linkedin: "https://www.linkedin.com/in/bree-jiaying-wang-25421b59/",
+    img: "Wang.jpg"
+  },
+  {
+    name: "Luke	Truitt",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "CRM",
+    email: "luke.truitt@duke.edu",
+    linkedin: "https://www.linkedin.com/in/luke-truitt/",
+    github: "https://github.com/luke-truitt/"
   }
 ];
 
@@ -74,23 +92,22 @@ const DS = [
     team: "DS",
     email: "varun.nair.1@duke.edu",
     linkedin: "https://www.linkedin.com/in/varunnair18/",
-    img: "",
+    img: "Nair.jpg",
     github: "https://github.com/varunnair18/"
   },
-
   {
     name: "Daniel	Tao",
     school: "Undergraduate",
-    study: "CS, Stats",
+    study: "Computer Science, Statistics",
     team: "DS",
     email: "chaofan.tao@duke.edu",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/chaofan-daniel-tao/",
     github: "https://github.com/danieltao/",
-    img: ""
+    img: "Tao.jpg"
   },
   {
     name: "Anna	Yanchencko",
-    school: "Post-Graduate",
+    school: "Ph.D.",
     study: "Statistics",
     team: "DS",
     email: "anna.yanchenko@duke.edu",
@@ -99,139 +116,75 @@ const DS = [
     img: "Yanchencko.jpg"
   },
   {
-    name: "Ching Lung	Hsu",
-    school: "Post-Graduate",
-    study: "Statistics",
-    team: "DS",
-    email: "chinglung.hsu@duke.edu",
-    linkedin: "",
-    img: ""
-  },
-  {
-    name: "David	Rein",
-    school: "Undergraduate",
-    study: "CS, Math",
-    team: "",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/idavidrein/",
-    img: ""
-  },
-  {
     name: "Jia Rong	Chua",
     school: "Masters",
     study: "Economics",
-    team: "",
-    email: "",
+    team: "DS",
+    email: "jiarong.chua@duke.edu",
     linkedin: "https://www.linkedin.com/in/jiarongchua/",
-    img: ""
-  },
-  {
-    name: "Lindsay	Wu",
-    school: "Masters",
-    study: "Statistics",
-    team: "",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/bingruo-lindsay-wu-b98854150/",
-    img: "Wu.jpg"
+    img: "Chua.jpg"
   },
   {
     name: "Olivier Binette",
-    school: "Post-Graduate",
+    school: "Ph.D.",
     study: "Statistics",
-    team: "",
-    email: "",
-    linkedin: "",
+    team: "DS",
+    email: "olivier.binette@duke.edu",
+    linkedin: "https://www.linkedin.com/in/olivier-binette/",
     img: "Binette.jpg"
-  },
-  {
-    name: "Qingying	Luo",
-    school: "Undergraduate",
-    study: "Statistics",
-    team: "",
-    email: "",
-    linkedin: "",
-    img: "Luo.jpg"
   },
   {
     name: "Ryan	Middlemiss",
     school: "Undergraduate",
-    study: "ECE, Economics",
-    team: "",
-    email: "",
-    linkedin: "",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "DS",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
     img: "Middlemiss.png",
     github: "https://github.com/ryanmiddlemiss/"
   },
   {
-    name: "Yishu	Gong",
-    school: "Post-Graduate",
-    study: "",
-    team: "DS",
-    email: "",
-    linkedin: "",
-    img: "Gong.png",
-    github: "https://github.com/yishu0524/"
-  },
-  {
-    name: "Zhiyue	Zhang",
-    school: "Post-Graduate",
-    study: "",
-    team: "DS",
-    email: "",
-    linkedin: "",
-    img: ""
-  },
-  {
-    name: "Alina	Barnett",
-    school: "Post-Graduate",
+    name: "Alina Barnett",
+    school: "Ph.D.",
     study: "Computer Science",
     team: "DS",
-    email: "",
-    linkedin: "https://www.linkedin.com/in/hang-yang/",
-    img: ""
+    email: "alina.barnett@duke.edu",
+    linkedin: "https://www.linkedin.com/in/alina-jade-barnett-ab703582/",
+    img: "Barnett.jpg"
   },
   {
     name: "Hang	Yang",
-    school: "",
-    study: "",
+    school: "Ph.D.",
+    study: "Mathematics",
     team: "DS",
-    email: "",
+    email: "hang.yang@duke.edu",
     linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: "Yang.jpg"
   },
   {
     name: "Morris	Greenberg",
-    school: "",
-    study: "",
+    school: "Masters",
+    study: "Statistics",
     team: "DS",
-    email: "",
+    email: "morris.greenberg@duke.edu",
     linkedin: "https://www.linkedin.com/in/morris-greenberg-1b9abb63/",
     img: "Greenberg.jpg"
   },
   {
     name: "Phoebe	Klett",
-    school: "",
-    study: "",
+    school: "Undergraduate",
+    study: "Mathematics",
     team: "DS",
-    email: "",
+    email: "phoebe.klett@duke.edu",
     linkedin: "https://www.linkedin.com/in/phoebe-klett-644009134/",
-    img: ""
-  },
-  {
-    name: "Rachel	Williamson",
-    school: "",
-    study: "",
-    team: "",
-    email: "",
-    linkedin: "",
-    img: "Williamson.jpg"
+    img: "Klett.jpg"
   },
   {
     name: "Tima	Alqabandi",
-    school: "",
-    study: "",
-    team: "",
-    email: "",
+    school: "Ph.D.",
+    study: "Sociology",
+    team: "DS",
+    email: "fa83@duke.edu",
     linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
     img: "Alqabandi.jpg"
   }
@@ -241,9 +194,9 @@ const PS = [
   {
     name: "Yasa	Baig",
     school: "Undergraduate",
-    study: "Physics, CS",
+    study: "Physics, Computer Science",
     team: "Implementation",
-    email: "",
+    email: "yasa.baig@duke.edu",
     linkedin: "https://www.linkedin.com/in/yasab/",
     img: "Baig.jpg",
     github: "https://github.com/yasab27/"
@@ -252,10 +205,10 @@ const PS = [
   {
     name: "Nicole	Moiseyev",
     school: "Undergraduate",
-    study: "Neuroscience, CS",
+    study: "Neuroscience, Computer Science",
     team: "Implementation",
-    email: "",
-    linkedin: "",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
     img: "Moiseyev.jpg",
     github: "https://github.com/nicolemoiseyev/"
   }
@@ -337,12 +290,12 @@ class PeoplePage extends React.Component {
           <div className="title" style={{ padding: "0 0 1rem 0" }}>
             <center>Our Members</center>
           </div>
+          
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            Client Management Team
+            Data Science Team
             <hr />
           </div>
-          <center>{CRMgrid}</center>
-
+          <center>{DSgrid}</center>
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
             Implementation Team
             <hr />
@@ -350,10 +303,10 @@ class PeoplePage extends React.Component {
           <center>{PSgrid}</center>
 
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            Data Science Team
+            Client Management Team
             <hr />
           </div>
-          <center>{DSgrid}</center>
+          <center>{CRMgrid}</center>
 
           <Footer />
         </Container>

@@ -28,6 +28,9 @@ import baig from "./headshots/Baig.jpg";
 import levy from "./headshots/Levy.jpg";
 import moiseyev from "./headshots/Moiseyev.jpg";
 import fan from "./headshots/Fan.jpg";
+import wang from "./headshots/Wang.jpg";
+import barnett from "./headshots/Barnett.jpg";
+import tao from "./headshots/Tao.jpg";
 
 // compose dictionary of headshots for people that have headshots
 const headshots = {
@@ -50,7 +53,10 @@ const headshots = {
   "Yasa	Baig": baig,
   "Ben	Levy": levy,
   "Nicole	Moiseyev": moiseyev,
-  "Shuyi	Fan": fan
+  "Shuyi	Fan": fan,
+  "Bree Wang":wang,
+  "Daniel	Tao":tao,
+  "Alina Barnett":barnett
 };
 
 function Person(props) {
