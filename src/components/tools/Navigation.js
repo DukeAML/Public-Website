@@ -32,14 +32,14 @@ class Navigation extends React.Component {
             style={{
               alignItems: "center",
               display: "flex",
-              padding: "0.1rem 0 0 1rem"
+              padding: "0.1rem 0 0 0.6rem"
             }}
           >
             <Link to="/" style={{ padding: "0.4rem 0 0 1rem" }}>
               <div className="daml-icon" />
             </Link>
 
-            <div style={{ padding: "0 3rem 0 4rem", float: "left" }}>
+            <div style={{ padding: "0 2rem 0 2rem", float: "left" }}>
               <Link to="/projects" className="homepage-link">
                 Projects
               </Link>
@@ -50,7 +50,6 @@ class Navigation extends React.Component {
                 People
               </Link>
             </div>
-            
           </Col>
         </Row>
       </Container>
