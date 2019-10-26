@@ -10,6 +10,8 @@ import Person from "./Person";
 class PeopleRow extends React.Component {
   constructor() {
     super();
+    this.detailsBox = React.createRef();
+    this.peopleDisplay = React.createRef();
     this.state = {
       in: false,
       current: null,
@@ -17,6 +19,31 @@ class PeopleRow extends React.Component {
       currIndex: null
     };
   }
+
+  componentWillMount() {
+    document.addEventListener("mousedown", this.handleClickAway, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickAway, false);
+  }
+
+  handleClickAway = e => {
+    if (
+      this.detailsBox.contains(e.target) ||
+      this.peopleDisplay.contains(e.target)
+    ) {
+      // click is inside this component or within a people row; do not close it
+      return;
+    }
+    // close the component if user clicks away
+    this.setState({
+      current: null,
+      currIndex: null,
+      in: false,
+      lastClicked: null
+    });
+  };
 
   handleShowDetails(person, key) {
     if (key == this.state.lastClicked) {
@@ -116,8 +143,13 @@ class PeopleRow extends React.Component {
 
     return (
       <div>
-        <Row style={{ padding: `0 ${padding}%`, margin: 0 }}>{columns}</Row>
-        <Row>
+        <Row
+          ref={node => (this.peopleDisplay = node)}
+          style={{ margin: `0 ${padding}%` }}
+        >
+          {columns}
+        </Row>
+        <Row ref={node => (this.detailsBox = node)}>
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
               <div className="person-details box-shadowed">
