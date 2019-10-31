@@ -17,7 +17,6 @@ import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
 import withWindowDimensions from "./withWindowDimensions";
 
-import Details from "./Details";
 import Person from "./Person";
 import PeopleRow from "./PeopleRow";
 

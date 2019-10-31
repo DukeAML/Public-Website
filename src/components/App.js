@@ -13,6 +13,7 @@ import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
 import IndividualProject2 from "./projects/individual-pages/IndividualProject2";
 import IndividualProject3 from "./projects/individual-pages/IndividualProject3";
+import CoursesPage from "./courses/CoursesPage";
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <Route exact path="/project1" component={IndividualProject} />
         <Route exact path="/project2" component={IndividualProject2} />
         <Route exact path="/project3" component={IndividualProject3} />
+        <Route exact path="/courses" component={CoursesPage} />
       </BrowserRouter>
     );
   }

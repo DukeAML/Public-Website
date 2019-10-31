@@ -14,9 +14,11 @@
     "react-animate-height": "^2.0.16",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
+    "react-graph-vis": "^1.0.5",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "react-sigma": "^1.2.31"
   },
   "scripts": {
     "start": "react-scripts start",
