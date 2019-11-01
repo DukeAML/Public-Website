@@ -16,6 +16,15 @@ class CoursesDetailsTab extends React.Component {
           <b> Course name: </b>
           {selectedNode.name} <br />
           <br />
+          {selectedNode.professor === "" ? (
+            ""
+          ) : (
+            <div>
+              <b> Professor(s): </b>
+              {selectedNode.professor} <br />
+              <br />
+            </div>
+          )}
           <b> Description: </b>
           {selectedNode.description} <br />
           <br />
