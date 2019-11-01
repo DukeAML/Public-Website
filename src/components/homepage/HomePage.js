@@ -52,8 +52,8 @@ class HomePage extends React.Component {
             {/**Navigation Area */}
             <Col
               md={2}
-              sm={4}
-              xs={4}
+              sm={3}
+              xs={3}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -66,8 +66,8 @@ class HomePage extends React.Component {
             </Col>
             <Col
               md={2}
-              sm={4}
-              xs={4}
+              sm={3}
+              xs={3}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -81,8 +81,8 @@ class HomePage extends React.Component {
             </Col>
             <Col
               md={2}
-              sm={4}
-              xs={4}
+              sm={3}
+              xs={3}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -91,6 +91,21 @@ class HomePage extends React.Component {
             >
               <Link to="/people" className="homepage-link">
                 People
+              </Link>
+            </Col>
+
+            <Col
+              md={2}
+              sm={3}
+              xs={3}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <Link to="/courses" className="homepage-link">
+                Courses
               </Link>
             </Col>
           </Row>
@@ -136,8 +151,14 @@ class HomePage extends React.Component {
                   alignItems: "center"
                 }}
               >
-               We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
-
+                We are a group focused on building, implementing, and deploying
+                end-to-end machine learning models to solve research and
+                business problems. We establish collaborations with local
+                companies and organizations to identify and solve challenges
+                they face. Through collaboration with post-graduate, graduate,
+                and undergraduate students studying data science, mathematics,
+                computer science, business, electrical engineering and more, we
+                provide an interdisciplinary approach to solving these problems.
               </Col>
               <Col md={6} sm={12}>
                 <Animation />

@@ -45,9 +45,15 @@ class Navigation extends React.Component {
               </Link>
             </div>
 
-            <div style={{ padding: "0 0 0 0" }}>
+            <div style={{ padding: "0 2rem 0 0" }}>
               <Link to="/people" className="homepage-link">
                 People
+              </Link>
+            </div>
+
+            <div style={{ padding: "0 0 0 0" }}>
+              <Link to="/courses" className="homepage-link">
+                Courses
               </Link>
             </div>
           </Col>
