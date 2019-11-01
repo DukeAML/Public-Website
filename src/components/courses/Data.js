@@ -87,7 +87,7 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "James H Nolen",
-    to: "5,10,14,18,22,26,27,32,33"
+    to: "5,10,14,18,22,26,27,32,"
   },
   {
     id: 8,
@@ -372,23 +372,12 @@ nodes.forEach(node => {
       let edge = {
         id: `${node.id}-${sinkIndex}`,
         source: node.id,
-        target: sink
+        target: parseInt(sink)
       };
       edges.push(edge);
     }
   });
 });
-
-/* create an array with edges
-const edges = [
-  { id: "e1", name: "math related", source: 1, target: 5 },
-  { id: "e2", source: 2, target: 3 },
-  { id: "e3", source: 4, target: 2 },
-  { id: "e4", source: 2, target: 6 },
-  { id: "e5", source: 1, target: 6 },
-  { id: "e6", source: 6, target: 4 }
-];
-*/
 
 const data = {
   nodes: nodes,
