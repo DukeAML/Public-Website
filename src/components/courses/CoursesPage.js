@@ -26,7 +26,19 @@ const data = require("./Data");
 const myConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
-  height: "800",
+  collapsible: false,
+  directed: false,
+  focusAnimationDuration: 0.75,
+  focusZoom: 1,
+  height: 400,
+  highlightDegree: 1,
+  highlightOpacity: 1,
+  maxZoom: 8,
+  minZoom: 0.1,
+  panAndZoom: true,
+  staticGraph: false,
+  staticGraphWithDragAndDrop: false,
+  width: 800,
   node: {
     color: "#f0efe5",
     size: 200,
@@ -36,7 +48,9 @@ const myConfig = {
   },
   link: {
     highlightColor: "lightblue",
-    renderLabel: "true"
+    renderLabel: "true",
+    semanticStrokeWidth: false,
+    strokeWidth: 1.5
   },
   d3: {
     alphaTarget: 0.05,
@@ -61,6 +75,10 @@ class CoursesPage extends React.Component {
     this.setState({ selectedNode: data.nodes[node], tabDisplayed: true });
   };
 
+  onClickLink = link => {
+    console.log(link);
+  };
+
   onOverNode = e => {
     console.log(e);
   };
@@ -73,12 +91,15 @@ class CoursesPage extends React.Component {
           <Container fluid style={{ padding: "0" }}>
             <Row>
               <Col sm={12} md={6} style={{ borderStyle: "solid black" }}>
-                <Graph
-                  data={{ links: data.edges, nodes: data.nodes }}
-                  config={myConfig}
-                  id="graph-id"
-                  onClickNode={e => this.onClickNode(e)}
-                />
+                <div className="container__graph-area">
+                  <Graph
+                    data={{ links: data.edges, nodes: data.nodes }}
+                    config={myConfig}
+                    id="graph-id"
+                    onClickNode={e => this.onClickNode(e)}
+                    onClickLink={e => this.onClickLink(e)}
+                  />
+                </div>
               </Col>
               <Col sm={12} md={6}>
                 <CoursesDetailsTab
