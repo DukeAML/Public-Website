@@ -27,30 +27,32 @@ const myConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
   collapsible: false,
-  directed: false,
+  directed: true,
   focusAnimationDuration: 0.75,
-  focusZoom: 1,
-  height: 400,
-  highlightDegree: 1,
+  focusZoom: 8,
+  height: 600,
+  highlightDegree: 2,
   highlightOpacity: 1,
-  maxZoom: 8,
+  maxZoom: 5,
   minZoom: 0.1,
   panAndZoom: true,
-  staticGraph: false,
   staticGraphWithDragAndDrop: false,
+  nodeHighlightBehavior: true,
   width: 800,
+  highlightOpacity: 0.1,
   node: {
     color: "#f0efe5",
     size: 200,
-    highlightStrokeColor: "blue",
     labelProperty: "course",
-    fontColor: "#f0efe5"
+    fontColor: "#f0efe5",
+    fontSize: "0.5rem",
+    highlightFontSize: "0.5rem"
   },
   link: {
-    highlightColor: "lightblue",
     renderLabel: "true",
-    semanticStrokeWidth: false,
-    strokeWidth: 1.5
+    semanticStrokeWidth: true,
+    strokeWidth: 1,
+    fontSize: "0.5rem"
   },
   d3: {
     alphaTarget: 0.05,
@@ -65,21 +67,30 @@ class CoursesPage extends React.Component {
     super();
     this.state = {
       tabDisplayed: false,
-      selectedNode: null
+      selectedNode: null,
+      data: {
+        links: data.edges,
+        nodes: data.nodes,
+        focusedNodeId: null
+      },
+      config: myConfig
     };
   }
 
   // need to use arrow function to bind to this class
   onClickNode = node => {
     console.log(node);
-    this.setState({ selectedNode: data.nodes[node], tabDisplayed: true });
+    this.setState({
+      selectedNode: data.nodes[node],
+      tabDisplayed: true
+    });
   };
 
   onClickLink = link => {
     console.log(link);
   };
 
-  onOverNode = e => {
+  onMouseOverNode = e => {
     console.log(e);
   };
 
@@ -93,11 +104,12 @@ class CoursesPage extends React.Component {
               <Col sm={12} md={6} style={{ borderStyle: "solid black" }}>
                 <div className="container__graph-area">
                   <Graph
-                    data={{ links: data.edges, nodes: data.nodes }}
-                    config={myConfig}
+                    data={this.state.data}
+                    config={this.state.config}
                     id="graph-id"
                     onClickNode={e => this.onClickNode(e)}
                     onClickLink={e => this.onClickLink(e)}
+                    onMouseOverNode={e => this.onMouseOverNode(e)}
                   />
                 </div>
               </Col>
