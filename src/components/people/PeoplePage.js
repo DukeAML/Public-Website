@@ -161,15 +161,6 @@ const DS = [
     img: "Yang.jpg"
   },
   {
-    name: "Morris	Greenberg",
-    school: "Masters",
-    study: "Statistics",
-    team: "DS",
-    email: "morris.greenberg@duke.edu",
-    linkedin: "https://www.linkedin.com/in/morris-greenberg-1b9abb63/",
-    img: "Greenberg.jpg"
-  },
-  {
     name: "Phoebe	Klett",
     school: "Undergraduate",
     study: "Mathematics",
