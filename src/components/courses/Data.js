@@ -369,6 +369,7 @@ nodes.forEach(node => {
   let sinks = node.to.split(",");
   node.to = sinks;
   node.from = [];
+  node.color = "";
   sinks.forEach((sink, sinkIndex) => {
     if (sink != "") {
       let edge = {

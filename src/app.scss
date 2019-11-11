@@ -211,12 +211,18 @@ a.homepage-link {
   color: $main-white;
   padding: 1rem;
   margin: 1rem;
+  max-width: 300px;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  max-height: 600px;
 }
 
 .container__graph-area {
-  max-height: 1000px;
-  border: 1px solid gray;
+  height: 90vh;
+  width: 80vw;
   margin: 1rem;
   z-index: 1;
-  overflow: hidden;
 }

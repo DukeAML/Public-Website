@@ -30,15 +30,15 @@ const myConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 8,
-  height: 600,
-  highlightDegree: 2,
+  height: 800,
+  highlightDegree: 1,
   highlightOpacity: 1,
   maxZoom: 5,
   minZoom: 0.1,
   panAndZoom: true,
   staticGraphWithDragAndDrop: false,
   nodeHighlightBehavior: true,
-  width: 800,
+  width: 2000,
   highlightOpacity: 0.1,
   node: {
     color: "#f0efe5",
@@ -46,13 +46,14 @@ const myConfig = {
     labelProperty: "course",
     fontColor: "#f0efe5",
     fontSize: "0.5rem",
-    highlightFontSize: "0.5rem"
+    highlightFontSize: "0.5rem",
+    selectedColor: "#ffffff"
   },
   link: {
     renderLabel: "true",
-    semanticStrokeWidth: true,
     strokeWidth: 1,
-    fontSize: "0.5rem"
+    fontSize: "1rem",
+    color: "#617489"
   },
   d3: {
     alphaTarget: 0.05,
@@ -98,29 +99,21 @@ class CoursesPage extends React.Component {
     return (
       <div>
         <div>
-          <Navigation />
-          <Container fluid style={{ padding: "0" }}>
-            <Row>
-              <Col sm={12} md={6} style={{ borderStyle: "solid black" }}>
-                <div className="container__graph-area">
-                  <Graph
-                    data={this.state.data}
-                    config={this.state.config}
-                    id="graph-id"
-                    onClickNode={e => this.onClickNode(e)}
-                    onClickLink={e => this.onClickLink(e)}
-                    onMouseOverNode={e => this.onMouseOverNode(e)}
-                  />
-                </div>
-              </Col>
-              <Col sm={12} md={6}>
-                <CoursesDetailsTab
-                  in={this.state.tabDisplayed}
-                  selectedNode={this.state.selectedNode}
-                />
-              </Col>
-            </Row>
-          </Container>
+          <Navigation />]
+          <CoursesDetailsTab
+            in={this.state.tabDisplayed}
+            selectedNode={this.state.selectedNode}
+          />
+          <div className="container__graph-area">
+            <Graph
+              data={this.state.data}
+              config={this.state.config}
+              id="graph-id"
+              onClickNode={e => this.onClickNode(e)}
+              onClickLink={e => this.onClickLink(e)}
+              onMouseOverNode={e => this.onMouseOverNode(e)}
+            />
+          </div>
           <Footer />
         </div>
       </div>
