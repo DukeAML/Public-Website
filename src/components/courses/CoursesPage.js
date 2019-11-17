@@ -31,7 +31,7 @@ const myConfig = {
   focusAnimationDuration: 0.75,
   focusZoom: 2,
   height: 800,
-  width: 800,
+  width: 1200,
   highlightDegree: 1,
   highlightOpacity: 1,
   maxZoom: 4,

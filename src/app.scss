@@ -205,6 +205,10 @@ a.homepage-link {
 }
 
 ///// courses display
+.container__graph-area {
+  margin: 1rem;
+  z-index: 1;
+}
 
 .courses-details-tab {
   background-color: $dark-grey;

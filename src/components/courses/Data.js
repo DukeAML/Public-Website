@@ -367,7 +367,7 @@ let edges = [];
 
 nodes.forEach(node => {
   let sinks = node.to.split(",");
-  node.to = sinks;
+  node.to = [];
   node.from = [];
   node.color = "";
   sinks.forEach((sink, sinkIndex) => {
@@ -384,6 +384,7 @@ nodes.forEach(node => {
 
 edges.forEach(edge => {
   nodes[edge.target].from.push(nodes[edge.source]);
+  nodes[edge.source].to.push(nodes[edge.target]);
 });
 
 const data = {
