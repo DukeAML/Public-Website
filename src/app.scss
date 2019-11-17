@@ -210,13 +210,11 @@ a.homepage-link {
   background-color: $dark-grey;
   color: $main-white;
   padding: 1rem;
-  margin: 1rem;
-}
-
-.container__graph-area {
-  max-height: 1000px;
-  border: 1px solid gray;
-  margin: 1rem;
-  z-index: 1;
-  overflow: hidden;
+  margin: 2rem;
+  max-width: 300px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  max-height: 600px;
 }

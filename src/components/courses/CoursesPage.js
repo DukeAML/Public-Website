@@ -27,30 +27,35 @@ const myConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
   collapsible: false,
-  directed: false,
+  directed: true,
   focusAnimationDuration: 0.75,
-  focusZoom: 1,
-  height: 400,
+  focusZoom: 2,
+  height: 800,
+  width: 800,
   highlightDegree: 1,
   highlightOpacity: 1,
-  maxZoom: 8,
-  minZoom: 0.1,
+  maxZoom: 4,
+  minZoom: 0.001,
   panAndZoom: true,
-  staticGraph: false,
   staticGraphWithDragAndDrop: false,
-  width: 800,
+  nodeHighlightBehavior: true,
+  highlightOpacity: 0.1,
+  collapsible: true,
   node: {
     color: "#f0efe5",
     size: 200,
-    highlightStrokeColor: "blue",
     labelProperty: "course",
-    fontColor: "#f0efe5"
+    fontColor: "#f0efe5",
+    fontSize: "0.5rem",
+    highlightFontSize: "0.5rem",
+    selectedColor: "#ffffff",
+    clickFontColor: "#000000"
   },
   link: {
-    highlightColor: "lightblue",
     renderLabel: "true",
-    semanticStrokeWidth: false,
-    strokeWidth: 1.5
+    strokeWidth: 1,
+    fontSize: "1rem",
+    color: "#617489"
   },
   d3: {
     alphaTarget: 0.05,
@@ -65,52 +70,71 @@ class CoursesPage extends React.Component {
     super();
     this.state = {
       tabDisplayed: false,
-      selectedNode: null
+      selectedNode: null,
+      data: {
+        links: data.edges,
+        nodes: data.nodes
+      },
+      focusedNodeId: null,
+      config: myConfig
     };
   }
 
   // need to use arrow function to bind to this class
   onClickNode = node => {
     console.log(node);
-    this.setState({ selectedNode: data.nodes[node], tabDisplayed: true });
+    this.setState({
+      selectedNode: data.nodes[node],
+      tabDisplayed: true,
+      focusedNodeId: node
+    });
   };
 
   onClickLink = link => {
     console.log(link);
   };
 
-  onOverNode = e => {
+  onMouseOverNode = e => {
     console.log(e);
+  };
+
+  onClickGraph = e => {
+    this.setState({
+      selectedNode: null
+    });
+    this.setState({
+      focusedNodeId: null,
+      tabDisplayed: false
+    });
   };
 
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-          <Container fluid style={{ padding: "0" }}>
-            <Row>
-              <Col sm={12} md={6} style={{ borderStyle: "solid black" }}>
-                <div className="container__graph-area">
-                  <Graph
-                    data={{ links: data.edges, nodes: data.nodes }}
-                    config={myConfig}
-                    id="graph-id"
-                    onClickNode={e => this.onClickNode(e)}
-                    onClickLink={e => this.onClickLink(e)}
-                  />
-                </div>
-              </Col>
-              <Col sm={12} md={6}>
-                <CoursesDetailsTab
-                  in={this.state.tabDisplayed}
-                  selectedNode={this.state.selectedNode}
-                />
-              </Col>
-            </Row>
-          </Container>
+        <Navigation />
+        <Container fluid style={{ padding: 0 }}>
+          <CoursesDetailsTab
+            in={this.state.tabDisplayed}
+            selectedNode={this.state.selectedNode}
+          />
+          <center>
+            <div className="container__graph-area">
+              <Graph
+                data={{
+                  ...this.state.data,
+                  focusedNodeId: this.state.focusedNodeId
+                }}
+                config={this.state.config}
+                id="graph-id"
+                onClickNode={e => this.onClickNode(e)}
+                onClickGraph={e => this.onClickGraph(e)}
+                onClickLink={e => this.onClickLink(e)}
+                onMouseOverNode={e => this.onMouseOverNode(e)}
+              />
+            </div>
+          </center>
           <Footer />
-        </div>
+        </Container>
       </div>
     );
   }
