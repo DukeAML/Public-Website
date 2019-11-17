@@ -44,7 +44,7 @@ class HomePage extends React.Component {
         <Container style={{ height: "100%", paddingTop: "60px" }} />
 
         {/**INTRODUCTION SECTION */}
-        <Container fluid style={{ marginBottom: "10px" }}>
+        <Container fluid style={{ height: "100vh", marginBottom: "10px" }}>
           <Row
             className="justify-content-md-center"
             style={{ fontSize: "1.5rem" }}
@@ -99,14 +99,14 @@ class HomePage extends React.Component {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              paddingTop: "65px"
+              paddingTop: "30vh"
             }}
           >
             {/**Icon */}
             <Image
               fluid
               className="main-graphic"
-              src={require("./images/DAML-logo.svg")}
+              src={require("./images/DAML_Full_Cream_Transparent.svg")}
             />
           </Row>
         </Container>
@@ -130,14 +130,13 @@ class HomePage extends React.Component {
                 md={6}
                 sm={12}
                 style={{
-                  fontFamily: "Roboto Mono",
+                  fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
               >
                We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
-
               </Col>
               <Col md={6} sm={12}>
                 <Animation />
@@ -147,7 +146,7 @@ class HomePage extends React.Component {
         </Container>
 
         {/** APPLICATIONS SECTION */}
-        <Container fluid>
+        {/* <Container fluid>
           <Container>
             <h3
               className="homepageTitle"
@@ -157,8 +156,9 @@ class HomePage extends React.Component {
             </h3>
             <IndustryBuckets />
           </Container>
-        </Container>
-        <Footer />
+        </Container> */}
+        <Footer
+        />
       </div>
     );
   }

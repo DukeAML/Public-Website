@@ -98,7 +98,7 @@ const DS = [
   {
     name: "Daniel	Tao",
     school: "Undergraduate",
-    study: "Computer Science, Statistics",
+    study: "Computer Science",
     team: "DS",
     email: "chaofan.tao@duke.edu",
     linkedin: "https://www.linkedin.com/in/chaofan-daniel-tao/",
@@ -160,15 +160,6 @@ const DS = [
     email: "hang.yang@duke.edu",
     linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: "Yang.jpg"
-  },
-  {
-    name: "Morris	Greenberg",
-    school: "Masters",
-    study: "Statistics",
-    team: "DS",
-    email: "morris.greenberg@duke.edu",
-    linkedin: "https://www.linkedin.com/in/morris-greenberg-1b9abb63/",
-    img: "Greenberg.jpg"
   },
   {
     name: "Phoebe	Klett",
