@@ -27,13 +27,13 @@ import PeopleRow from "./PeopleRow";
 
 const CRM = [
   {
-    name: "Ben	Levy",
+    name: "Shuyi	Fan",
     school: "Fuqua School of Business",
-    study: "MBA",
+    study: "QMS",
     team: "CRM",
-    email: "ben.levy@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ben-levy1/",
-    img: "Levy.jpg"
+    email: "shuyi.fan@duke.edu",
+    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
+    img: "Fan.jpg"
   },
   {
     name: "Mary	Gooneratne",
@@ -46,22 +46,22 @@ const CRM = [
     github: "https://github.com/marygooneratne/"
   },
   {
-    name: "Shuyi	Fan",
+    name: "Ben	Levy",
     school: "Fuqua School of Business",
-    study: "QMS",
+    study: "MBA",
     team: "CRM",
-    email: "shuyi.fan@duke.edu",
-    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
-    img: "Fan.jpg"
+    email: "ben.levy@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ben-levy1/",
+    img: "Levy.jpg"
   },
   {
-    name: "Rachel	Williamson",
-    school: "Fuqua School of Business",
-    study: "QMS",
+    name: "Luke	Truitt",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
     team: "CRM",
-    email: "rachel.williamson@duke.edu",
-    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
-    img: "Williamson.jpg"
+    email: "luke.truitt@duke.edu",
+    linkedin: "https://www.linkedin.com/in/luke-truitt/",
+    github: "https://github.com/luke-truitt/"
   },
   {
     name: "Bree Wang",
@@ -73,23 +73,118 @@ const CRM = [
     img: "Wang.jpg"
   },
   {
-    name: "Luke	Truitt",
-    school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
+    name: "Rachel	Williamson",
+    school: "Fuqua School of Business",
+    study: "QMS",
     team: "CRM",
-    email: "luke.truitt@duke.edu",
-    linkedin: "https://www.linkedin.com/in/luke-truitt/",
-    github: "https://github.com/luke-truitt/"
-  }
+    email: "rachel.williamson@duke.edu",
+    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
+    img: "Williamson.jpg"
+  },
 ];
 
 // Compose array of person objects with necessary info
 const DS = [
   {
+    name: "Tima	Alqabandi",
+    school: "Ph.D.",
+    study: "Sociology",
+    team: "VR Sickness",
+    email: "fa83@duke.edu",
+    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
+    img: "Alqabandi.jpg"
+  },
+  {
+    name: "Alina Barnett",
+    school: "Ph.D.",
+    study: "Computer Science",
+    team: "VR Sickness",
+    email: "alina.barnett@duke.edu",
+    linkedin: "https://www.linkedin.com/in/alina-jade-barnett-ab703582/",
+    img: "Barnett.jpg"
+  },
+  {
+    name: "Suchir Bhatt",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Restaurant",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Olivier Binette",
+    school: "Ph.D.",
+    study: "Statistics",
+    team: "Visualization",
+    email: "olivier.binette@duke.edu",
+    linkedin: "https://www.linkedin.com/in/olivier-binette/",
+    img: "Binette.jpg"
+  },
+  {
+    name: "Jia Rong	Chua",
+    school: "Masters",
+    study: "Economics",
+    team: "Fidget",
+    email: "jiarong.chua@duke.edu",
+    linkedin: "https://www.linkedin.com/in/jiarongchua/",
+    img: "Chua.jpg"
+  },
+  {
+    name: "Ram Gallopudy",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Human Connectome",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Niko Hobart",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Restaurant",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Himanshu Jain",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Fidget",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Jaiveer Katariya",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Fidget",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Phoebe	Klett",
+    school: "Undergraduate",
+    study: "Mathematics",
+    team: "Fidget",
+    email: "phoebe.klett@duke.edu",
+    linkedin: "https://www.linkedin.com/in/phoebe-klett-644009134/",
+    img: "Klett.jpg"
+  },
+  {
     name: "Varun Nair",
     school: "Undergraduate",
     study: "CS, Math",
-    team: "DS",
+    team: "Human Connectome",
     email: "varun.nair.1@duke.edu",
     linkedin: "https://www.linkedin.com/in/varunnair18/",
     img: "Nair.jpg",
@@ -99,7 +194,7 @@ const DS = [
     name: "Daniel	Tao",
     school: "Undergraduate",
     study: "Computer Science",
-    team: "DS",
+    team: "VR Sickness",
     email: "chaofan.tao@duke.edu",
     linkedin: "https://www.linkedin.com/in/chaofan-daniel-tao/",
     github: "https://github.com/danieltao/",
@@ -109,76 +204,22 @@ const DS = [
     name: "Anna	Yanchencko",
     school: "Ph.D.",
     study: "Statistics",
-    team: "DS",
+    team: "Timeseries",
     email: "anna.yanchenko@duke.edu",
     linkedin: "https://www.linkedin.com/in/anna-yanchenko/",
     github: "https://github.com/aky4wn/",
     img: "Yanchencko.jpg"
   },
   {
-    name: "Jia Rong	Chua",
-    school: "Masters",
-    study: "Economics",
-    team: "DS",
-    email: "jiarong.chua@duke.edu",
-    linkedin: "https://www.linkedin.com/in/jiarongchua/",
-    img: "Chua.jpg"
-  },
-  {
-    name: "Olivier Binette",
-    school: "Ph.D.",
-    study: "Statistics",
-    team: "DS",
-    email: "olivier.binette@duke.edu",
-    linkedin: "https://www.linkedin.com/in/olivier-binette/",
-    img: "Binette.jpg"
-  },
-  {
-    name: "Ryan	Middlemiss",
-    school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
-    team: "DS",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
-  },
-  {
-    name: "Alina Barnett",
-    school: "Ph.D.",
-    study: "Computer Science",
-    team: "DS",
-    email: "alina.barnett@duke.edu",
-    linkedin: "https://www.linkedin.com/in/alina-jade-barnett-ab703582/",
-    img: "Barnett.jpg"
-  },
-  {
     name: "Hang	Yang",
     school: "Ph.D.",
     study: "Mathematics",
-    team: "DS",
+    team: "Hman Connectome",
     email: "hang.yang@duke.edu",
     linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: "Yang.jpg"
   },
-  {
-    name: "Phoebe	Klett",
-    school: "Undergraduate",
-    study: "Mathematics",
-    team: "DS",
-    email: "phoebe.klett@duke.edu",
-    linkedin: "https://www.linkedin.com/in/phoebe-klett-644009134/",
-    img: "Klett.jpg"
-  },
-  {
-    name: "Tima	Alqabandi",
-    school: "Ph.D.",
-    study: "Sociology",
-    team: "DS",
-    email: "fa83@duke.edu",
-    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
-    img: "Alqabandi.jpg"
-  }
+  
 ];
 
 const PS = [
@@ -186,23 +227,122 @@ const PS = [
     name: "Yasa	Baig",
     school: "Undergraduate",
     study: "Physics, Computer Science",
-    team: "Implementation",
+    team: "Software",
     email: "yasa.baig@duke.edu",
     linkedin: "https://www.linkedin.com/in/yasab/",
     img: "Baig.jpg",
     github: "https://github.com/yasab27/"
   },
-
   {
-    name: "Nicole	Moiseyev",
+    name: "Anabella Buckvar",
     school: "Undergraduate",
     study: "Neuroscience, Computer Science",
-    team: "Implementation",
+    team: "Software",
     email: "nicole.moiseyev@duke.edu",
     linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
     img: "Moiseyev.jpg",
     github: "https://github.com/nicolemoiseyev/"
-  }
+  },
+  {
+    name: "Madeline Cuozzo",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Wyatt Focht",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Sauren Gupta",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Russell Llave",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Raj Mehta",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Hardware",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Ryan	Middlemiss",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering, Economics",
+    team: "Software",
+    email: "ryan.middlemiss@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
+    img: "Middlemiss.png",
+    github: "https://github.com/ryanmiddlemiss/"
+  },
+  {
+    name: "Nicole	Moiseyev",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Luiza Wolf",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Hardware",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Christine Yoon",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Software",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
+  {
+    name: "Cady Zhou",
+    school: "Undergraduate",
+    study: "Neuroscience, Computer Science",
+    team: "Hardware",
+    email: "nicole.moiseyev@duke.edu",
+    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    img: "Moiseyev.jpg",
+    github: "https://github.com/nicolemoiseyev/"
+  },
 ];
 
 const peopleInfo = [CRM, DS, PS];
@@ -230,7 +370,7 @@ class PeoplePage extends React.Component {
       //xs; 1 person per row
       cols = 1;
     }
-
+    
     console.log("Cols: ", cols);
     console.log(people.length);
 
@@ -281,11 +421,11 @@ class PeoplePage extends React.Component {
     if (window <= 576) {
       DStitle = <center> Data Science Team </center>;
       PStitle = <center> Implementation Team </center>;
-      CRMtitle = <center> Client Management Team </center>;
+      CRMtitle = <center> Business Team </center>;
     } else {
       DStitle = "Data Science Team";
       PStitle = "Implementation Team";
-      CRMtitle = "Client Management Team";
+      CRMtitle = "Business Team";
     }
 
     return (

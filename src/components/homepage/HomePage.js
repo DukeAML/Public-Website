@@ -24,7 +24,15 @@ import "./HomePage.scss";
 class HomePage extends React.Component {
   state = { redirect: false };
 
-  handleSignUpClick = () => {};
+  handleSignUpClick = () => {
+    var link = "mailto:news@dukeaml.com"
+             + "?cc=duke.applied.ml@gmail.com"
+             + "&subject=" + escape("Add me to the Newsletter!")
+             + "&body=" + escape("This is the email to add.")
+    ;
+
+    window.location.href = link;
+  };
 
   handleProjectsClick = () => {
     this.setState({ redirect: true });
@@ -146,17 +154,23 @@ class HomePage extends React.Component {
         </Container>
 
         {/** APPLICATIONS SECTION */}
-        {/* <Container fluid>
+        <Container fluid>
           <Container>
             <h3
               className="homepageTitle"
               style={{ marginBottom: "20px", marginTop: "20px" }}
             >
-              Bring ML To Your Field
+              Join Our Newletter!
             </h3>
-            <IndustryBuckets />
+            <button className="homepageButton"
+              style={{ marginBottom: "30px", marginTop: "30px" }}
+              onClick={this.handleSignUpClick}
+              >
+                Join!
+              </button>
+            {/* <IndustryBuckets /> */}
           </Container>
-        </Container> */}
+        </Container>
         <Footer
         />
       </div>

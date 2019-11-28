@@ -109,9 +109,17 @@ class PeopleRow extends React.Component {
     }
 
     let { current } = this.state;
-    let school, studying, name;
+    let school, studying, name, team;
 
     if (current != null) {
+      team =
+        current.team != "" ? (
+          <div>
+            <b>Team</b>: {current.team}{" "}
+          </div>
+        ) : (
+          ""
+        );
       school =
         current.school != "" ? (
           <div>
@@ -130,6 +138,7 @@ class PeopleRow extends React.Component {
         );
       name = current.name;
     } else {
+      team = "";
       school = "";
       studying = "";
       name = "";
@@ -161,6 +170,7 @@ class PeopleRow extends React.Component {
                   }}
                 >
                   <div className="title">{name}</div>
+                  {team}
                   {school}
                   {studying}
                 </div>
