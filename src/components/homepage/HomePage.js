@@ -163,7 +163,7 @@ class HomePage extends React.Component {
               Join Our Newletter!
             </h3>
             <button className="homepageButton"
-              style={{ marginBottom: "30px", marginTop: "30px" }}
+              style={{ color: "white", marginBottom: "30px", marginTop: "30px" }}
               onClick={this.handleSignUpClick}
               >
                 Join!

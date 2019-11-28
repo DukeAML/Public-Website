@@ -31,20 +31,20 @@ import fan from "./headshots/Fan.jpg";
 import wang from "./headshots/Wang.jpg";
 import barnett from "./headshots/Barnett.jpg";
 import tao from "./headshots/Tao.jpg";
-import cuozzo from "./headshots/Alqabandi.jpg";
-import focht from "./headshots/Alqabandi.jpg";
-import yoon from "./headshots/Alqabandi.jpg";
-import llave from "./headshots/Alqabandi.jpg";
-import mehta from "./headshots/Alqabandi.jpg";
-import wolf from "./headshots/Alqabandi.jpg";
-import zhou from "./headshots/Alqabandi.jpg";
-import buckvar from "./headshots/Alqabandi.jpg";
-import gupta from "./headshots/Alqabandi.jpg";
-import katariya from "./headshots/Alqabandi.jpg";
-import gollapudy from "./headshots/Alqabandi.jpg";
-import jain from "./headshots/Alqabandi.jpg";
-import bhatt from "./headshots/Alqabandi.jpg";
-import hobart from "./headshots/Alqabandi.jpg";
+import cuozzo from "./headshots/profile-placeholder.svg";
+import focht from "./headshots/Focht.jpg";
+import yoon from "./headshots/Yoon.jpg";
+import llave from "./headshots/profile-placeholder.svg";
+import mehta from "./headshots/profile-placeholder.svg";
+import wolf from "./headshots/profile-placeholder.svg";
+import zhou from "./headshots/Zhou.jpg";
+import buckvar from "./headshots/profile-placeholder.svg";
+import gupta from "./headshots/Gupta.jpg";
+import katariya from "./headshots/Katariya.jpg";
+import gollapudy from "./headshots/profile-placeholder.svg";
+import jain from "./headshots/profile-placeholder.svg";
+import bhatt from "./headshots/profile-placeholder.svg";
+import hobart from "./headshots/profile-placeholder.svg";
 
 // compose dictionary of headshots for people that have headshots
 const headshots = {

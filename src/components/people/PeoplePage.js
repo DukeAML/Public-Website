@@ -95,7 +95,7 @@ const DS = [
     img: "Alqabandi.jpg"
   },
   {
-    name: "Alina Barnett",
+    name: "Alina Barnett", 
     school: "Ph.D.",
     study: "Computer Science",
     team: "VR Sickness",
@@ -106,12 +106,10 @@ const DS = [
   {
     name: "Suchir Bhatt",
     school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
+    study: "Computer Science",
     team: "Restaurant",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
+    email: "suchir.bhatt@duke.edu",
+    img: "",
   },
   {
     name: "Olivier Binette",
@@ -134,22 +132,20 @@ const DS = [
   {
     name: "Ram Gallopudy",
     school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
+    study: "Electrical and Computer Engineering",
     team: "Human Connectome",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
+    email: "ram.gallopudy@duke.edu",
+    linkedin: "https://www.linkedin.com/in/ram-gollapudy-08a334aa/",
+    img: "",
   },
   {
     name: "Niko Hobart",
     school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
+    study: "Electrical and Computer Engineering",
     team: "Restaurant",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
+    email: "niko.hobart@duke.edu",
+    linkedin: "https://www.linkedin.com/in/niko-hobart-562826195/",
+    img: "",
   },
   {
     name: "Himanshu Jain",
@@ -164,12 +160,12 @@ const DS = [
   {
     name: "Jaiveer Katariya",
     school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
+    study: "Computer Science, Statistics",
     team: "Fidget",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
+    email: "jaiveer.katariya@duke.edu",
+    linkedin: "https://www.linkedin.com/in/jaiveer-katariya-900865166/",
+    img: "Katariya.png",
+    github: "https://github.com/jaiveerk/"
   },
   {
     name: "Phoebe	Klett",
@@ -236,62 +232,62 @@ const PS = [
   {
     name: "Anabella Buckvar",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "anabella.buckvar@duke.edu",
+    linkedin: "https://www.linkedin.com/in/anabella-buckvar-818614162/",
+    img: "",
+    github: "https://github.com/anabellab/"
   },
   {
     name: "Madeline Cuozzo",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "madeline.cuozzo@duke.edu",
+    linkedin: "https://www.linkedin.com/in/madeline-cuozzo/",
+    img: "",
+    github: "https://github.com/mcuozzo19/"
   },
   {
     name: "Wyatt Focht",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science, Electrical and Computer Engineering",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "wyatt.focht@duke.edu",
+    linkedin: "https://www.linkedin.com/in/wyattfocht/",
+    img: "Focht.jpg",
+    github: "https://github.com/wyattgf/"
   },
   {
     name: "Sauren Gupta",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science, Economics",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "sauren.gupta@duke.edu",
+    linkedin: "https://www.linkedin.com/in/sauren-g/",
+    img: "Gupta.jpg",
+    github: "https://github.com/sauren5842/"
   },
   {
     name: "Russell Llave",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "russell.llave@duke.edu",
+    linkedin: "https://www.linkedin.com/in/russell-llave-999236102/",
+    img: "",
+    github: "https://github.com/russellave/"
   },
   {
     name: "Raj Mehta",
     school: "Undergraduate",
     study: "Neuroscience, Computer Science",
     team: "Hardware",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "rm359@duke.edu",
+    linkedin: "https://www.linkedin.com/in/rmehta010/",
+    img: "",
+    github: "https://github.com/rmehta010/"
   },
   {
     name: "Ryan	Middlemiss",
@@ -316,32 +312,32 @@ const PS = [
   {
     name: "Luiza Wolf",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Electrical and Computer Engineering",
     team: "Hardware",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
+    email: "luiza.wolf@duke.edu",
+    linkedin: "https://www.linkedin.com/in/luiza-wolf/",
     img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    github: "https://github.com/luizaawwolf/"
   },
   {
     name: "Christine Yoon",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science",
     team: "Software",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "christine.yoon@duke.edu",
+    linkedin: "https://www.linkedin.com/in/christineyoon1/",
+    img: "Yoon.jpg",
+    github: "https://github.com/cyoon23/"
   },
   {
     name: "Cady Zhou",
     school: "Undergraduate",
-    study: "Neuroscience, Computer Science",
+    study: "Computer Science, Electrical and Computer Engineering",
     team: "Hardware",
-    email: "nicole.moiseyev@duke.edu",
-    linkedin: "https://www.linkedin.com/in/nicole-m-184123b4/",
-    img: "Moiseyev.jpg",
-    github: "https://github.com/nicolemoiseyev/"
+    email: "cady.zhou@duke.edu",
+    linkedin: "https://www.linkedin.com/in/cadyzhou/",
+    img: "Zhou.jpg",
+    github: "https://github.com/candyzq/"
   },
 ];
 
