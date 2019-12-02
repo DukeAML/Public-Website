@@ -1,6 +1,6 @@
 // create an array with nodes
 // id needs to be = to the node's index in the array
-const nodes = [
+let nodes = [
   {
     id: 0,
     course: "Math 212/222",
@@ -10,7 +10,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Many",
-    to: "27,30,32,"
+    prereqs__1: "",
+    skills_to: "",
+    skills_from: 0
   },
   {
     id: 1,
@@ -21,7 +23,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Many",
-    to: "4,6,27,30"
+    prereqs__1: "",
+    skills_to: "",
+    skills_from: 1
   },
   {
     id: 2,
@@ -32,7 +36,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Many",
-    to: "4,6,21,22,23,27,30"
+    prereqs__1: "",
+    skills_to: "",
+    skills_from: 1
   },
   {
     id: 3,
@@ -43,7 +49,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Many",
-    to: "14,18,31,32"
+    prereqs__1: 0,
+    skills_to: "",
+    skills_from: 4
   },
   {
     id: 4,
@@ -54,7 +62,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Paul Bendich",
-    to: "5,"
+    prereqs__1: "(1|2)",
+    skills_to: 1,
+    skills_from: "2,3,8,9"
   },
   {
     id: 5,
@@ -65,7 +75,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Cynthia Rudin",
-    to: "24,25"
+    prereqs__1: "",
+    skills_to: "0,1,2,3,5,7,8,9,11,12",
+    skills_from: "17,18,19,20,21,22"
   },
   {
     id: 6,
@@ -75,8 +87,10 @@ const nodes = [
       "Introduction to core concepts in machine learning and statistical pattern recognition, with a focus on discriminative and generative classifiers (nearest-neighbors, Bayes, logistic regression, linear discriminant, support vector machine, and relevance vector machine). Dimensionality reduction and feature selection. Classifier performance evaluation, bias-variance tradeoff, and cross-validation. Prerequisite: (Mathematics 216, Mathematics 218, Mathematics 221, or ECE 586) and (Computer Science 201 or ECE 551D) and ECE 581. Not open to students who have taken Computer Science 671D.",
     prereqs: "",
     semesters: "Fall",
-    professor: "",
-    to: "5,24,25"
+    professor: "Tantum",
+    prereqs__1: "",
+    skills_to: "0,1,4,7,10",
+    skills_from: "19,20,21,22"
   },
   {
     id: 7,
@@ -87,7 +101,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "James H Nolen",
-    to: "5,10,14,18,22,26,27,32,"
+    prereqs__1: 0,
+    skills_to: 1,
+    skills_from: 5
   },
   {
     id: 8,
@@ -96,9 +112,11 @@ const nodes = [
     description:
       "The course will explore mathematics underlying the practice and theory of various machine learning concepts and algorithms. Kernel methods, deep learning, reinforcement learning, generalization error, stochastic gradient descent, and dimension reduction or data embeddings will be introduced. The interplay between the mathematics and real applications will be a component of the course. Students can take both this course and Mathematics 465 for credit. Recommended prerequisite: Mathematics 230/340 and 218/216/221 and some familiarity with programing, preferably Python.",
     prereqs: "",
-    semesters: "",
+    semesters: "Fall",
     professor: "Yitzchak Elchanan Solomon",
-    to: "5,"
+    prereqs__1: "(3|7),(1|2)",
+    skills_to: "0,1,2,3,12,13,14",
+    skills_from: "17,19,20,22"
   },
   {
     id: 9,
@@ -107,9 +125,11 @@ const nodes = [
     description:
       "An introduction to stochastic processes without measure theory. Topics selected from: Markov chains in discrete and continuous time, queuing theory, branching processes, martingales, Brownian motion, stochastic calculus. Prerequisite: Mathematics 230 or Mathematics 340 or equivalent.",
     prereqs: "",
-    semesters: "",
+    semesters: "Fall",
     professor: "Tau Shean Lim",
-    to: "5,"
+    prereqs__1: "(3|7)",
+    skills_to: 5,
+    skills_from: 24
   },
   {
     id: 10,
@@ -120,7 +140,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Sayan Mukherjee",
-    to: ""
+    prereqs__1: "(3|7)",
+    skills_to: 5,
+    skills_from: 24
   },
   {
     id: 11,
@@ -131,7 +153,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Astrachan, Forbes, or Rodger",
-    to: "14,15"
+    prereqs__1: "",
+    skills_to: 5,
+    skills_from: 10
   },
   {
     id: 12,
@@ -142,7 +166,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Alexander Hartemink",
-    to: "29,"
+    prereqs__1: "",
+    skills_to: 4,
+    skills_from: 11
   },
   {
     id: 13,
@@ -153,7 +179,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Agarwal, Munagala, Panigrahi, or Reif",
-    to: "16,28,29"
+    prereqs__1: "(3|7),11",
+    skills_to: 4,
+    skills_from: 11
   },
   {
     id: 14,
@@ -164,7 +192,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Carlo Tomasi",
-    to: "24,25,26,27,"
+    prereqs__1: "0,(1|2),(3|7),11",
+    skills_to: "0,1,4",
+    skills_from: "7,11,12,15"
   },
   {
     id: 15,
@@ -175,7 +205,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Conitzer or Parr",
-    to: "5,"
+    prereqs__1: 13,
+    skills_to: 11,
+    skills_from: 24
   },
   {
     id: 16,
@@ -186,7 +218,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Many",
-    to: "3,7,17,18"
+    prereqs__1: "",
+    skills_to: "",
+    skills_from: 4
   },
   {
     id: 17,
@@ -197,7 +231,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Maria A Tackett",
-    to: "18,"
+    prereqs__1: 3,
+    skills_to: 4,
+    skills_from: "7,23"
   },
   {
     id: 18,
@@ -208,7 +244,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Simon TSZ Fung Mak",
-    to: "25,26"
+    prereqs__1: "(3|7),17",
+    skills_to: "4,7,23",
+    skills_from: "18,20,21,24"
   },
   {
     id: 19,
@@ -219,7 +257,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Daily, Gustafson, Huettel, or Tantum",
-    to: "20,"
+    prereqs__1: "",
+    skills_to: "",
+    skills_from: 6
   },
   {
     id: 20,
@@ -230,7 +270,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Collins, Gustafson, or Huettel",
-    to: "22,25"
+    prereqs__1: 19,
+    skills_to: 6,
+    skills_from: 15
   },
   {
     id: 21,
@@ -240,7 +282,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Stacy L Tantum",
-    to: "23,"
+    prereqs__1: "(1|2),3",
+    skills_to: "1,5",
+    skills_from: 24
   },
   {
     id: 22,
@@ -251,7 +295,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Guillermo Sapiro",
-    to: "5,"
+    prereqs__1: "(1|2)",
+    skills_to: "1,15",
+    skills_from: "16,17,19,24"
   },
   {
     id: 23,
@@ -261,7 +307,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Vahid Tarokh",
-    to: "5,"
+    prereqs__1: "",
+    skills_to: "5,23",
+    skills_from: "16,17,19,24"
   },
   {
     id: 24,
@@ -271,7 +319,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Yiran Chen",
-    to: "5,"
+    prereqs__1: "",
+    skills_to: "1,24",
+    skills_from: "16,17,19"
   },
   {
     id: 25,
@@ -282,7 +332,9 @@ const nodes = [
     prereqs: "",
     semesters: "Spring",
     professor: "Sayan Mukherjee",
-    to: "10,"
+    prereqs__1: "(1|2), 30, 31",
+    skills_to: "5,12",
+    skills_from: "19,20,21,22,24"
   },
   {
     id: 26,
@@ -293,7 +345,9 @@ const nodes = [
     prereqs: "",
     semesters: "Spring",
     professor: "Xiaobai Sun",
-    to: "5,"
+    prereqs__1: "",
+    skills_to: "0,1,5,12",
+    skills_from: "2,3,8,19,24"
   },
   {
     id: 27,
@@ -304,7 +358,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall, Spring",
     professor: "Conitzer, Parr, or Tomasi",
-    to: "14,15,"
+    prereqs__1: "11,(0|1|2|3)",
+    skills_to: "0,1,4,10",
+    skills_from: "11,23"
   },
   {
     id: 28,
@@ -315,7 +371,9 @@ const nodes = [
     prereqs: "",
     semesters: "Spring",
     professor: "Gordan or Hartemink",
-    to: ""
+    prereqs__1: 30,
+    skills_to: "5,11,23",
+    skills_from: 24
   },
   {
     id: 29,
@@ -326,7 +384,9 @@ const nodes = [
     prereqs: "",
     semesters: "Spring",
     professor: "Mukherjee or Schmidler",
-    to: "24,"
+    prereqs__1: "0,(1,2),30",
+    skills_to: "0,1,4,23",
+    skills_from: 24
   },
   {
     id: 30,
@@ -337,7 +397,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Meimei Liu",
-    to: "5,28,29"
+    prereqs__1: "",
+    skills_to: 23,
+    skills_from: 24
   },
   {
     id: 31,
@@ -348,7 +410,9 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Jason Q Xu",
-    to: "18,"
+    prereqs__1: "0, (3|7)",
+    skills_to: "",
+    skills_from: 23
   },
   {
     id: 32,
@@ -359,36 +423,229 @@ const nodes = [
     prereqs: "",
     semesters: "Fall",
     professor: "Mike West",
-    to: "18,"
+    prereqs__1: 3,
+    skills_to: 4,
+    skills_from: "5,24"
   }
 ];
 
+let skills = [
+  {
+    id: 0,
+    skill: "Multivariable Calculus"
+  },
+  {
+    id: 1,
+    skill: "Linear Algebra"
+  },
+  {
+    id: 2,
+    skill: "ODEs"
+  },
+  {
+    id: 3,
+    skill: "PDEs"
+  },
+  {
+    id: 4,
+    skill: "Basic Probability"
+  },
+  {
+    id: 5,
+    skill: "Advanced Probability"
+  },
+  {
+    id: 6,
+    skill: "Digital Logic"
+  },
+  {
+    id: 7,
+    skill: "Regression"
+  },
+  {
+    id: 8,
+    skill: "High-Dimensional Data Analysis"
+  },
+  {
+    id: 9,
+    skill: "Gradient Descent"
+  },
+  {
+    id: 10,
+    skill: "Basic Algorithms"
+  },
+  {
+    id: 11,
+    skill: "Advanced Algorithms"
+  },
+  {
+    id: 12,
+    skill: "Python"
+  },
+  {
+    id: 13,
+    skill: "R"
+  },
+  {
+    id: 14,
+    skill: "Matlab"
+  },
+  {
+    id: 15,
+    skill: "Signal Processing"
+  },
+  {
+    id: 16,
+    skill: "Computer Vision"
+  },
+  {
+    id: 17,
+    skill: "Neural Networks"
+  },
+  {
+    id: 18,
+    skill: "Clustering"
+  },
+  {
+    id: 19,
+    skill: "Statistical Learning Theory"
+  },
+  {
+    id: 20,
+    skill: "Boosting"
+  },
+  {
+    id: 21,
+    skill: "Decision Trees"
+  },
+  {
+    id: 22,
+    skill: "Vector Machines"
+  },
+  {
+    id: 23,
+    skill: "Basic Statistics"
+  },
+  {
+    id: 24,
+    skill: "Advanced Statistics"
+  }
+];
+
+// Make the list of prereqs from the string on each node; treat grouped prereqs as independent for now
+const makeArrayFromPrereqs = prereqs => {
+  let str = prereqs
+    .toString()
+    .replace(/\|/g, ",")
+    .replace(/\(/g, "")
+    .replace(/\)/g, "");
+
+  console.log(str);
+  if (str === "") return [];
+  else
+    return str
+      .split(" ")
+      .join("")
+      .split(",");
+};
+
+// Make the edges from the connections listed on each node
 let edges = [];
 
+// First, make connections based on hard prerequisites
+let prereqColor = "#bbbbbb";
 nodes.forEach(node => {
-  let sinks = node.to.split(",");
-  node.to = [];
-  node.sinks = sinks;
-  node.from = [];
-  node.color = "";
-  sinks.forEach((sink, sinkIndex) => {
-    if (sink != "") {
+  // Treat grouped prereqs (like math 216/math 218) as separate prereqs for now
+  let prereqsList = makeArrayFromPrereqs(node.prereqs__1);
+
+  // prereqsFrom - prereqs required by this course
+  // prereqsTo - courses for which this course is a prereq
+  node.prereqsFrom = [];
+  node.prereqsTo = [];
+  prereqsList.forEach((prereq, prereqIndex) => {
+    if (prereq != "") {
       let edge = {
-        id: `${node.id}-${sinkIndex}`,
-        source: node.id,
-        target: parseInt(sink)
+        id: `prereq-${prereqIndex}-${node.id}`,
+        source: parseInt(prereq),
+        target: node.id,
+        color: prereqColor,
+        type: "prereq"
       };
       edges.push(edge);
     }
   });
 });
 
-edges.forEach(edge => {
-  nodes[edge.target].from.push(nodes[edge.source]);
-  nodes[edge.source].to.push(nodes[edge.target]);
+// Next, make connections based on skills
+
+// First make lists of skills on each node
+let skillColor = "#348feb";
+nodes.forEach(node => {
+  let skillsToList = node.skills_to.toString().split(",");
+  let skillsFromList = node.skills_from.toString().split(",");
+
+  node.skillsToList = [];
+  for (let i = 0; i < skillsToList.length; i++) {
+    let id = parseInt(skillsToList[i]);
+    if (id >= 0 && id < skills.length)
+      node.skillsToList.push(parseInt(skillsToList[i]));
+  }
+  node.skillsFromList = [];
+  for (let i = 0; i < skillsFromList.length; i++) {
+    let id = parseInt(skillsFromList[i]);
+    if (id >= 0 && id < skills.length)
+      node.skillsFromList.push(parseInt(skillsFromList[i]));
+  }
+
+  // skillsFrom - skills this course contributes to
+  // prereqsTo - skills this course uses
+  node.skillsTo = [];
+  node.skillsFrom = [];
 });
 
-let adjacencies = [];
+// Make skills groups
+skills.forEach(skill => {
+  // from - course IDs of courses that contribute to this skill
+  // to - course IDs of courses that use this skill
+  skill.from = [];
+  skill.to = [];
+  nodes.forEach(node => {
+    if (node.skillsToList.includes(skill.id)) {
+      skill.to.push(node.id);
+    }
+
+    if (node.skillsFromList.includes(skill.id)) {
+      skill.from.push(node.id);
+    }
+  });
+});
+
+// Now link each course that contributes TO a skill to the courses that USE that skill
+// TODO: link courses the other way too? i.e. courses that use a skill -> courses that can provide it
+// "consumer" is the course that uses the skill
+nodes.forEach(node => {
+  console.log("node:", node);
+  node.skillsToList.forEach(skill => {
+    skills[skill].from.forEach(consumer => {
+      let edge = {
+        id: `skill-${skill.id}-${node.id}-${consumer.id}`,
+        source: node.id,
+        target: consumer,
+        color: skillColor,
+        type: "skill"
+      };
+      edges.push(edge);
+    });
+  });
+});
+
+/*
+edges.forEach(edge => {
+  nodes[edge.target].prereqsFrom.push(nodes[edge.source]);
+  nodes[edge.source].prereqsTo.push(nodes[edge.target]);
+});
+
+
 
 nodes.forEach(source => {
   adjacencies[source.id] = [];
@@ -397,10 +654,16 @@ nodes.forEach(source => {
   });
 });
 
-const data_v2 = {
+*/
+
+let adjacencies = [];
+
+const data = {
   nodes: nodes,
   edges: edges,
   adjacencies: adjacencies
 };
 
-module.exports = data_v2;
+console.log(data);
+
+module.exports = data;

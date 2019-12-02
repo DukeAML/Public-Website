@@ -20,8 +20,10 @@ import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
 
 import CoursesDetailsTab from "./CoursesDetailsTab";
+import shortestPath from "./shortestPath";
 
 const data = require("./Data");
+const data_v2 = require("./Data-v2");
 
 const myConfig = {
   nodeHighlightBehavior: true,
@@ -54,8 +56,7 @@ const myConfig = {
   link: {
     renderLabel: "true",
     strokeWidth: 1,
-    fontSize: "1rem",
-    color: "#617489"
+    fontSize: "1rem"
   },
   d3: {
     alphaTarget: 0.05,
@@ -72,19 +73,27 @@ class CoursesPage extends React.Component {
       tabDisplayed: false,
       selectedNode: null,
       data: {
-        links: data.edges,
-        nodes: data.nodes
+        links: data_v2.edges,
+        nodes: data_v2.nodes,
+        // TODO: make adjacenices from data_v2
+        adjacencies: data.adjacencies
       },
       focusedNodeId: null,
       config: myConfig
     };
   }
 
+  componentDidMount = () => {
+    let { adjacencies, links } = this.state.data;
+    //console.log(adjacencies);
+    console.log(shortestPath(10, 5, adjacencies, links));
+  };
+
   // need to use arrow function to bind to this class
   onClickNode = node => {
     console.log(node);
     this.setState({
-      selectedNode: data.nodes[node],
+      selectedNode: this.state.data.nodes[node],
       tabDisplayed: true,
       focusedNodeId: node
     });

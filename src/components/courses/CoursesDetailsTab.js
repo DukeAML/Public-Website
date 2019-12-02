@@ -15,11 +15,14 @@ class CoursesDetailsTab extends React.Component {
       );
     } else {
       console.log(selectedNode);
-      let prereqs = selectedNode.from.map((node, key) => (
+
+      // Display required prereqs for this course
+      let prereqs = selectedNode.prereqsFrom.map((node, key) => (
         <div key={key}>{node.course}</div>
       ));
 
-      let next = selectedNode.to.map((node, key) => (
+      // Display courses for which this course is a required prereq
+      let next = selectedNode.prereqsTo.map((node, key) => (
         <div key={key}>{node.course}</div>
       ));
 
@@ -53,7 +56,7 @@ class CoursesDetailsTab extends React.Component {
               <br />
               <b> Prerequisites: </b> {prereqs}
               <br />
-              <b> Leads to: </b> {next}
+              <b> Required for: </b> {next}
             </div>
           </div>
         </AnimateHeight>
