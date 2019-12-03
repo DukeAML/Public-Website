@@ -553,7 +553,7 @@ const makeArrayFromPrereqs = prereqs => {
 let edges = [];
 
 // First, make connections based on hard prerequisites
-let prereqColor = "#bbbbbb";
+let prereqColor = "rgba(151, 76, 186,0.3)";
 nodes.forEach(node => {
   // Treat grouped prereqs (like math 216/math 218) as separate prereqs for now
   let prereqsList = makeArrayFromPrereqs(node.prereqs__1);
@@ -576,10 +576,20 @@ nodes.forEach(node => {
   });
 });
 
+// Now that we have prereq connections, fill in missing data on each node
+// in prereqsFrom and prereqsTo
+edges.forEach(edge => {
+  // Double check that we have prereqs only
+  if (edge.type === "prereq") {
+    nodes[edge.source].prereqsTo.push(edge.target);
+    nodes[edge.target].prereqsFrom.push(edge.source);
+  }
+});
+
 // Next, make connections based on skills
 
 // First make lists of skills on each node
-let skillColor = "#348feb";
+let skillColor = "rgb(209, 255, 250, 0.2)";
 nodes.forEach(node => {
   let skillsToList = node.skills_to.toString().split(",");
   let skillsFromList = node.skills_from.toString().split(",");
@@ -624,9 +634,9 @@ skills.forEach(skill => {
 // TODO: link courses the other way too? i.e. courses that use a skill -> courses that can provide it
 // "consumer" is the course that uses the skill
 nodes.forEach(node => {
-  console.log("node:", node);
   node.skillsToList.forEach(skill => {
     skills[skill].from.forEach(consumer => {
+      node.skillsTo.push(consumer);
       let edge = {
         id: `skill-${skill.id}-${node.id}-${consumer.id}`,
         source: node.id,
@@ -658,9 +668,22 @@ nodes.forEach(source => {
 
 let adjacencies = [];
 
+let skillEdges = [];
+let prereqEdges = [];
+
+edges.forEach(edge => {
+  if (edge.type === "prereq") {
+    prereqEdges.push(edge);
+  } else if (edge.type == "skill") {
+    skillEdges.push(edge);
+  }
+});
+
 const data = {
   nodes: nodes,
   edges: edges,
+  skillEdges: skillEdges,
+  prereqEdges: prereqEdges,
   adjacencies: adjacencies
 };
 

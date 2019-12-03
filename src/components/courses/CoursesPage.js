@@ -9,7 +9,8 @@ import {
   Card,
   Carousel,
   Accordion,
-  Collapse
+  Collapse,
+  Form
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 
@@ -22,13 +23,12 @@ import Navigation from "../tools/Navigation";
 import CoursesDetailsTab from "./CoursesDetailsTab";
 import shortestPath from "./shortestPath";
 
-const data = require("./Data");
+//const data = require("./Data");
 const data_v2 = require("./Data-v2");
 
 const myConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
-  collapsible: false,
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
@@ -42,7 +42,6 @@ const myConfig = {
   staticGraphWithDragAndDrop: false,
   nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
-  collapsible: true,
   node: {
     color: "#f0efe5",
     size: 200,
@@ -54,12 +53,20 @@ const myConfig = {
     clickFontColor: "#000000"
   },
   link: {
-    renderLabel: "true",
     strokeWidth: 1,
-    fontSize: "1rem"
+    fontSize: "1rem",
+    fontColor: "black",
+    fontSize: 8,
+    fontWeight: "normal",
+    opacity: 1,
+    renderLabel: false,
+    semanticStrokeWidth: false,
+    strokeWidth: 1.5,
+    markerHeight: 6,
+    markerWidth: 6
   },
   d3: {
-    alphaTarget: 0.05,
+    alphaTarget: 1,
     gravity: -1000,
     linkLength: 200,
     linkStrength: 1
@@ -76,10 +83,12 @@ class CoursesPage extends React.Component {
         links: data_v2.edges,
         nodes: data_v2.nodes,
         // TODO: make adjacenices from data_v2
-        adjacencies: data.adjacencies
+        adjacencies: data_v2.adjacencies
       },
       focusedNodeId: null,
-      config: myConfig
+      config: myConfig,
+      prereqChecked: true,
+      skillChecked: true
     };
   }
 
@@ -117,15 +126,57 @@ class CoursesPage extends React.Component {
     });
   };
 
+  handleDataTypeChange = e => {
+    console.log(e);
+    this.setState({ [e.target.name]: !this.state[e.target.name] });
+    console.log(this.state);
+
+    let data = [];
+
+    if (this.state.prereqChecked) data = data_v2.prereqEdges;
+    if (this.state.skillChecked) data = [...data, ...data_v2.skillEdges];
+
+    this.setState({
+      data: {
+        links: data,
+        nodes: this.state.nodes,
+        adjacencies: this.state.adjacencies
+      }
+    });
+  };
+
   render() {
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: 0 }}>
+        <center></center>
+
+        <Container fluid style={{ padding: 0 }} justify="center">
           <CoursesDetailsTab
             in={this.state.tabDisplayed}
             selectedNode={this.state.selectedNode}
           />
+          <Row>
+            <Col xl={12}>
+              <Form onChange={e => this.handleDataTypeChange(e)}>
+                <Form.Check
+                  type="checkbox"
+                  name="prereqChecked"
+                  id="prereq"
+                  label="View prerequisite-based connections"
+                  value={this.state.prereqChecked}
+                />
+                <Form.Check
+                  type="checkbox"
+                  name="skillChecked"
+                  id="skill"
+                  label="View skill-based connections"
+                  value={this.state.skillChecked}
+                />
+              </Form>
+            </Col>
+          </Row>
+
           <center>
             <div className="container__graph-area">
               <Graph
@@ -153,7 +204,10 @@ export default CoursesPage;
 
 /*
 <Sigma
-  graph={data}
+  graph={{
+    nodes: this.state.data.nodes,
+    edges: this.state.data.edges
+  }}
   settings={{
     drawEdges: true,
     drawLabels: true,
@@ -170,9 +224,23 @@ export default CoursesPage;
   }}
   style={{ height: "80vh", width: "50vw" }}
   onClickNode={e => this.onClickNode(e)}
-  onOverNode={e => this.onOverNode(e)}
 >
   <RelativeSize initialSize={20} />
   <RandomizeNodePositions />
 </Sigma>
+  */
+/*
+  <Graph
+    data={{
+      ...this.state.data,
+      focusedNodeId: this.state.focusedNodeId
+    }}
+    config={this.state.config}
+    id="graph-id"
+    onClickNode={e => this.onClickNode(e)}
+    onClickGraph={e => this.onClickGraph(e)}
+    onClickLink={e => this.onClickLink(e)}
+    onMouseOverNode={e => this.onMouseOverNode(e)}
+  />
+
   */
