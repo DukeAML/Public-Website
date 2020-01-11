@@ -27,20 +27,19 @@ $main-white: #f0efe5;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 20px;
+  background-color:$dark-grey; 
+  border-radius: 5%;
+  color: white;
+  padding: 20px 40px;
   text-align: center;
-  color: $dark-grey;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 20%;
-  background: #617489;
+  text-decoration: none;
   align-content: center;
-  width: 40%;
-  margin-left: 30%;
+  width: 20%;
+  margin-left: 40%;
 }
+
+
 
 .main-graphic {
   animation: opac 4s;
