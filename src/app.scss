@@ -222,3 +222,20 @@ a.homepage-link {
   overflow-y: scroll;
   max-height: 600px;
 }
+
+.accordion-header:hover {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.accordion-header {
+  padding: 0.5rem;
+  font-family: "Roboto Mono";
+  background-color: $main-grey;
+  border: solid 2px $dark-grey;
+}
+
+.accordion-body {
+  color: white;
+  padding: 0.5rem;
+}

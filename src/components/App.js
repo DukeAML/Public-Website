@@ -13,7 +13,7 @@ import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
 import IndividualProject2 from "./projects/individual-pages/IndividualProject2";
 import IndividualProject3 from "./projects/individual-pages/IndividualProject3";
-import CoursesPage from "./courses/CoursesPage";
+import CoursesPage from "./courses/CoursesPage3";
 
 class App extends React.Component {
   render() {

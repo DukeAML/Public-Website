@@ -1,8 +1,20 @@
 import React from "react";
 // Import graph dependencies
 
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Card, Accordion, Button } from "react-bootstrap";
 import AnimateHeight from "react-animate-height";
+
+const AccordionHeader = props => {
+  return (
+    <div
+      className="accordion-header"
+      style={{ color: "white !important" }}
+      {...props}
+    >
+      {props.children}
+    </div>
+  );
+};
 
 class CoursesDetailsTab extends React.Component {
   render() {
@@ -26,37 +38,63 @@ class CoursesDetailsTab extends React.Component {
         <div key={key}>{node.course}</div>
       ));
 
+      const properties = [
+        selectedNode.professor,
+        selectedNode.description,
+        selectedNode.semesters,
+        prereqs,
+        next
+      ];
+
+      const headers = [
+        "Professor",
+        "Description",
+        "Semesters offered",
+        "Prerequisites",
+        "Required for"
+      ];
+
       return (
-        <AnimateHeight duration={300} height={this.props.in ? "auto" : 0}>
+        <AnimateHeight
+          duration={300}
+          height={this.props.in ? "auto" : 0}
+          style={{ width: "300" }}
+        >
           <div className="courses-details-tab">
             <div>
               <div
                 className="title"
-                style={{ fontSize: "1.5rem", margin: "0 0 5px 0" }}
+                style={{ fontSize: "1.5rem", margin: "0.5rem 0.5rem 0 0.5rem" }}
               >
                 {selectedNode.course}
               </div>
-              <b> Course name: </b>
-              {selectedNode.name} <br />
-              <br />
-              {selectedNode.professor === "" ? (
-                ""
-              ) : (
-                <div>
-                  <b> Professor(s): </b>
-                  {selectedNode.professor} <br />
-                  <br />
-                </div>
-              )}
-              <b> Description: </b>
-              {selectedNode.description} <br />
-              <br />
-              <b> Semester offered: </b> {selectedNode.semesters}
-              <br />
-              <br />
-              <b> Prerequisites: </b> {prereqs}
-              <br />
-              <b> Required for: </b> {next}
+              <div style={{ fontSize: "1rem", padding: "0.5rem" }}>
+                {selectedNode.name}
+              </div>
+
+              <Accordion style={{ width: "100%" }}>
+                {properties.map((property, index) => {
+                  if (property == "" || property === null) {
+                    return "";
+                  } else {
+                    return (
+                      <div key={index}>
+                        {" "}
+                        <Accordion.Toggle
+                          as={AccordionHeader}
+                          variant="link"
+                          eventKey={index}
+                        >
+                          {headers[index]}
+                        </Accordion.Toggle>
+                        <Accordion.Collapse eventKey={index}>
+                          <div className="accordion-body">{property}</div>
+                        </Accordion.Collapse>
+                      </div>
+                    );
+                  }
+                })}
+              </Accordion>
             </div>
           </div>
         </AnimateHeight>
