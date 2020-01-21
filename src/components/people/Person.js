@@ -31,7 +31,7 @@ import fan from "./headshots/Fan.jpg";
 import wang from "./headshots/Wang.jpg";
 import barnett from "./headshots/Barnett.jpg";
 import tao from "./headshots/Tao.jpg";
-import cuozzo from "./headshots/profile-placeholder.svg";
+import cuozzo from "./headshots/Cuozzo.jpg";
 import focht from "./headshots/Focht.jpg";
 import yoon from "./headshots/Yoon.jpg";
 import llave from "./headshots/profile-placeholder.svg";
@@ -45,6 +45,7 @@ import gollapudy from "./headshots/profile-placeholder.svg";
 import jain from "./headshots/profile-placeholder.svg";
 import bhatt from "./headshots/profile-placeholder.svg";
 import hobart from "./headshots/profile-placeholder.svg";
+
 
 // compose dictionary of headshots for people that have headshots
 const headshots = {

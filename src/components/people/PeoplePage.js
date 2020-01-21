@@ -246,7 +246,7 @@ const PS = [
     team: "Software",
     email: "madeline.cuozzo@duke.edu",
     linkedin: "https://www.linkedin.com/in/madeline-cuozzo/",
-    img: "",
+    img: "Cuozzo.jpg",
     github: "https://github.com/mcuozzo19/"
   },
   {
