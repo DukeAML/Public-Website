@@ -29,7 +29,7 @@ $main-white: #f0efe5;
   font-weight: normal;
   font-size: 21px;
   background-color:$dark-grey; 
-  border-radius: 5%;
+  border: none;
   color: white;
   padding: 20px 40px;
   text-align: center;
@@ -41,6 +41,8 @@ $main-white: #f0efe5;
 .homepageButton:hover {
   background-color: #3D67A5; /* Green */
   color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
 
 
