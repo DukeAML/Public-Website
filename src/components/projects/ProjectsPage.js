@@ -16,6 +16,7 @@ import {
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
+import withWindowDimensions from "../people/withWindowDimensions";
 
 const projects = require("./projectsData");
 
@@ -25,8 +26,26 @@ class ProjectsPage extends React.Component {
   componentDidMount() {}
 
   render() {
+    let window = this.props.windowWidth;
+    let padding;
+
+    // dynamically determine left and right padding around projects grid
+    if (window >= 992) {
+      // lg or xl
+      padding = 20;
+    } else if (window >= 768) {
+      // m
+      padding = 5;
+    } else if (window >= 576) {
+      // s
+      padding = 10;
+    } else {
+      // xs
+      padding = 5;
+    }
+
     const projectCards = projects.map((project, key) => (
-      <Col md={12} lg={4} style={{ padding: "1rem" }}>
+      <Col md={4} style={{ padding: "1rem" }}>
         <ProjectCard
           key={key}
           title={project.title}
@@ -40,13 +59,14 @@ class ProjectsPage extends React.Component {
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: "0" }}>
+        <Container fluid style={{ padding: `1rem ${padding}%` }}>
           <Container style={{ minHeight: "100%" }}>
             <Row
               style={{
                 display: "flex",
                 justifyContent: "center"
               }}
+              noGutters={true}
             >
               <div className="title"> Current Projects </div>
             </Row>
@@ -66,4 +86,4 @@ class ProjectsPage extends React.Component {
   }
 }
 
-export default ProjectsPage;
+export default withWindowDimensions(ProjectsPage);
