@@ -59,8 +59,8 @@ class ProjectsPage extends React.Component {
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: `1rem ${padding}%` }}>
-          <Container style={{ minHeight: "100%" }}>
+        <Container fluid style={{ padding: 0 }}>
+          <Container style={{ minHeight: "100%", padding: `1rem ${padding}%` }}>
             <Row
               style={{
                 display: "flex",
