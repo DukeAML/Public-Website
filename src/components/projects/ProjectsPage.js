@@ -59,7 +59,7 @@ class ProjectsPage extends React.Component {
               {projectCards}
             </Row>
           </Container>
-          <Footer />
+          <Footer style={{ margin: "2rem 0 0 0" }} />
         </Container>
       </div>
     );

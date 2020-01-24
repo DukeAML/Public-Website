@@ -8,10 +8,10 @@ class Footer extends React.Component {
         <center>
           Questions, comments? Contact us:
           <br />
-          <a className="contact" href="mailto: info@duke.aml">
-            Email
+          <a className="contact" href="mailto: info@dukeaml.com">
+            info@dukeaml.com
           </a>{" "}
-          • (320)-333-8531
+          • (320) 333-8531
         </center>
       </Container>
     );

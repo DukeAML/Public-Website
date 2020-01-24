@@ -24,7 +24,15 @@ import "./HomePage.scss";
 class HomePage extends React.Component {
   state = { redirect: false };
 
-  handleSignUpClick = () => {};
+  handleSignUpClick = () => {
+    var link = "mailto:news@dukeaml.com"
+             + "?cc=duke.applied.ml@gmail.com"
+             + "&subject=" + escape("Add me to the Newsletter!")
+             + "&body=" + escape("This is the email to add.")
+    ;
+
+    window.location.href = link;
+  };
 
   handleProjectsClick = () => {
     this.setState({ redirect: true });
@@ -44,7 +52,7 @@ class HomePage extends React.Component {
         <Container style={{ height: "100%", paddingTop: "60px" }} />
 
         {/**INTRODUCTION SECTION */}
-        <Container fluid style={{ marginBottom: "10px" }}>
+        <Container fluid style={{ height: "100vh", marginBottom: "10px" }}>
           <Row
             className="justify-content-md-center"
             style={{ fontSize: "1.5rem" }}
@@ -99,14 +107,14 @@ class HomePage extends React.Component {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              paddingTop: "65px"
+              paddingTop: "30vh"
             }}
           >
             {/**Icon */}
             <Image
               fluid
               className="main-graphic"
-              src={require("./images/DAML-logo.svg")}
+              src={require("./images/DAML_Full_Cream_Transparent.svg")}
             />
           </Row>
         </Container>
@@ -130,14 +138,13 @@ class HomePage extends React.Component {
                 md={6}
                 sm={12}
                 style={{
-                  fontFamily: "Roboto Mono",
+                  fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
               >
                We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
-
               </Col>
               <Col md={6} sm={12}>
                 <Animation />
@@ -153,12 +160,19 @@ class HomePage extends React.Component {
               className="homepageTitle"
               style={{ marginBottom: "20px", marginTop: "20px" }}
             >
-              Bring ML To Your Field
+              Join Our Newletter!
             </h3>
-            <IndustryBuckets />
+            <button className="homepageButton"
+              style={{ color: "white", marginBottom: "30px", marginTop: "30px" }}
+              onClick={this.handleSignUpClick}
+              >
+                Join!
+              </button>
+            {/* <IndustryBuckets /> */}
           </Container>
         </Container>
-        <Footer />
+        <Footer
+        />
       </div>
     );
   }

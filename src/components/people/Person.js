@@ -31,6 +31,21 @@ import fan from "./headshots/Fan.jpg";
 import wang from "./headshots/Wang.jpg";
 import barnett from "./headshots/Barnett.jpg";
 import tao from "./headshots/Tao.jpg";
+import cuozzo from "./headshots/Cuozzo.jpg";
+import focht from "./headshots/Focht.jpg";
+import yoon from "./headshots/Yoon.jpg";
+import llave from "./headshots/profile-placeholder.svg";
+import mehta from "./headshots/profile-placeholder.svg";
+import wolf from "./headshots/profile-placeholder.svg";
+import zhou from "./headshots/Zhou.jpg";
+import buckvar from "./headshots/profile-placeholder.svg";
+import gupta from "./headshots/Gupta.jpg";
+import katariya from "./headshots/Katariya.jpg";
+import gollapudy from "./headshots/profile-placeholder.svg";
+import jain from "./headshots/profile-placeholder.svg";
+import bhatt from "./headshots/profile-placeholder.svg";
+import hobart from "./headshots/profile-placeholder.svg";
+
 
 // compose dictionary of headshots for people that have headshots
 const headshots = {
@@ -56,7 +71,21 @@ const headshots = {
   "Shuyi	Fan": fan,
   "Bree Wang":wang,
   "Daniel	Tao":tao,
-  "Alina Barnett":barnett
+  "Alina Barnett":barnett,
+  "Madeline Cuozzo":cuozzo,
+  "Wyatt Focht":focht,
+  "Christine Yoon":yoon,
+  "Russell Llave":llave,
+  "Raj Mehta":mehta,
+  "Luiza Wolf":wolf,
+  "Cady Zhou":zhou,
+  "Anabella Buckvar":buckvar,
+  "Sauren Gupta":gupta,
+  "Jaiveer Katariya":katariya,
+  "Ram Gallopudy": gollapudy,
+  "Himanshu Jain": jain,
+  "Suchir Bhatt": bhatt,
+  "Niko Hobart": hobart
 };
 
 function Person(props) {
