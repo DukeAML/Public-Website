@@ -10,8 +10,8 @@ import placeholder from "../images/placeholder.jpg";
 
 
 - image url (image)
-- title (name)
--
+- title (title)
+- abstract (abstract)
 
 */
 
@@ -25,7 +25,7 @@ const IndividualProject = props => {
       >
         <Row>
           <Col sm={12} md={6}>
-            <Image src={placeholder} fluid />
+            <Image src={props.image} fluid />
           </Col>
           <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
             <Card className="individual-project-card">
@@ -34,25 +34,26 @@ const IndividualProject = props => {
                 style={{ padding: "1rem" }}
               >
                 <Card.Title style={{ padding: 0 }} className="title">
-                  fMRI Disease Detection
+                  {props.title}
                 </Card.Title>
+                <br />
                 <Card.Text>
-                    {" "}
-                    <Container>
-                      <Row>
-                        <b> Team: </b>Varun Nair, Hang Yang, Morris Greenberg, Ram Gollupudy
-                      </Row>
-                      <Row style={{ padding: "1rem 0 1rem 0" }}>
-                        <b> Abstract: </b> 
-                        Functional Magnetic Resonance Imaging, or fMRI, has emerged as a powerful tool in studying the function of brain regions. However, using data analysis techniques on fMRI data to predict the onset of neurodegenerative and mental illnesses has been challenging, largely due to the shortage of high-quality labeled data and the difficulty of extracting meaningful features. In this project, we utilize the Human Connectome Project, which contains a dataset of fMRI data labeled with the behavioral states of healthy subjects. By applying modern deep learning techniques on this dataset, we hope to build a classifier with strong predictive power on classifying behavioral states whose features contain significant correlations to a variety of neurodegenerative and mental illnesses.
-                      </Row>
-                    </Container>
+                  <Container>
+                    <Row>
+                      <b> Team: </b>
+                    </Row>
+                    <Row>{props.team.join(", ")}</Row>
+                    <br />
+                    <Row>
+                      <b> Abstract: </b>
+                    </Row>
+                    <Row>{props.abstract}</Row>
+                  </Container>
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-       
       </Container>
     </div>
   );

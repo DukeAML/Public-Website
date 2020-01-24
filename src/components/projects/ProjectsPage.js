@@ -17,28 +17,7 @@ import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
 
-
-
-const projects = [
-  {
-    title: "fMRI Disease Detection",
-    description: "Using modern image processing technology to better predict neurological illness.",
-    img: "https://upload.wikimedia.org/wikipedia/commons/0/03/T1-weighted-MRI.png",
-    link: "/project1"
-  },
-  {
-    title: "VR Sickness Detection",
-    description: "Predicting virtual reality sickness through the use of artificial intelligence.",
-    img: "https://images.pexels.com/photos/2692467/pexels-photo-2692467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    link: "/project2"
-  },
-  {
-    title: "Digital Fidget",
-    description: "Helping detect patterns of fidgeting for children with ADHD",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Primary_Laos2.jpg/1280px-Primary_Laos2.jpg",
-    link: "/project3"
-  }
-];
+const projects = require("./projectsData");
 
 class ProjectsPage extends React.Component {
   state = {};
@@ -51,8 +30,8 @@ class ProjectsPage extends React.Component {
         <ProjectCard
           key={key}
           title={project.title}
-          description={project.description}
-          img={project.img}
+          description={project.shortDescription}
+          img={project.image}
           link={project.link}
         />
       </Col>

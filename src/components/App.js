@@ -11,8 +11,7 @@ import Navigation from "./tools/Navigation";
 import ProjectDisplayPage from "./projectdisplay/ProjectDisplayPage";
 import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
-import IndividualProject2 from "./projects/individual-pages/IndividualProject2";
-import IndividualProject3 from "./projects/individual-pages/IndividualProject3";
+const projects = require("./projects/projectsData");
 
 class App extends React.Component {
   render() {
@@ -21,9 +20,21 @@ class App extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
-        <Route exact path="/project1" component={IndividualProject} />
-        <Route exact path="/project2" component={IndividualProject2} />
-        <Route exact path="/project3" component={IndividualProject3} />
+        {projects.map((project, index) => (
+          <Route
+            key={index}
+            exact
+            path={`/${project.link}`}
+            component={() => (
+              <IndividualProject
+                title={project.title}
+                image={project.image}
+                abstract={project.abstract}
+                team={project.team}
+              />
+            )}
+          />
+        ))}
       </BrowserRouter>
     );
   }
