@@ -24,8 +24,10 @@ class ProjectCard extends React.Component {
 
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Card style={{ width: "100%", maxWidth: "15rem" }}>
+      <div
+        style={{ display: "flex", justifyContent: "center", height: "100%" }}
+      >
+        <Card style={{ width: "100%", maxWidth: "40rem" }}>
           <Card.Img
             variant="top"
             src={this.props.img}
@@ -35,10 +37,16 @@ class ProjectCard extends React.Component {
             <Card.Title style={{ padding: 0 }}>
               <h4>{this.props.title}</h4>
             </Card.Title>
-            <Card.Text>{this.props.description}</Card.Text>
-            <Link to={this.props.link}>
-              <Button className="theme-button">See more</Button>
-            </Link>
+            <Card.Text style={{ paddingBottom: "2rem" }}>
+              {this.props.description}
+            </Card.Text>
+            <div
+              style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
+            >
+              <Link to={this.props.link}>
+                <Button className="theme-button">See more</Button>
+              </Link>
+            </div>
           </Card.Body>
         </Card>
       </div>

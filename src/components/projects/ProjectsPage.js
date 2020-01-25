@@ -32,20 +32,20 @@ class ProjectsPage extends React.Component {
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
       // lg or xl
-      padding = 20;
+      padding = 5;
     } else if (window >= 768) {
       // m
-      padding = 5;
+      padding = 10;
     } else if (window >= 576) {
       // s
       padding = 10;
     } else {
       // xs
-      padding = 5;
+      padding = 10;
     }
 
     const projectCards = projects.map((project, key) => (
-      <Col md={4} style={{ padding: "1rem" }}>
+      <Col lg={4} md={6} style={{ padding: "1rem" }}>
         <ProjectCard
           key={key}
           title={project.title}

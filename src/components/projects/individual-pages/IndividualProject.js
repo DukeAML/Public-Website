@@ -4,8 +4,6 @@ import { Redirect } from "react-router-dom";
 
 import Navigation from "../../tools/Navigation";
 
-import placeholder from "../images/placeholder.jpg";
-
 /* props:
 
 
@@ -25,7 +23,7 @@ const IndividualProject = props => {
       >
         <Row>
           <Col sm={12} md={6}>
-            <Image src={props.image} fluid />
+            <Image src={props.image} fluid style={{ width: "100%" }} />
           </Col>
           <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
             <Card className="individual-project-card">
