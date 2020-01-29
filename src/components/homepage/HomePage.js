@@ -152,26 +152,7 @@ class HomePage extends React.Component {
             </Row>
           </Container>
         </Container>
-
-        {/** APPLICATIONS SECTION */}
-        <Container fluid>
-          <Container>
-            <h3
-              className="homepageTitle"
-              style={{ marginBottom: "20px", marginTop: "20px" }}
-            >
-              Join Our Newletter!
-            </h3>
-            <button className="homepageButton"
-              style={{ color: "white", marginBottom: "30px", marginTop: "30px" }}
-              onClick={this.handleSignUpClick}
-              >
-                Join!
-              </button>
-            {/* <IndustryBuckets /> */}
-          </Container>
-        </Container>
-        <Footer
+         <Footer
         />
       </div>
     );

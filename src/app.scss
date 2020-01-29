@@ -146,7 +146,7 @@ hr {
 }
 
 .daml-icon:hover {
-  background-image: $daml-hover !important;
+  background-image: $daml !important;
   cursor: pointer;
 }
 
@@ -165,10 +165,9 @@ a.homepage-link {
 
 .footer {
   font-family: "Lora", monospace;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  height: 12vh;
+  height: 22vh;
   background-color: $dark-grey;
+ 
 }
 
 .theme-button {
