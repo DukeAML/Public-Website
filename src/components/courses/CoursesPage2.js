@@ -19,7 +19,8 @@ import {
   RandomizeNodePositions,
   RelativeSize,
   ForceAtlas2,
-  NOverlap
+  NOverlap,
+  LoadJSON
 } from "react-sigma";
 import { Graph } from "react-d3-graph";
 
@@ -35,6 +36,7 @@ const data_v2 = require("./Data-v2");
 class CoursesPage extends React.Component {
   constructor() {
     super();
+
     this.state = {
       tabDisplayed: false,
       selectedNode: null,
@@ -146,26 +148,25 @@ class CoursesPage extends React.Component {
             settings={{
               batchEdgesDrawing: true,
               defaultLabelColor: "#fff",
-              defaultLabelSize: 15,
-              drawLabel: true,
+              defaultLabelSize: 10,
               defaultNodeColor: "#fff",
+              defaultEdgeColor: "#fff",
               drawEdgeLabels: false,
               drawEdges: true,
               hoverFontStyle: "text-size: 11",
-              labelThreshold: 12
+              labelThreshold: 5
             }}
             onClickNode={this.onClickNode}
             onClickEdge={this.onClickEdge}
           >
-            <NOverlap gridSize={10} maxIterations={100} />
             <RandomizeNodePositions>
               <ForceAtlas2
-                iterationsPerRender={1}
+                iterationsPerRender={50}
                 linLogMode
-                timeout={10000}
+                timeout={500}
                 worker
               />
-              <RelativeSize initialSize={30} />
+              <RelativeSize initialSize={50} />
             </RandomizeNodePositions>
           </Sigma>
           <Footer />

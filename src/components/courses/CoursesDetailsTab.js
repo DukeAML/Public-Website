@@ -29,14 +29,18 @@ class CoursesDetailsTab extends React.Component {
       console.log(selectedNode);
 
       // Display required prereqs for this course
-      let prereqs = selectedNode.prereqsFrom.map((node, key) => (
-        <div key={key}>{node.course}</div>
-      ));
+      let prereqs = selectedNode.prereqsFrom
+        ? selectedNode.prereqsFrom.map((id, key) => (
+            <div key={key}>{this.props.nodes[id].course}</div>
+          ))
+        : "";
 
       // Display courses for which this course is a required prereq
-      let next = selectedNode.prereqsTo.map((node, key) => (
-        <div key={key}>{node.course}</div>
-      ));
+      let next = selectedNode.prereqsTo
+        ? selectedNode.prereqsTo.map((id, key) => (
+            <div key={key}>{this.props.nodes[id].course}</div>
+          ))
+        : "";
 
       const properties = [
         selectedNode.professor,

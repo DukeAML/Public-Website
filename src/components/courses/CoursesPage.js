@@ -16,6 +16,7 @@ import { Link, Redirect } from "react-router-dom";
 
 import { Sigma, RandomizeNodePositions, RelativeSize } from "react-sigma";
 import { Graph } from "react-d3-graph";
+import WebCola from "react-cola";
 
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
@@ -35,11 +36,9 @@ const myConfig = {
   height: 800,
   width: 1200,
   highlightDegree: 1,
-  highlightOpacity: 1,
   maxZoom: 4,
   minZoom: 0.001,
   panAndZoom: true,
-  staticGraphWithDragAndDrop: false,
   nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
   node: {
@@ -53,21 +52,13 @@ const myConfig = {
     clickFontColor: "#000000"
   },
   link: {
-    strokeWidth: 1,
-    fontSize: "1rem",
-    fontColor: "black",
-    fontSize: 8,
-    fontWeight: "normal",
-    opacity: 1,
     renderLabel: false,
     semanticStrokeWidth: false,
-    strokeWidth: 1.5,
-    markerHeight: 6,
-    markerWidth: 6
+    strokeWidth: 2
   },
   d3: {
     alphaTarget: 1,
-    gravity: -1000,
+    gravity: -500,
     linkLength: 200,
     linkStrength: 1
   }
@@ -87,7 +78,7 @@ class CoursesPage extends React.Component {
       },
       focusedNodeId: null,
       config: myConfig,
-      prereqChecked: true,
+      prereqChecked: false,
       skillChecked: true
     };
   }
@@ -129,23 +120,32 @@ class CoursesPage extends React.Component {
   handleDataTypeChange = e => {
     console.log(e);
     this.setState({ [e.target.name]: !this.state[e.target.name] });
-    console.log(this.state);
-
-    let data = [];
-
-    if (this.state.prereqChecked) data = data_v2.prereqEdges;
-    if (this.state.skillChecked) data = [...data, ...data_v2.skillEdges];
-
-    this.setState({
-      data: {
-        links: data,
-        nodes: this.state.nodes,
-        adjacencies: this.state.adjacencies
-      }
-    });
   };
 
   render() {
+    const graph = (
+      <Graph
+        data={
+          this.state.prereqChecked
+            ? {
+                nodes: data_v2.nodes,
+                links: data_v2.prereqEdges,
+                focusedNodeId: this.state.focusedNodeId
+              }
+            : {
+                nodes: data_v2.nodes,
+                links: data_v2.skillEdges,
+                focusedNodeId: this.state.focusedNodeId
+              }
+        }
+        config={this.state.config}
+        id="graph-id"
+        onClickNode={e => this.onClickNode(e)}
+        onClickGraph={e => this.onClickGraph(e)}
+        onClickLink={e => this.onClickLink(e)}
+        onMouseOverNode={e => this.onMouseOverNode(e)}
+      />
+    );
     return (
       <div>
         <Navigation />
@@ -155,6 +155,7 @@ class CoursesPage extends React.Component {
           <CoursesDetailsTab
             in={this.state.tabDisplayed}
             selectedNode={this.state.selectedNode}
+            nodes={data_v2.nodes}
           />
           <Row>
             <Col xl={12}>
@@ -178,20 +179,7 @@ class CoursesPage extends React.Component {
           </Row>
 
           <center>
-            <div className="container__graph-area">
-              <Graph
-                data={{
-                  ...this.state.data,
-                  focusedNodeId: this.state.focusedNodeId
-                }}
-                config={this.state.config}
-                id="graph-id"
-                onClickNode={e => this.onClickNode(e)}
-                onClickGraph={e => this.onClickGraph(e)}
-                onClickLink={e => this.onClickLink(e)}
-                onMouseOverNode={e => this.onMouseOverNode(e)}
-              />
-            </div>
+            <div className="container__graph-area">{graph}</div>
           </center>
           <Footer />
         </Container>

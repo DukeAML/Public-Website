@@ -18,7 +18,8 @@ import { Graph } from "react-d3-graph";
 import {
   InteractiveForceGraph,
   ForceGraphNode,
-  ForceGraphLink
+  ForceGraphLink,
+  ForceGraphArrowLink
 } from "react-vis-force";
 
 import Footer from "../tools/Footer";
@@ -141,8 +142,6 @@ class CoursesPage extends React.Component {
           <center>
             <div className="container__graph-area">
               <InteractiveForceGraph
-                options={myConfig}
-                simulationOptions={{ height: 300, width: 300 }}
                 labelAttr="label"
                 id="graph-id"
                 onSelectNode={(e, node) => this.onClickNode(node)}
@@ -150,11 +149,15 @@ class CoursesPage extends React.Component {
                 onSelectLink={(e, link) => this.onClickLink(link)}
                 onMouseOverNode={e => this.onMouseOverNode(e)}
               >
+                >
                 {this.state.data.nodes.map(node => (
                   <ForceGraphNode node={{ ...node }} />
                 ))}
                 {this.state.data.links.map(link => (
-                  <ForceGraphLink link={{ ...link }} />
+                  <ForceGraphArrowLink
+                    key={`${link.source}=>${link.target}`}
+                    link={{ ...link }}
+                  />
                 ))}
               </InteractiveForceGraph>
             </div>

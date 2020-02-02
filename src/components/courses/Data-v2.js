@@ -591,6 +591,7 @@ edges.forEach(edge => {
 // First make lists of skills on each node
 let skillColor = "rgb(209, 255, 250, 0.2)";
 nodes.forEach(node => {
+  node.label = node.course;
   let skillsToList = node.skills_to.toString().split(",");
   let skillsFromList = node.skills_from.toString().split(",");
 
