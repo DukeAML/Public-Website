@@ -27,15 +27,6 @@ import PeopleRow from "./PeopleRow";
 
 const CRM = [
   {
-    name: "Shuyi	Fan",
-    school: "Fuqua School of Business",
-    study: "QMS",
-    team: "CRM",
-    email: "shuyi.fan@duke.edu",
-    linkedin: "https://www.linkedin.com/in/shuyi-fan-976393110/",
-    img: "Fan.jpg"
-  },
-  {
     name: "Mary	Gooneratne",
     school: "Undergraduate",
     study: "Electrical and Computer Engineering",
@@ -48,7 +39,7 @@ const CRM = [
   {
     name: "Ben	Levy",
     school: "Fuqua School of Business",
-    study: "MBA",
+    study: "QM",
     team: "CRM",
     email: "ben.levy@duke.edu",
     linkedin: "https://www.linkedin.com/in/ben-levy1/",
@@ -64,23 +55,12 @@ const CRM = [
     github: "https://github.com/luke-truitt/"
   },
   {
-    name: "Bree Wang",
-    school: "Fuqua School of Business",
-    study: "QMS",
-    team: "CRM",
-    email: "bree.wang@duke.edu",
-    linkedin: "https://www.linkedin.com/in/bree-jiaying-wang-25421b59/",
-    img: "Wang.jpg"
-  },
-  {
-    name: "Rachel	Williamson",
-    school: "Fuqua School of Business",
-    study: "QMS",
-    team: "CRM",
-    email: "rachel.williamson@duke.edu",
-    linkedin: "https://www.linkedin.com/in/rachel-williamson-8ab8a9125/",
-    img: "Williamson.jpg"
-  },
+    name: "Jaidha	Rosenblatt",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "jrr59@duke.edu",
+    img: ""
+  }
 ];
 
 // Compose array of person objects with necessary info
@@ -95,7 +75,7 @@ const DS = [
     img: "Alqabandi.jpg"
   },
   {
-    name: "Alina Barnett", 
+    name: "Alina Barnett",
     school: "Ph.D.",
     study: "Computer Science",
     team: "VR Sickness",
@@ -109,7 +89,7 @@ const DS = [
     study: "Computer Science",
     team: "Restaurant",
     email: "suchir.bhatt@duke.edu",
-    img: "",
+    img: ""
   },
   {
     name: "Olivier Binette",
@@ -136,7 +116,7 @@ const DS = [
     team: "Human Connectome",
     email: "ram.gallopudy@duke.edu",
     linkedin: "https://www.linkedin.com/in/ram-gollapudy-08a334aa/",
-    img: "",
+    img: ""
   },
   {
     name: "Niko Hobart",
@@ -145,18 +125,9 @@ const DS = [
     team: "Restaurant",
     email: "niko.hobart@duke.edu",
     linkedin: "https://www.linkedin.com/in/niko-hobart-562826195/",
-    img: "",
+    img: ""
   },
-  {
-    name: "Himanshu Jain",
-    school: "Undergraduate",
-    study: "Electrical and Computer Engineering, Economics",
-    team: "Fidget",
-    email: "ryan.middlemiss@duke.edu",
-    linkedin: "https://www.linkedin.com/in/ryan-middlemiss-732541192/",
-    img: "Middlemiss.png",
-    github: "https://github.com/ryanmiddlemiss/"
-  },
+
   {
     name: "Jaiveer Katariya",
     school: "Undergraduate",
@@ -208,14 +179,111 @@ const DS = [
   },
   {
     name: "Hang	Yang",
-    school: "Ph.D.",
+    school: "Post-graduate",
     study: "Mathematics",
     team: "Hman Connectome",
     email: "hang.yang@duke.edu",
     linkedin: "https://www.linkedin.com/in/hang-yang/",
     img: "Yang.jpg"
   },
-  
+  {
+    name: "Raj Mehta",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering",
+    email: "raj.mehta918@duke.edu",
+    img: ""
+  },
+  {
+    name: "Kush Gulati",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "kush.gulati@duke.edu",
+    img: ""
+  },
+  {
+    name: "Jason Lee",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "choonghwan.lee@duke.edu",
+    img: ""
+  },
+  {
+    name: "Vishal Dubey",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "vishal.dubey@duke.edu",
+    img: ""
+  },
+  {
+    name: "Muthu Arivoli",
+    school: "Undergraduate",
+    study: "Electrical and  Computer Engineering",
+    email: "ma381@duke.edu",
+    img: ""
+  },
+  {
+    name: "Angikar Gosel",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "angikar.ghosal@duke.edu",
+    img: ""
+  },
+  {
+    name: "Geoff Gaugler",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "geoffrey.gaugler@duke.edu",
+    img: ""
+  },
+  {
+    name: "Aman Ibrahim",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "aman.ibrahim@duke.edu",
+    img: ""
+  },
+  {
+    name: "Ziyi	Wang",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "zw119@duke.edu",
+    img: ""
+  },
+  {
+    name: "Emily 	Mittleman",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "emily.mittleman@duke.edu",
+    img: ""
+  },
+  {
+    name: "Aneesh	Gupta",
+    school: "Undergraduate",
+    study: "Statistics",
+    email: "aneesh.gupta@duke.edu",
+    img: ""
+  },
+  {
+    name: "David	Chester",
+    school: "Post-graduate",
+    study: "Statistics",
+    email: "david.chester@duke.edu",
+    img: ""
+  },
+  {
+    name: "Jack	Moody",
+    school: "Undergraduate",
+    study: "Economics",
+    email: "jack.moody@live.unc.edu",
+    img: ""
+  },
+  {
+    name: "Himanshu Jain",
+    school: "Undergraduate",
+    study: "Electrical and Computer Engineering",
+    email: "himanshu.jain@duke.edu",
+    img: ""
+  }
 ];
 
 const PS = [
@@ -259,16 +327,7 @@ const PS = [
     img: "Focht.jpg",
     github: "https://github.com/wyattgf/"
   },
-  {
-    name: "Sauren Gupta",
-    school: "Undergraduate",
-    study: "Computer Science, Economics",
-    team: "Software",
-    email: "sauren.gupta@duke.edu",
-    linkedin: "https://www.linkedin.com/in/sauren-g/",
-    img: "Gupta.jpg",
-    github: "https://github.com/sauren5842/"
-  },
+
   {
     name: "Russell Llave",
     school: "Undergraduate",
@@ -320,16 +379,6 @@ const PS = [
     github: "https://github.com/luizaawwolf/"
   },
   {
-    name: "Christine Yoon",
-    school: "Undergraduate",
-    study: "Computer Science",
-    team: "Software",
-    email: "christine.yoon@duke.edu",
-    linkedin: "https://www.linkedin.com/in/christineyoon1/",
-    img: "Yoon.jpg",
-    github: "https://github.com/cyoon23/"
-  },
-  {
     name: "Cady Zhou",
     school: "Undergraduate",
     study: "Computer Science, Electrical and Computer Engineering",
@@ -339,6 +388,13 @@ const PS = [
     img: "Zhou.jpg",
     github: "https://github.com/candyzq/"
   },
+  {
+    name: "Harish Yerra",
+    school: "Undergraduate",
+    study: "Computer Science",
+    email: "harish.yerra@duke.edu",
+    img: ""
+  }
 ];
 
 const peopleInfo = [CRM, DS, PS];
@@ -366,7 +422,7 @@ class PeoplePage extends React.Component {
       //xs; 1 person per row
       cols = 1;
     }
-    
+
     console.log("Cols: ", cols);
     console.log(people.length);
 
