@@ -152,6 +152,44 @@ class HomePage extends React.Component {
             </Row>
           </Container>
         </Container>
+        <Container fluid className="boxShadowed" style={{backgroundColor: "#2f3e4e"}}>
+          <Container>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                News
+              </h3>
+            </Row>
+            <Row>
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+             We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
+              </Col>
+              <Col md={6} sm={12}>
+                <img src = "dtc-logo-tag.png" 
+                style={{
+                  height: "600 px",
+                  width: "600px",
+              
+                
+                }}/>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
          <Footer
         />
       </div>
