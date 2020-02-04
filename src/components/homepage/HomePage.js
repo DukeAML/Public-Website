@@ -71,12 +71,12 @@ class HomePage extends React.Component {
               <Link to="/">
                 <div className="daml-icon" />
               </Link>
-              <div style="text-align:center">
+              {/* <div style="text-align:center">
        <div class="slider" id="slider-range"></div>
       < div class="slider" id="slider-test"></div>
   
       <canvas id="canvasOne" width="900" height="520" ></canvas>
-      </div>
+      </div> */}
             </Col>
             <Col
               md={2}
