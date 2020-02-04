@@ -39,7 +39,7 @@ class Navigation extends React.Component {
               <div className="daml-icon" />
             </Link>
 
-            <div style={{ padding: "0 2rem 0 2rem", float: "left" }}>
+            <div style={{ padding: "0 2rem 0 2rem", float: "right" }}>
               <Link to="/projects" className="homepage-link">
                 Projects
               </Link>
