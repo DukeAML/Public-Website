@@ -117,6 +117,7 @@ class HomePage extends React.Component {
             }}
           >
             {/**Icon */}
+            {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
             <Image
               fluid
               className="main-graphic"
