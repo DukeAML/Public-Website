@@ -10,7 +10,7 @@ import {
   Carousel
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
-
+import AnimationWrapper from './animation.js';
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
@@ -108,6 +108,7 @@ class HomePage extends React.Component {
               </Link>
             </Col>
           </Row>
+          <AnimationWrapper>
           <Row
             style={{
               display: "flex",
@@ -124,6 +125,7 @@ class HomePage extends React.Component {
               src={require("./images/DAML_Full_Cream_Transparent.svg")}
             />
           </Row>
+          </AnimationWrapper>
         </Container>
 
         {/**ABOUT SECTION */}

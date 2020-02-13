@@ -4,12 +4,12 @@ import {rn, ri, sample, mobileCheck} from './helpers.js'
 class Effect extends VantaBase {
   static initClass() {
     this.prototype.defaultOptions = {
-      color: 0xff8820,
-      color2: 0xff8820,
-      backgroundColor: 0x222222,
-      size: 3,
-      spacing: 35,
-      showLines: true,
+      color: 0x1e2c3a ,
+      color2: 0x2f3e4e,
+      backgroundColor: 0x617489,
+      size: 4,
+      spacing: 32,
+      showLines: false,
     };
   }
 
