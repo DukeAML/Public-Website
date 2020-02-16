@@ -46,8 +46,8 @@ const myConfig = {
     size: 200,
     labelProperty: "course",
     fontColor: "#f0efe5",
-    fontSize: "0.5rem",
-    highlightFontSize: "0.5rem",
+    fontSize: "1rem",
+    highlightFontSize: "1rem",
     selectedColor: "#ffffff",
     clickFontColor: "#000000"
   },
@@ -78,8 +78,7 @@ class CoursesPage extends React.Component {
       },
       focusedNodeId: null,
       config: myConfig,
-      prereqChecked: false,
-      skillChecked: true
+      prereqChecked: true
     };
   }
 
@@ -119,10 +118,17 @@ class CoursesPage extends React.Component {
 
   handleDataTypeChange = e => {
     console.log(e);
-    this.setState({ [e.target.name]: !this.state[e.target.name] });
+    this.setState({
+      prereqChecked: !this.state.prereqChecked,
+      focusedNodeId: null
+    });
   };
 
   render() {
+    const title = this.state.prereqChecked
+      ? "Viewing pre-req based connections"
+      : "Viewing skill-based connections";
+
     const graph = (
       <Graph
         data={
@@ -159,24 +165,34 @@ class CoursesPage extends React.Component {
           />
           <Row>
             <Col xl={12}>
-              <Form onChange={e => this.handleDataTypeChange(e)}>
-                <Form.Check
-                  type="checkbox"
+              <div
+                style={{ fontSize: "1rem", padding: "1rem" }}
+                onChange={e => this.handleDataTypeChange(e)}
+              >
+                <input
+                  type="radio"
                   name="prereqChecked"
                   id="prereq"
-                  label="View prerequisite-based connections"
-                  value={this.state.prereqChecked}
+                  label=""
+                  defaultChecked
+                  checked={this.state.prereqChecked}
                 />
-                <Form.Check
-                  type="checkbox"
+                View prerequisite-based connections
+                <br />
+                <input
+                  type="radio"
                   name="skillChecked"
                   id="skill"
-                  label="View skill-based connections"
-                  value={this.state.skillChecked}
+                  label=""
+                  checked={!this.state.prereqChecked}
                 />
-              </Form>
+                View skill-based connections
+              </div>
             </Col>
           </Row>
+          <div style={{ fontSize: "2rem" }}>
+            <center>{title}</center>
+          </div>
 
           <center>
             <div className="container__graph-area">{graph}</div>
