@@ -24,19 +24,22 @@ $main-white: #f0efe5;
 }
 
 .homepageButton {
+  display: inline-block;
+  vertical-align: middle;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
-  background-color:$dark-grey; 
+  font-size: 18px;
+  background-color:$light-grey; 
   border: none;
   color: white;
   padding: 20px 40px;
   text-align: center;
   text-decoration: none;
-  align-content: center;
   width: 20%;
-  margin-left: 40%;
+  margin-bottom: 3vh;
+  margin-top: 4vh;
+  margin-left: 5%;
 }
 .homepageButton:hover {
   background-color: #3D67A5; /* Green */
