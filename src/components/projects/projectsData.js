@@ -17,15 +17,15 @@ const projects = [
     image: "",
     team: "Varun,Ram,Hang"
   },
-  {
-    title: "Fidget",
-    shortDescription:
-      "Helping detect patterns of fidgeting for children with ADHD using a smart watch.",
-    abstract:
-      "There is a trend of large increase in Attention Deficit Hyperactivity Disorder (ADHD). Research has shown positive impact of fidget toys on students with ADHD. By replacing fidget toys with a similar app on a wearable device, user data from device sensors (e.g. heart rate, motion, location) can be collected to identify patterns of fidgeting. The project seeks to utilize ANOVA analysis to see user behavior differences and machine learning models to classify human activities in an effort to generate user behavior time series for children with ADHD",
-    image: "",
-    team: "Mary,Phoebe,Jia,Jaiveer,Himanshu"
-  },
+  // {
+  //   title: "Fidget",
+  //   shortDescription:
+  //     "Helping detect patterns of fidgeting for children with ADHD using a smart watch.",
+  //   abstract:
+  //     "There is a trend of large increase in Attention Deficit Hyperactivity Disorder (ADHD). Research has shown positive impact of fidget toys on students with ADHD. By replacing fidget toys with a similar app on a wearable device, user data from device sensors (e.g. heart rate, motion, location) can be collected to identify patterns of fidgeting. The project seeks to utilize ANOVA analysis to see user behavior differences and machine learning models to classify human activities in an effort to generate user behavior time series for children with ADHD",
+  //   image: "",
+  //   team: "Mary,Phoebe,Jia,Jaiveer,Himanshu"
+  // },
   {
     title: "Network Anomaly Detection",
     shortDescription:
@@ -44,13 +44,13 @@ const projects = [
     team: "Niko,Jia"
   },
   {
-    title: "CT Image Validation",
+    title: "Entity Resolution of Clinical Analyte Results",
     shortDescription:
-      "Using Computer Vision to verify the quality of a CT scan.",
+      "Matching tests across Hostpitals",
     abstract:
-      "When a CT scan is taken, there is a chance that an artifact appears in the image making it difficult for a radiologist to read the image and gain insights. By detecting poorly captured images before hand, radiologists will spend less time waiting for new images to be taken and more time interpreting accurate ones.",
+      "Every day, patients from across Duke Health receive laboratory tests in order to assess a variety of clinical conditions. Due to the large volume of patients that Duke sees -- as well as the sheer number of vendors, instruments, and other variables -- the laboratory values that are received often look different when they are in fact the same test. For example, a blood glucose test might come back under 1 name at Duke University Hospital, but that name may be different than a blood glucose test administered at Duke Regional Hospital.",
     image: "",
-    team: "Ram,Kush,Himanshu"
+    team: "Nicole,Himanshu"
   },
   {
     title: "Course Scheduling",
@@ -69,7 +69,27 @@ const projects = [
     image: "",
     team: "Jaiveer,Phoebe,Luke",
     link: "RadiologyGenomics"
-  }
+  },
+  {
+    title: "Radio Frequency Classification",
+    shortDescription:
+      "In the battlefield, Radio Frequency communication is essential to the success of missions, so keeping RF comms up can be the difference between a successful and unsuccessful mission",
+    abstract:
+      "In order to radio frequency communications up, the Army hopes to use machine learning to classify signals as inhibiting and isolate adversarial signals so as to direct soldiers to the best location to get communications out.",
+    image: "",
+    team: "Suchir,Luke,Geoff",
+    link: "RadioFrequencyClassification"
+  },
+  {
+    title: "Duke Health Safety Bot",
+    shortDescription:
+      "Duke Health System wants a better way to filter emergency messages from less urgent ones.",
+    abstract:
+      "By using NLP to filter emergency from non-emergency messsages to prompt patients to reconsider calling an emergency line.",
+    image: "",
+    team: "Varun,Luke,Yasa",
+    link: "DukeHealthSafetyBot"
+  },
 ];
 
 projects.forEach(project => {
