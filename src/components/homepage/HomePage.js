@@ -10,7 +10,7 @@ import {
   Carousel
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
-import AnimationWrapper from './animation.js';
+import AnimationWrapper from './AnimationWrapper.js';
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
@@ -109,11 +109,12 @@ class HomePage extends React.Component {
             </Col>
           </Row>
           <AnimationWrapper>
-          <Row
+          <Col
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              width: "100%",
               paddingTop: "30vh"
             }}
           >
@@ -121,10 +122,11 @@ class HomePage extends React.Component {
             {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
             <Image
               fluid
+              style={{padding: 0}}
               className="main-graphic"
               src={require("./images/DAML_Full_Cream_Transparent.svg")}
             />
-          </Row>
+          </Col>
           </AnimationWrapper>
         </Container>
 
@@ -190,8 +192,8 @@ class HomePage extends React.Component {
               <Col md={6} sm={12}>
                 <img src = "dtc-logo-tag.png" 
                 style={{
-                  height: "600 px",
-                  width: "600px",
+                  height: "100%",
+                  width: "100%",
               
                 
                 }}/>

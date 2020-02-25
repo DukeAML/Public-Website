@@ -14,7 +14,11 @@ class AnimationWrapper extends React.Component {
   componentDidMount() {
     this.vantaEffect = DOTS({
 	  el: this.vantaRef.current,
-	  THREE: THREE
+    THREE: {...THREE},
+    showLines: false,
+    color: "#f0efe5",
+    backgroundColor: "#1e2c3a",
+    
     })
   }
   componentWillUnmount() {
