@@ -10,7 +10,7 @@ import {
   Carousel
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
-import AnimationWrapper from './AnimationWrapper.js';
+import AnimationWrapper from "./AnimationWrapper.js";
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
@@ -25,12 +25,13 @@ class HomePage extends React.Component {
   state = { redirect: false };
 
   handleSignUpClick = () => {
-    var link = "mailto:news@dukeaml.com"
-             + "?cc=duke.applied.ml@gmail.com"
-             + "&subject=" + escape("Add me to the Newsletter!")
-             + "&body=" + escape("This is the email to add.")
-    ;
-
+    var link =
+      "mailto:news@dukeaml.com" +
+      "?cc=duke.applied.ml@gmail.com" +
+      "&subject=" +
+      escape("Add me to the Newsletter!") +
+      "&body=" +
+      escape("This is the email to add.");
     window.location.href = link;
   };
 
@@ -52,10 +53,13 @@ class HomePage extends React.Component {
         <Container style={{ height: "100%", paddingTop: "60px" }} />
 
         {/**INTRODUCTION SECTION */}
-        <Container fluid style={{ height: "100vh", marginBottom: "10px" }}>
+        <Container
+          fluid
+          style={{ height: "100vh", marginBottom: "10px", padding: 0 }}
+        >
           <Row
             className="justify-content-md-center"
-            style={{ fontSize: "1.5rem" }}
+            style={{ fontSize: "1.5rem, padding: 0" }}
           >
             {/**Navigation Area */}
             <Col
@@ -65,18 +69,13 @@ class HomePage extends React.Component {
               style={{
                 display: "flex",
                 justifyContent: "center",
+                flexDirection: "row",
                 alignItems: "center"
               }}
             >
               <Link to="/">
                 <div className="daml-icon" />
               </Link>
-              {/* <div style="text-align:center">
-       <div class="slider" id="slider-range"></div>
-      < div class="slider" id="slider-test"></div>
-  
-      <canvas id="canvasOne" width="900" height="520" ></canvas>
-      </div> */}
             </Col>
             <Col
               md={2}
@@ -108,32 +107,26 @@ class HomePage extends React.Component {
               </Link>
             </Col>
           </Row>
-          <AnimationWrapper
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            paddingTop: "30vh"
-          }}>
-          <Col
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              paddingTop: "30vh"
-            }}
-          >
-            {/**Icon */}
-            {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
-            <Image
-              fluid
-              style={{padding: 0}}
-              className="main-graphic"
-              src={require("./images/DAML_Full_Cream_Transparent.svg")}
-            />
-          </Col>
+
+          <AnimationWrapper>
+            <Col
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "60vh"
+              }}
+            >
+              {/**Icon */}
+              {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
+              <Image
+                fluid
+                style={{ padding: 0 }}
+                className="main-graphic"
+                src={require("./images/DAML_Full_Cream_Transparent.svg")}
+              />
+            </Col>
           </AnimationWrapper>
         </Container>
 
@@ -162,7 +155,14 @@ class HomePage extends React.Component {
                   alignItems: "center"
                 }}
               >
-               We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
+                We are a group focused on building, implementing, and deploying
+                end-to-end machine learning models to solve research and
+                business problems. We establish collaborations with local
+                companies and organizations to identify and solve challenges
+                they face. Through collaboration with post-graduate, graduate,
+                and undergraduate students studying data science, mathematics,
+                computer science, business, electrical engineering and more, we
+                provide an interdisciplinary approach to solving these problems.
               </Col>
               <Col md={6} sm={12}>
                 <Animation />
@@ -170,7 +170,11 @@ class HomePage extends React.Component {
             </Row>
           </Container>
         </Container>
-        <Container fluid className="boxShadowed" style={{backgroundColor: "#2f3e4e"}}>
+        <Container
+          fluid
+          className="boxShadowed"
+          style={{ backgroundColor: "#2f3e4e" }}
+        >
           <Container>
             <Row
               style={{
@@ -194,22 +198,28 @@ class HomePage extends React.Component {
                   alignItems: "center"
                 }}
               >
-             We are a group focused on building, implementing, and deploying end-to-end machine learning models to solve research and business problems. We establish collaborations with local companies and organizations to identify and solve challenges they face. Through collaboration with post-graduate, graduate, and undergraduate students studying data science, mathematics, computer science, business, electrical engineering and more, we provide an interdisciplinary approach to solving these problems.
+                We are a group focused on building, implementing, and deploying
+                end-to-end machine learning models to solve research and
+                business problems. We establish collaborations with local
+                companies and organizations to identify and solve challenges
+                they face. Through collaboration with post-graduate, graduate,
+                and undergraduate students studying data science, mathematics,
+                computer science, business, electrical engineering and more, we
+                provide an interdisciplinary approach to solving these problems.
               </Col>
               <Col md={6} sm={12}>
-                <img src = "dtc-logo-tag.png" 
-                style={{
-                  height: "100%",
-                  width: "100%",
-              
-                
-                }}/>
+                <img
+                  src="dtc-logo-tag.png"
+                  style={{
+                    height: "100%",
+                    width: "100%"
+                  }}
+                />
               </Col>
             </Row>
           </Container>
         </Container>
-         <Footer
-        />
+        <Footer />
       </div>
     );
   }

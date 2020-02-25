@@ -142,6 +142,7 @@ hr {
   @extend .icon;
   height: 6rem !important;
   width: 6rem !important;
+  padding: 0;
   background-image: $daml;
 }
 
@@ -167,7 +168,6 @@ a.homepage-link {
   font-family: "Lora", monospace;
   height: 22vh;
   background-color: $dark-grey;
- 
 }
 
 .theme-button {
