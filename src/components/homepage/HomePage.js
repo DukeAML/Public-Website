@@ -16,10 +16,9 @@ import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
 import ThemeCard from "./ThemeCard";
 import ImageAccordion from "../tools/ImageAccordion";
-
 import IndustryBuckets from "./IndustryBuckets";
-
 import "./HomePage.scss";
+const DtcLogo = require("./dtc-logo-tag.png");
 
 class HomePage extends React.Component {
   state = { redirect: false };
@@ -53,10 +52,7 @@ class HomePage extends React.Component {
         <Container style={{ height: "100%", paddingTop: "60px" }} />
 
         {/**INTRODUCTION SECTION */}
-        <Container
-          fluid
-          style={{ height: "100vh", marginBottom: "10px", padding: 0 }}
-        >
+        <Container fluid style={{ padding: 0 }}>
           <Row
             className="justify-content-md-center"
             style={{ fontSize: "1.5rem, padding: 0" }}
@@ -189,11 +185,10 @@ class HomePage extends React.Component {
             </Row>
             <Row>
               <Col
-                md={6}
-                sm={12}
+                lg={6}
+                md={12}
                 style={{
                   fontFamily: "Lora",
-                  display: "flex",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
@@ -207,12 +202,20 @@ class HomePage extends React.Component {
                 computer science, business, electrical engineering and more, we
                 provide an interdisciplinary approach to solving these problems.
               </Col>
-              <Col md={6} sm={12}>
+              <Col
+                lg={6}
+                md={12}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
                 <img
-                  src="dtc-logo-tag.png"
+                  src={DtcLogo}
                   style={{
-                    height: "100%",
-                    width: "100%"
+                    width: "100%",
+                    margin: "2rem"
                   }}
                 />
               </Col>
