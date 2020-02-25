@@ -589,7 +589,9 @@ edges.forEach(edge => {
 // Next, make connections based on skills
 
 // First make lists of skills on each node
-let skillColor = "rgb(209, 255, 250, 0.2)";
+const skillColor = "rgb(209, 255, 250, 0.2)";
+const skillNodeColor = "#614dff";
+
 nodes.forEach(node => {
   node.label = node.course;
   let skillsToList = node.skills_to.toString().split(",");
@@ -631,6 +633,52 @@ skills.forEach(skill => {
   });
 });
 
+// make nodes for each skill
+
+let skillNodes = [];
+let skillEdges = [];
+let skillNodeIds = [];
+
+const skillNodeStyle = { fontSize: 12, highlightFontSize: 12 };
+
+skills.forEach(skill => {
+  skillNodes.push({
+    id: skill.skill,
+    index: skillNodes.length,
+    label: skill.skill,
+    type: "skill",
+    size: 400,
+    color: skillNodeColor
+  });
+  skill.to.forEach(course => {
+    const edge = {
+      id: `${skill.skill}-${course}`,
+      source: skill.skill,
+      target: course,
+      color: skillColor
+    };
+    skillEdges.push(edge);
+    if (!skillNodeIds.includes(course)) {
+      skillNodeIds.push(course);
+      skillNodes.push({ ...nodes[course], ...skillNodeStyle });
+    }
+  });
+  skill.from.forEach(course => {
+    const edge = {
+      id: `${course}-${skill.skill}`,
+      source: course,
+      target: skill.skill,
+      color: skillColor
+    };
+    skillEdges.push(edge);
+    if (!skillNodeIds.includes(course)) {
+      skillNodeIds.push(course);
+      skillNodes.push({ ...nodes[course], index: skillNodes.length });
+    }
+  });
+});
+
+/*
 // Now link each course that contributes TO a skill to the courses that USE that skill
 // TODO: link courses the other way too? i.e. courses that use a skill -> courses that can provide it
 // "consumer" is the course that uses the skill
@@ -649,6 +697,7 @@ nodes.forEach(node => {
     });
   });
 });
+*/
 
 /*
 edges.forEach(edge => {
@@ -667,27 +716,48 @@ nodes.forEach(source => {
 
 */
 
-let adjacencies = [];
-
-let skillEdges = [];
 let prereqEdges = [];
+let prereqNodeIds = [];
 
+//  construct arrays of edges and nodes by type of connection
 edges.forEach(edge => {
   if (edge.type === "prereq") {
-    prereqEdges.push(edge);
-  } else if (edge.type == "skill") {
-    skillEdges.push(edge);
+    prereqEdges.push({ ...edge, key: `${edge.id}-prereq` });
+    if (!prereqNodeIds.includes[edge.source]) {
+      prereqNodeIds.push(edge.source);
+    }
+    if (!prereqNodeIds.includes[edge.target]) {
+      prereqNodeIds.push(edge.target);
+    }
   }
 });
 
-const data = {
+let prereqNodes = [];
+
+let nodesObject = {};
+
+skills.forEach(skill => {
+  nodesObject[skill.skill] = { ...skill, label: skill.skill, type: "skill" };
+});
+
+nodes.forEach(node => {
+  nodesObject[node.id] = node;
+});
+
+prereqNodeIds.forEach(node => {
+  prereqNodes.push(nodes[node]);
+});
+
+export const data = {
   nodes: nodes,
   edges: edges,
+  skillNodes: skillNodes,
+  prereqNodes: prereqNodes,
   skillEdges: skillEdges,
   prereqEdges: prereqEdges,
-  adjacencies: adjacencies
+  nodesObject: nodesObject
 };
 
 console.log(data);
 
-module.exports = data;
+export default { ...data };

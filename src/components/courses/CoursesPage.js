@@ -16,7 +16,6 @@ import { Link, Redirect } from "react-router-dom";
 
 import { Sigma, RandomizeNodePositions, RelativeSize } from "react-sigma";
 import { Graph } from "react-d3-graph";
-import WebCola from "react-cola";
 
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
@@ -25,9 +24,46 @@ import CoursesDetailsTab from "./CoursesDetailsTab";
 import shortestPath from "./shortestPath";
 
 //const data = require("./Data");
-const data_v2 = require("./Data-v2");
+import data_v2 from "./Data-v2";
 
-const myConfig = {
+const skillConfig = {
+  nodeHighlightBehavior: true,
+  automaticRearrangeAfterDropNode: false,
+  directed: true,
+  focusAnimationDuration: 0.75,
+  focusZoom: 2,
+  height: 800,
+  width: 1200,
+  highlightDegree: 1,
+  maxZoom: 4,
+  minZoom: 0.0001,
+  panAndZoom: true,
+  nodeHighlightBehavior: true,
+  highlightOpacity: 0.1,
+  node: {
+    color: "#f0efe5",
+    size: 300,
+    labelProperty: "label",
+    fontColor: "#f0efe5",
+    fontSize: 14,
+    highlightFontSize: 14,
+    selectedColor: "#ffffff",
+    clickFontColor: "#000000"
+  },
+  link: {
+    renderLabel: false,
+    semanticStrokeWidth: false,
+    strokeWidth: 2
+  },
+  d3: {
+    alphaTarget: 1,
+    gravity: -400,
+    linkLength: 350,
+    linkStrength: 0.5
+  }
+};
+
+const prereqConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
   directed: true,
@@ -44,21 +80,22 @@ const myConfig = {
   node: {
     color: "#f0efe5",
     size: 200,
-    labelProperty: "course",
+    labelProperty: "label",
     fontColor: "#f0efe5",
-    fontSize: "1rem",
-    highlightFontSize: "1rem",
+    fontSize: 14,
+    highlightFontSize: 14,
     selectedColor: "#ffffff",
     clickFontColor: "#000000"
   },
   link: {
     renderLabel: false,
     semanticStrokeWidth: false,
-    strokeWidth: 2
+    strokeWidth: 2,
+    iterations: 20
   },
   d3: {
-    alphaTarget: 1,
-    gravity: -500,
+    alphaTarget: 0.5,
+    gravity: -1000,
     linkLength: 200,
     linkStrength: 1
   }
@@ -77,7 +114,6 @@ class CoursesPage extends React.Component {
         adjacencies: data_v2.adjacencies
       },
       focusedNodeId: null,
-      config: myConfig,
       prereqChecked: true
     };
   }
@@ -90,9 +126,9 @@ class CoursesPage extends React.Component {
 
   // need to use arrow function to bind to this class
   onClickNode = node => {
-    console.log(node);
+    if (node) console.log(node);
     this.setState({
-      selectedNode: this.state.data.nodes[node],
+      selectedNode: data_v2.nodesObject[node],
       tabDisplayed: true,
       focusedNodeId: node
     });
@@ -129,22 +165,25 @@ class CoursesPage extends React.Component {
       ? "Viewing pre-req based connections"
       : "Viewing skill-based connections";
 
+    const subtitle = this.state.prereqChecked
+      ? "Hover over a course to highlight the courses it leads to. Click on any course for more information."
+      : "Hover over a course node to highlight skills it contributes to. Hover over a skill to see highlight courses that use that skill. Click on any course or skill for more information.";
     const graph = (
       <Graph
         data={
           this.state.prereqChecked
             ? {
-                nodes: data_v2.nodes,
+                nodes: data_v2.prereqNodes,
                 links: data_v2.prereqEdges,
                 focusedNodeId: this.state.focusedNodeId
               }
             : {
-                nodes: data_v2.nodes,
+                nodes: data_v2.skillNodes,
                 links: data_v2.skillEdges,
                 focusedNodeId: this.state.focusedNodeId
               }
         }
-        config={this.state.config}
+        config={this.state.prereqChecked ? prereqConfig : skillConfig}
         id="graph-id"
         onClickNode={e => this.onClickNode(e)}
         onClickGraph={e => this.onClickGraph(e)}
@@ -193,6 +232,9 @@ class CoursesPage extends React.Component {
           <div style={{ fontSize: "2rem" }}>
             <center>{title}</center>
           </div>
+          <div style={{ fontSize: "1rem" }}>
+            <center>{subtitle}</center>
+          </div>
 
           <center>
             <div className="container__graph-area">{graph}</div>
@@ -205,46 +247,3 @@ class CoursesPage extends React.Component {
 }
 
 export default CoursesPage;
-
-/*
-<Sigma
-  graph={{
-    nodes: this.state.data.nodes,
-    edges: this.state.data.edges
-  }}
-  settings={{
-    drawEdges: true,
-    drawLabels: true,
-    drawNodes: true,
-    defaultLabelColor: "#f0efe5",
-    defaultEdgeColor: "#f0efe5",
-    defaultNodeColor: "#f0efe5",
-    labelThreshold: "2",
-    batchEdgesDrawing: true,
-    drawEdges: true,
-    drawLabels: true,
-    drawEdgeLabels: true,
-    labelFontSize: "12"
-  }}
-  style={{ height: "80vh", width: "50vw" }}
-  onClickNode={e => this.onClickNode(e)}
->
-  <RelativeSize initialSize={20} />
-  <RandomizeNodePositions />
-</Sigma>
-  */
-/*
-  <Graph
-    data={{
-      ...this.state.data,
-      focusedNodeId: this.state.focusedNodeId
-    }}
-    config={this.state.config}
-    id="graph-id"
-    onClickNode={e => this.onClickNode(e)}
-    onClickGraph={e => this.onClickGraph(e)}
-    onClickLink={e => this.onClickLink(e)}
-    onMouseOverNode={e => this.onMouseOverNode(e)}
-  />
-
-  */
