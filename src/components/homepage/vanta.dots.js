@@ -4,7 +4,7 @@ import {rn, ri, sample, mobileCheck} from './helpers.js'
 class Effect extends VantaBase {
   static initClass() {
     this.prototype.defaultOptions = {
-      color: 0x1e2c3a ,
+      color: 0xff005a ,
       color2: 0x2f3e4e,
       backgroundColor: 0x617489,
       size: 4,
