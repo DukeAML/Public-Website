@@ -115,7 +115,7 @@ class HomePage extends React.Component {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
-                height: "60vh"
+                height: "87.5vh"
               }}
             >
               {/**Icon */}

@@ -6,18 +6,18 @@ class Footer extends React.Component {
     return (
       <Container fluid className="footer" style={{display: "inline-block",
       verticalAlign: "middle"}}>
-        <a style ={{marginLeft: "5%", marginTop: "10%"}}>
+        <a style ={{marginLeft: "40%", marginTop: "10%"}}>
           Questions, comments? Contact us:
           </a>
           <br />
-          <a className="contact" href="mailto: info@dukeaml.com" style={{marginLeft: "5%"}}>
+          <a className="contact" href="mailto: info@dukeaml.com" style={{marginLeft: "40%"}}>
             info@dukeaml.com
           </a>
           <br />
         
   
       <button className="homepageButton" style={{display: "inline-block",
-      verticalAlign: "middle"}}
+      verticalAlign: "middle", marginLeft: "40%", width: "20%"}}
       
       onClick={this.handleSignUpClick}
       >
