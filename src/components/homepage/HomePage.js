@@ -108,7 +108,14 @@ class HomePage extends React.Component {
               </Link>
             </Col>
           </Row>
-          <AnimationWrapper>
+          <AnimationWrapper
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            paddingTop: "30vh"
+          }}>
           <Col
             style={{
               display: "flex",
