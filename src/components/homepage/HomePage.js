@@ -215,7 +215,7 @@ class HomePage extends React.Component {
                   src={DtcLogo}
                   style={{
                     width: "100%",
-                    margin: "2rem"
+                    margin: "2.2rem"
                   }}
                 />
               </Col>
