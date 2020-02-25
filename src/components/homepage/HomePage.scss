@@ -65,11 +65,21 @@ $main-white: #f0efe5;
 
 a.homepage-link {
   color: $main-white;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 a.homepage-link:hover {
   text-decoration: none !important;
   color: $light-grey;
+}
+
+.homepage-link-col {
+  display: flex;
+  padding-top: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .list-group-item {

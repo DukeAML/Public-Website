@@ -17,7 +17,7 @@ $linkedin: url(./components/tools/Icons/linkedin.svg);
 $linkedin-hover: url(./components/tools/Icons/linkedin-hover.svg);
 
 $daml: url(./components/homepage/images/DAML_Picture_Cream_Transparent.svg);
-$daml-hover: url(./components/homepage/images/DAML_Picture_White_Transparent.svg);
+$daml-hover: url(./components/homepage/images/DAML_Picture_Grey_Transparent.svg);
 
 body,
 header {
@@ -142,12 +142,15 @@ hr {
   @extend .icon;
   height: 6rem !important;
   width: 6rem !important;
-  padding: 0;
   background-image: $daml;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .daml-icon:hover {
-  background-image: $daml !important;
+  background-image: $daml-hover;
+  padding-left: 1rem;
+  padding-right: 1rem;
   cursor: pointer;
 }
 

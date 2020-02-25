@@ -49,60 +49,44 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <Container style={{ height: "100%", paddingTop: "60px" }} />
+        <Container style={{ height: "100%", paddingTop: "4rem" }} />
 
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
-          <Row
-            className="justify-content-md-center"
-            style={{ fontSize: "1.5rem, padding: 0" }}
-          >
-            {/**Navigation Area */}
-            <Col
-              md={2}
-              sm={4}
-              xs={4}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "row",
-                alignItems: "center"
-              }}
-            >
-              <Link to="/">
-                <div className="daml-icon" />
-              </Link>
+          <center>
+            <Col sm={12} md={10} lg={8}>
+              <Row
+                style={{
+                  fontSize: "1.5rem",
+                  padding: 0,
+                  verticalAlign: "middle",
+                  justifyContent: "center"
+                }}
+              >
+                {/**Navigation Area */}
+                <Col xs={2}>
+                  <Link to="/">
+                    <div className="daml-icon" />
+                  </Link>
+                </Col>
+                <Col xs={2} to="/projects" className="homepage-link-col">
+                  <Link to="/projects" className="homepage-link">
+                    Projects
+                  </Link>
+                </Col>
+                <Col xs={2} className="homepage-link-col">
+                  <Link to="/people" className="homepage-link">
+                    People
+                  </Link>
+                </Col>
+                <Col xs={2} className="homepage-link-col">
+                  <Link to="/courses" className="homepage-link">
+                    Courses
+                  </Link>
+                </Col>
+              </Row>
             </Col>
-            <Col
-              md={2}
-              sm={4}
-              xs={4}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-              to="/projects"
-            >
-              <Link to="/projects" className="homepage-link">
-                Projects
-              </Link>
-            </Col>
-            <Col
-              md={2}
-              sm={4}
-              xs={4}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <Link to="/people" className="homepage-link">
-                People
-              </Link>
-            </Col>
-          </Row>
+          </center>
 
           <AnimationWrapper>
             <Col
