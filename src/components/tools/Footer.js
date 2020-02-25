@@ -4,28 +4,38 @@ import { Container } from "react-bootstrap";
 class Footer extends React.Component {
   render() {
     return (
-      <Container fluid className="footer" style={{display: "inline-block",
-      verticalAlign: "middle"}}>
-        <a style ={{marginLeft: "5%", marginTop: "10%"}}>
-          Questions, comments? Contact us:
+      <Container
+        fluid
+        className="footer"
+        style={{
+          display: "inline-block",
+          verticalAlign: "middle",
+          padding: "1rem"
+        }}
+      >
+        <center>
+          <div>
+            <button
+              className="homepageButton"
+              style={{ display: "inline-block", verticalAlign: "middle" }}
+              onClick={this.handleSignUpClick}
+            >
+              Join Our Newsletter!
+            </button>
+          </div>
+          <a style={{ marginLeft: "5%", marginTop: "10%" }}>
+            Questions, comments? Contact us:
           </a>
           <br />
-          <a className="contact" href="mailto: info@dukeaml.com" style={{marginLeft: "5%"}}>
+          <a
+            className="contact"
+            href="mailto: info@dukeaml.com"
+            style={{ marginLeft: "5%" }}
+          >
             info@dukeaml.com
           </a>
           <br />
-        
-  
-      <button className="homepageButton" style={{display: "inline-block",
-      verticalAlign: "middle"}}
-      
-      onClick={this.handleSignUpClick}
-      >
-        Join Our Newsletter!
-      </button>
-         
-       
-        
+        </center>
       </Container>
     );
   }

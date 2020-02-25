@@ -17,7 +17,7 @@ class AnimationWrapper extends React.Component {
       THREE: { ...THREE },
       showLines: false,
       color: "#f0efe5",
-      backgroundColor: "#1e2c3a"
+      backgroundColor: "#2f3e4e"
     });
   }
   componentWillUnmount() {
