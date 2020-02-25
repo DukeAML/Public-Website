@@ -69,18 +69,18 @@ class HomePage extends React.Component {
                     <div className="daml-icon" />
                   </Link>
                 </Col>
-                <Col xs={2} to="/projects" className="homepage-link-col">
-                  <Link to="/projects" className="homepage-link">
+                <Col xs={2} to="/projects" className="nav-link-col">
+                  <Link to="/projects" className="nav-link">
                     Projects
                   </Link>
                 </Col>
-                <Col xs={2} className="homepage-link-col">
-                  <Link to="/people" className="homepage-link">
+                <Col xs={2} className="nav-link-col">
+                  <Link to="/people" className="nav-link">
                     People
                   </Link>
                 </Col>
-                <Col xs={2} className="homepage-link-col">
-                  <Link to="/courses" className="homepage-link">
+                <Col xs={2} className="nav-link-col">
+                  <Link to="/courses" className="nav-link">
                     Courses
                   </Link>
                 </Col>

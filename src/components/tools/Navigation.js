@@ -19,39 +19,43 @@ class Navigation extends React.Component {
       <Container
         fluid
         style={{
-          paddingTop: "0.6rem",
-          paddingBottom: "0.6rem",
-          marginBottom: "10px",
+          paddingTop: "1rem",
           backgroundColor: "#1e2c3a"
         }}
       >
-        <Row style={{ fontSize: "20px" }}>
-          {" "}
-          <Col
-            xs={12}
+        <Col sm={12} md={10} lg={8}>
+          {/**Navigation Area */}
+          <Row
             style={{
-              alignItems: "center",
-              display: "flex",
-              padding: "0.1rem 0 0 0.6rem"
+              fontSize: "1.5rem",
+              padding: 0,
+              verticalAlign: "middle",
+              justifyContent: "center"
             }}
           >
-            <Link to="/" style={{ padding: "0.4rem 0 0 1rem" }}>
-              <div className="daml-icon" />
-            </Link>
-
-            <div style={{ padding: "0 2rem 0 2rem", float: "right" }}>
-              <Link to="/projects" className="homepage-link">
+            {/**Navigation Area */}
+            <Col xs={2}>
+              <Link to="/">
+                <div className="daml-icon" />
+              </Link>
+            </Col>
+            <Col xs={2} to="/projects" className="nav-link-col">
+              <Link to="/projects" className="nav-link">
                 Projects
               </Link>
-            </div>
-
-            <div style={{ padding: "0 0 0 0" }}>
-              <Link to="/people" className="homepage-link">
+            </Col>
+            <Col xs={2} className="nav-link-col">
+              <Link to="/people" className="nav-link">
                 People
               </Link>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+            <Col xs={2} className="nav-link-col">
+              <Link to="/courses" className="nav-link">
+                Courses
+              </Link>
+            </Col>
+          </Row>
+        </Col>
       </Container>
     );
   }

@@ -11,6 +11,7 @@ import Navigation from "./tools/Navigation";
 import ProjectDisplayPage from "./projectdisplay/ProjectDisplayPage";
 import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
+import CoursesPage from "./courses/CoursesPage";
 const projects = require("./projects/projectsData");
 
 class App extends React.Component {
@@ -20,6 +21,8 @@ class App extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
+        <Route exact path="/courses" component={CoursesPage} />
+
         {projects.map((project, index) => (
           <Route
             key={index}

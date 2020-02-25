@@ -207,3 +207,58 @@ a.homepage-link {
 .card-body.individual-project-card {
   background-color: #f0f1f2;
 }
+
+.nav-link-col {
+  display: flex;
+  padding-top: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+a.nav-link {
+  color: $main-white;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+a.nav-link:hover {
+  text-decoration: none !important;
+  color: $light-grey;
+}
+
+///// courses display
+.container__graph-area {
+  margin: 1rem;
+  z-index: 1;
+}
+
+.courses-details-tab {
+  background-color: $dark-grey;
+  color: $main-white;
+  padding: 1rem;
+  margin: 2rem;
+  max-width: 300px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+.accordion-header:hover {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.accordion-header {
+  padding: 0.5rem;
+  font-family: "Roboto Mono";
+  background-color: $main-grey;
+  border: solid 2px $dark-grey;
+}
+
+.accordion-body {
+  color: white;
+  padding: 0.5rem;
+}
