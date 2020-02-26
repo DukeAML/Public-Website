@@ -19,6 +19,7 @@
     "react-d3-graph": "^2.3.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
+    "react-items-carousel": "^2.8.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.0",
     "three": "^0.113.2",
