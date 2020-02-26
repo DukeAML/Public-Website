@@ -201,6 +201,14 @@ class CoursesPage extends React.Component {
             selectedNode={this.state.selectedNode}
             nodes={data_v2.nodes}
           />
+
+          <div className="title">
+            <center>{title}</center>
+          </div>
+          <div style={{ fontSize: "1rem" }}>
+            <center>{subtitle}</center>
+          </div>
+
           <Row>
             <Col xl={12}>
               <div
@@ -228,15 +236,9 @@ class CoursesPage extends React.Component {
               </div>
             </Col>
           </Row>
-          <div style={{ fontSize: "2rem" }}>
-            <center>{title}</center>
-          </div>
-          <div style={{ fontSize: "1rem" }}>
-            <center>{subtitle}</center>
-          </div>
 
           <center>
-            <div className="container__graph-area">{graph}</div>
+            r<div className="container__graph-area">{graph}</div>
           </center>
           <Footer />
         </Container>

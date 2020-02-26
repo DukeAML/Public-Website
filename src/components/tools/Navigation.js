@@ -48,7 +48,7 @@ class Navigation extends React.Component {
             <Nav.Link>
               {" "}
               <Link to="/people" className="nav-link">
-                Our Team
+                People
               </Link>
             </Nav.Link>
             <Nav.Link>

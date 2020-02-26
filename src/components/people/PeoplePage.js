@@ -484,7 +484,7 @@ class PeoplePage extends React.Component {
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <div className="title" style={{ padding: "0 0 1rem 0" }}>
+          <div className="title">
             <center>Our Members</center>
           </div>
 

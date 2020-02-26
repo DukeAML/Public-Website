@@ -60,16 +60,10 @@ class ProjectsPage extends React.Component {
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <Container style={{ minHeight: "100%", padding: `1rem ${padding}%` }}>
-            <Row
-              style={{
-                display: "flex",
-                justifyContent: "center"
-              }}
-              noGutters={true}
-            >
+          <Container style={{ minHeight: "100%", padding: `0 ${padding}%` }}>
+            <center>
               <div className="title"> Current Projects </div>
-            </Row>
+            </center>
             <Row
               style={{
                 display: "flex",
