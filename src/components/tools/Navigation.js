@@ -25,7 +25,7 @@ class Navigation extends React.Component {
       >
         <Row
           className={this.props.center ? "justify-content-md-center" : ""}
-          style={{ padding: "0 1rem" }}
+          style={{ padding: "0" }}
         >
           <Navbar>
             <Navbar.Brand>

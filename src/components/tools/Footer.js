@@ -8,9 +8,7 @@ class Footer extends React.Component {
         fluid
         className="footer"
         style={{
-          display: "inline-block",
-          verticalAlign: "middle",
-          padding: "1rem"
+          verticalAlign: "middle"
         }}
       >
         <center>

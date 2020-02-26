@@ -51,8 +51,6 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <Container style={{ height: "100%" }} />
-
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
           <center>
