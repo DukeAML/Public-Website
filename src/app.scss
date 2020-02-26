@@ -262,3 +262,21 @@ a.nav-link:hover {
   color: white;
   padding: 0.5rem;
 }
+
+.newsletter-button {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-color: $light-grey;
+  border: none;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+.newsletter-button:hover {
+  background-color: #3d67a5; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

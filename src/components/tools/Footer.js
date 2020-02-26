@@ -14,24 +14,9 @@ class Footer extends React.Component {
         }}
       >
         <center>
-          <div>
-            <button
-              className="homepageButton"
-              style={{ display: "inline-block", verticalAlign: "middle" }}
-              onClick={this.handleSignUpClick}
-            >
-              Join Our Newsletter!
-            </button>
-          </div>
-          <a style={{ marginLeft: "5%", marginTop: "10%" }}>
-            Questions, comments? Contact us:
-          </a>
+          <a>Questions, comments? Contact us:</a>
           <br />
-          <a
-            className="contact"
-            href="mailto: info@dukeaml.com"
-            style={{ marginLeft: "5%" }}
-          >
+          <a className="contact" href="mailto: info@dukeaml.com">
             info@dukeaml.com
           </a>
           <br />
