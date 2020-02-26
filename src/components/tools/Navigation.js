@@ -19,43 +19,30 @@ class Navigation extends React.Component {
       <Container
         fluid
         style={{
-          paddingTop: "1rem",
-          backgroundColor: "#1e2c3a"
+          padding: 0,
+          backgroundColor: this.props.backgroundColor || "#1e2c3a"
         }}
       >
-        <Col sm={12} md={10} lg={8}>
-          {/**Navigation Area */}
-          <Row
-            style={{
-              fontSize: "1.5rem",
-              padding: 0,
-              verticalAlign: "middle",
-              justifyContent: "center"
-            }}
-          >
-            {/**Navigation Area */}
-            <Col xs={2}>
-              <Link to="/">
-                <div className="daml-icon" />
-              </Link>
-            </Col>
-            <Col xs={2} to="/projects" className="nav-link-col">
-              <Link to="/projects" className="nav-link">
-                Projects
-              </Link>
-            </Col>
-            <Col xs={2} className="nav-link-col">
-              <Link to="/people" className="nav-link">
-                People
-              </Link>
-            </Col>
-            <Col xs={2} className="nav-link-col">
-              <Link to="/courses" className="nav-link">
-                Courses
-              </Link>
-            </Col>
-          </Row>
-        </Col>
+        <Row
+          className={this.props.center ? "justify-content-md-center" : ""}
+          style={{ padding: "0 1rem" }}
+        >
+          <Navbar>
+            <Navbar.Brand href="/">
+              <img
+                alt="Home"
+                src={require("../homepage/images/DAML_Full_Cream_Transparent.svg")}
+                width="50"
+                height="50"
+                className="d-inline-block align-top"
+              />
+            </Navbar.Brand>
+
+            <Nav.Link href="/projects">Projects</Nav.Link>
+            <Nav.Link href="/people">Our Team</Nav.Link>
+            <Nav.Link href="/courses">Courses</Nav.Link>
+          </Navbar>
+        </Row>
       </Container>
     );
   }

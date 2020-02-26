@@ -14,6 +14,7 @@ import AnimationWrapper from "./AnimationWrapper.js";
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
+import Navigation from "../tools/Navigation";
 import ThemeCard from "./ThemeCard";
 import ImageAccordion from "../tools/ImageAccordion";
 import IndustryBuckets from "./IndustryBuckets";
@@ -49,43 +50,12 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <Container style={{ height: "100%", paddingTop: "4rem" }} />
+        <Container style={{ height: "100%" }} />
 
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
           <center>
-            <Col sm={12} md={10} lg={8}>
-              <Row
-                style={{
-                  fontSize: "1.5rem",
-                  padding: 0,
-                  verticalAlign: "middle",
-                  justifyContent: "center"
-                }}
-              >
-                {/**Navigation Area */}
-                <Col xs={2}>
-                  <Link to="/">
-                    <div className="daml-icon" />
-                  </Link>
-                </Col>
-                <Col xs={2} to="/projects" className="nav-link-col">
-                  <Link to="/projects" className="nav-link">
-                    Projects
-                  </Link>
-                </Col>
-                <Col xs={2} className="nav-link-col">
-                  <Link to="/people" className="nav-link">
-                    People
-                  </Link>
-                </Col>
-                <Col xs={2} className="nav-link-col">
-                  <Link to="/courses" className="nav-link">
-                    Courses
-                  </Link>
-                </Col>
-              </Row>
-            </Col>
+            <Navigation center={true} backgroundColor="#2f3e4e" />
           </center>
 
           <AnimationWrapper>
