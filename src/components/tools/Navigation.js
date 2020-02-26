@@ -28,19 +28,34 @@ class Navigation extends React.Component {
           style={{ padding: "0 1rem" }}
         >
           <Navbar>
-            <Navbar.Brand href="/">
-              <img
-                alt="Home"
-                src={require("../homepage/images/DAML_Full_Cream_Transparent.svg")}
-                width="50"
-                height="50"
-                className="d-inline-block align-top"
-              />
+            <Navbar.Brand>
+              <Link to="/">
+                <img
+                  alt="Home"
+                  src={require("../homepage/images/DAML_Full_Cream_Transparent.svg")}
+                  width="50"
+                  height="50"
+                  className="d-inline-block align-top"
+                />
+              </Link>
             </Navbar.Brand>
 
-            <Nav.Link href="/projects">Projects</Nav.Link>
-            <Nav.Link href="/people">Our Team</Nav.Link>
-            <Nav.Link href="/courses">Courses</Nav.Link>
+            <Nav.Link>
+              <Link to="/projects" className="nav-link">
+                Projects
+              </Link>{" "}
+            </Nav.Link>
+            <Nav.Link>
+              {" "}
+              <Link to="/people" className="nav-link">
+                Our Team
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/courses" className="nav-link">
+                Courses
+              </Link>
+            </Nav.Link>
           </Navbar>
         </Row>
       </Container>
