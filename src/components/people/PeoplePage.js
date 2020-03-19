@@ -481,33 +481,32 @@ class PeoplePage extends React.Component {
     }
 
     return (
-      <div>
+      <Container fluid style={{ padding: 0 }}>
         <Navigation />
-        <Container fluid style={{ padding: 0 }}>
-          <div className="title">
-            <center>Our Members</center>
-          </div>
 
-          <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            {DStitle}
-            <hr />
-          </div>
-          <center>{DSgrid}</center>
-          <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            {PStitle}
-            <hr />
-          </div>
-          <center>{PSgrid}</center>
+        <div className="title">
+          <center>Our Members</center>
+        </div>
 
-          <div className="team" style={{ padding: `1rem ${padding}%` }}>
-            {CRMtitle}
-            <hr />
-          </div>
-          <center>{CRMgrid}</center>
+        <div className="team" style={{ padding: `1rem ${padding}%` }}>
+          {DStitle}
+          <hr />
+        </div>
+        <center>{DSgrid}</center>
+        <div className="team" style={{ padding: `1rem ${padding}%` }}>
+          {PStitle}
+          <hr />
+        </div>
+        <center>{PSgrid}</center>
 
-          <Footer />
-        </Container>
-      </div>
+        <div className="team" style={{ padding: `1rem ${padding}%` }}>
+          {CRMtitle}
+          <hr />
+        </div>
+        <center>{CRMgrid}</center>
+
+        <Footer />
+      </Container>
     );
   }
 }

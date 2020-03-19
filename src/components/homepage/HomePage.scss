@@ -2,14 +2,14 @@
 $main-grey: #2f3e4e;
 $dark-grey: #1e2c3a;
 $light-grey: #617489;
-$main-white: #f0efe5;
+$lightest-grey: #e6e7e8;
+$main-white: #f2f4f5;
 
 .boxShadowed {
   //   margin-top: 100px;
   padding: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: $dark-grey;
   //   box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
   //     inset 0px 4px 30px rgba(0, 0, 0, 0.15);
 }
@@ -21,7 +21,6 @@ $main-white: #f0efe5;
   font-size: 30px;
   line-height: 35px;
   text-align: center;
-  color: $main-white;
 }
 
 .homepageButton {
@@ -70,12 +69,11 @@ $main-white: #f0efe5;
 
 .card {
   border: none;
-  background-color: $main-grey;
-  color: $dark-grey;
+  background-color: $lightest-grey;
 }
 
 .card-title {
-  background-color: #f0f1f2;
+  background-color: $lightest-grey;
   padding: 1rem;
 }
 
