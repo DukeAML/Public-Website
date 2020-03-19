@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
-import ItemsCarousel from './ItemsCarousel';
+
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
@@ -164,8 +164,7 @@ class HomePage extends React.Component {
                   alignItems: "center"
                 }}
               >
-                <img
-                  src={DtcLogo}
+                <Carousel
                   style={{
                     width: "100%",
                     margin: "2.2rem"
