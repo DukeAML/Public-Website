@@ -19,12 +19,12 @@ class Navigation extends React.Component {
       <Container
         fluid
         style={{
-          padding: 0,
+          padding: "0",
           backgroundColor: this.props.backgroundColor || "#1e2c3a"
         }}
       >
-        <Row
-          className={this.props.center ? "justify-content-md-center" : ""}
+        <div
+          style={this.props.center ? "justify-content-md-center" : ""}
           style={{ padding: "0" }}
         >
           <Navbar>
@@ -57,7 +57,7 @@ class Navigation extends React.Component {
               </Link>
             </Nav.Link>
           </Navbar>
-        </Row>
+        </div>
       </Container>
     );
   }
