@@ -47,7 +47,7 @@ class GPUPage extends React.Component {
         <Container fluid style={{ padding: 0 }}>
           <Container style={{ minHeight: "80vh", padding: `0 ${padding}%` }}>
             <center>
-              <div className="title"> GPU Usage </div>
+              <div className="title"> GPUs </div>
             </center>
             <Row
               style={{

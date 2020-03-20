@@ -66,7 +66,7 @@ class Navigation extends React.Component {
 
             <Col xs="2" lg="1">
               <Link to="/GPU" className="nav-link-col">
-                GPU Usage
+                GPUs
               </Link>
             </Col>
           </Navbar>
