@@ -7,17 +7,17 @@ class Carousel extends React.Component {
            <Carousel>
  <Carousel.Item>
    <img
-     src="./dtc-logo-tag.png"
+     src="dtc-logo-tag.png"
      alt="First slide"
    />
    <Carousel.Caption>
-     <h3>First slide label</h3>
+     <h3 style={{color: "#2B3E50"}} >First slide label</h3>
      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
    </Carousel.Caption>
  </Carousel.Item>
  <Carousel.Item>
    <img
-     src="./dtc-logo-tag.png"
+     src="dtc-logo-tag.png"
      alt="Seconf slide"
    />
  
@@ -28,7 +28,7 @@ class Carousel extends React.Component {
  </Carousel.Item>
  <Carousel.Item>
    <img
-     src= "./dtc-logo-tag.png"
+     src= "dtc-logo-tag.png"
      alt="Third slide"
    />
  
