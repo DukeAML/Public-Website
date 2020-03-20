@@ -7,8 +7,7 @@ class Carousel extends React.Component {
             <Carousel>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src="./headshots/Cuozzo.jpg"
+      src="./dtc-logo-tag.png"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -18,8 +17,7 @@ class Carousel extends React.Component {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src="./headshots/Baig.jpg"
+      src="./dtc-logo-tag.png"
       alt="Seconf slide"
     />
 
@@ -30,8 +28,7 @@ class Carousel extends React.Component {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src= "./headshots/Focht.jpg"
+      src= "./dtc-logo-tag.png"
       alt="Third slide"
     />
 
