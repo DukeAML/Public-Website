@@ -39,7 +39,6 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Navbar.Brand>
-
             <Nav.Link>
               <Link to="/projects" className="nav-link">
                 Projects
