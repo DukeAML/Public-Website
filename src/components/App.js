@@ -12,6 +12,9 @@ import ProjectDisplayPage from "./projectdisplay/ProjectDisplayPage";
 import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
 import CoursesPage from "./courses/CoursesPage";
+import PapersPage from "./papers/PapersPage";
+import GPUPage from "./GPU/GPUPage";
+
 const projects = require("./projects/projectsData");
 
 class App extends React.Component {
@@ -22,6 +25,8 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/courses" component={CoursesPage} />
+        <Route exact path="/papers" component={PapersPage} />
+        <Route exact path="/GPU" component={GPUPage} />
 
         {projects.map((project, index) => (
           <Route

@@ -39,7 +39,6 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Navbar.Brand>
-
             <Nav.Link>
               <Link to="/projects" className="nav-link">
                 Projects
@@ -54,6 +53,16 @@ class Navigation extends React.Component {
             <Nav.Link>
               <Link to="/courses" className="nav-link">
                 Courses
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/papers" className="nav-link">
+                Papers
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/GPU" className="nav-link">
+                GPU Usage
               </Link>
             </Nav.Link>
           </Navbar>
