@@ -71,7 +71,7 @@ class HomePage extends React.Component {
               <Image
                 fluid
                 style={{ padding: 0 }}
-                className="main-graphic"
+                className="main-graphic parallax"
                 src={require("./images/DAML_Full_Grey_Transparent.svg")}
               />
             </Col>

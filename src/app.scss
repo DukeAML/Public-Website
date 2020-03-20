@@ -211,8 +211,6 @@ a.homepage-link {
 .nav-link-col {
   display: flex;
   padding-top: 0.7rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .card-title.h5 {
@@ -282,6 +280,10 @@ a.nav-link:hover {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.DAML-nav-icon {
+  margin-left: 1.5rem;
+  justify-content: "center";
+}
 // get rid of padding on react-bootstrap elements
 
 div.container-fluid {

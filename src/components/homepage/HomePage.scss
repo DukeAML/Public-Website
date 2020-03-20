@@ -86,3 +86,11 @@ $main-white: #f2f4f5;
     cursor: pointer;
   }
 }
+
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
