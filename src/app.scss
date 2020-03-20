@@ -51,7 +51,7 @@ h4 {
 }
 
 hr {
-  background-color: $main-white;
+  background-color: $dark-grey;
   filter: opacity(0.5);
 }
 .main-bg {
@@ -78,14 +78,13 @@ hr {
 }
 
 .person-details {
-  background-color: $dark-grey;
+  background-color: #e6e7e870;
 }
 
 .person-details-text {
   animation: opac 1s;
   font-size: 1.2rem;
   clear: left;
-  color: white;
   margin: 0;
 }
 
@@ -164,7 +163,7 @@ a.homepage-link {
   padding-top: 30px;
   padding-bottom: 30px;
   min-height: 15vh;
-  background-color: $dark-grey;
+  background-color: #e6e7e870;
   box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
     inset 0px 4px 30px rgba(0, 0, 0, 0.15);
 }
