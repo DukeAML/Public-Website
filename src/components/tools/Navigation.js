@@ -20,12 +20,13 @@ class Navigation extends React.Component {
         fluid
         style={{
           padding: "0",
-          backgroundColor: this.props.backgroundColor || "#f2f4f5"
+          backgroundColor: this.props.backgroundColor || "#f2f4f5",
+          maxWidth: "100vw"
         }}
       >
         <div style={{ padding: "0" }}>
           <Navbar>
-            <Col xs="2" md="1">
+            <Col xs="2" lg="1">
               <Navbar.Brand>
                 <Link to="/">
                   <img
@@ -38,45 +39,35 @@ class Navigation extends React.Component {
                 </Link>
               </Navbar.Brand>
             </Col>
-            <Col xs="2" md="1">
-              <Nav.Link>
-                <Link to="/projects" className="nav-link">
-                  Projects
-                </Link>{" "}
-              </Nav.Link>
+            <Col xs="2" lg="1">
+              <Link to="/projects" className="nav-link-col">
+                Projects
+              </Link>{" "}
             </Col>
 
-            <Col xs="2" md="1">
-              <Nav.Link>
-                {" "}
-                <Link to="/people" className="nav-link">
-                  People
-                </Link>
-              </Nav.Link>
+            <Col xs="2" lg="1">
+              {" "}
+              <Link to="/people" className="nav-link-col">
+                People
+              </Link>
             </Col>
 
-            <Col xs="2" md="1">
-              <Nav.Link>
-                <Link to="/courses" className="nav-link">
-                  Courses
-                </Link>
-              </Nav.Link>
+            <Col xs="2" lg="1">
+              <Link to="/courses" className="nav-link-col">
+                Courses
+              </Link>
             </Col>
 
-            <Col xs="2" md="1">
-              <Nav.Link>
-                <Link to="/papers" className="nav-link">
-                  Papers
-                </Link>
-              </Nav.Link>
+            <Col xs="2" lg="1">
+              <Link to="/papers" className="nav-link-col">
+                Papers
+              </Link>
             </Col>
 
-            <Col xs="2" md="1">
-              <Nav.Link>
-                <Link to="/GPU" className="nav-link">
-                  GPU Usage
-                </Link>
-              </Nav.Link>
+            <Col xs="2" lg="1">
+              <Link to="/GPU" className="nav-link-col">
+                GPU Usage
+              </Link>
             </Col>
           </Navbar>
         </div>
