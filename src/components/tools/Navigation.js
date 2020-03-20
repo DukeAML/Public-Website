@@ -56,6 +56,16 @@ class Navigation extends React.Component {
                 Courses
               </Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/papers" className="nav-link">
+                Papers
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/GPU" className="nav-link">
+                GPU Usage
+              </Link>
+            </Nav.Link>
           </Navbar>
         </div>
       </Container>

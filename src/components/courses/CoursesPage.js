@@ -45,14 +45,13 @@ const skillConfig = {
     labelProperty: "label",
     fontColor: "#1e2c3a",
     fontSize: 14,
-    highlightFontSize: 14,
-    selectedColor: "#ffffff",
-    clickFontColor: "#000000"
+    highlightFontSize: 14
   },
   link: {
     renderLabel: false,
     semanticStrokeWidth: false,
-    strokeWidth: 2
+    strokeWidth: 2,
+    color: "#61748970"
   },
   d3: {
     alphaTarget: 1,
@@ -82,15 +81,14 @@ const prereqConfig = {
     labelProperty: "label",
     fontColor: "#1e2c3a",
     fontSize: 14,
-    highlightFontSize: 14,
-    selectedColor: "#ffffff",
-    clickFontColor: "#000000"
+    highlightFontSize: 14
   },
   link: {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
-    iterations: 20
+    iterations: 20,
+    color: "#61748970"
   },
   d3: {
     alphaTarget: 0.5,
