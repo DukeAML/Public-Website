@@ -6,8 +6,7 @@ import {
   Row,
   Col,
   Image,
-  Card,
-  Carousel
+  Card
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
@@ -18,6 +17,7 @@ import Navigation from "../tools/Navigation";
 import ThemeCard from "./ThemeCard";
 import ImageAccordion from "../tools/ImageAccordion";
 import IndustryBuckets from "./IndustryBuckets";
+import Carousel from "./Carousel";
 import "./HomePage.scss";
 const DtcLogo = require("./dtc-logo-tag.png");
 
@@ -154,21 +154,8 @@ class HomePage extends React.Component {
                 computer science, business, electrical engineering and more, we
                 provide an interdisciplinary approach to solving these problems.
               </Col>
-              <Col
-                lg={6}
-                md={12}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
-                <Carousel
-                  style={{
-                    width: "100%",
-                    margin: "2.2rem"
-                  }}
-                />
+              <Col lg={6} md={12}>
+                <Carousel style={{ width: "100%" }} />
               </Col>
             </Row>
           </Container>
