@@ -21,9 +21,10 @@ import Navigation from "../tools/Navigation";
 
 import CoursesDetailsTab from "./CoursesDetailsTab";
 import shortestPath from "./shortestPath";
-
+import "./courses.scss";
 //const data = require("./Data");
 import data_v2 from "./Data-v2";
+
 
 const skillConfig = {
   nodeHighlightBehavior: true,
@@ -213,24 +214,25 @@ class CoursesPage extends React.Component {
                 style={{ fontSize: "1rem", padding: "1rem" }}
                 onChange={e => this.handleDataTypeChange(e)}
               >
-                <input
+              <div class = "selectView">
+                <input 
                   type="radio"
                   name="prereqChecked"
                   id="prereq"
-                  label=""
                   defaultChecked
                   checked={this.state.prereqChecked}
                 />
-                View prerequisite-based connections
+                <label for="prereq">View prerequisite-based connections</label>
+                
                 <br />
                 <input
                   type="radio"
                   name="skillChecked"
                   id="skill"
-                  label=""
                   checked={!this.state.prereqChecked}
                 />
-                View skill-based connections
+                <label for="skill">View skill-based connections</label>
+                </div>
               </div>
             </Col>
           </Row>
