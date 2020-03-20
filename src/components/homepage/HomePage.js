@@ -11,10 +11,6 @@ import {
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
-<<<<<<< HEAD
-
-=======
->>>>>>> 0415887bfe2d09a6c936aae42713ba3cef3b18dc
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
