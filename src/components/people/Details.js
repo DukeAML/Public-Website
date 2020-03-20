@@ -11,8 +11,13 @@ class Details extends React.Component {
 
   render() {
     return (
-      <Collapse in={this.props.display}>
-        <div className="person-details inset">{this.state.current}</div>
+      <Collapse
+        in={this.props.display}
+        style={{ padding: "0 !important", margin: "0 !important" }}
+      >
+        <div style={{ margin: 0 }} className="person-details inset">
+          {this.state.current}
+        </div>
       </Collapse>
     );
   }

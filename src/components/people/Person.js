@@ -46,7 +46,6 @@ import jain from "./headshots/profile-placeholder.svg";
 import bhatt from "./headshots/profile-placeholder.svg";
 import hobart from "./headshots/profile-placeholder.svg";
 
-
 // compose dictionary of headshots for people that have headshots
 const headshots = {
   "Luke	Truitt": truitt,
@@ -69,19 +68,19 @@ const headshots = {
   "Ben	Levy": levy,
   "Nicole	Moiseyev": moiseyev,
   "Shuyi	Fan": fan,
-  "Bree Wang":wang,
-  "Daniel	Tao":tao,
-  "Alina Barnett":barnett,
-  "Madeline Cuozzo":cuozzo,
-  "Wyatt Focht":focht,
-  "Christine Yoon":yoon,
-  "Russell Llave":llave,
-  "Raj Mehta":mehta,
-  "Luiza Wolf":wolf,
-  "Cady Zhou":zhou,
-  "Anabella Buckvar":buckvar,
-  "Sauren Gupta":gupta,
-  "Jaiveer Katariya":katariya,
+  "Bree Wang": wang,
+  "Daniel	Tao": tao,
+  "Alina Barnett": barnett,
+  "Madeline Cuozzo": cuozzo,
+  "Wyatt Focht": focht,
+  "Christine Yoon": yoon,
+  "Russell Llave": llave,
+  "Raj Mehta": mehta,
+  "Luiza Wolf": wolf,
+  "Cady Zhou": zhou,
+  "Anabella Buckvar": buckvar,
+  "Sauren Gupta": gupta,
+  "Jaiveer Katariya": katariya,
   "Ram Gallopudy": gollapudy,
   "Himanshu Jain": jain,
   "Suchir Bhatt": bhatt,
@@ -140,7 +139,7 @@ function Person(props) {
           </center>
         </Col>
       </Row>
-      <div style={{ color: "#f0efe5" }}>
+      <div>
         <div style={{ fontSize: "1.5rem" }}>{props.name} </div>
       </div>
     </Col>

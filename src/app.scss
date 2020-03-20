@@ -2,7 +2,8 @@
 $main-grey: #2f3e4e;
 $dark-grey: #1e2c3a;
 $light-grey: #617489;
-$main-white: #f0efe5;
+$lightest-grey: #e6e7e8;
+$main-white: #f2f4f5;
 
 // Inset shadow settings
 $shadow-color: rgba(0, 0, 0, 0.3);
@@ -22,14 +23,14 @@ $daml-hover: url(./components/homepage/images/DAML_Picture_Grey_Transparent.svg)
 body,
 header {
   font-family: "Noto Sans", sans-serif;
-  background-color: $main-grey;
-  color: $main-white;
+  background-color: $main-white;
+  color: $dark-grey;
 }
 
 .title {
   font-family: "Lora", monospace !important;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .team {
@@ -54,14 +55,14 @@ hr {
   filter: opacity(0.5);
 }
 .main-bg {
-  background-color: #2f3e4e;
+  background-color: $main-white;
 }
 
 .people-accordion > .card .card-header {
   width: 100%;
-  background-color: $main-grey;
+  background-color: $main-white;
   border-style: none;
-  color: $main-white !important;
+  color: black !important;
   & :hover {
     text-decoration: none !important;
   }
@@ -78,20 +79,22 @@ hr {
 
 .person-details {
   background-color: $dark-grey;
-  height: 100%;
-  margin: 0;
 }
 
 .person-details-text {
   animation: opac 1s;
   font-size: 1.2rem;
   clear: left;
+  color: white;
+  margin: 0;
 }
 
 .inset {
   -moz-box-shadow: $inset-shadow;
   -webkit-box-shadow: $inset-shadow;
   box-shadow: $inset-shadow;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes opac {
@@ -155,7 +158,6 @@ hr {
 }
 
 a.homepage-link {
-  color: $main-white;
 }
 
 .box-shadowed {
@@ -171,28 +173,27 @@ a.homepage-link {
   font-family: "Lora", monospace;
   height: 7rem;
   padding: 1rem;
+  margin-top: 2rem;
   background-color: $dark-grey;
+  color: white;
 }
 
 .theme-button {
-  background-color: $dark-grey;
+  background-color: $main-white;
   border: none;
-  & :hover,
-  :focus {
-    background-color: $light-grey;
-  }
+  color: $dark-grey;
 }
 
 .theme-button.btn:hover {
-  background-color: $main-grey;
+  background-color: $light-grey;
 }
 
 .theme-button.btn:active {
-  background-color: $dark-grey !important;
+  background-color: $main-grey !important;
 }
 
 .card-body.project-card {
-  background-color: #f0f1f2;
+  background-color: $lightest-grey;
   padding: 1rem;
   align-content: center;
   vertical-align: center;
@@ -202,11 +203,10 @@ a.homepage-link {
 .card-body,
 .image {
   border: none;
-  color: $dark-grey;
 }
 
 .card-body.individual-project-card {
-  background-color: #f0f1f2;
+  background-color: $lightest-grey;
 }
 
 .nav-link-col {
@@ -216,8 +216,12 @@ a.homepage-link {
   padding-right: 1rem;
 }
 
+.card-title.h5 {
+  background-color: $lightest-grey;
+}
+
 a.nav-link {
-  color: $main-white;
+  color: $dark-grey;
 }
 
 a.nav-link:hover {
@@ -233,7 +237,7 @@ a.nav-link:hover {
 
 .courses-details-tab {
   background-color: $dark-grey;
-  color: $main-white;
+  color: white;
   padding: 1rem;
   margin: 2rem;
   max-width: 300px;
@@ -252,12 +256,12 @@ a.nav-link:hover {
 .accordion-header {
   padding: 0.5rem;
   font-family: "Roboto Mono";
-  background-color: $main-grey;
+  background-color: $main-white;
   border: solid 2px $dark-grey;
+  color: $dark-grey;
 }
 
 .accordion-body {
-  color: white;
   padding: 0.5rem;
 }
 
@@ -338,7 +342,19 @@ div.col-xs-5,
 div.col-xs-6,
 div.col-xs-7,
 div.col-xs-8,
-div.col-xs-9 {
+div.col-xs-9,
+div.col-1,
+div.col-2,
+div.col-3,
+div.col-4,
+div.col-5,
+div.col-6,
+div.col-7,
+div.col-8,
+div.col-9,
+div.col-10,
+div.col-11,
+div.col-12 {
   padding-left: 0;
   padding-right: 0;
 }

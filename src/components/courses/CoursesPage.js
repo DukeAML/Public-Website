@@ -40,10 +40,10 @@ const skillConfig = {
   nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
   node: {
-    color: "#f0efe5",
+    color: "#1e2c3a",
     size: 300,
     labelProperty: "label",
-    fontColor: "#f0efe5",
+    fontColor: "#1e2c3a",
     fontSize: 14,
     highlightFontSize: 14,
     selectedColor: "#ffffff",
@@ -77,10 +77,10 @@ const prereqConfig = {
   nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
   node: {
-    color: "#f0efe5",
+    color: "#1e2c3a",
     size: 200,
     labelProperty: "label",
-    fontColor: "#f0efe5",
+    fontColor: "#1e2c3a",
     fontSize: 14,
     highlightFontSize: 14,
     selectedColor: "#ffffff",
@@ -238,7 +238,7 @@ class CoursesPage extends React.Component {
           </Row>
 
           <center>
-            r<div className="container__graph-area">{graph}</div>
+            <div className="container__graph-area">{graph}</div>
           </center>
           <Footer />
         </Container>

@@ -16,8 +16,8 @@ class AnimationWrapper extends React.Component {
       el: this.vantaRef.current,
       THREE: { ...THREE },
       showLines: false,
-      color: "#f0efe5",
-      backgroundColor: "#2f3e4e"
+      color: "#1e2c3a",
+      backgroundColor: "#f2f4f5"
     });
   }
   componentWillUnmount() {

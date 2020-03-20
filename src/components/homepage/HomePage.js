@@ -11,7 +11,10 @@ import {
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0415887bfe2d09a6c936aae42713ba3cef3b18dc
 import Canvas from "../canvas/Canvas";
 import Animation from "../canvas/Animation";
 import Footer from "../tools/Footer";
@@ -54,7 +57,7 @@ class HomePage extends React.Component {
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
           <center>
-            <Navigation center={true} backgroundColor="#2f3e4e" />
+            <Navigation center={true} />
           </center>
 
           <AnimationWrapper>
@@ -73,14 +76,18 @@ class HomePage extends React.Component {
                 fluid
                 style={{ padding: 0 }}
                 className="main-graphic"
-                src={require("./images/DAML_Full_Cream_Transparent.svg")}
+                src={require("./images/DAML_Full_Grey_Transparent.svg")}
               />
             </Col>
           </AnimationWrapper>
         </Container>
 
         {/**ABOUT SECTION */}
-        <Container fluid className="boxShadowed">
+        <Container
+          fluid
+          className="boxShadowed"
+          style={{ backgroundColor: "#1e2c3a", color: "white" }}
+        >
           <Container>
             <Row
               style={{
@@ -122,7 +129,7 @@ class HomePage extends React.Component {
         <Container
           fluid
           className="boxShadowed"
-          style={{ backgroundColor: "#2f3e4e" }}
+          style={{ backgroundColor: "" }}
         >
           <Container>
             <Row

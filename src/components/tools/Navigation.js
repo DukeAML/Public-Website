@@ -20,7 +20,7 @@ class Navigation extends React.Component {
         fluid
         style={{
           padding: "0",
-          backgroundColor: this.props.backgroundColor || "#1e2c3a"
+          backgroundColor: this.props.backgroundColor || "#f2f4f5"
         }}
       >
         <div
@@ -32,7 +32,7 @@ class Navigation extends React.Component {
               <Link to="/">
                 <img
                   alt="Home"
-                  src={require("../homepage/images/DAML_Full_Cream_Transparent.svg")}
+                  src={require("../homepage/images/DAML_Full_Grey_Transparent.svg")}
                   width="50"
                   height="50"
                   className="d-inline-block align-top"
