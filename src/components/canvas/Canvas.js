@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 const mainGrey = "#2f3e4e";
 const darkGrey = "#1e2c3a";
 const lightGrey = "#617489";
-const mainWhite = "#f0efe5";
+const mainWhite = "#f2f4f5";
 function Circle(x, y, dx, dy, radius, borderColor, fillColor, ctx) {
   this.x = x;
   this.y = y;
@@ -42,7 +42,7 @@ function Signal(startX, startY, endX, endY) {
   this.draw = function(c) {
     c.beginPath();
     c.arc(this.currentX, this.currentY, 10, 0, Math.PI * 2, false);
-    c.fillStyle = "#f0efe5";
+    c.fillStyle = "#617489";
     c.fill();
   };
 
@@ -58,7 +58,7 @@ function Signal(startX, startY, endX, endY) {
     }
 
     this.currentX += 0.7;
-    this.currentY += 0.7*slope;
+    this.currentY += 0.7 * slope;
 
     this.draw(c);
   };
@@ -90,7 +90,10 @@ class Canvas extends React.Component {
   }
 
   updateAnimationState() {
-    if (this.state.frameCounter >= (10/7)*this.state.width / 5.0 / 2.0 - 0.5) {
+    if (
+      this.state.frameCounter >=
+      ((10 / 7) * this.state.width) / 5.0 / 2.0 - 0.5
+    ) {
       this.setState({ frameCounter: 0 });
       console.log(this.state.stageCounter);
       if (this.state.stageCounter >= 2) {
@@ -306,7 +309,7 @@ class Canvas extends React.Component {
       c.beginPath();
       c.moveTo(startXPosition, startYPosition);
       c.lineTo(endXPosition, endYPosition);
-      c.strokeStyle = "#617489";
+      c.strokeStyle = "#1e2c3a";
       c.stroke();
     }
 
@@ -318,7 +321,7 @@ class Canvas extends React.Component {
       c.beginPath();
       c.moveTo(startXPosition, startYPosition);
       c.lineTo(endXPosition, endYPosition);
-      c.strokeStyle = "#617489";
+      c.strokeStyle = "#1e2c3a";
       c.stroke();
     }
 
@@ -330,7 +333,7 @@ class Canvas extends React.Component {
       c.beginPath();
       c.moveTo(startXPosition, startYPosition);
       c.lineTo(endXPosition, endYPosition);
-      c.strokeStyle = "#617489";
+      c.strokeStyle = "#1e2c3a";
       c.stroke();
     }
   }
@@ -359,8 +362,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var inputMiddle = new Circle(
       firstLayerXPos,
@@ -368,8 +371,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var inputBottom = new Circle(
       firstLayerXPos,
@@ -377,8 +380,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     inputTop.draw(c);
     inputMiddle.draw(c);
@@ -390,8 +393,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l2North = new Circle(
       secondLayerXPos,
@@ -399,8 +402,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l2Middle = new Circle(
       secondLayerXPos,
@@ -408,8 +411,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l2South = new Circle(
       secondLayerXPos,
@@ -417,8 +420,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l2Bottom = new Circle(
       secondLayerXPos,
@@ -426,8 +429,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     l2Top.draw(c);
     l2North.draw(c);
@@ -441,8 +444,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l3North = new Circle(
       thirdLayerXPos,
@@ -450,8 +453,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l3Middle = new Circle(
       thirdLayerXPos,
@@ -459,8 +462,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l3South = new Circle(
       thirdLayerXPos,
@@ -468,8 +471,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var l3Bottom = new Circle(
       thirdLayerXPos,
@@ -477,8 +480,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     l3Top.draw(c);
     l3North.draw(c);
@@ -492,8 +495,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     var outputBottom = new Circle(
       ouputLayerXPos,
@@ -501,8 +504,8 @@ class Canvas extends React.Component {
       0,
       0,
       10,
-      "white",
-      "#617489"
+      "dark",
+      "#1e2c3a"
     );
     outputTop.draw(c);
     outputBottom.draw(c);
@@ -529,7 +532,7 @@ class Canvas extends React.Component {
   }
 
   render() {
-    return <canvas width={500} height={350}  ref={this.canvasRef} />;
+    return <canvas width={500} height={350} ref={this.canvasRef} />;
   }
 }
 

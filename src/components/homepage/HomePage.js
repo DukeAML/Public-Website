@@ -82,7 +82,7 @@ class HomePage extends React.Component {
         <Container
           fluid
           className="boxShadowed"
-          style={{ backgroundColor: "#1e2c3a", color: "white" }}
+          style={{ backgroundColor: "#e6e7e870", color: "#1e2c3a" }}
         >
           <Container>
             <Row
@@ -122,11 +122,7 @@ class HomePage extends React.Component {
             </Row>
           </Container>
         </Container>
-        <Container
-          fluid
-          className="boxShadowed"
-          style={{ backgroundColor: "" }}
-        >
+        <Container fluid className="boxShadowed">
           <Container>
             <Row
               style={{
