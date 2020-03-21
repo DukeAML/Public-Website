@@ -61,22 +61,12 @@ class Navigation extends React.Component {
             </Link>
           </Col>
 
-<<<<<<< HEAD
-            <Col xs="2" lg="1">
-              <Link to="/GPU" className="nav-link-col">
-                GPUs
-              </Link>
-            </Col>
-          </Navbar>
-        </div>
-=======
           <Col xs="2" lg="1">
             <Link to="/GPU" className="nav-link-col">
               GPU Usage
             </Link>
           </Col>
         </Row>
->>>>>>> 007c78d15eb672e9721baa3b01647d2fd031081b
       </Container>
     );
   }
