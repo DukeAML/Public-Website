@@ -96,7 +96,7 @@ class HomePage extends React.Component {
                 About DAML
               </h3>
             </Row>
-            <Row>
+            <Row className="vertical-align-outer">
               <Col
                 md={6}
                 sm={12}
@@ -116,7 +116,16 @@ class HomePage extends React.Component {
                 computer science, business, electrical engineering and more, we
                 provide an interdisciplinary approach to solving these problems.
               </Col>
-              <Col md={6} sm={12}>
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
                 <Animation />
               </Col>
             </Row>
