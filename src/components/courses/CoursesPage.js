@@ -224,7 +224,7 @@ class CoursesPage extends React.Component {
                 />
                 <label for="prereq">View prerequisite-based connections</label>
                 
-                <br />
+                
                 <input
                   type="radio"
                   name="skillChecked"
