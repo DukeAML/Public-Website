@@ -169,7 +169,7 @@ class PeopleRow extends React.Component {
                     padding: `0 ${padding}%`
                   }}
                 >
-                  <div className="title">{name}</div>
+                  <div className="details-title">{name}</div>
                   {team}
                   {school}
                   {studying}
