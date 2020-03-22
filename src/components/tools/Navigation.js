@@ -15,6 +15,12 @@ import { Link } from "react-router-dom";
 
 class Navigation extends React.Component {
   render() {
+    // need to use inline styles for veertical alignment of columns so that defaults are overridden
+    const verticalAlign = {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    };
     return (
       <Container
         fluid
@@ -39,32 +45,32 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
-            <Col xs="2" lg="1">
+            <Col xs="2" lg="1" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
               </Link>{" "}
             </Col>
 
-            <Col xs="2" lg="1">
+            <Col xs="2" lg="1" style={verticalAlign}>
               {" "}
               <Link to="/people" className="nav-link-col">
                 People
               </Link>
             </Col>
 
-            <Col xs="2" lg="1">
+            <Col xs="2" lg="1" style={verticalAlign}>
               <Link to="/courses" className="nav-link-col">
                 Courses
               </Link>
             </Col>
 
-            <Col xs="2" lg="1">
+            <Col xs="2" lg="1" style={verticalAlign}>
               <Link to="/papers" className="nav-link-col">
                 Papers
               </Link>
             </Col>
 
-            <Col xs="2" lg="1">
+            <Col xs="2" lg="1" style={verticalAlign}>
               <Link to="/GPU" className="nav-link-col">
                 GPUs
               </Link>

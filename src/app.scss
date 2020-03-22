@@ -214,8 +214,10 @@ a.homepage-link {
 }
 
 .nav-link-col {
-  display: flex;
-  padding: 0.6rem 1rem;
+  fontfamily: "Lora";
+  display: "flex";
+  justifycontent: "center";
+  alignitems: "center";
 }
 
 .card-title.h5 {
