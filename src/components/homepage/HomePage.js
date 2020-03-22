@@ -146,24 +146,13 @@ class HomePage extends React.Component {
             </Row>
             <Row>
               <Col
-                lg={6}
-                md={12}
+                xs={12}
                 style={{
                   fontFamily: "Lora",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
               >
-                We are a group focused on building, implementing, and deploying
-                end-to-end machine learning models to solve research and
-                business problems. We establish collaborations with local
-                companies and organizations to identify and solve challenges
-                they face. Through collaboration with post-graduate, graduate,
-                and undergraduate students studying data science, mathematics,
-                computer science, business, electrical engineering and more, we
-                provide an interdisciplinary approach to solving these problems.
-              </Col>
-              <Col lg={6} md={12}>
                 <Carousel style={{ width: "100%" }} />
               </Col>
             </Row>

@@ -17,7 +17,7 @@ export const getPapers = async () => {
 };
 
 export const getNews = async () => {
-  const { data } = await client.get("./news");
+  const { data } = await client.get("./newsentries");
   console.log(data);
   return data;
 };
