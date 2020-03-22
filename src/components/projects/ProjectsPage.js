@@ -17,13 +17,22 @@ import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
+import { getProjects } from "../../api/api.js";
 
 const projects = require("./projectsData");
 
 class ProjectsPage extends React.Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = { projects: [] };
+  }
 
-  componentDidMount() {}
+  componentDidMount = async () => {
+    const projects = await getProjects();
+    this.setState({ projects: projects }, () => {
+      console.log("state: ", this.state);
+    });
+  };
 
   render() {
     let window = this.props.windowWidth;
@@ -44,17 +53,27 @@ class ProjectsPage extends React.Component {
       padding = 10;
     }
 
-    const projectCards = projects.map((project, key) => (
-      <Col lg={4} md={6} style={{ padding: "1rem" }}>
-        <ProjectCard
+    const projectCards = this.state.projects
+      ? this.state.projects.map((project, key) => (
+          <Col lg={4} md={6} style={{ padding: "1rem" }}>
+            {/*<ProjectCard
           key={key}
           title={project.title}
           description={project.shortDescription}
           img={project.image}
           link={project.link}
-        />
-      </Col>
-    ));
+        />*/}
+            <ProjectCard
+              key={key}
+              uid={project.uid}
+              link={project.uid}
+              title={project.title}
+              description={project.description}
+              img={project.imageLink}
+            />
+          </Col>
+        ))
+      : "";
 
     return (
       <div>

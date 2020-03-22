@@ -14,10 +14,21 @@ import IndividualProject from "./projects/individual-pages/IndividualProject";
 import CoursesPage from "./courses/CoursesPage";
 import PapersPage from "./papers/PapersPage";
 import GPUPage from "./GPU/GPUPage";
+import { getProjects } from "../api/api.js";
 
-const projects = require("./projects/projectsData");
+import { projects } from "./projects/projectsData";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { projects: [] };
+  }
+
+  componentDidMount = async () => {
+    const projects = await getProjects();
+    this.setState({ projects: projects });
+  };
+
   render() {
     return (
       <BrowserRouter>
@@ -28,17 +39,17 @@ class App extends React.Component {
         <Route exact path="/papers" component={PapersPage} />
         <Route exact path="/GPU" component={GPUPage} />
 
-        {projects.map((project, index) => (
+        {this.state.projects.map((project, index) => (
           <Route
             key={index}
             exact
-            path={`/${project.link}`}
+            path={`/${project.uid}`}
             component={() => (
               <IndividualProject
                 title={project.title}
-                image={project.image}
+                image={project.imageLink}
                 abstract={project.abstract}
-                team={project.team}
+                team={project.team || []}
               />
             )}
           />
