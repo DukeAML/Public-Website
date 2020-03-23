@@ -13,14 +13,20 @@ import {
   Card
 } from "react-bootstrap";
 
+import PaperCard from "./PaperCard";
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import withWindowDimensions from "../people/withWindowDimensions";
 
-class PapersPage extends React.Component {
-  state = {};
+import { getPapers } from "../../api/api";
 
-  componentDidMount() {}
+class PapersPage extends React.Component {
+  state = { papers: [] };
+
+  componentDidMount = async () => {
+    const papers = await getPapers();
+    this.setState({ papers: papers });
+  };
 
   render() {
     let window = this.props.windowWidth;
@@ -41,6 +47,20 @@ class PapersPage extends React.Component {
       padding = 10;
     }
 
+    const papers = this.state.papers.map((paper, key) => (
+      <Col lg={8} md={10} style={{ padding: "1rem" }}>
+        <PaperCard
+          key={key}
+          link={paper.url}
+          title={paper.title}
+          publicationDate={paper.publicationDate}
+          authorFirstName={paper.authorFirstName}
+          authorLastName={paper.authorLastName}
+          abstract={paper.abstract}
+        />
+      </Col>
+    ));
+
     return (
       <div>
         <Navigation />
@@ -55,7 +75,7 @@ class PapersPage extends React.Component {
                 justifyContent: "center"
               }}
             >
-              Under construction
+              {papers}
             </Row>
           </Container>
           <Footer style={{ margin: "2rem 0 0 0" }} />

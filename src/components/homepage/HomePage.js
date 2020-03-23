@@ -96,7 +96,7 @@ class HomePage extends React.Component {
                 About DAML
               </h3>
             </Row>
-            <Row>
+            <Row className="vertical-align-outer">
               <Col
                 md={6}
                 sm={12}
@@ -116,7 +116,16 @@ class HomePage extends React.Component {
                 computer science, business, electrical engineering and more, we
                 provide an interdisciplinary approach to solving these problems.
               </Col>
-              <Col md={6} sm={12}>
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
                 <Animation />
               </Col>
             </Row>
@@ -137,24 +146,13 @@ class HomePage extends React.Component {
             </Row>
             <Row>
               <Col
-                lg={6}
-                md={12}
+                xs={12}
                 style={{
                   fontFamily: "Lora",
                   justifyContent: "center",
                   alignItems: "center"
                 }}
               >
-                We are a group focused on building, implementing, and deploying
-                end-to-end machine learning models to solve research and
-                business problems. We establish collaborations with local
-                companies and organizations to identify and solve challenges
-                they face. Through collaboration with post-graduate, graduate,
-                and undergraduate students studying data science, mathematics,
-                computer science, business, electrical engineering and more, we
-                provide an interdisciplinary approach to solving these problems.
-              </Col>
-              <Col lg={6} md={12}>
                 <Carousel style={{ width: "100%" }} />
               </Col>
             </Row>
