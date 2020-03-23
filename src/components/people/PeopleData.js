@@ -351,7 +351,7 @@ export const PS = [
     team: "Hardware",
     email: "luiza.wolf@duke.edu",
     linkedin: "https://www.linkedin.com/in/luiza-wolf/",
-    img: "Moiseyev.jpg",
+    img: "",
     github: "https://github.com/luizaawwolf/"
   },
   {
