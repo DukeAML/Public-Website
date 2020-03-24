@@ -6,9 +6,6 @@ import { Row, Col, Image } from "react-bootstrap";
 import placeholder from "./headshots/profile-placeholder.svg";
 
 function Person(props) {
-  console.log(props.img);
-  console.log(props.linkedIn);
-
   const github =
     props.github != null ? (
       <a

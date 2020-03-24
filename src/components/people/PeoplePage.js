@@ -16,6 +16,8 @@ import { Link, Redirect } from "react-router-dom";
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
 import withWindowDimensions from "./withWindowDimensions";
+import { getMembers } from "../../api/api";
+import { getMemberData } from "./PeopleData";
 
 import Details from "./Details";
 import Person from "./Person";
@@ -25,11 +27,13 @@ import { CRM, DS, PS } from "./PeopleData";
 const peopleInfo = [CRM, DS, PS];
 
 class PeoplePage extends React.Component {
-  state = { redirect: false, details: {}, collapse: false };
+  state = { redirect: false, details: {}, collapse: false, members: {} };
 
-  componentDidMount() {
+  componentDidMount = async () => {
+    const members = await getMemberData();
+    console.log(members);
     this.setState({ redirect: false });
-  }
+  };
 
   makePeopleGrid(people, window) {
     // determine number of people per row based on bootstrap screen breakpoints

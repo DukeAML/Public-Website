@@ -10,6 +10,12 @@ export const getProjects = async () => {
   return data;
 };
 
+export const getMembers = async () => {
+  const { data } = await client.get("/users");
+  console.log(data);
+  return data;
+};
+
 export const getPapers = async () => {
   const { data } = await client.get("./papers");
   console.log(data);
@@ -22,4 +28,4 @@ export const getNews = async () => {
   return data;
 };
 
-export default { getProjects, getPapers, getNews };
+export default { getProjects, getPapers, getNews, getMembers };
