@@ -38,7 +38,8 @@ header {
   font-size: 2rem;
 }
 
-.team {
+.team,
+.gpu-header {
   font-family: "Lora", monospace !important;
   font-size: 1.5rem;
   margin: 0;
@@ -58,6 +59,7 @@ h4 {
 hr {
   background-color: $dark-grey;
   filter: opacity(0.5);
+  margin: 0;
 }
 .main-bg {
   background-color: $main-white;
