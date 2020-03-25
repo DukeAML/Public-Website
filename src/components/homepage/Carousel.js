@@ -20,7 +20,7 @@ class CustomCarousel extends React.Component {
   render() {
     const slides = this.state.news.map((news, index) => (
       <Carousel.Item key={index}>
-        <Container fluid style={{ width: "70%" }}>
+        <Container fluid style={{ width: "0%" }}>
           <Row style={{ padding: "2rem" }}>
             <img src={DtcLogo} />
           </Row>
