@@ -84,11 +84,7 @@ class CoursesDetailsTab extends React.Component {
     }
 
     return (
-      <AnimateHeight
-        duration={300}
-        height={this.props.in ? "auto" : 0}
-        style={{ width: "300" }}
-      >
+      <AnimateHeight duration={300} height={this.props.in ? "auto" : 0}>
         <div className="courses-details-tab">
           <div>
             <div
