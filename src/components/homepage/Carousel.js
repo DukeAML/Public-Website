@@ -23,11 +23,15 @@ class CustomCarousel extends React.Component {
     const slides = this.state.news.map((news, index) => (
       <Carousel.Item key={index}>
         <Container>
-          <Col xs={10} style={{ padding: "2rem 0" }}>
-
-          </Col>
           <Row>
-            <h3><Link to="https://www.dukechronicle.com/" className="carouselLink">{news.title}</Link></h3>
+            <h3>
+              <Link
+                to="https://www.dukechronicle.com/"
+                className="carouselLink"
+              >
+                {news.title}
+              </Link>
+            </h3>
             <p>{news.description}</p>
           </Row>
         </Container>

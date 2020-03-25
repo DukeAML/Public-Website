@@ -79,51 +79,61 @@ $main-white: #f2f4f5;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   height: 100px;
   width: 100px;
-  outline: black;
   background-size: 100%, 100%;
   border-radius: 50%;
   background-image: none;
-
 }
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color:$dark-grey;
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 50px;
+  color: $dark-grey;
+  margin-left: 4rem;
 }
-.carousel-control-prev-icon:after{
-  content: '<';
-  font-size: 55px;
-  color:$dark-grey; 
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 50px;
+  color: $dark-grey;
+  margin-right: 4rem;
 }
-.carousel-indicators{
+.carousel-indicators {
   color: black;
-
 }
 .carousel-item h3 {
   color: $dark-grey;
   display: table-cell;
   text-align: left;
   vertical-align: top;
-  width:70%;
   margin-left: 10%;
+  margin-right: 10%;
 }
 .carousel-item p {
   color: $light-grey;
   display: table-cell;
   text-align: left;
   vertical-align: top;
-  width:70%;
   margin-left: 10%;
+  margin-right: 10%;
 }
-.carouselLink{
+.carouselLink {
   color: $dark-grey;
   display: table-cell;
   text-align: left;
   vertical-align: top;
-  width:70%;
   margin-left: 10%;
+  margin-right: 10%;
+}
+.carouselLink:hover {
+  color: $dark-grey;
+}
+
+.carousel-indicators li {
+  background-color: $dark-grey;
+}
+
+.carousel-indicators {
+  bottom: -3rem;
 }
