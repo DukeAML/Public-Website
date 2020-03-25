@@ -34,7 +34,7 @@ function Person(props) {
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
       <div className="person-image">
         <img
-          src={props.img ? require(`./headshots/${props.img}`) : placeholder}
+          src={props.img ? props.img : placeholder}
           style={{
             height: "120px",
             width: "120px",

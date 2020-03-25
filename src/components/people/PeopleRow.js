@@ -77,11 +77,11 @@ class PeopleRow extends React.Component {
     return people.map((person, key, index) => (
       <Person
         key={key}
-        name={person.name}
+        name={`${person.firstName} ${person.lastName}`}
         team={person.team}
-        linkedin={person.linkedin}
-        github={person.github}
-        img={person.img}
+        linkedin={person.linkedIn}
+        github={person.githubLink}
+        img={person.photoString}
         onClick={() => this.handleShowDetails(person, key)}
       />
     ));
@@ -131,12 +131,12 @@ class PeopleRow extends React.Component {
       studying =
         current.study != "" ? (
           <div>
-            <b>Studying</b>: {current.study}{" "}
+            <b>Studying</b>: {current.major}{" "}
           </div>
         ) : (
           ""
         );
-      name = current.name;
+      name = `${current.firstName} ${current.lastName}`;
     } else {
       team = "";
       school = "";
