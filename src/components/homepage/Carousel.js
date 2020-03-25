@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Carousel, Row, Container, Col } from "react-bootstrap";
 import { getNews } from "../../api/api";
 import "./HomePage.scss";
+import { Link } from "react-router-dom";
 
 const DtcLogo = require("./dtc-logo-tag.png");
 
@@ -26,8 +27,7 @@ class CustomCarousel extends React.Component {
 
           </Col>
           <Row>
-            
-            <h3>{news.title}</h3>
+            <h3><Link to="https://www.dukechronicle.com/" className="carouselLink">{news.title}</Link></h3>
             <p>{news.description}</p>
           </Row>
         </Container>
