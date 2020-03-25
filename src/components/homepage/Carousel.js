@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Row, Container } from "react-bootstrap";
+import { Carousel, Row, Container, Col } from "react-bootstrap";
 import { getNews } from "../../api/api";
 
 const DtcLogo = require("./dtc-logo-tag.png");
@@ -20,10 +20,10 @@ class CustomCarousel extends React.Component {
   render() {
     const slides = this.state.news.map((news, index) => (
       <Carousel.Item key={index}>
-        <Container fluid style={{ width: "0%" }}>
-          <Row style={{ padding: "2rem" }}>
+        <Container>
+          <Col xs={10} style={{ padding: "2rem 0" }}>
             <img src={DtcLogo} />
-          </Row>
+          </Col>
           <Row>
             <h3>{news.title}</h3>
             <p>{news.description}</p>
@@ -33,9 +33,13 @@ class CustomCarousel extends React.Component {
     ));
 
     return (
-      <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
-        {slides}
-      </Carousel>
+      <Container fluid style={{ width: "100%", justifyContent: "center" }}>
+        <center>
+          <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
+            {slides}
+          </Carousel>
+        </center>
+      </Container>
     );
   }
 }

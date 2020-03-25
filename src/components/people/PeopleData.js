@@ -1,3 +1,29 @@
+import { getMembers } from "../../api/api";
+
+export const getMemberData = async () => {
+  const members = await getMembers();
+
+  let CRM = [];
+  let DS = [];
+  let PS = [];
+
+  members.forEach(member => {
+    switch (member.team) {
+      case "CRM":
+        CRM.push(member);
+        break;
+      case "DS":
+        DS.push(member);
+        break;
+      case "PS":
+        PS.push(member);
+        break;
+    }
+  });
+
+  return { CRM, DS, PS };
+};
+
 // DS = data science
 // CRM = client management
 // PS = implementation

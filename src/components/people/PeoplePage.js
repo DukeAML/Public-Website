@@ -16,20 +16,29 @@ import { Link, Redirect } from "react-router-dom";
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
 import withWindowDimensions from "./withWindowDimensions";
+import { getMembers } from "../../api/api";
+import { getMemberData } from "./PeopleData";
 
 import Details from "./Details";
 import Person from "./Person";
 import PeopleRow from "./PeopleRow";
-import { CRM, DS, PS } from "./PeopleData";
+//import { CRM, DS, PS } from "./PeopleData";
 
-const peopleInfo = [CRM, DS, PS];
+//const peopleInfo = [CRM, DS, PS];
 
 class PeoplePage extends React.Component {
-  state = { redirect: false, details: {}, collapse: false };
+  state = {
+    redirect: false,
+    details: {},
+    collapse: false,
+    members: { CRM: [], DS: [], PS: [] }
+  };
 
-  componentDidMount() {
-    this.setState({ redirect: false });
-  }
+  componentDidMount = async () => {
+    const members = await getMemberData();
+    console.log(members);
+    this.setState({ redirect: false, members: members });
+  };
 
   makePeopleGrid(people, window) {
     // determine number of people per row based on bootstrap screen breakpoints
@@ -69,6 +78,8 @@ class PeoplePage extends React.Component {
   }
 
   render() {
+    const { CRM, DS, PS } = this.state.members;
+
     let CRMgrid = this.makePeopleGrid(CRM, this.props.windowWidth);
     let DSgrid = this.makePeopleGrid(DS, this.props.windowWidth);
     let PSgrid = this.makePeopleGrid(PS, this.props.windowWidth);
