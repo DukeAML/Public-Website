@@ -11,10 +11,13 @@ export const getMemberData = async () => {
     switch (member.team) {
       case "CRM":
         CRM.push(member);
+        break;
       case "DS":
         DS.push(member);
+        break;
       case "PS":
         PS.push(member);
+        break;
     }
   });
 
