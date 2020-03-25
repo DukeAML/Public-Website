@@ -18,6 +18,8 @@ export const getMemberData = async () => {
       case "PS":
         PS.push(member);
         break;
+      default:
+        //DO NOTHING
     }
   });
 
