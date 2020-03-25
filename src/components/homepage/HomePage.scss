@@ -98,3 +98,32 @@ $main-white: #f2f4f5;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+  outline: black;
+  background-color:black;
+  color: black;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.carousel-indicators{
+  color: black;
+
+}
+.carousel-item h3 {
+  color: $dark-grey;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  width:70%;
+  margin-left: 10%;
+}
+.carousel-item p {
+  color: $light-grey;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  width:70%;
+  margin-left: 10%;
+}

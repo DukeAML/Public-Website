@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Carousel, Row, Container, Col } from "react-bootstrap";
 import { getNews } from "../../api/api";
+import "./HomePage.scss";
 
 const DtcLogo = require("./dtc-logo-tag.png");
 
@@ -22,9 +23,10 @@ class CustomCarousel extends React.Component {
       <Carousel.Item key={index}>
         <Container>
           <Col xs={10} style={{ padding: "2rem 0" }}>
-            <img src={DtcLogo} />
+
           </Col>
           <Row>
+            
             <h3>{news.title}</h3>
             <p>{news.description}</p>
           </Row>
