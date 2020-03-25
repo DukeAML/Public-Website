@@ -23,7 +23,7 @@ export const getMemberData = async () => {
 // DS = data science
 // CRM = client management
 // PS = implementation
-
+/*
 export const CRM = [
   {
     name: "Mary	Gooneratne",
@@ -395,4 +395,6 @@ export const PS = [
   }
 ];
 
-export default { CRM, DS, PS };
+*/
+
+export default { getMemberData };
