@@ -8,18 +8,12 @@ export const getMemberData = async () => {
   let PS = [];
 
   members.forEach(member => {
-    switch (member.team) {
-      case "CRM":
-        CRM.push(member);
-        break;
-      case "DS":
-        DS.push(member);
-        break;
-      case "PS":
-        PS.push(member);
-        break;
-      default:
-        //DO NOTHING
+    if (member.team == "CRM") {
+      CRM.push(member);
+    } else if (member.team == "DS") {
+      DS.push(member);
+    } else if (member.team == "PS") {
+      PS.push(member);
     }
   });
 
