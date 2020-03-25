@@ -553,7 +553,7 @@ const makeArrayFromPrereqs = prereqs => {
 let edges = [];
 
 // First, make connections based on hard prerequisites
-let prereqColor = "#61748970";
+let prereqColor = "#BCC4CD";
 nodes.forEach(node => {
   // Treat grouped prereqs (like math 216/math 218) as separate prereqs for now
   let prereqsList = makeArrayFromPrereqs(node.prereqs__1);
@@ -589,7 +589,7 @@ edges.forEach(edge => {
 // Next, make connections based on skills
 
 // First make lists of skills on each node
-const skillColor = "#61748970";
+const skillColor = "#BCC4CD";
 const skillNodeColor = "#614dff";
 
 nodes.forEach(node => {

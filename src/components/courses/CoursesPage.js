@@ -31,7 +31,7 @@ const skillConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 800,
+  height: 900,
   width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
@@ -51,7 +51,7 @@ const skillConfig = {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
-    color: "#61748960"
+    color: "#BCC4CD"
   },
   d3: {
     alphaTarget: 1,
@@ -67,7 +67,7 @@ const prereqConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 800,
+  height: 900,
   width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
@@ -88,7 +88,7 @@ const prereqConfig = {
     semanticStrokeWidth: false,
     strokeWidth: 2,
     iterations: 20,
-    color: "#61748960"
+    color: "#BCC4CD"
   },
   d3: {
     alphaTarget: 0.5,
