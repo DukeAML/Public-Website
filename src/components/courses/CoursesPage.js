@@ -25,14 +25,13 @@ import "./courses.scss";
 //const data = require("./Data");
 import data_v2 from "./Data-v2";
 
-
 const skillConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: false,
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 800,
+  height: 900,
   width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
@@ -52,7 +51,7 @@ const skillConfig = {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
-    color: "#61748970"
+    color: "#BCC4CD"
   },
   d3: {
     alphaTarget: 1,
@@ -68,7 +67,7 @@ const prereqConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 800,
+  height: 900,
   width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
@@ -89,11 +88,11 @@ const prereqConfig = {
     semanticStrokeWidth: false,
     strokeWidth: 2,
     iterations: 20,
-    color: "#61748970"
+    color: "#BCC4CD"
   },
   d3: {
     alphaTarget: 0.5,
-    gravity: -1000,
+    gravity: -800,
     linkLength: 200,
     linkStrength: 1
   }
@@ -214,24 +213,25 @@ class CoursesPage extends React.Component {
                 style={{ fontSize: "1rem", padding: "1rem" }}
                 onChange={e => this.handleDataTypeChange(e)}
               >
-              <div class = "selectView">
-                <input 
-                  type="radio"
-                  name="prereqChecked"
-                  id="prereq"
-                  defaultChecked
-                  checked={this.state.prereqChecked}
-                />
-                <label for="prereq">View prerequisite-based connections</label>
-                
-                
-                <input
-                  type="radio"
-                  name="skillChecked"
-                  id="skill"
-                  checked={!this.state.prereqChecked}
-                />
-                <label for="skill">View skill-based connections</label>
+                <div class="selectView">
+                  <input
+                    type="radio"
+                    name="prereqChecked"
+                    id="prereq"
+                    defaultChecked
+                    checked={this.state.prereqChecked}
+                  />
+                  <label for="prereq">
+                    View prerequisite-based connections
+                  </label>
+
+                  <input
+                    type="radio"
+                    name="skillChecked"
+                    id="skill"
+                    checked={!this.state.prereqChecked}
+                  />
+                  <label for="skill">View skill-based connections</label>
                 </div>
               </div>
             </Col>
