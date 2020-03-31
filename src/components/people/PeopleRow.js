@@ -131,7 +131,7 @@ class PeopleRow extends React.Component {
       studying =
         current.study != "" ? (
           <div>
-            <b>Studying</b>: {current.major}{" "}
+            <b>Studying</b>: {current.major.split(",").join(", ")}{" "}
           </div>
         ) : (
           ""
