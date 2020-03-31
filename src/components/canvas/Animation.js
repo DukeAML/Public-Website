@@ -25,14 +25,11 @@ class Animation extends React.Component {
   render() {
     return (
       <div>
-        <Container style={{display: 'flex', justifyContent: 'center', textAlign: "center", width:"100%", height : "100%"}}>
-         
-            <Row >
-              <Canvas angle={this.state.angle} />
-            </Row>
+        <Container fluid>
+          <Canvas angle={this.state.angle} />
         </Container>
       </div>
-      );
+    );
   }
 }
 

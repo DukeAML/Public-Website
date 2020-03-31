@@ -1,0 +1,139 @@
+// Theme colors
+$main-grey: #2f3e4e;
+$dark-grey: #1e2c3a;
+$light-grey: #617489;
+$lightest-grey: #e6e7e8;
+$main-white: #f2f4f5;
+
+.boxShadowed {
+  //   margin-top: 100px;
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  //   box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
+  //     inset 0px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.homepageTitle {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+.homepageButton:hover {
+  background-color: #3d67a5; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-graphic {
+  animation: opac 4s;
+  height: 30vh;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.list-group-item {
+  background-color: #f0f1f2;
+  padding: 0.5rem;
+}
+
+.card {
+  border: none;
+  background-color: $lightest-grey;
+}
+
+.card-title {
+  background-color: $lightest-grey;
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.industry-card {
+  & :hover {
+    cursor: pointer;
+  }
+}
+
+.carousel-image {
+  width: 100%;
+}
+
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+}
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 50px;
+  color: $dark-grey;
+  margin-left: 4rem;
+}
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 50px;
+  color: $dark-grey;
+  margin-right: 4rem;
+}
+.carousel-indicators {
+  color: black;
+}
+.carousel-item h3 {
+  color: $dark-grey;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.carousel-item p {
+  color: $light-grey;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.carouselLink {
+  color: $dark-grey;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.carouselLink:hover {
+  color: $dark-grey;
+}
+
+.carousel-indicators li {
+  background-color: $dark-grey;
+}
+
+.carousel-indicators {
+  bottom: -3rem;
+}

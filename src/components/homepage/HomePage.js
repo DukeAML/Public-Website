@@ -1,126 +1,167 @@
 import React from "react";
-import {Container, Jumbotron, Button, Row, Col, Image, Card, Carousel} from "react-bootstrap"
-import {Link, Redirect} from "react-router-dom"
+import {
+  Container,
+  Jumbotron,
+  Button,
+  Row,
+  Col,
+  Image,
+  Card
+} from "react-bootstrap";
+import { Link, Redirect } from "react-router-dom";
+import AnimationWrapper from "./AnimationWrapper.js";
+import Canvas from "../canvas/Canvas";
+import Animation from "../canvas/Animation";
+import Footer from "../tools/Footer";
+import Navigation from "../tools/Navigation";
+import ThemeCard from "./ThemeCard";
+import ImageAccordion from "../tools/ImageAccordion";
+import IndustryBuckets from "./IndustryBuckets";
+import Carousel from "./Carousel";
+import "./HomePage.scss";
+const DtcLogo = require("./dtc-logo-tag.png");
 
-import Canvas from "../canvas/Canvas"
-import Animation from "../canvas/Animation"
-import Footer from "../tools/Footer"
+class HomePage extends React.Component {
+  state = { redirect: false };
 
-import ThemeCard from "./ThemeCard"
+  handleSignUpClick = () => {
+    var link =
+      "mailto:news@dukeaml.com" +
+      "?cc=duke.applied.ml@gmail.com" +
+      "&subject=" +
+      escape("Add me to the Newsletter!") +
+      "&body=" +
+      escape("This is the email to add.");
+    window.location.href = link;
+  };
 
-class HomePage extends React.Component{
+  handleProjectsClick = () => {
+    this.setState({ redirect: true });
+  };
 
-    state = {redirect:false}
+  componentDidMount() {
+    this.setState({ redirect: false });
+  }
 
-    handleSignUpClick = () =>  {
-
+  render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/projects" />;
     }
 
-    handleProjectsClick = () => {
-        this.setState({redirect:true})
-    }
+    return (
+      <div>
+        {/**INTRODUCTION SECTION */}
+        <Container fluid style={{ padding: 0 }}>
+          <center>
+            <Navigation center={true} />
+          </center>
 
-    componentDidMount(){
-        this.setState({redirect:false})
-    }
+          <AnimationWrapper>
+            <Col
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "60vh"
+              }}
+            >
+              {/**Icon */}
+              {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
+              <Image
+                fluid
+                style={{ padding: 0 }}
+                className="main-graphic parallax"
+                src={require("./images/DAML_Full_Grey_Transparent.svg")}
+              />
+            </Col>
+          </AnimationWrapper>
+        </Container>
 
-    render(){
-        if(this.state.redirect){
-            return <Redirect push to="/projects" />
-        }
-
-        return(
-            <div>
-                <Container style = {{height: "100%", paddingBottom:"60px"}}>
-                    <Row style={{display: 'flex', 
-                                justifyContent: 'center', 
-                                color:"white", 
-                                position:"relative",
-                                paddingBottom: "100px",
-                                paddingTop: "80px"}}>
-                        <Image sm = {0} xs = {0} src = {require("./DAML_LargeLogo.png")} style = {{maxWidth:"80%", maxHeight:"250px"}} fluid/>
-                    </Row>
-                    <Row>
-                        <Col style = {{display:"flex", justifyContent: "center"}}>
-                            <Button style = {{width:"50%"}} >
-                                Sign Up
-                            </Button>
-                        </Col>
-                        <Col style = {{display:"flex", justifyContent: "center"}}>
-                            <Button style = {{width:"50%"}} onClick = {this.handleProjectsClick}>
-                                View Projects
-                            </Button>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container fluid style = {{backgroundColor:"#4E5D6C", padding: "25px"}}>
-                    <Row>
-                        <Col sm = {12} xs = {12} md = {6}>
-                            <Row>
-                                <Col sm = {6} xs = {12}>
-                                    <ThemeCard />
-                                </Col>
-                                <Col sm = {6} xs = {12}>  
-                                    <ThemeCard />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col sm = {6} xs = {12}>
-                                    <ThemeCard />
-                                </Col>
-                                <Col sm = {6} xs = {12}>  
-                                    <ThemeCard />
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col sm={0} xs = {12} md = {6} style = {{display:"flex", justifyContent: "center"}}>
-                            <Animation />                                
-                        </Col>
-                    </Row>
-                </Container>
-                <Container fluid style={{padding:"25px"}} >
-                    <Row style={{display: 'flex',justifyContent: 'center', fontFamily: "Raleway"}}>
-                        <h1> People </h1>
-                    </Row>
-                    <Row style = {{padding: "25px", display:"flex"}}>
-                        <Col sm = {6} xs = {12} md = {3}>
-                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
-                                <Card.Img variant="top" src=  {require("./placeholder.svg")} />
-                                <Card.Body>
-                                    <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col sm = {6} xs = {12} md = {3}>
-                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
-                                <Card.Img variant="top" src= {require("./placeholder.svg")} />
-                                <Card.Body>
-                                    <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col sm = {6} xs = {12} md = {3}>
-                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
-                                <Card.Img variant="top" src=  {require("./placeholder.svg")} />
-                                <Card.Body>
-                                    <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col sm = {6} xs = {12} md = {3}>
-                            <Card style={{ backgroundColor: "#2B3E50", border: "0px" }}>
-                                <Card.Img variant="top" src=  {require("./placeholder.svg")} />
-                                <Card.Body>
-                                    <Card.Title style= {{textAlign:"center"}}>Card Title</Card.Title>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
-                <Footer />
-            </div>
-        )
-    }
+        {/**ABOUT SECTION */}
+        <Container
+          fluid
+          className="boxShadowed"
+          style={{ backgroundColor: "#e6e7e870", color: "#1e2c3a" }}
+        >
+          <Container>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                About DAML
+              </h3>
+            </Row>
+            <Row className="vertical-align-outer">
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                We are a group focused on building, implementing, and deploying
+                end-to-end machine learning models to solve research and
+                business problems. We establish collaborations with local
+                companies and organizations to identify and solve challenges
+                they face. Through collaboration with post-graduate, graduate,
+                and undergraduate students studying data science, mathematics,
+                computer science, business, electrical engineering and more, we
+                provide an interdisciplinary approach to solving these problems.
+              </Col>
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Animation />
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+        <Container fluid className="boxShadowed">
+          <Container>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                News
+              </h3>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                style={{
+                  fontFamily: "Lora",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Carousel style={{ width: "100%" }} />
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+        <Footer />
+      </div>
+    );
+  }
 }
 
-export default HomePage
+export default HomePage;

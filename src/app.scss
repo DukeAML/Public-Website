@@ -1,0 +1,364 @@
+// Theme colors
+$main-grey: #2f3e4e;
+$dark-grey: #1e2c3a;
+$light-grey: #617489;
+$lightest-grey: #e6e7e8;
+$main-white: #f2f4f5;
+
+// Inset shadow settings
+$shadow-color: rgba(0, 0, 0, 0.3);
+$inset-top: inset 0 20px 30px -20px $shadow-color;
+$inset-bottom: inset 0 -20px 30px -20px $shadow-color;
+$inset-shadow: $inset-top, $inset-bottom;
+
+// Image/icon imports
+$github: url(./components/tools/Icons/github.svg);
+$github-hover: url(./components/tools/Icons/github-hover.svg);
+$linkedin: url(./components/tools/Icons/linkedin.svg);
+$linkedin-hover: url(./components/tools/Icons/linkedin-hover.svg);
+
+$daml: url(./components/homepage/images/DAML_Picture_Cream_Transparent.svg);
+$daml-hover: url(./components/homepage/images/DAML_Picture_Grey_Transparent.svg);
+
+body,
+header {
+  font-family: "Noto Sans", sans-serif;
+  background-color: $main-white;
+  color: $dark-grey;
+}
+
+.title {
+  font-family: "Lora", monospace !important;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.details-title {
+  font-family: "Lora", monospace !important;
+  font-size: 2rem;
+}
+
+.team,
+.gpu-header {
+  font-family: "Lora", monospace !important;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+a.contact {
+  color: $light-grey !important;
+  & :hover {
+  }
+}
+
+h3,
+h4 {
+  font-family: "Lora", monospace !important;
+}
+
+hr {
+  background-color: $dark-grey;
+  filter: opacity(0.5);
+  margin: 0;
+}
+.main-bg {
+  background-color: $main-white;
+}
+
+.people-accordion > .card .card-header {
+  width: 100%;
+  background-color: $main-white;
+  border-style: none;
+  color: black !important;
+  & :hover {
+    text-decoration: none !important;
+  }
+  border: none;
+}
+
+.person-image {
+  :hover,
+  :focus {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.person-details {
+  background-color: #e6e7e870;
+}
+
+.person-details-text {
+  animation: opac 1s;
+  font-size: 1.2rem;
+  clear: left;
+  margin: 0;
+}
+
+.inset {
+  -moz-box-shadow: $inset-shadow;
+  -webkit-box-shadow: $inset-shadow;
+  box-shadow: $inset-shadow;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.1rem;
+  & :hover,
+  :focus {
+    cursor: pointer;
+  }
+  background-repeat: no-repeat;
+  & :active {
+    box-shadow: 0 5px 5px black;
+  }
+  justify-content: center;
+}
+
+.github-icon {
+  @extend .icon;
+  background-image: $github;
+}
+
+.github-icon:hover {
+  background-image: $github-hover !important;
+  cursor: pointer;
+}
+
+.linkedin-icon {
+  @extend .icon;
+  background-image: $linkedin;
+}
+
+.linkedin-icon:hover {
+  background-image: $linkedin-hover !important;
+  cursor: pointer;
+}
+
+.daml-icon {
+  @extend .icon;
+  height: 6rem !important;
+  width: 6rem !important;
+  background-image: $daml;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.daml-icon:hover {
+  background-image: $daml-hover;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+a.homepage-link {
+}
+
+.box-shadowed {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 15vh;
+  background-color: #e6e7e870;
+  box-shadow: inset 0px -4px 30px rgba(0, 0, 0, 0.15),
+    inset 0px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  font-family: "Lora", monospace;
+  height: 7rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: $dark-grey;
+  color: white;
+}
+
+.theme-button {
+  background-color: $main-white;
+  border: none;
+  color: $dark-grey;
+}
+
+.theme-button.btn:hover {
+  background-color: $light-grey;
+}
+
+.theme-button.btn:active {
+  background-color: $main-grey !important;
+}
+
+.card-body.project-card {
+  background-color: $lightest-grey;
+  padding: 1rem;
+  align-content: center;
+  vertical-align: center;
+}
+
+.card,
+.card-body,
+.image {
+  border: none;
+}
+
+.card-body.individual-project-card {
+  background-color: $lightest-grey;
+}
+
+.nav-link-col {
+  fontfamily: "Lora";
+  display: "flex";
+  justifycontent: "center";
+  alignitems: "center";
+}
+
+.card-title.h5 {
+  background-color: $lightest-grey;
+}
+
+a.nav-link-col {
+  color: $dark-grey;
+}
+
+a.nav-link-col:hover {
+  text-decoration: none !important;
+  color: $light-grey;
+}
+
+///// courses display
+.container__graph-area {
+  margin: 1rem;
+  z-index: 1;
+}
+
+.courses-details-tab {
+  background-color: $dark-grey;
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
+  max-width: 300px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+.accordion-header:hover {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.accordion-header {
+  padding: 0.5rem;
+  font-family: "Roboto Mono";
+  background-color: $main-white;
+  border: solid 2px $dark-grey;
+  color: $dark-grey;
+}
+
+.accordion-body {
+  padding: 0.5rem;
+}
+
+.newsletter-button {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-color: $light-grey;
+  border: none;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+.newsletter-button:hover {
+  background-color: #3d67a5; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+div.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+div.col-lg-1,
+div.col-lg-10,
+div.col-lg-11,
+div.col-lg-12,
+div.col-lg-2,
+div.col-lg-3,
+div.col-lg-4,
+div.col-lg-5,
+div.col-lg-6,
+div.col-lg-7,
+div.col-lg-8,
+div.col-lg-9,
+div.col-md-1,
+div.col-md-10,
+div.col-md-11,
+div.col-md-12,
+div.col-md-2,
+div.col-md-3,
+div.col-md-4,
+div.col-md-5,
+div.col-md-6,
+div.col-md-7,
+div.col-md-8,
+div.col-md-9,
+div.col-sm-1,
+div.col-sm-10,
+div.col-sm-11,
+div.col-sm-12,
+div.col-sm-2,
+div.col-sm-3,
+div.col-sm-4,
+div.col-sm-5,
+div.col-sm-6,
+div.col-sm-7,
+div.col-sm-8,
+div.col-sm-9,
+div.col-xs-1,
+div.col-xs-10,
+div.col-xs-11,
+div.col-xs-12,
+div.col-xs-2,
+div.col-xs-3,
+div.col-xs-4,
+div.col-xs-5,
+div.col-xs-6,
+div.col-xs-7,
+div.col-xs-8,
+div.col-xs-9,
+div.col-1,
+div.col-2,
+div.col-3,
+div.col-4,
+div.col-5,
+div.col-6,
+div.col-7,
+div.col-8,
+div.col-9,
+div.col-10,
+div.col-11,
+div.col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}

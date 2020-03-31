@@ -1,0 +1,220 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+// responsiveAccordion Height
+$a-height: 250px;
+
+// Position text along bottom
+$text-offset: $a-height - 90;
+
+// Page Title
+h1 {
+  text-align: center;
+  font-family:  Lora;
+  color: #333;
+}
+
+.responsiveAccordion {
+  width: 100%;
+  max-width: 1080px;
+  height: $a-height;
+  overflow: hidden;
+  margin: 50px auto;
+
+  ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: table-cell;
+      vertical-align: bottom;
+      position: relative;
+      width: 16.67%; // 6 into 100
+      height: $a-height;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      transition: all 500ms ease;
+
+      div {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+
+        a {
+          display: block;
+          height: $a-height;
+          width: 100%;
+
+          position: relative;
+          z-index: 3;
+          vertical-align: bottom;
+          padding: 1rem;
+          box-sizing: border-box;
+          color: #fff;
+          text-decoration: none;
+          font-family: Lora;
+          font-size: 2rem;
+
+          transition: all 200ms ease;
+
+          * {
+            opacity: 0;
+            margin: 0;
+            width: 100%;
+            text-overflow: ellipsis;
+            position: relative;
+            z-index: 5;
+
+            white-space: nowrap;
+            overflow: hidden;
+
+            -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+
+            -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
+          }
+
+          h2 {
+            font-family: Lora;
+            text-overflow: wrap;
+            font-size: 2rem;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: flex-end;
+            //margin-bottom: 2px;
+
+            //top: $text-offset;
+          }
+
+          p {
+            //top: $text-offset;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    // Background images
+    li:nth-child(1) {
+      background-image: url("https://i.kym-cdn.com/photos/images/newsfeed/001/499/826/2f0.png");
+    }
+
+    li:nth-child(2) {
+      background-image: url("http://michael-ferry.com/assets/accordion2.jpg");
+    }
+
+    li:nth-child(3) {
+      background-image: url("http://michael-ferry.com/assets/accordion3.jpg");
+    }
+
+    li:nth-child(4) {
+      background-image: url("http://michael-ferry.com/assets/accordion4.jpg");
+    }
+
+    li:nth-child(5) {
+      background-image: url("http://michael-ferry.com/assets/accordion5.jpg");
+    }
+
+    li:nth-child(6) {
+      background-image: url("http://michael-ferry.com/assets/accordion6.jpg");
+    }
+
+    &:hover li,
+    &:focus-within li {
+      //width: 8%;
+    }
+
+    li:focus {
+      outline: none;
+    }
+
+    &:hover li:hover,
+        // allow users to tab through active slides
+        li:focus,
+        &:focus-within li:focus {
+      width: 60%;
+
+      a {
+        background: rgba(0, 0, 0, 0.4);
+
+        * {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &:hover li {
+      width: 8% !important;
+
+      a * {
+        opacity: 0 !important;
+      }
+    }
+
+    &:hover li:hover {
+      width: 60% !important;
+
+      a {
+        background: rgba(0, 0, 0, 0.4);
+
+        * {
+          opacity: 1 !important;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+// Stack items
+@media screen and (max-width: 600px) {
+  // IE gets fussy if this isn't here
+  body {
+    margin: 0;
+  }
+
+  .responsiveAccordion {
+    height: auto;
+
+    ul,
+    ul:hover {
+      li,
+      li:hover {
+        position: relative;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        -webkit-transition: none;
+        transition: none;
+      }
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  font-family:  Lora;
+  font-size: 1rem;
+  color: #666;
+
+  a {
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

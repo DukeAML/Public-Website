@@ -1,88 +1,102 @@
 import React from "react";
-import {Container, Row, Card, Table, tr, td, thead, tbody, Spinner, Button} from "react-bootstrap";
-import {Redirect} from "react-router-dom";
+import {
+  Container,
+  Row,
+  Col,
+  Spinner,
+  Jumbotron,
+  Table,
+  td,
+  thead,
+  tr,
+  Button,
+  Card
+} from "react-bootstrap";
 
-import client from "../../api/api"
-import axios from "axios"
+import Navigation from "../tools/Navigation";
+import Footer from "../tools/Footer";
+import ProjectCard from "./ProjectCard";
+import withWindowDimensions from "../people/withWindowDimensions";
+import { getProjects } from "../../api/api.js";
 
-import FeaturedProjectCard from "./FeaturedProjectCard"
-import Footer from "../tools/Footer"
+const projects = require("./projectsData");
 
 class ProjectsPage extends React.Component {
+  constructor() {
+    super();
+    this.state = { projects: [] };
+  }
 
-    state = {
-        featuredProjects: [],
-        projects: [],
-        redirectURL: "",
-        redirect: false
+  componentDidMount = async () => {
+    const projects = await getProjects();
+    this.setState({ projects: projects }, () => {
+      console.log("state: ", this.state);
+    });
+  };
+
+  render() {
+    let window = this.props.windowWidth;
+    let padding;
+
+    // dynamically determine left and right padding around projects grid
+    if (window >= 992) {
+      // lg or xl
+      padding = 5;
+    } else if (window >= 768) {
+      // m
+      padding = 10;
+    } else if (window >= 576) {
+      // s
+      padding = 10;
+    } else {
+      // xs
+      padding = 10;
     }
 
-    // Get all projects in the database
-    getProjects = async () => {
-        let response = await axios.get("https://dukeappml.herokuapp.com/projects")
-        console.log(response);
-        this.setState({featuredProjects:response.data.slice(0,3), projects: response.data})        
-    }
+    const projectCards = this.state.projects
+      ? this.state.projects.map((project, key) => (
+          <Col lg={4} md={6} style={{ padding: "1rem" }}>
+            {/*<ProjectCard
+          key={key}
+          title={project.title}
+          description={project.shortDescription}
+          img={project.image}
+          link={project.link}
+        />*/}
+            <ProjectCard
+              key={key}
+              uid={project.uid}
+              link={project.uid}
+              title={project.title}
+              description={project.description}
+              img={project.imageLink}
+            />
+          </Col>
+        ))
+      : "";
 
-    // Upon component mounting, query the database for data.
-    componentDidMount(){
-        this.getProjects()
-    }
-
-    generateFeaturedProjects(){
-
-    }
-
-
-    render(){
-        if(this.state.projects.length === 0){
-            return ( 
-            <Container style = {{display:"flex", justifyContent: "center", marginTop: "200px"}}>
-                <Spinner animation = "grow" />
-            </Container>
-            )
-        }
-
-        if(this.state.redirect){
-            return <Redirect push to= {`/project/${this.state.redirectURL}`}/>;
-        }
-        
-        return(
-            <div>
-                <Container style = {{marginTop:"25px", "marginBottom":"50px"}}>
-                    <h3> Featured </h3>
-                    <Row>
-                        {this.state.featuredProjects.map(card => <FeaturedProjectCard title = {card.title} description = {card.description}/>)}
-                    </Row>
-                    <h3 style = {{marginTop:"20px"}}> All Projects</h3>
-                    <Table hover size="sm" >
-                        <thead style = {{backgroundColor:"#DF691A"}}>
-                            <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Client</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.projects.map(project => {
-                                return(
-                                    <tr onClick = {() => {
-                                        this.setState({redirectURL: project.uid})
-                                        this.setState({redirect:true})
-                                    }}>
-                                        <td>{project.title}</td>
-                                        <td>{project.description.substring(0,50)}</td>
-                                        <td>{project.submitter}</td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                    </Table>
-                </Container>
-                <Footer />
-            </div>
-        )
-    }
+    return (
+      <div>
+        <Navigation />
+        <Container fluid style={{ padding: 0 }}>
+          <Container style={{ minHeight: "100%", padding: `0 ${padding}%` }}>
+            <center>
+              <div className="title"> Current Projects </div>
+            </center>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
+              {projectCards}
+            </Row>
+          </Container>
+          <Footer style={{ margin: "2rem 0 0 0" }} />
+        </Container>
+      </div>
+    );
+  }
 }
 
-export default ProjectsPage;
+export default withWindowDimensions(ProjectsPage);
