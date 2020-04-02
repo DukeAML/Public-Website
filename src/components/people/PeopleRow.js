@@ -109,11 +109,11 @@ class PeopleRow extends React.Component {
     }
 
     let { current } = this.state;
-    let school, studying, name, team;
+    let school, studying, name, team, bio;
 
     if (current != null) {
       team =
-        current.team != "" ? (
+        current.team != null ? (
           <div>
             <b>Team</b>: {current.team}{" "}
           </div>
@@ -121,7 +121,7 @@ class PeopleRow extends React.Component {
           ""
         );
       school =
-        current.school != "" ? (
+        current.school != null ? (
           <div>
             <b>School</b>: {current.school}{" "}
           </div>
@@ -129,13 +129,14 @@ class PeopleRow extends React.Component {
           ""
         );
       studying =
-        current.study != "" ? (
+        current.major != null ? (
           <div>
-            <b>Studying</b>: {current.major}{" "}
+            <b>Studying</b>: {current.major.split(",").join(", ")}{" "}
           </div>
         ) : (
           ""
         );
+      bio = current.biography;
       name = `${current.firstName} ${current.lastName}`;
     } else {
       team = "";
@@ -173,6 +174,8 @@ class PeopleRow extends React.Component {
                   {team}
                   {school}
                   {studying}
+                  <br />
+                  {bio}
                 </div>
               </div>
             </AnimateHeight>
