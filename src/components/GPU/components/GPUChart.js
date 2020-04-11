@@ -34,6 +34,28 @@ class GPUChart extends React.Component {
                     <Line
                         ref="chart"
                         data={this.state.chartData}
+                        options={{
+                            scales: {
+                                yAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Memory'
+                                    },
+                                    ticks: {
+                                        // Include a dollar sign in the ticks
+                                        callback: function(value, index, values) {
+                                            return value + ' GB';
+                                        }
+                                    }
+                                }],
+                                xAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Time'
+                                    }
+                                }]
+                            }
+                        }}
                         redraw
                     />
                 </div>
