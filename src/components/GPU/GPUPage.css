@@ -1,0 +1,16 @@
+.main-content {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main-content * {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapped{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
