@@ -22,7 +22,7 @@ $daml-hover: url(./components/homepage/images/DAML_Picture_Grey_Transparent.svg)
 
 body,
 header {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif !important;
   background-color: $main-white;
   color: $dark-grey;
 }
