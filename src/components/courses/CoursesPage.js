@@ -37,7 +37,6 @@ const skillConfig = {
   maxZoom: 4,
   minZoom: 0.0001,
   panAndZoom: true,
-  nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
   node: {
     color: "#1e2c3a",
@@ -73,7 +72,6 @@ const prereqConfig = {
   maxZoom: 4,
   minZoom: 0.001,
   panAndZoom: true,
-  nodeHighlightBehavior: true,
   highlightOpacity: 0.1,
   node: {
     color: "#1e2c3a",
