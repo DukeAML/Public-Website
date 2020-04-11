@@ -4,14 +4,14 @@ import React from "react";
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import { Spinner } from "react-bootstrap";
-import { Container, Tab } from "semantic-ui-react";
+import { Container, Tab, Input } from "semantic-ui-react";
 import GPUInfo from "./components/GPUInfo";
 import StatisticsPool from "./model/StatisticPool";
 import GPUChart from "./components/GPUChart";
 import withWindowDimensions from "../people/withWindowDimensions";
 
 class GPUPage extends React.Component {
-  state = { panes: [], loadingClusters: true };
+  state = { panes: [], loadingClusters: true, search: "" };
 
   componentDidMount() {
     this.updatePanes();
@@ -30,7 +30,18 @@ class GPUPage extends React.Component {
       };
     });
     this.setState({ panes: panes, loadingClusters: false });
+    console.log(this.state.panes);
   }
+
+  handleSearchChange = (e, { value }) => {
+    this.setState({ search: value });
+  };
+
+  filterClusters = clusters => {
+    return this.state.search
+      ? clusters.filter(cluster => cluster.menuItem.includes(this.state.search))
+      : clusters;
+  };
 
   render() {
     let window = this.props.windowWidth;
@@ -70,10 +81,20 @@ class GPUPage extends React.Component {
                   Loading clusters
                 </div>
               ) : (
-                <Tab
-                  menu={{ secondary: true, className: "wrapped" }}
-                  panes={this.state.panes}
-                />
+                <div>
+                  <Input
+                    icon="search"
+                    placeholder="Search for a cluster"
+                    onChange={this.handleSearchChange}
+                    value={this.state.search}
+                    style={{ width: "20rem", margin: "1rem" }}
+                  />
+
+                  <Tab
+                    menu={{ secondary: true, className: "wrapped" }}
+                    panes={this.filterClusters(this.state.panes)}
+                  />
+                </div>
               )}
             </center>
           </div>
