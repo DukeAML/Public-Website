@@ -39,7 +39,7 @@ class GPUPage extends React.Component {
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
       // lg or xl
-      padding = 5;
+      padding = 15;
     } else if (window >= 768) {
       // m
       padding = 4;
@@ -54,13 +54,14 @@ class GPUPage extends React.Component {
     return (
       <div>
         <Navigation />
-        <Container fluid style={{ padding: 0, minHeight: "95vh" }}>
-          <Container style={{ padding: `0 ${padding}%` }}>
-            <div style={{ marginTop: "1rem" }}>
-              <GPUInfo />
-            </div>
-          </Container>
-          <div style={{ padding: "3rem 15%" }}>
+        <Container
+          fluid
+          style={{ padding: 0, minHeight: "95vh", padding: `0 ${padding}%` }}
+        >
+          <div style={{ marginTop: "1rem" }}>
+            <GPUInfo />
+          </div>
+          <div style={{ padding: "3rem 0" }}>
             <center>
               {this.state.loadingClusters ? (
                 <div style={{ fontSize: "2rem", padding: "3rem" }}>
@@ -77,6 +78,7 @@ class GPUPage extends React.Component {
             </center>
           </div>
         </Container>
+
         <Footer />
       </div>
     );
