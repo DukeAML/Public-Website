@@ -11,7 +11,7 @@ import GPUChart from "./components/GPUChart";
 import withWindowDimensions from "../people/withWindowDimensions";
 
 class GPUPage extends React.Component {
-  state = { panes: [], loadingClusters: true, search: "", activeIndex: [1, 2] };
+  state = { panes: [], loadingClusters: true, search: "", activeIndex: [2] };
 
   componentDidMount() {
     this.updatePanes();
@@ -133,12 +133,13 @@ class GPUPage extends React.Component {
                           placeholder="Search for a cluster"
                           onChange={this.handleSearchChange}
                           value={this.state.search}
-                          style={{ width: "20rem", margin: "2rem" }}
+                          style={{ width: "20rem", margin: "1rem 0 2rem 0" }}
                         />
 
                         <Tab
                           menu={{ secondary: true, className: "wrapped" }}
                           panes={this.filterClusters(this.state.panes)}
+                          style={{ fontfamily: "Nora" }}
                         />
                       </div>
                     )}
