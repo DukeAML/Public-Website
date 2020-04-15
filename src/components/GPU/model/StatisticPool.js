@@ -57,18 +57,6 @@ class StatisticsPool {
         }
     }
 
-    convertToChartData0 = () => {
-        return this.statistics.map(statistic => {
-            const points = [];
-            for (let i = 0; i < statistic.times.length; i++) {
-                points.push({x: statistic.times[i], y: statistic.values[i]})
-            }
-            const color = Object.keys(Statistic.statistics).find((key, index) => Statistic.statistics[key].name === statistic.name).color;
-            const cluster = statistic.cluster;
-            return {points, color, cluster};
-        })
-    };
-
     convertToChartData = () => {
         if (this.statistics.length === 0) return {};
         const data = {

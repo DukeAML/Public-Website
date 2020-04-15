@@ -126,6 +126,7 @@ class GPUPage extends React.Component {
                             selection
                             options={this.state.clusters}
                             onChange={this.handleClusterSelectionChange.bind(this)}
+                            style={{ zIndex: 1001 }}
                         />
                         <GPUChart selectedClusters={this.state.selectedClusters} statistics={[Statistic.statistics.memoryFree.name, Statistic.statistics.memoryUsed.name]} />
                       </div>
