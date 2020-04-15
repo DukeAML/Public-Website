@@ -1,9 +1,10 @@
 import './GPUChart.css';
-import '../../../../node_modules/react-vis/dist/style.css';
 import React from 'react';
 import { Segment, Dimmer, Loader, Button } from 'semantic-ui-react';
 import { Line } from 'react-chartjs-2';
+import { Parser as HtmlToReactParser } from 'html-to-react';
 import StatisticsPool from './../model/StatisticPool';
+import Statistic from '../model/Statistic';
 
 class GPUChart extends React.Component {
     state = {chartData: {}, isLoaded: false};
@@ -26,6 +27,7 @@ class GPUChart extends React.Component {
     }
 
     render() {
+        const htmlToReactParser = new HtmlToReactParser();
         return (
             <div id="chart-container">
                 <Segment>
@@ -59,16 +61,30 @@ class GPUChart extends React.Component {
                                         labelString: 'Time'
                                     }
                                 }]
+                            },
+                            legend: {
+                                display: false,
+                            },
+                            legendCallback: function(chart) {
+                                const legendItems = Object.keys(Statistic.statistics).map((key, index) => {
+                                    return `<div>
+                                            <svg width="20" height="20" style="display: inline-block; margin-right: 5px;">
+                                                <rect width="20" height="20" style="fill:${Statistic.statistics[key].color};" />
+                                            </svg>
+                                            <p style="display: inline-block;">${Statistic.statistics[key].displayName}</p>
+                                            </div>`
+                                });
+                                return `<div style="display: flex; flex-direction: row; justify-content: space-around;">${legendItems.join('')}</div>`;
                             }
                         }}
                         />
+                    {this.refs.chart && htmlToReactParser.parse(this.refs.chart.chartInstance.generateLegend())}
                 </div>
                 <div className="ui one buttons">
                     <Button><a href="https://vm-manage.oit.duke.edu/containers">Reserve GPU</a></Button>
                 </div>
                 </Segment>
             </div>
-
         );
     }
 }

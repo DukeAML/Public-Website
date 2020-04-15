@@ -66,7 +66,7 @@ class StatisticsPool {
                 const statisticConfigKey = Object.keys(Statistic.statistics).find((key, index) => Statistic.statistics[key].name === statistic.name);
                 const statisticConfig = Statistic.statistics[statisticConfigKey];
                 return {
-                    label: `${statisticConfig.displayName} - ${statistic.cluster}`,
+                    label: statistic.cluster,
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: statisticConfig.color,
