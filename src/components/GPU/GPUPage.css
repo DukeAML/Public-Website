@@ -35,3 +35,7 @@ a:hover {
   font-size: 1.5rem;
   margin: 0;
 }
+
+.dropdown {
+  margin-bottom: 2rem !important;
+}
