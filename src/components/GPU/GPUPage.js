@@ -4,7 +4,7 @@ import React from "react";
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import { Spinner } from "react-bootstrap";
-import { Container, Tab, Dropdown, Accordion, Icon } from "semantic-ui-react";
+import { Container, Dropdown, Accordion, Icon } from "semantic-ui-react";
 import GPUInfo from "./components/GPUInfo";
 import StatisticsPool from "./model/StatisticPool";
 import Statistic from "./model/Statistic";

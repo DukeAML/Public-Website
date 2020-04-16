@@ -57,12 +57,21 @@ class StatisticsPool {
         }
     }
 
+    generateLineTypes = () => {
+        const lineTypes = {};
+        this.statistics.forEach(statistic => {
+            lineTypes[statistic.cluster] = statistic.lineDash();
+        });
+        return lineTypes;
+    };
+
     convertToChartData = () => {
         if (this.statistics.length === 0) return {};
         const data = {
             // Assume that the labels will be the same for all data.
             labels: this.statistics[0].getXAxisLabels(),
             datasets: this.statistics.map(statistic => {
+                console.log(statistic.lineDash());
                 const statisticConfigKey = Object.keys(Statistic.statistics).find((key, index) => Statistic.statistics[key].name === statistic.name);
                 const statisticConfig = Statistic.statistics[statisticConfigKey];
                 return {
@@ -72,7 +81,7 @@ class StatisticsPool {
                     backgroundColor: statisticConfig.color,
                     borderColor: statisticConfig.color,
                     borderCapStyle: "butt",
-                    borderDash: [],
+                    borderDash: statistic.lineDash(),
                     borderDashOffset: 0.0,
                     borderJoinStyle: "miter",
                     pointBorderColor: statisticConfig.color,

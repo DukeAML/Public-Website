@@ -21,6 +21,10 @@ class Statistic {
         this.values = values;
     }
 
+    lineDash = () => {
+        return [this.cluster.length % 10, this.cluster.length % 5]
+    };
+
     getXAxisLabels = () => {
         const moments = this.times.map(time => moment.unix(time));
         const labels = moments.map(moment => moment.format('h:mm A'));
@@ -29,5 +33,6 @@ class Statistic {
 
     getYValues = () => this.values;
 }
+
 
 export default Statistic;
