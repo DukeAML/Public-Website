@@ -4,17 +4,18 @@ import React from "react";
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import { Spinner } from "react-bootstrap";
-import { Container, Tab, Input, Accordion, Icon } from "semantic-ui-react";
+import { Container, Dropdown, Accordion, Icon } from "semantic-ui-react";
 import GPUInfo from "./components/GPUInfo";
 import StatisticsPool from "./model/StatisticPool";
+import Statistic from "./model/Statistic";
 import GPUChart from "./components/GPUChart";
 import withWindowDimensions from "../people/withWindowDimensions";
 
 class GPUPage extends React.Component {
-  state = { panes: [], loadingClusters: true, search: "", activeIndex: [2] };
+  state = { clusters: [], selectedClusters: [], loadingClusters: true, activeIndex: [2] };
 
   componentDidMount() {
-    this.updatePanes();
+    this.updateClusters();
   }
 
   handleClick = (e, titleProps) => {
@@ -29,31 +30,21 @@ class GPUPage extends React.Component {
     this.setState({ activeIndex: [...newIndex] });
   };
 
-  async updatePanes() {
+  async updateClusters() {
     const clusters = await StatisticsPool.fetchClusterNames();
-    const panes = clusters.map(cluster => {
+    const options = clusters.map(cluster => {
       return {
-        menuItem: cluster,
-        render: () => (
-          <Tab.Pane attached={false}>
-            <GPUChart cluster={cluster} statistics={["mem_free", "mem_used"]} />
-          </Tab.Pane>
-        )
+        key: cluster,
+        value: cluster,
+        text: cluster
       };
     });
-    this.setState({ panes: panes, loadingClusters: false });
-    console.log(this.state.panes);
+    this.setState({ clusters: options, loadingClusters: false });
   }
 
-  handleSearchChange = (e, { value }) => {
-    this.setState({ search: value });
-  };
-
-  filterClusters = clusters => {
-    return this.state.search
-      ? clusters.filter(cluster => cluster.menuItem.includes(this.state.search))
-      : clusters;
-  };
+  handleClusterSelectionChange(e, {value}) {
+    this.setState({ selectedClusters : value })
+  }
 
   render() {
     let window = this.props.windowWidth;
@@ -81,7 +72,6 @@ class GPUPage extends React.Component {
         <Container
           fluid
           style={{
-            padding: 0,
             minHeight: "95vh",
             padding: `0 ${padding}%`,
             fontfamily: "Nora"
@@ -128,19 +118,17 @@ class GPUPage extends React.Component {
                       </div>
                     ) : (
                       <div>
-                        <Input
-                          icon="search"
-                          placeholder="Search for a cluster"
-                          onChange={this.handleSearchChange}
-                          value={this.state.search}
-                          style={{ width: "20rem", margin: "1rem 0 2rem 0" }}
+                        <Dropdown
+                            placeholder='State'
+                            fluid
+                            multiple
+                            search
+                            selection
+                            options={this.state.clusters}
+                            onChange={this.handleClusterSelectionChange.bind(this)}
+                            style={{ zIndex: 1001 }}
                         />
-
-                        <Tab
-                          menu={{ secondary: true, className: "wrapped" }}
-                          panes={this.filterClusters(this.state.panes)}
-                          style={{ fontfamily: "Nora" }}
-                        />
+                        <GPUChart selectedClusters={this.state.selectedClusters} statistics={[Statistic.statistics.memoryFree.name, Statistic.statistics.memoryUsed.name]} />
                       </div>
                     )}
                   </center>

@@ -13,7 +13,7 @@ import PeoplePage from "./people/PeoplePage";
 import IndividualProject from "./projects/individual-pages/IndividualProject";
 import CoursesPage from "./courses/CoursesPage";
 import PapersPage from "./papers/PapersPage";
-import GPUPage from "./gpu/GPUPage";
+import GPUPage from "./GPU/GPUPage";
 import { getProjects } from "../api/api.js";
 
 import { projects } from "./projects/projectsData";
