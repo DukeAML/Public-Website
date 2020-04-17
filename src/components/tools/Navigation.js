@@ -95,6 +95,11 @@ class Navigation extends React.Component {
                 GPUs
               </Link>
             </Col>
+            <Col xs="2" style={verticalAlign}>
+              <Link to="/thePheonixProject" className="nav-link-col">
+                Pheonix Project
+              </Link>
+            </Col>
           </Row>
         </Container>
       </center>

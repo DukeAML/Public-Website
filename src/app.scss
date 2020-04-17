@@ -299,6 +299,26 @@ div.row {
   margin-left: 0px;
 }
 
+.gpu-sub-header {
+  font-family: "Lora", monospace !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.gpu-header,
+.pheonix-header {
+  font-family: "Lora", monospace !important;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.pheonix-sub-header {
+  font-family: "Lora", monospace !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 div.col-lg-1,
 div.col-lg-10,
 div.col-lg-11,
