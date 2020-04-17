@@ -8,6 +8,8 @@ import withWindowDimensions from "../people/withWindowDimensions";
 import { companyForm, studentForm } from "./faq";
 import EmbeddedForm from "./EmbeddedForm";
 
+const PhoenixLogo = require("./phoenix.png");
+
 class PhoenixProjectPage extends React.Component {
   state = { activeIndex: [1] };
 
@@ -56,7 +58,13 @@ class PhoenixProjectPage extends React.Component {
         >
           <center>
             <div className="title"> The Phoenix Project </div>
+            <img
+              src={PhoenixLogo}
+              alt="The Phoenix Project"
+              style={{ height: "15rem", margin: "2rem" }}
+            />{" "}
           </center>
+
           <div style={{ marginTop: "1rem" }}>
             <Accordion>
               <Accordion.Title
