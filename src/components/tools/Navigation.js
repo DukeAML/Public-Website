@@ -56,7 +56,7 @@ class Navigation extends React.Component {
             maxWidth: "100vw"
           }}
         >
-          <Row style={{ padding: 0, margin: 0 }}>
+          <Row style={{ padding: 0, margin: 0, justifyContent: "center" }}>
             <Col xs="2" style={verticalAlign}>
               <Link to="/">
                 <img
@@ -72,26 +72,24 @@ class Navigation extends React.Component {
                 Projects
               </Link>{" "}
             </Col>
-
             <Col xs="2" style={verticalAlign}>
               {" "}
               <Link to="/people" className="nav-link-col">
                 People
               </Link>
             </Col>
-
             <Col xs="2" style={verticalAlign}>
               <Link to="/courses" className="nav-link-col">
                 Courses
               </Link>
             </Col>
-
+            {/*
             <Col xs="2" style={verticalAlign}>
               <Link to="/papers" className="nav-link-col">
                 Papers
               </Link>
             </Col>
-
+            */}
             <Col xs="2" style={verticalAlign}>
               <Link to="/GPU" className="nav-link-col">
                 GPUs

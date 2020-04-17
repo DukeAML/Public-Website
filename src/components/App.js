@@ -36,9 +36,10 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/courses" component={CoursesPage} />
+        {/*
         <Route exact path="/papers" component={PapersPage} />
+        */}
         <Route exact path="/GPU" component={GPUPage} />
-
         {this.state.projects.map((project, index) => (
           <Route
             key={index}
