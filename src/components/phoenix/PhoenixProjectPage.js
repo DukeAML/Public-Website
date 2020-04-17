@@ -8,7 +8,7 @@ import withWindowDimensions from "../people/withWindowDimensions";
 import { companyForm, studentForm } from "./faq";
 import EmbeddedForm from "./EmbeddedForm";
 
-class PheonixProjectPage extends React.Component {
+class PhoenixProjectPage extends React.Component {
   state = { activeIndex: [1] };
 
   handleClick = (e, titleProps) => {
@@ -31,16 +31,16 @@ class PheonixProjectPage extends React.Component {
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
       // lg or xl
-      padding = 15;
+      padding = 20;
     } else if (window >= 768) {
       // m
-      padding = 4;
+      padding = 10;
     } else if (window >= 576) {
       // s
-      padding = 2;
+      padding = 5;
     } else {
       // xs
-      padding = 1;
+      padding = 5;
     }
 
     return (
@@ -55,7 +55,7 @@ class PheonixProjectPage extends React.Component {
           }}
         >
           <center>
-            <div className="title"> The Pheonix Project </div>
+            <div className="title"> The Phoenix Project </div>
           </center>
           <div style={{ marginTop: "1rem" }}>
             <Accordion>
@@ -65,7 +65,7 @@ class PheonixProjectPage extends React.Component {
                 onClick={this.handleClick}
               >
                 <Icon name="dropdown" />
-                <span className="pheonix-header">
+                <span className="Phoenix-header">
                   What is this?
                   <hr />
                 </span>
@@ -91,7 +91,7 @@ class PheonixProjectPage extends React.Component {
                 onClick={this.handleClick}
               >
                 <Icon name="dropdown" />
-                <span className="pheonix-header">
+                <span className="Phoenix-header">
                   I’m a company. What’s next?
                   <hr />
                 </span>
@@ -108,7 +108,7 @@ class PheonixProjectPage extends React.Component {
                 and a member of our executive committee will reach out to answer
                 your questions and discuss potential projects.
                 <Row style={{ justifyContent: "center" }}>
-                  <Col xs={12} xl={8}>
+                  <Col xs={12} xl={10}>
                     <EmbeddedForm questions={companyForm} />
                   </Col>
                 </Row>
@@ -120,7 +120,7 @@ class PheonixProjectPage extends React.Component {
                 onClick={this.handleClick}
               >
                 <Icon name="dropdown" />
-                <span className="pheonix-header">
+                <span className="Phoenix-header">
                   I’m a student. What’s next?
                   <hr />
                 </span>
@@ -133,7 +133,7 @@ class PheonixProjectPage extends React.Component {
                 </a>{" "}
                 to apply to the program.
                 <Row style={{ justifyContent: "center" }}>
-                  <Col xs={12} xl={8}>
+                  <Col xs={12} xl={10}>
                     <EmbeddedForm questions={studentForm} />
                   </Col>
                 </Row>
@@ -145,7 +145,7 @@ class PheonixProjectPage extends React.Component {
                 onClick={this.handleClick}
               >
                 <Icon name="dropdown" />
-                <span className="pheonix-header">
+                <span className="Phoenix-header">
                   Where can I learn more?
                   <hr />
                 </span>
@@ -165,4 +165,4 @@ class PheonixProjectPage extends React.Component {
   }
 }
 
-export default withWindowDimensions(PheonixProjectPage);
+export default withWindowDimensions(PhoenixProjectPage);

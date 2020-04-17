@@ -14,7 +14,7 @@ import IndividualProject from "./projects/individual-pages/IndividualProject";
 import CoursesPage from "./courses/CoursesPage";
 import PapersPage from "./papers/PapersPage";
 import GPUPage from "./GPU/GPUPage";
-import PheonixProjectPage from "./pheonix/PheonixProjectPage";
+import PhoenixProjectPage from "./phoenix/PhoenixProjectPage";
 import { getProjects } from "../api/api.js";
 
 import { projects } from "./projects/projectsData";
@@ -37,7 +37,7 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/courses" component={CoursesPage} />
-        <Route exact path="/thepheonixproject" component={PheonixProjectPage} />
+        <Route exact path="/thePhoenixproject" component={PhoenixProjectPage} />
         {/*
         <Route exact path="/papers" component={PapersPage} />
         */}

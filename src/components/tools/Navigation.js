@@ -57,7 +57,7 @@ class Navigation extends React.Component {
           }}
         >
           <Row style={{ padding: 0, margin: 0, justifyContent: "center" }}>
-            <Col xs="2" style={verticalAlign}>
+            <Col xs="1" style={verticalAlign}>
               <Link to="/">
                 <img
                   alt="Home"
@@ -67,13 +67,17 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
+            <Col xs="3" style={verticalAlign}>
+              <Link to="/ThePhoenixProject" className="nav-link-col">
+                Phoenix Project
+              </Link>
+            </Col>
             <Col xs="2" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
-              </Link>{" "}
+              </Link>
             </Col>
             <Col xs="2" style={verticalAlign}>
-              {" "}
               <Link to="/people" className="nav-link-col">
                 People
               </Link>
@@ -93,11 +97,6 @@ class Navigation extends React.Component {
             <Col xs="2" style={verticalAlign}>
               <Link to="/GPU" className="nav-link-col">
                 GPUs
-              </Link>
-            </Col>
-            <Col xs="2" style={verticalAlign}>
-              <Link to="/thePheonixProject" className="nav-link-col">
-                Pheonix Project
               </Link>
             </Col>
           </Row>
