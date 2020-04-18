@@ -56,7 +56,7 @@ export const studentForm = [
   {
     q: "Are the start and end dates flexible?",
     a:
-      "Cohort I runs from Monday, May 18 and ends on Friday, June 19 (5 weeks). Cohort II runs from Tuesday, May 26 and ends on Friday, August 7th (11 weeks). These dates are not flexible."
+      "The program runs from Tuesday, May 26 to Friday, August 7th (11 weeks). These dates are not flexible."
   },
   {
     q: "Is the program remote?",

@@ -83,7 +83,7 @@ class PhoenixProjectPage extends React.Component {
                   The Duke University Phoenix Project brings together 150 Duke
                   students who have recently lost internships to work on
                   end-to-end technical solutions for companies during Summer
-                  2020 (May 18-August 7).
+                  2020 (May 26-August 7).
                   <br />
                   <br />
                   This program supports students seeking a meaningful summer
