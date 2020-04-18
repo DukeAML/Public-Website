@@ -24,14 +24,12 @@ const projects = require("./projectsData");
 class ProjectsPage extends React.Component {
   constructor() {
     super();
-    this.state = { projects: [] };
+    this.state = { projects: [], loading: true };
   }
 
   componentDidMount = async () => {
     const projects = await getProjects();
-    this.setState({ projects: projects }, () => {
-      console.log("state: ", this.state);
-    });
+    this.setState({ projects: projects, loading: false });
   };
 
   render() {
@@ -79,7 +77,7 @@ class ProjectsPage extends React.Component {
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <Container style={{ minHeight: "100%", padding: `0 ${padding}%` }}>
+          <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
             <center>
               <div className="title"> Current Projects </div>
             </center>
@@ -89,7 +87,13 @@ class ProjectsPage extends React.Component {
                 justifyContent: "center"
               }}
             >
-              {projectCards}
+              {this.state.loading ? (
+                <div style={{ height: "10rem", padding: "10rem" }}>
+                  <Spinner animation="grow" size="md" />
+                </div>
+              ) : (
+                projectCards
+              )}
             </Row>
           </Container>
           <Footer style={{ margin: "2rem 0 0 0" }} />

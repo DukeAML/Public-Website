@@ -21,11 +21,11 @@ import withWindowDimensions from "../people/withWindowDimensions";
 import { getPapers } from "../../api/api";
 
 class PapersPage extends React.Component {
-  state = { papers: [] };
+  state = { papers: [], loading: true };
 
   componentDidMount = async () => {
     const papers = await getPapers();
-    this.setState({ papers: papers });
+    this.setState({ papers: papers, loading: false });
   };
 
   render() {
@@ -75,7 +75,13 @@ class PapersPage extends React.Component {
                 justifyContent: "center"
               }}
             >
-              {papers}
+              {this.state.loading ? (
+                <div style={{ height: "10rem", padding: "3rem" }}>
+                  <Spinner animation="grow" size="md" />
+                </div>
+              ) : (
+                papers
+              )}
             </Row>
           </Container>
           <Footer style={{ margin: "2rem 0 0 0" }} />

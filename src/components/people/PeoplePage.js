@@ -9,7 +9,8 @@ import {
   Card,
   Carousel,
   Accordion,
-  Collapse
+  Collapse,
+  Spinner
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 
@@ -28,7 +29,7 @@ import PeopleRow from "./PeopleRow";
 
 class PeoplePage extends React.Component {
   state = {
-    redirect: false,
+    loading: true,
     details: {},
     collapse: false,
     members: { CRM: [], DS: [], PS: [] }
@@ -37,7 +38,7 @@ class PeoplePage extends React.Component {
   componentDidMount = async () => {
     const members = await getMemberData();
     console.log(members);
-    this.setState({ redirect: false, members: members });
+    this.setState({ loading: false, members: members });
   };
 
   makePeopleGrid(people, window) {
@@ -74,7 +75,13 @@ class PeoplePage extends React.Component {
       <PeopleRow people={row} key={index} />
     ));
 
-    return result;
+    return this.state.loading ? (
+      <div style={{ height: "10rem", padding: "3rem" }}>
+        <Spinner animation="grow" size="md" />
+      </div>
+    ) : (
+      result
+    );
   }
 
   render() {
