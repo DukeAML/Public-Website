@@ -54,11 +54,6 @@ export const studentForm = [
       "We are looking for Duke students with a minimum of CS201. No other experience is required!"
   },
   {
-    q: "Are the start and end dates flexible?",
-    a:
-      "The program runs from Tuesday, May 26 to Friday, August 7th (11 weeks). These dates are not flexible."
-  },
-  {
     q: "Is the program remote?",
     a:
       "Yes, the program will be remote with regular meetings, including team meetings, meetings with mentor groups, pre-professional and technical workshops, and a speaker series. All participants will also have several virtual presentations throughout the experience to demonstrate progress and the final outcome of their projects. We will also host an on-campus reception when school resumes. "
@@ -91,6 +86,62 @@ export const studentForm = [
   {
     q: "Will I be paid?",
     a:
-      "We are currently working with companies and Duke University for students who are working full-time to receive a stipend for their work."
+      "Students working full-time will receive a $1,000 stipend for their work."
+  }
+];
+
+export const projectAssistantForm = [
+  {
+    q: "What is a project assistant?",
+    a:
+      "Project assistants are experienced students and recent graduates that will guide students in navigating engineering challenges associated with their technical projects."
+  },
+  {
+    q: "What are the qualifications?",
+    a:
+      "Project assistants must have internship or significant project experience to qualify. PAs may be rising 4th year students or recent graduates from any school (Duke preferred). "
+  },
+  {
+    q: "What are my responsibilities?",
+    a:
+      "Project assistants will be put in a database accessible by teams showcasing their areas of expertise. We ask that project assistants reserve at least an hour a week to answer questions from teams about these areas. We also ask that project assistants maintain an open communication line with students to address questions that may arise. Students might expect advice for specific engineering challenges, learning resources, navigating client relationships, and organizing their projects."
+  },
+  {
+    q: "How else can I help?",
+    a:
+      "In addition to being a project assistant for their assigned team, PAs are encouraged to give technical  and career-related advice to participants in the program outside of their assigned team. Project assistants are also welcome to participate or lead our weekly workshops, presentations, or speaker panels."
+  },
+  {
+    q: "What do I get in return?",
+    a:
+      "Project assistants get to help out their peers during a tough time and serve as a mentor for real-life projects. At this time, project assistants are not eligible for a stipend."
+  }
+];
+
+export const mentorForm = [
+  {
+    q: "What is a mentor?",
+    a:
+      "Mentors guide students in navigating challenges associated with client relationships and delivering end-to-end technical projects. They will also serve as role models to students who are early-stage in their technical career."
+  },
+  {
+    q: "What are the qualifications?",
+    a:
+      "Industry experience working in a software, data science, or engineering role."
+  },
+  {
+    q: "What are my responsibilities?",
+    a:
+      "Mentors will be assigned to between one to four projects (of 4 students) depending on their preferred time commitment. We expect that mentors meet with each team at a minimum of 1 hour a week. We also ask that mentors maintain an open communication line with students to address questions that may arise. Students might expect advice for product strategy, planning, navigating clients expectations, and learning resources to pursue."
+  },
+  {
+    q: "How else can I help?",
+    a:
+      "In addition to being a mentor for their assigned team, mentors are encouraged to give career advice to individuals for their team and other participants in the program. Mentors are also welcome to participate or lead our weekly workshops, presentations, or speaker panels."
+  },
+  {
+    q: "What do I get in return?",
+    a:
+      "Mentors get to assist and build relationships with passionate students during a difficult time."
   }
 ];

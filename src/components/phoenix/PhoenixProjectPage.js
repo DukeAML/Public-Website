@@ -5,7 +5,12 @@ import Footer from "../tools/Footer";
 import { Dropdown, Accordion, Icon } from "semantic-ui-react";
 import { Col, Row, Container } from "react-bootstrap";
 import withWindowDimensions from "../people/withWindowDimensions";
-import { companyForm, studentForm } from "./faq";
+import {
+  companyForm,
+  studentForm,
+  mentorForm,
+  projectAssistantForm
+} from "./faq";
 import EmbeddedForm from "./EmbeddedForm";
 
 const PhoenixLogo = require("./phoenix.png");
@@ -154,12 +159,64 @@ class PhoenixProjectPage extends React.Component {
               >
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
-                  Where can I learn more?
+                  I’m interested in being a mentor. What’s next?
                   <hr />
                 </span>
               </Accordion.Title>
 
               <Accordion.Content active={activeIndex.includes(4)}>
+                Fill out this{" "}
+                <a target="_blank" href="https://forms.gle/fQitYLpusFqQhMjcA">
+                  non-binding form
+                </a>{" "}
+                by May 1 and a member of our executive committee will reach out
+                to you!
+                <Row style={{ justifyContent: "center" }}>
+                  <Col xs={12} xl={10}>
+                    <EmbeddedForm questions={mentorForm} />
+                  </Col>
+                </Row>
+              </Accordion.Content>
+
+              <Accordion.Title
+                active={activeIndex.includes(5)}
+                index={5}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  I’m interested in being a project assistant. What’s next?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(5)}>
+                Fill out this{" "}
+                <a target="_blank" href="https://forms.gle/URS8TWN79arPvN179">
+                  non-binding form
+                </a>{" "}
+                by May 1 and a member of our executive committee will reach out
+                to you!
+                <Row style={{ justifyContent: "center" }}>
+                  <Col xs={12} xl={10}>
+                    <EmbeddedForm questions={projectAssistantForm} />
+                  </Col>
+                </Row>
+              </Accordion.Content>
+
+              <Accordion.Title
+                active={activeIndex.includes(6)}
+                index={6}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  Where can I learn more?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(6)}>
                 If you have questions beyond what is covered on this page,
                 please email <a href="mailto: mmg53@duke.edu">mmg53@duke.edu</a>
               </Accordion.Content>
