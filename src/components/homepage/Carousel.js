@@ -25,12 +25,13 @@ class CustomCarousel extends React.Component {
         <Container>
           <Row>
             <h3>
-              <Link
-                to="https://www.dukechronicle.com/"
+              <a
+                target="_blank"
+                href="https://www.dukechronicle.com/"
                 className="carouselLink"
               >
                 {news.title}
-              </Link>
+              </a>
             </h3>
             <p>{news.description}</p>
           </Row>
