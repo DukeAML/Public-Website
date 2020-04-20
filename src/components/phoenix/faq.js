@@ -27,8 +27,22 @@ export const companyForm = [
   },
   {
     q: "What is this program’s affiliation with Duke University?",
-    a:
-      "This program is being run through Duke University’s Applied Machine Learning Group in conjunction with the Innovation & Entrepreneurship department. All participating students are current Duke students and students’ participation will be partially subsidized through the university."
+    a: (
+      <React.Fragment>
+        This program is being run through Duke University’s Applied Machine
+        Learning Group and is backed by{" "}
+        <a
+          target="_blank"
+          href="https://scholars.duke.edu/person/steven.mcclelland"
+        >
+          Steve McClelland
+        </a>{" "}
+        from the Pratt School of Engineering and Duke Innovation &
+        Entrepreneurship. All participating students are current Duke students
+        and students’ participation will be partially subsidized through the
+        university.
+      </React.Fragment>
+    )
   },
   {
     q: "Why should my company participate?",
