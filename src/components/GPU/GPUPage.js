@@ -119,7 +119,7 @@ class GPUPage extends React.Component {
                     ) : (
                       <div>
                         <Dropdown
-                            placeholder='State'
+                            placeholder='Clusters'
                             fluid
                             multiple
                             search
