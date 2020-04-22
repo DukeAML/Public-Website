@@ -25,11 +25,7 @@ class CustomCarousel extends React.Component {
         <Container>
           <Row>
             <h3>
-              <a
-                target="_blank"
-                href="https://www.dukechronicle.com/"
-                className="carouselLink"
-              >
+              <a target="_blank" href={news.webLink} className="carouselLink">
                 {news.title}
               </a>
             </h3>
