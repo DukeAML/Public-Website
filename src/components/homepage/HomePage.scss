@@ -72,13 +72,6 @@ $main-white: #f2f4f5;
   width: 100%;
 }
 
-.parallax {
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -118,6 +111,56 @@ $main-white: #f2f4f5;
   margin-left: 10%;
   margin-right: 10%;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel-item::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.carousel-item {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  height: 10rem;
+}
+
+/* Set breakpoints for news section manually */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .carousel-item {
+    height: 15rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .carousel-item {
+    height: 12rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .carousel-item {
+    height: 10rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel-item {
+    height: 10rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .carousel-item {
+    height: 8rem;
+  }
+}
+
 .carouselLink {
   color: $dark-grey;
   display: table-cell;

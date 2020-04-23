@@ -78,12 +78,44 @@ class HomePage extends React.Component {
           </AnimationWrapper>
         </Container>
 
-        {/**ABOUT SECTION */}
+        {/**NEWS SECTION */}
         <Container
           fluid
           className="boxShadowed"
-          style={{ backgroundColor: "#e6e7e870", color: "#1e2c3a" }}
+          style={{
+            backgroundColor: "#e6e7e870",
+            color: "#1e2c3a"
+          }}
         >
+          <Container>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                News
+              </h3>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                style={{
+                  fontFamily: "Lora",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Carousel style={{ width: "100%" }} />
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+
+        {/**ABOUT SECTION */}
+        <Container fluid className="boxShadowed">
           <Container>
             <Row
               style={{
@@ -127,33 +159,6 @@ class HomePage extends React.Component {
                 }}
               >
                 <Animation />
-              </Col>
-            </Row>
-          </Container>
-        </Container>
-        <Container fluid className="boxShadowed">
-          <Container>
-            <Row
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
-                News
-              </h3>
-            </Row>
-            <Row>
-              <Col
-                xs={12}
-                style={{
-                  fontFamily: "Lora",
-                  justifyContent: "center",
-                  alignItems: "center"
-                }}
-              >
-                <Carousel style={{ width: "100%" }} />
               </Col>
             </Row>
           </Container>

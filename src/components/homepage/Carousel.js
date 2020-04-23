@@ -38,7 +38,11 @@ class CustomCarousel extends React.Component {
     return (
       <Container fluid style={{ width: "100%", justifyContent: "center" }}>
         <center>
-          <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
+          <Carousel
+            activeIndex={this.state.index}
+            onSelect={this.handleSelect}
+            style={{ alignItems: "top" }}
+          >
             {slides}
           </Carousel>
         </center>
