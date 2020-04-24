@@ -26,7 +26,7 @@ class HomePage extends React.Component {
 
   handleSignUpClick = () => {
     var link =
-      "mailto:news@dukeaml.com" +
+      "mailto:duke.applied.ml@gmail.com" +
       "?cc=duke.applied.ml@gmail.com" +
       "&subject=" +
       escape("Add me to the Newsletter!") +
