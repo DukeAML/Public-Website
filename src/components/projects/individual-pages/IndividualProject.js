@@ -14,6 +14,7 @@ import Navigation from "../../tools/Navigation";
 */
 
 const IndividualProject = props => {
+  console.log(props);
   return (
     <div>
       <Navigation />
@@ -23,7 +24,9 @@ const IndividualProject = props => {
       >
         <Row>
           <Col sm={12} md={6}>
-            <Image src={props.image} fluid style={{ width: "100%" }} />
+            <center>
+              <Image src={props.image} fluid style={{ width: "80%" }} />
+            </center>
           </Col>
           <Col sm={12} md={6} style={{ maxWidth: "800px" }}>
             <Card className="individual-project-card">
@@ -37,14 +40,22 @@ const IndividualProject = props => {
                 <br />
                 <Card.Text>
                   <Container>
-                    <Row>
-                      <b> Team: </b>
-                    </Row>
-                    <Row>{props.team.join(", ")}</Row>
-                    <br />
-                    <Row>
+                    {props.team.length != 0 ? (
+                      <div>
+                        <Row style={{ lineHeight: "2.5rem" }}>
+                          <b> Team: </b>
+                        </Row>
+
+                        <Row>{props.team.join(", ")}</Row>
+                        <br />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    <Row style={{ lineHeight: "2.5rem" }}>
                       <b> Abstract: </b>
                     </Row>
+
                     <Row>{props.abstract}</Row>
                   </Container>
                 </Card.Text>
