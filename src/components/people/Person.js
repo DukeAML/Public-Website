@@ -4,28 +4,15 @@ import { Link, Redirect } from "react-router-dom";
 
 import { Row, Col, Image } from "react-bootstrap";
 import placeholder from "./headshots/profile-placeholder.svg";
+import Icon from "../tools/Icon";
 
 function Person(props) {
   const github =
-    props.github != null ? (
-      <a
-        className="github-icon button ripple"
-        style={{ float: "left" }}
-        target="_blank"
-        href={props.github}
-      ></a>
-    ) : (
-      ""
-    );
+    props.github != null ? <Icon type="github" href={props.github} /> : "";
 
   const linkedin =
     props.linkedin != null ? (
-      <a
-        className="linkedin-icon button"
-        style={{ float: "left" }}
-        target="_blank"
-        href={props.linkedin}
-      ></a>
+      <Icon type="linkedin" href={props.linkedin} />
     ) : (
       ""
     );

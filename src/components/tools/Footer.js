@@ -1,23 +1,40 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Icon from "./Icon";
 
 class Footer extends React.Component {
   render() {
+    const linkedin = (
+      <Icon
+        type="linkedin-light"
+        href={"https://www.linkedin.com/company/dukeaml/"}
+      />
+    );
+
+    const mail = (
+      <Icon type="mail-light" href="mailto:duke.applied.ml@gmail.com" />
+    );
+
     return (
       <Container
         fluid
         className="footer"
         style={{
-          verticalAlign: "middle"
+          verticalAlign: "middle",
+          lineHeight: "2.5rem",
+          minHeight: "10rem"
         }}
       >
         <center>
           <a>Questions, comments? Contact us:</a>
           <br />
-          <a className="contact" href="mailto:duke.applied.ml@gmail.com">
-            info@dukeaml.com
-          </a>
-          <br />
+          <Row style={{ justifyContent: "center" }}>
+            <div style={{ display: "inline-block" }}>
+              <center>
+                {linkedin} {mail}
+              </center>
+            </div>
+          </Row>
         </center>
       </Container>
     );
