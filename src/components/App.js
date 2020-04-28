@@ -16,7 +16,7 @@ import PapersPage from "./papers/PapersPage";
 import GPUPage from "./GPU/GPUPage";
 import PhoenixProjectPage from "./phoenix/PhoenixProjectPage";
 import { getProjects } from "../api/api.js";
-
+import PhoenixAlert from "./tools/PhoenixAlert";
 import { projects } from "./projects/projectsData";
 
 class App extends React.Component {
@@ -33,6 +33,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
+        <PhoenixAlert />
         <Route exact path="/" component={HomePage} />
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
