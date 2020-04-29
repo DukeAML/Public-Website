@@ -12,11 +12,17 @@ import {
   projectAssistantForm
 } from "./faq";
 import EmbeddedForm from "./EmbeddedForm";
-
+import logos from "./projectLogos";
 const PhoenixLogo = require("./phoenix.png");
 
 class PhoenixProjectPage extends React.Component {
-  state = { activeIndex: [1] };
+  state = { activeIndex: [1, 7], files: [] };
+
+  componentDidMount = () => {
+    this.setState({
+      files: logos
+    });
+  };
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps;
@@ -69,7 +75,6 @@ class PhoenixProjectPage extends React.Component {
               style={{ height: "15rem", margin: "2rem" }}
             />{" "}
           </center>
-
           <div style={{ marginTop: "1rem" }}>
             <Accordion>
               <Accordion.Title
@@ -219,6 +224,30 @@ class PhoenixProjectPage extends React.Component {
               <Accordion.Content active={activeIndex.includes(6)}>
                 If you have questions beyond what is covered on this page,
                 please email <a href="mailto: mmg53@duke.edu">mmg53@duke.edu</a>
+              </Accordion.Content>
+
+              <Accordion.Title
+                active={activeIndex.includes(7)}
+                index={7}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  What are some of the project sponsors?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(7)}>
+                <center>
+                  {this.state.files.map(logo => (
+                    <img
+                      className="phoenix-sponsor-logo"
+                      src={require(`./confirmedProjects/${logo}`)}
+                      alt={logo}
+                    />
+                  ))}
+                </center>{" "}
               </Accordion.Content>
             </Accordion>
           </div>
