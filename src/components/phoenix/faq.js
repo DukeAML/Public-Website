@@ -18,7 +18,7 @@ export const companyForm = [
   {
     q: "Will my team have to pay to participate?",
     a:
-      "Project sponsors are encouraged to contribute a $1000 summer-long stipend for each student working on their project. Duke has also provided some funding for students to subsidize students working on unpaid projects."
+      "Project sponsors are encouraged to contribute a $3000 summer-long stipend for each student working on their project. Duke has also provided some funding for students to subsidize students working on unpaid projects."
   },
   {
     q: "What can we expect upon completion of this program?",

@@ -243,7 +243,7 @@ class PhoenixProjectPage extends React.Component {
                   {this.state.files.map(logo => (
                     <img
                       className="phoenix-sponsor-logo"
-                      src={require(`./confirmedProjects/${logo}`)}
+                      src={require(`./confirmedProjects/${logo}.png`)}
                       alt={logo}
                     />
                   ))}
