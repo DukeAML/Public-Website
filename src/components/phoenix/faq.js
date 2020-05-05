@@ -123,7 +123,7 @@ export const projectAssistantForm = [
   {
     q: "How else can I help?",
     a:
-      "In addition to being a project assistant for their assigned team, PAs are encouraged to give technical  and career-related advice to participants in the program outside of their assigned team. Project assistants are also welcome to participate or lead our weekly workshops, presentations, or speaker panels."
+      "PAs are encouraged to give technical and career-related advice to any participants in the program. Project assistants are also welcome to participate or lead our weekly workshops, presentations, or speaker panels."
   },
   {
     q: "What do I get in return?",
