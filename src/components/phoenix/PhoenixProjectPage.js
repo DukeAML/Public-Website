@@ -174,8 +174,7 @@ class PhoenixProjectPage extends React.Component {
                 <a target="_blank" href="https://forms.gle/fQitYLpusFqQhMjcA">
                   non-binding form
                 </a>{" "}
-                by May 1 and a member of our executive committee will reach out
-                to you!
+                and a member of our executive committee will reach out to you!
                 <Row style={{ justifyContent: "center" }}>
                   <Col xs={12} xl={10}>
                     <EmbeddedForm questions={mentorForm} />
