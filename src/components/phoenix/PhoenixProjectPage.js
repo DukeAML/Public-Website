@@ -196,7 +196,10 @@ class PhoenixProjectPage extends React.Component {
 
               <Accordion.Content active={activeIndex.includes(5)}>
                 Fill out this{" "}
-                <a target="_blank" href="https://forms.gle/URS8TWN79arPvN179">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScQ0oBiRo2z0phzPK1LcPfNjSs6ufqCdJkfd4L6SpNGgl36nA/viewform"
+                >
                   non-binding form
                 </a>{" "}
                 and a member of our executive committee will reach out to you!
