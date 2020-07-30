@@ -9,7 +9,7 @@ import {
   Container,
   Row,
   Col,
-  Image
+  Image,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import withWindowDimensions from "../people/withWindowDimensions";
@@ -42,7 +42,7 @@ class Navigation extends React.Component {
     const verticalAlign = {
       display: "flex",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     };
     return (
       <center>
@@ -53,7 +53,7 @@ class Navigation extends React.Component {
             padding: `0 ${padding}%`,
             paddingTop: "0.5rem",
             backgroundColor: this.props.backgroundColor || "#f2f4f5",
-            maxWidth: "100vw"
+            maxWidth: "100vw",
           }}
         >
           <Row style={{ padding: 0, margin: 0, justifyContent: "center" }}>
@@ -67,12 +67,17 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
-            <Col xs="3" style={verticalAlign}>
-              <Link to="/ThePhoenixProject" className="nav-link-col">
-                Phoenix Project
+            <Col xs="2" style={verticalAlign}>
+              <Link to="/thephoenixproject" className="nav-link-col">
+                The Phoenix Project
               </Link>
             </Col>
             <Col xs="2" style={verticalAlign}>
+              <Link to="/phoenixprojects" className="nav-link-col">
+                Phoenix Projects
+              </Link>
+            </Col>
+            <Col xs="1" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
               </Link>
@@ -82,7 +87,7 @@ class Navigation extends React.Component {
                 People
               </Link>
             </Col>
-            <Col xs="2" style={verticalAlign}>
+            <Col xs="1 " style={verticalAlign}>
               <Link to="/courses" className="nav-link-col">
                 Courses
               </Link>

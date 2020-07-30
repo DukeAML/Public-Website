@@ -17,7 +17,8 @@ import GPUPage from "./GPU/GPUPage";
 import PhoenixProjectPage from "./phoenix/PhoenixProjectPage";
 import { getProjects } from "../api/api.js";
 import PhoenixAlert from "./tools/PhoenixAlert";
-import { projects } from "./projects/projectsData";
+import PhoenixProjectsPage from "./phoenixprojects/ProjectsPage";
+const projects = require("./phoenixprojects/projectsData");
 
 class App extends React.Component {
   constructor() {
@@ -38,7 +39,8 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/courses" component={CoursesPage} />
-        <Route exact path="/thePhoenixproject" component={PhoenixProjectPage} />
+        <Route exact path="/phoenixprojects" component={PhoenixProjectsPage} />
+        <Route exact path="/thephoenixproject" component={PhoenixProjectPage} />
         {/*
         <Route exact path="/papers" component={PapersPage} />
         */}
@@ -53,6 +55,25 @@ class App extends React.Component {
                 title={project.title}
                 image={project.imageLink}
                 abstract={project.abstract}
+                team={project.team || []}
+              />
+            )}
+          />
+        ))}
+        {projects.map((project, index) => (
+          <Route
+            key={index}
+            exact
+            path={`/phoenix/${project.uid}`}
+            component={() => (
+              <IndividualProject
+                title={project.title}
+                image={project.imageLink}
+                abstract={
+                  project.abstract === ""
+                    ? project.description
+                    : project.abstract
+                }
                 team={project.team || []}
               />
             )}

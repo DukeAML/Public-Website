@@ -15,23 +15,13 @@ import {
 
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../projects/ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
-import { getProjects } from "../../api/api.js";
 
 const projects = require("./projectsData");
+console.log(projects, "asds");
 
 class ProjectsPage extends React.Component {
-  constructor() {
-    super();
-    this.state = { projects: [], loading: true };
-  }
-
-  componentDidMount = async () => {
-    const projects = await getProjects();
-    this.setState({ projects: projects, loading: false });
-  };
-
   render() {
     let window = this.props.windowWidth;
     let padding;
@@ -51,27 +41,25 @@ class ProjectsPage extends React.Component {
       padding = 10;
     }
 
-    const projectCards = this.state.projects
-      ? this.state.projects.map((project, key) => (
-          <Col lg={4} md={6} style={{ padding: "1rem" }}>
-            {/*<ProjectCard
+    const projectCards = projects.map((project, key) => (
+      <Col lg={4} md={6} style={{ padding: "1rem" }}>
+        {/*<ProjectCard
           key={key}
           title={project.title}
           description={project.shortDescription}
           img={project.image}
           link={project.link}
         />*/}
-            <ProjectCard
-              key={key}
-              uid={project.uid}
-              link={project.uid}
-              title={project.title}
-              description={project.description}
-              img={project.imageLink}
-            />
-          </Col>
-        ))
-      : "";
+        <ProjectCard
+          key={key}
+          uid={project.uid}
+          link={`/phoenix/${project.uid}`}
+          title={project.title}
+          description={project.description}
+          img={project.imageLink}
+        />
+      </Col>
+    ));
 
     return (
       <div>
@@ -79,7 +67,7 @@ class ProjectsPage extends React.Component {
         <Container fluid style={{ padding: 0 }}>
           <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
             <center>
-              <div className="title"> DAML Projects </div>
+              <div className="title"> Phoenix Projects </div>
             </center>
             <Row
               style={{
@@ -87,13 +75,7 @@ class ProjectsPage extends React.Component {
                 justifyContent: "center",
               }}
             >
-              {this.state.loading ? (
-                <div style={{ height: "10rem", padding: "10rem" }}>
-                  <Spinner animation="grow" size="md" />
-                </div>
-              ) : (
-                projectCards
-              )}
+              {projectCards}
             </Row>
           </Container>
           <Footer style={{ margin: "2rem 0 0 0" }} />
