@@ -3,6 +3,7 @@ import {
   Container,
   Row,
   Col,
+  Accordion,
   Spinner,
   Jumbotron,
   Table,
@@ -17,6 +18,7 @@ import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "../projects/ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
+const PhoenixLogo = require("./phoenix.png");
 
 const projects = require("./projectsData");
 console.log(projects, "asds");
@@ -67,8 +69,34 @@ class ProjectsPage extends React.Component {
         <Container fluid style={{ padding: 0 }}>
           <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
             <center>
-              <div className="title"> Phoenix Projects </div>
+              <Row style={{ marginTop: 20 }}>
+                <Col lg={4} sm={12}>
+                  <img
+                    src={PhoenixLogo}
+                    alt="The Phoenix Project"
+                    style={{ height: "15rem", margin: "2rem" }}
+                  />
+                </Col>
+                <Col lg={8} sm={12} align="left">
+                  <div className="title"> The Phoenix Project </div>
+                  <p>
+                    The Duke University Phoenix Project brings together 200 Duke
+                    students who have recently lost internships to work on
+                    end-to-end technical solutions for companies during Summer
+                    2020 (May 26-August 7).
+                    <br />
+                    <br />
+                    This program supports students seeking a meaningful summer
+                    experience despite the sudden cancellation of many programs
+                    and internships. For companies, this program offers teams of
+                    qualified Duke University students to work on valuable
+                    projects related to data science or software engineering.
+                  </p>
+                </Col>
+              </Row>
+              <div className="title"> Projects </div>
             </center>
+
             <Row
               style={{
                 display: "flex",

@@ -67,16 +67,12 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
-            <Col xs="2" style={verticalAlign}>
+            <Col xs="4" style={verticalAlign}>
               <Link to="/thephoenixproject" className="nav-link-col">
                 The Phoenix Project
               </Link>
             </Col>
-            <Col xs="2" style={verticalAlign}>
-              <Link to="/phoenixprojects" className="nav-link-col">
-                Phoenix Projects
-              </Link>
-            </Col>
+
             <Col xs="1" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
