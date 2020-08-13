@@ -6,7 +6,7 @@ import {
   Row,
   Col,
   Image,
-  Card
+  Card,
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
@@ -63,7 +63,7 @@ class HomePage extends React.Component {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
-                height: "60vh"
+                height: "60vh",
               }}
             >
               {/**Icon */}
@@ -77,14 +77,59 @@ class HomePage extends React.Component {
             </Col>
           </AnimationWrapper>
         </Container>
-
+        {/**ABOUT SECTION */}
+        <Container fluid className="boxShadowed">
+          <Container>
+            <Row className="vertical-align-outer">
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                The Duke Applied Machine Learning Group is always looking for
+                smart and enthusiastic people, regardless of experience. For
+                most new applicants we will have a short introductory course in
+                Machine Learning, Software Engineering, or Product Management.
+                Following this, you will be placed in your respective group and
+                then placed on a project that fits your interests and has people
+                to balance your experience level. DAML is a great way to get
+                better at technical skills as well as soft skills that will make
+                you great at whatever you do after. Apply Here.
+              </Col>
+              <Col
+                md={6}
+                sm={12}
+                style={{
+                  fontFamily: "Lora",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <a
+                  style={{ fontSize: "36px", textAlign: "center" }}
+                  target="_blank"
+                  href="https://bit.ly/daml2020"
+                >
+                  Join the <br />
+                  Team!
+                </a>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
         {/**NEWS SECTION */}
         <Container
           fluid
           className="boxShadowed"
           style={{
             backgroundColor: "#e6e7e870",
-            color: "#1e2c3a"
+            color: "#1e2c3a",
           }}
         >
           <Container>
@@ -92,7 +137,7 @@ class HomePage extends React.Component {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
@@ -105,7 +150,7 @@ class HomePage extends React.Component {
                 style={{
                   fontFamily: "Lora",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <Carousel style={{ width: "100%" }} />
@@ -121,7 +166,7 @@ class HomePage extends React.Component {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
@@ -136,7 +181,7 @@ class HomePage extends React.Component {
                   fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 We are a group focused on building, implementing, and deploying
@@ -155,7 +200,7 @@ class HomePage extends React.Component {
                   fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <Animation />
