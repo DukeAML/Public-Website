@@ -10,7 +10,7 @@ import {
   thead,
   tr,
   Button,
-  Card
+  Card,
 } from "react-bootstrap";
 
 import Navigation from "../tools/Navigation";
@@ -79,12 +79,12 @@ class ProjectsPage extends React.Component {
         <Container fluid style={{ padding: 0 }}>
           <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
             <center>
-              <div className="title"> Current Projects </div>
+              <div className="title"> DAML Projects </div>
             </center>
             <Row
               style={{
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               {this.state.loading ? (
