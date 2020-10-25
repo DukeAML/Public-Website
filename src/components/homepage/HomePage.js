@@ -80,47 +80,31 @@ class HomePage extends React.Component {
         {/**ABOUT SECTION */}
         <Container fluid className="boxShadowed">
           <Container>
-            <Row className="vertical-align-outer">
-              <Col
-                md={6}
-                sm={12}
+            <Link to="/join">
+              <Row
+                className="vertical-align-outer"
                 style={{
                   fontFamily: "Lora",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  color: "#1e2c3a",
                 }}
               >
-                The Duke Applied Machine Learning Group is always looking for
-                smart and enthusiastic people, regardless of experience. For
-                most new applicants we will have a short introductory course in
-                Machine Learning, Software Engineering, or Product Management.
-                Following this, you will be placed in your respective group and
-                then placed on a project that fits your interests and has people
-                to balance your experience level. DAML is a great way to get
-                better at technical skills as well as soft skills that will make
-                you great at whatever you do after. Apply Here.
-              </Col>
-              <Col
-                md={6}
-                sm={12}
-                style={{
-                  fontFamily: "Lora",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <a
-                  style={{ fontSize: "36px", textAlign: "center" }}
-                  target="_blank"
-                  href="https://bit.ly/daml2020"
-                >
-                  Join the <br />
-                  Team!
-                </a>
-              </Col>
-            </Row>
+                <p style={{ width: "50%" }}>
+                  The Duke Applied Machine Learning Group is always looking for
+                  smart and enthusiastic people, regardless of experience. For
+                  most new applicants we will have a short introductory course
+                  in Machine Learning, Software Engineering, or Product
+                  Management. Following this, you will be placed in your
+                  respective group and then placed on a project that fits your
+                  interests and has people to balance your experience level.
+                  DAML is a great way to get better at technical skills as well
+                  as soft skills that will make you great at whatever you do
+                  after. Apply Here.
+                </p>
+              </Row>
+            </Link>
           </Container>
         </Container>
         {/**NEWS SECTION */}

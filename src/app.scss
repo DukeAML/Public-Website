@@ -255,6 +255,14 @@ a.nav-link-col:hover {
   color: $light-grey;
 }
 
+p.nav-link-col {
+  color: $dark-grey;
+}
+
+p.nav-link-col:hover {
+  text-decoration: none !important;
+  color: $light-grey;
+}
 ///// courses display
 .container__graph-area {
   margin: 1rem;

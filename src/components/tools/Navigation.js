@@ -15,6 +15,34 @@ import { Link } from "react-router-dom";
 import withWindowDimensions from "../people/withWindowDimensions";
 
 class Navigation extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      showMenu: false,
+    };
+
+    this.showMenu = this.showMenu.bind(this);
+
+    this.closeMenu = this.closeMenu.bind(this);
+  }
+
+  showMenu(event) {
+    event.preventDefault();
+
+    this.setState({ showMenu: true }, () => {
+      document.addEventListener("click", this.closeMenu);
+    });
+  }
+
+  closeMenu(event) {
+    if (!this.dropdownMenu.contains(event.target)) {
+      this.setState({ showMenu: false }, () => {
+        document.removeEventListener("click", this.closeMenu);
+      });
+    }
+  }
+
   render() {
     // need to use inline styles for veertical alignment of columns so that defaults are overridden
     let window = this.props.windowWidth;
@@ -67,12 +95,16 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
-            <Col xs="4" style={verticalAlign}>
-              <Link to="/thephoenixproject" className="nav-link-col">
-                The Phoenix Project
+            <Col xs="2" style={verticalAlign}>
+              <Link to="/initiatives" className="nav-link-col">
+                Initiatives
               </Link>
             </Col>
-
+            <Col xs="3" style={verticalAlign}>
+              <Link to="/join" className="nav-link-col">
+                Join the Team
+              </Link>
+            </Col>
             <Col xs="1" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
@@ -95,11 +127,11 @@ class Navigation extends React.Component {
               </Link>
             </Col>
             */}
-            <Col xs="2" style={verticalAlign}>
+            {/* <Col xs="2" style={verticalAlign}>
               <Link to="/GPU" className="nav-link-col">
                 GPUs
               </Link>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </center>
