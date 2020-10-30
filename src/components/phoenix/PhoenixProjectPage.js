@@ -9,7 +9,7 @@ import {
   companyForm,
   studentForm,
   mentorForm,
-  projectAssistantForm
+  projectAssistantForm,
 } from "./faq";
 import EmbeddedForm from "./EmbeddedForm";
 import logos from "./projectLogos";
@@ -20,7 +20,7 @@ class PhoenixProjectPage extends React.Component {
 
   componentDidMount = () => {
     this.setState({
-      files: logos
+      files: logos,
     });
   };
 
@@ -28,7 +28,7 @@ class PhoenixProjectPage extends React.Component {
     const { index } = titleProps;
     const { activeIndex } = this.state;
     const newIndex = activeIndex.includes(index)
-      ? activeIndex.filter(i => i != index)
+      ? activeIndex.filter((i) => i != index)
       : [...activeIndex, index];
 
     console.log(newIndex);
@@ -64,7 +64,7 @@ class PhoenixProjectPage extends React.Component {
           style={{
             minHeight: "95vh",
             padding: `0 ${padding}% 8rem ${padding}%`,
-            fontfamily: "Nora"
+            fontfamily: "Nora",
           }}
         >
           <center>
@@ -241,7 +241,7 @@ class PhoenixProjectPage extends React.Component {
 
               <Accordion.Content active={activeIndex.includes(7)}>
                 <center>
-                  {this.state.files.map(logo => (
+                  {this.state.files.map((logo) => (
                     <img
                       className="phoenix-sponsor-logo"
                       src={require(`./confirmedProjects/${logo}.png`)}

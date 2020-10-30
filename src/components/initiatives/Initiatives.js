@@ -25,7 +25,11 @@ class Initiatives extends React.Component {
       <div>
         <Navigation />
         {/**PHOENIX SECTION */}
-        <Container fluid className="boxShadowed">
+        <Container
+          style={{ borderTop: "2px black" }}
+          fluid
+          className="boxShadowed"
+        >
           <Container>
             <Row className="vertical-align-outer">
               <Col
@@ -36,9 +40,16 @@ class Initiatives extends React.Component {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  padding: "5%",
                 }}
               >
-                PHOENIX!!!!!
+                The Phoenix Project was launched in the Summer of 2020 to meet
+                the growing facet of students who lost opportunities due to
+                COVID-19 as the US Economy lost 22.4 Million and hundreds of
+                Duke students lost jobs and internships along with them. We
+                brought together 200 Duke students and 73 paying companies,
+                organizations, and sponsors to deliver an opportunity for both
+                businesses and students to progress in a world that felt stuck.
               </Col>
               <Col
                 md={6}
@@ -54,9 +65,11 @@ class Initiatives extends React.Component {
                   <img
                     alt="Home"
                     src={require("../homepage/images/phoenix.png")}
-                    width="100%"
+                    width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>Check it out</h3>
+                  <h3 style={{ paddingTop: "10%" }}>
+                    Check Out the Phoenix Project Here{" "}
+                  </h3>
                 </Link>
               </Col>
             </Row>
@@ -80,9 +93,11 @@ class Initiatives extends React.Component {
                   <img
                     alt="Innovation Studio"
                     src={require("../homepage/images/innovationstudio.png")}
-                    width="100%"
+                    width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>Check it out</h3>
+                  <h3 style={{ paddingTop: "10%" }}>
+                    Read More About Innovation Studio
+                  </h3>
                 </Link>
               </Col>
               <Col
@@ -93,9 +108,16 @@ class Initiatives extends React.Component {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  padding: "5%",
                 }}
               >
-                Innovation Studio!!!!!
+                DAML's Innovation Studio is an effort to help Duke Student
+                founded businesses go from 0 to 1 by providing engineering
+                support, product and business development support, and
+                opportunities for funding. If you are interested in bringing
+                your business into the Studio or you're an engineer/product
+                manager who is interested in getting involved, click on the
+                logo.
               </Col>
             </Row>
           </Container>
@@ -112,9 +134,14 @@ class Initiatives extends React.Component {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  padding: "5%",
                 }}
               >
-                Tech for Equity!!!!!
+                Tech for Equity is an initiative started by a group of DAMLers
+                that is focused on providing Engineering support to non-profits.
+                If you are a non-profit interested in partnering with us, click
+                to the right. We also would love to have more applicants and it
+                is not limited to Duke students, so apply to the right!
               </Col>
               <Col
                 md={6}
@@ -130,9 +157,11 @@ class Initiatives extends React.Component {
                   <img
                     alt="Tech for Equity"
                     src={require("../homepage/images/techforequity.png")}
-                    width="100%"
+                    width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>Check it out</h3>
+                  <h3 style={{ paddingTop: "10%" }}>
+                    Check out Tech for Equity Here
+                  </h3>
                 </Link>
               </Col>
             </Row>
