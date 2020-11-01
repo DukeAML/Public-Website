@@ -1,55 +1,191 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
-import Footer from "../tools/Footer";
+
 import Navigation from "../tools/Navigation";
-import "./InnovationStudio.scss";
+import Footer from "../tools/Footer";
+import { Dropdown, Accordion, Icon } from "semantic-ui-react";
+import { Col, Row, Container } from "react-bootstrap";
+import withWindowDimensions from "../people/withWindowDimensions";
+import {
+  companyForm,
+  studentForm,
+  mentorForm,
+  projectAssistantForm,
+} from "./faq";
+import EmbeddedForm from "./EmbeddedForm";
+const Logo = require("../homepage/images/innovationstudio.png");
 
-class InnovationStudio extends React.Component {
-  state = { redirect: false };
+class PhoenixProjectPage extends React.Component {
+  state = { activeIndex: [1, 5], files: [] };
 
-  handleProjectsClick = () => {
-    this.setState({ redirect: true });
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex.includes(index)
+      ? activeIndex.filter((i) => i != index)
+      : [...activeIndex, index];
+
+    console.log(newIndex);
+
+    this.setState({ activeIndex: [...newIndex] });
   };
 
-  componentDidMount() {
-    this.setState({ redirect: false });
-  }
-
   render() {
-    if (this.state.redirect) {
-      return <Redirect push to="/projects" />;
+    let window = this.props.windowWidth;
+    let padding;
+    const { activeIndex } = this.state;
+
+    // dynamically determine left and right padding around projects grid
+    if (window >= 992) {
+      // lg or xl
+      padding = 20;
+    } else if (window >= 768) {
+      // m
+      padding = 10;
+    } else if (window >= 576) {
+      // s
+      padding = 5;
+    } else {
+      // xs
+      padding = 5;
     }
 
     return (
       <div>
         <Navigation />
-        {/**ABOUT SECTION */}
-        <Container fluid className="boxShadowed">
-          <Container>
-            <Row style={{ display: "flex", justifyContent: "center" }}>
-              <Image
-                style={{ alignSelf: "center" }}
-                fluid
-                className="main-graphic parallax"
-                src={require("../homepage/images/innovationstudio.png")}
-              />
-            </Row>
-            <Row
-              style={{
-                paddingTop: "10%",
-                fontFamily: "Lora, serif",
-                justifyContent: "center",
-              }}
-            >
-              <h1>Under construction. Check back soon.</h1>
-            </Row>
-          </Container>
+        <Container
+          fluid
+          style={{
+            minHeight: "95vh",
+            padding: `0 ${padding}% 8rem ${padding}%`,
+            fontfamily: "Nora",
+          }}
+        >
+          <center>
+            <div className="title">DAML Innovation Studio</div>
+            <img
+              src={Logo}
+              alt="The Phoenix Project"
+              style={{ height: "15rem", margin: "2rem" }}
+            />{" "}
+          </center>
+          <div style={{ marginTop: "1rem" }}>
+            <Accordion>
+              <Accordion.Title
+                active={activeIndex.includes(1)}
+                index={1}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  What is this?
+                  <hr />
+                </span>
+              </Accordion.Title>
+              <Accordion.Content active={activeIndex.includes(1)}>
+                <p>
+                  The Innovation Studio is a Duke Applied Machine Learning (DAML) initiative to provide Duke Student entrepreneurs who seek to develop novel businesses and innovations with the necessary platform and support system to enable success in their venture. We are partnered with Duke I&E and other on-campus organizations, such as DTech and Contrary Capital, to create a great community to help founders capitalize on their ideas. 
+ 
+                  <br />
+                  <br />
+                  Ultimately, the goal is to take an innovative idea sourced from the Duke community and provide the engineering talent and business-side support to launch a pilot by the end of the program, setting you on the path to scale and secure funding.
+
+                </p>
+              </Accordion.Content>
+              <Accordion.Title
+                active={activeIndex.includes(2)}
+                index={2}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  When is this?
+                  <hr />
+                </span>
+              </Accordion.Title>
+              <Accordion.Content active={activeIndex.includes(2)}>
+                <p>
+                The Innovation Studio takes places throughout a semester-long cohort every Spring, with our first cohort in Spring 2021. Applications for the upcoming cohort will close November 18th. We’ll have an information session coming up on November 1st and a pitch deck workshop early-to-mid November (date TBD).
+                </p>
+              </Accordion.Content>
+              <Accordion.Title
+                active={activeIndex.includes(3)}
+                index={3}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  I’m a start-up or student with an idea. What’s next?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(3)}>
+                Fill out this{" "}
+                <a
+                  target="_blank"
+                  href="http://bit.ly/DukeFounders"
+                >
+                  form
+                </a>{" "}
+                and a member of our executive committee will reach out for interviews and next steps.
+                <Row style={{ justifyContent: "center" }}>
+                  <Col xs={12} xl={10}>
+                    <EmbeddedForm questions={companyForm} />
+                  </Col>
+                </Row>
+              </Accordion.Content>
+
+              <Accordion.Title
+                active={activeIndex.includes(4)}
+                index={4}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                I’m an engineer and I want to get involved. What’s next?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(4)}>
+                Please fill out this{" "}
+                <a target="_blank" href="https://bit.ly/DukeEngineerPM">
+                  form
+                </a>{" "}
+                to indicate your interest in Innovation Studio.
+                <Row style={{ justifyContent: "center" }}>
+                  <Col xs={12} xl={10}>
+                    <EmbeddedForm questions={studentForm} />
+                  </Col>
+                </Row>
+              </Accordion.Content>
+
+              <Accordion.Title
+                active={activeIndex.includes(5)}
+                index={5}
+                onClick={this.handleClick}
+              >
+                <Icon name="dropdown" />
+                <span className="Phoenix-header">
+                  Where can I learn more?
+                  <hr />
+                </span>
+              </Accordion.Title>
+
+              <Accordion.Content active={activeIndex.includes(5)}>
+                If you have questions beyond what is covered on this page,
+                please email <a href="mailto:choonghwan.lee@duke.edu">choonghwan.lee@duke.edu</a>
+              </Accordion.Content>
+
+              
+            </Accordion>
+          </div>
         </Container>
+
         <Footer />
       </div>
     );
   }
 }
 
-export default InnovationStudio;
+export default withWindowDimensions(PhoenixProjectPage);
