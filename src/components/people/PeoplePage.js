@@ -32,7 +32,7 @@ class PeoplePage extends React.Component {
     loading: true,
     details: {},
     collapse: false,
-    members: { CRM: [], DS: [], PS: [] }
+    members: { EXEC: [], CRM: [], DS: [], PS: [] }
   };
 
   componentDidMount = async () => {
@@ -85,12 +85,12 @@ class PeoplePage extends React.Component {
   }
 
   render() {
-    const { CRM, DS, PS } = this.state.members;
+    const { EXEC, CRM, DS, PS } = this.state.members;
 
     let CRMgrid = this.makePeopleGrid(CRM, this.props.windowWidth);
     let DSgrid = this.makePeopleGrid(DS, this.props.windowWidth);
     let PSgrid = this.makePeopleGrid(PS, this.props.windowWidth);
-
+    let EXECgrid = this.makePeopleGrid(EXEC, this.props.windowWidth);
     let window = this.props.windowWidth;
     let padding;
 
@@ -111,13 +111,15 @@ class PeoplePage extends React.Component {
 
     // center titles on mobile
 
-    let DStitle, PStitle, CRMtitle;
+    let EXECtitle, DStitle, PStitle, CRMtitle;
 
     if (window <= 576) {
+      EXECtitle = <center> Leadership Team </center>;
       DStitle = <center> Data Science Team </center>;
       PStitle = <center> Implementation Team </center>;
       CRMtitle = <center> Business Team </center>;
     } else {
+      EXECtitle = "Leadership Team";
       DStitle = "Data Science Team";
       PStitle = "Implementation Team";
       CRMtitle = "Business Team";
@@ -131,7 +133,11 @@ class PeoplePage extends React.Component {
           <div className="title">
             <center>Our Members</center>
           </div>
-
+          <div className="team" style={{ padding: `1rem ${padding}%` }}>
+            {EXECtitle}
+            <hr />
+          </div>
+          <center>{EXECgrid}</center>
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
             {DStitle}
             <hr />

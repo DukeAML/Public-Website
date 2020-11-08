@@ -3,12 +3,16 @@ import { getMembers } from "../../api/api";
 export const getMemberData = async () => {
   const members = await getMembers();
 
+  let EXEC = [];
   let CRM = [];
   let DS = [];
   let PS = [];
 
   members.forEach(member => {
-    if (member.team == "CRM") {
+    if (member.team == "EXEC") {
+      CRM.push(member);
+    }
+    else if (member.team == "CRM") {
       CRM.push(member);
     } else if (member.team == "DS") {
       DS.push(member);
@@ -17,7 +21,7 @@ export const getMemberData = async () => {
     }
   });
 
-  return { CRM, DS, PS };
+  return { EXEC, CRM, DS, PS };
 };
 
 export default { getMemberData };
