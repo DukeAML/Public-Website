@@ -33,6 +33,17 @@ const projects = [
     position: "Data Science",
     link: "https://www.cs.duke.edu/news/articles/3915",
   },
+  {
+    uid: 4,
+    title: "Test",
+    description:
+      "Test",
+    image:
+      "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024476/techforequity/dukecs_raoipd.jpg",
+    fellows: "bro... keep it a secret ",
+    position: "Data Science",
+    link: "https://www.cs.duke.edu/news/articles/3915",
+  }
 ];
 
 module.exports = projects;
