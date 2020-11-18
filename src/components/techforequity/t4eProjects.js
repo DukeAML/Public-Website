@@ -35,14 +35,25 @@ const projects = [
   },
   {
     uid: 4,
-    title: "Test",
+    title: "Road to Hire",
     description:
-      "Test",
+      "Road to Hire believes everyone - regardless of their background or zip code – should have a path to a prosperous future. By providing paid professional development and technical training, Road to Hire opens alternative pathways to high-earning careers. Passionate about their mission? Help support their mission as a software developer, and work on projects with amazing software developers in a Go, JavaScript, GraphQL shop.",
     image:
-      "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024476/techforequity/dukecs_raoipd.jpg",
-    fellows: "bro... keep it a secret ",
-    position: "Data Science",
-    link: "https://www.cs.duke.edu/news/articles/3915",
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1605679225/roadtohire_b5ywih.png",
+    fellows: "1",
+    position: "Software Engineering",
+    link: "https://roadtohire.org/",
+  },
+  {
+    uid: 5,
+    title: "Reality Ministries",
+    description:
+      "Reality Ministries creates opportunities for adults with and without developmental disabilities to experience belonging, kinship and the life-changing reality of Christ’s love. Support this rapidly-growing, local Durham initiative (right off of East Campus!) on creating impactful, end-to-end solutions, which include integrating donor database from quickbooks to Salesforce, developing Salesforce to be more user-friendly for their communities, and integrating volunteer sign-up between their SalesForce database and their website."
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1605679639/reality_xkbtlu.png",
+    fellows: "1",
+    position: "Data Analytics",
+    link: "https://realityministriesinc.org/",
   }
 ];
 
