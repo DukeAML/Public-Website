@@ -450,9 +450,9 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                 minHeight: "10vh",
               }}
             >
-              <p><b>Q:</b> Can I take more than one course?</p>
-              <br/>
-              <p><b>A:</b> Yes! We encourage our members to contribute to their project teams in as many ways as possible.</p>
+              <p><b>Q:</b> Can I take more than one course?
+              <br/><br/>
+              <b>A:</b> Yes! We encourage our members to contribute to their project teams in as many ways as possible.</p>
             </Row>
             <Row
               className="vertical-align-outer"
