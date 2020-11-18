@@ -48,7 +48,7 @@ const projects = [
     uid: 5,
     title: "Reality Ministries",
     description:
-      "Reality Ministries creates opportunities for adults with and without developmental disabilities to experience belonging, kinship and the life-changing reality of Christ’s love. Support this rapidly-growing, local Durham initiative (right off of East Campus!) on creating impactful, end-to-end solutions, which include integrating donor database from quickbooks to Salesforce, developing Salesforce to be more user-friendly for their communities, and integrating volunteer sign-up between their SalesForce database and their website."
+      "Reality Ministries creates opportunities for adults with and without developmental disabilities to experience belonging, kinship and the life-changing reality of Christ’s love. Support this rapidly-growing, local Durham initiative (right off of East Campus!) on creating impactful, end-to-end solutions, which include integrating donor database from quickbooks to Salesforce, developing Salesforce to be more user-friendly for their communities, and integrating volunteer sign-up between their SalesForce database and their website.",
     image:
       "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1605679639/reality_xkbtlu.png",
     fellows: "1",
