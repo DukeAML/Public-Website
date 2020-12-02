@@ -39,7 +39,7 @@ const projects = [
     description:
       "Road to Hire believes everyone - regardless of their background or zip code – should have a path to a prosperous future. By providing paid professional development and technical training, Road to Hire opens alternative pathways to high-earning careers. Passionate about their mission? Help support their mission as a software developer, and work on projects with amazing software developers in a Go, JavaScript, GraphQL shop.",
     image:
-      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1605679225/roadtohire_b5ywih.png",
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1606868426/roadtohire_b5ywih.png",
     fellows: "1",
     position: "Software Engineering",
     link: "https://roadtohire.org/",
