@@ -95,13 +95,22 @@ class TechForEquity extends React.Component {
                     <br />
                     <br />
                     As of 10/18, we’ve secured 15+ fellowship positions with
-                    $75,000+ of funding for our inaugural year of 2021.{" "}
+                    $75,000+ of funding for our inaugural year of 2021.
+                    <br />
                     <a
                       href="https://forms.gle/q3ZMAhVQg2VUe6GV6"
                       target="_blank"
                     >
                       Apply Here.
                     </a>
+                    <br />
+                    <a
+                      href="https://techforequityinitiative.substack.com/"
+                      target="_blank"
+                    >
+                      Subscribe to our Newsletter here!
+                    </a>
+ 
                   </p>
                 </Col>
               </Row>
