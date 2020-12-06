@@ -99,20 +99,20 @@ class TechForEquity extends React.Component {
 
                     <br />
 
-                    <Button className="theme-button"> 
-                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank"> Apply Here.</a> 
+                    <Button className="theme-button" style={{ marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
+                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here.</a> 
                     </Button>
       
                     <br />
 
-                    <Button className="theme-button"> 
-                    <a href="https://techforequityinitiative.substack.com/" target="_blank"> Subscribe to our Newsletter here!</a> 
+                    <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
+                    <a href="https://techforequityinitiative.substack.com/" target="_blank" style={{ color: "white" }}> Subscribe to our Newsletter here!</a> 
                     </Button>
                     
                     <br />
                       
-                    <Button className="theme-button"> 
-                    <a href="https://docs.google.com/document/d/1knBaok7z-VxGnhrPdWKBfIkvYL4QRepggdpMg9CXlsU/edit?usp=sharing" target="_blank"> Student FAQ</a> 
+                    <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
+                    <a href="https://docs.google.com/document/d/1knBaok7z-VxGnhrPdWKBfIkvYL4QRepggdpMg9CXlsU/edit?usp=sharing" target="_blank" style={{ color: "white" }}> Student FAQ</a> 
                     </Button>
                   </p>
                 </Col>
