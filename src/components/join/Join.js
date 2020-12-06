@@ -77,15 +77,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
               }}
             >
               <a href="https://docs.google.com/document/d/13-YqVrUoSSp2D3UTrsAtcEYgufqRBrxBb6Ktf-PjODE/edit?usp=sharing" target="_blank">Coursework and Recruitment Process</a>
-            </Row>
-          <center>
-          <img
-              src={Logo}
-              alt="DAML Course"
-              style={{ height: "15rem", margin: "2rem" }}
-            />{" "}
-          </center>
-          
+            </Row>         
           </Container>
         </Container>
         <Container fluid className="boxShadowed">
