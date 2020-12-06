@@ -26,7 +26,7 @@ class Join extends React.Component {
       <div>
         <Navigation />
         {/**PHOENIX SECTION */}
-        <Container fluid className="boxShadowed" style={{ height: "50vh" }}>
+        <Container fluid className="boxShadowed">
           <Container>
             <Row
               className="vertical-align-outer"
@@ -82,6 +82,18 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
         </Container>
         <Container fluid className="boxShadowed">
           <Container>
+          <Row
+              className="vertical-align-outer"
+              style={{
+                fontFamily: "Lora",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "5%"
+              }}
+            >
+            <h2>About the Divisions</h2>
+            </Row>
           <Row
               className="vertical-align-outer"
               style={{
