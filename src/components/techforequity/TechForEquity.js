@@ -99,19 +99,19 @@ class TechForEquity extends React.Component {
 
                     <br />
 
-                    <Button className=“theme-button”> 
+                    <Button className="theme-button"> 
                     <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank"> Apply Here.</a> 
                     </Button>
       
                     <br />
 
-                    <Button className=“theme-button”> 
+                    <Button className="theme-button"> 
                     <a href="https://techforequityinitiative.substack.com/" target="_blank"> Subscribe to our Newsletter here!</a> 
                     </Button>
                     
                     <br />
                       
-                    <Button className=“theme-button”> 
+                    <Button className="theme-button"> 
                     <a href="https://docs.google.com/document/d/1knBaok7z-VxGnhrPdWKBfIkvYL4QRepggdpMg9CXlsU/edit?usp=sharing" target="_blank"> Student FAQ</a> 
                     </Button>
                   </p>
