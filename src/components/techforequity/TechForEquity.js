@@ -100,13 +100,13 @@ class TechForEquity extends React.Component {
                     <br />
 
                     <Button className="theme-button" style={{ marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
-                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here.</a> 
+                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here!</a> 
                     </Button>
       
                     <br />
 
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
-                    <a href="https://techforequityinitiative.substack.com/" target="_blank" style={{ color: "white" }}> Subscribe to our Newsletter here!</a> 
+                    <a href="https://techforequityinitiative.substack.com/" target="_blank" style={{ color: "white" }}> Subscribe to our Newsletter!</a> 
                     </Button>
                     
                     <br />

@@ -53,9 +53,12 @@ class Join extends React.Component {
               width: "50%",
               textAlign: "center"
             }}>
-Hello all potential members! DAML is Duke’s premier project based tech organization that will give you real world experience in Data Science, Software Engineering, Hardware, or Product Management. To get involved, simply fill out this form to demonstrate your interest and see the directions below for the specific role of your choice. We are proud to be an entirely non-exclusive group and will put anyone on a project who completes the course for their specific track. 
+Hello all potential members! DAML is Duke’s premier project based tech organization that will give you real world experience in Data Science, Software Engineering, Hardware, or Product Management. We are proud to be a fully inclusive group and are happy to match anyone who completes the recruitment process to a project team in their desired division. To get involved, fill our the application below and see the Coursework and Recruitment Process document for more details on the role of your choice.
            </p>
-           
+           <br />
+           <a href="https://airtable.com/shrR4Iieze85aKSPw" target="_blank">Apply here!</a>
+           <br />
+           <a href="https://docs.google.com/document/d/13-YqVrUoSSp2D3UTrsAtcEYgufqRBrxBb6Ktf-PjODE/edit?usp=sharing" target="_blank">Coursework and Recruitment Process</a>
           </Row>
           <center>
           <img
@@ -89,7 +92,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   padding: "5%",
                 }}
               >
-              <b>Team</b>
+              <b>Division</b>
             </Col>
             <Col
                 md={4}
@@ -101,7 +104,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   alignItems: "center",
                 }}
               >
-            Team Description
+            Description
             </Col>
             <Col
                 md={4}
@@ -114,7 +117,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   padding: "5%",
                 }}
               >
-              DAML Contacts
+              Point of Contact
             </Col>
             </Row>
             <Row
@@ -150,7 +153,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   alignItems: "center",
                 }}
               >
-              The Data science team focuses on leveraging different data science techniques and machine learning concepts to solve real world problems. 
+              The Data Science division focuses on leveraging different data science techniques and machine learning concepts to solve real world problems. 
             </Col>
             <Col
                 md={4}
@@ -164,7 +167,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   textAlign: "center"
                 }}
               >
-              <a href="mailto:phoebe.klett@duke.edu">Phoebe Klett</a><a href="https://undergrad.ai/" target="_blank">Course Information/Materials</a><a href="https://forms.gle/oYojvTHJeW8XjWZ89" target="_blank">Fill out this form once you start!</a>
+              <a href="mailto:phoebe.klett@duke.edu">Phoebe Klett</a>
             </Col>
             </Row>
             <Row
@@ -200,7 +203,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   alignItems: "center",
                 }}
               >
-              The software engineering team works on a number of different software related projects for real clients ranging from mobile development to this very website. 
+              The Software Engineering division works on a number of different software related projects for real clients ranging from mobile development to this very website. 
             </Col>
             <Col
                 md={4}
@@ -214,7 +217,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   textAlign: "center"
                 }}
               >
-              <a href="mailto:yasa.baig@duke.edu"> Yasa Baig</a>&nbsp; & &nbsp;<a href="mailto:nathaniel.friedman@duke.edu"> Nathaniel Friedman</a> 
+              <a href="mailto:yasa.baig@duke.edu">Yasa Baig</a>&nbsp; & &nbsp;<a href="mailto:nathaniel.friedman@duke.edu"> Nathaniel Friedman</a> 
             </Col>
             </Row>
             <Row
@@ -238,7 +241,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   padding: "5%",
                 }}
               >
-              <b>Hardware Team</b>
+              <b>Hardware</b>
             </Col>
             <Col
                 md={4}
@@ -250,7 +253,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   alignItems: "center",
                 }}
               >
-              The Hardware Engineering team focuses on innovative solutions to different problems utilizing electrical and computer engineering. 
+              The Hardware Engineering division focuses on innovative solutions to different problems utilizing electrical and computer engineering. 
             </Col>
             <Col
                 md={4}
@@ -366,7 +369,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                 alignItems: "center",
               }}
             >
-              All courses are asynchronous. The material is available for access year-round. However, if you are taking this course during Fall or Spring semester (as opposed to over winter or summer break), the instructors will have office hours at least once a week. There are 17 lectures that we ask you to watch for the data science course, two Udemy courses to take for the SWE course, and a product assesment for Hardware and Product Management. Lecture length varies from 30 min to 90 min. You may complete these on whatever timeline your schedule permits. Any deadlines listed on the website are simply guidelines for those who would like to take the course on approximately over the course of one (shortened) semester. Assignments/Projects associated with the lecture material should be completed or at least attempted before moving on the next lecture.
+              All courses are asynchronous. The material is available for access year-round. However, if you are taking this course during Fall or Spring semester (as opposed to over winter or summer break), the instructors will have office hours at least once a week. You may complete the course on whatever timeline your schedule permits. Any deadlines listed on the website are simply guidelines for those who would like to take the course on approximately over the course of one (shortened) semester. Assignments/projects associated with the lecture material should be completed or at least attempted before moving on the next lecture.
             </Row>
             <Row
               className="vertical-align-outer"
