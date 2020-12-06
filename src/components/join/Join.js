@@ -89,7 +89,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                padding: "5%"
+                padding: "0%"
               }}
             >
             <h2>About the Divisions</h2>
