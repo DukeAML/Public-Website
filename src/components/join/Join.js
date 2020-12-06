@@ -55,10 +55,28 @@ class Join extends React.Component {
             }}>
 Hello all potential members! DAML is Duke’s premier project based tech organization that will give you real world experience in Data Science, Software Engineering, Hardware, or Product Management. We are proud to be a fully inclusive group and are happy to match anyone who completes the recruitment process to a project team in their desired division. To get involved, fill our the application below and see the Coursework and Recruitment Process document for more details on the role of your choice.
            </p>
-           <br />
-           <a href="https://airtable.com/shrR4Iieze85aKSPw" target="_blank">Apply here!</a>
-           <br />
-           <a href="https://docs.google.com/document/d/13-YqVrUoSSp2D3UTrsAtcEYgufqRBrxBb6Ktf-PjODE/edit?usp=sharing" target="_blank">Coursework and Recruitment Process</a>
+           <Row
+              className="vertical-align-outer"
+              style={{
+                fontFamily: "Lora",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <a href="https://airtable.com/shrR4Iieze85aKSPw" target="_blank">Apply here!</a>
+            </Row>
+            <Row
+              className="vertical-align-outer"
+              style={{
+                fontFamily: "Lora",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <a href="https://docs.google.com/document/d/13-YqVrUoSSp2D3UTrsAtcEYgufqRBrxBb6Ktf-PjODE/edit?usp=sharing" target="_blank">Coursework and Recruitment Process</a>
+            </Row>
           </Row>
           <center>
           <img
