@@ -189,7 +189,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                   textAlign: "center"
                 }}
               >
-              <a href="mailto:phoebe.klett@duke.edu">Phoebe Klett</a>
+              <a href="mailto:nicholas.hobart@duke.edu">Niko Hobart</a>
             </Col>
             </Row>
             <Row
