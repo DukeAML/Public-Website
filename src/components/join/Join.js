@@ -503,7 +503,7 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
             >
               <p><b>Q:</b> What if I already have in-depth DS/SWE/HWE/PM experience and feel that taking another course is overkill?</p>
               <br/>
-              <p><b>A:</b> If you feel this way, please contact the instructor of the course. You may be able to place out of the course by passing a quiz. </p>
+              <p><b>A:</b> Those with significant technical experience may forgo the introductory track (coursework) and begin the recruitment process from the practical track (project-based "assessment"). Once you have completed the practical track and interview, you may join a project team immediately! Details on the introductory and practical tracks for each division can be found at the link above.</p>
             </Row>
             <Row
               className="vertical-align-outer"
@@ -514,9 +514,9 @@ Hello all potential members! DAML is Duke’s premier project based tech organiz
                 paddingTop: "10%"
               }}
             >
-              <p><b>Q:</b> Can I work on a DAML project at the same time as I work on the course?</p>
+              <p><b>Q:</b> Can I work on a DAML project while I work through the introductory or practical track?</p>
               <br/>
-              <p><b>A:</b> It is often the case that we have opportunities for new members to begin working on projects before they have completed all the coursework.</p>
+              <p><b>A:</b> We ask that all students complete the practical track and interview for their division before joining a project team. Details on the introductory and practical tracks for each division can be found at the link above.</p>
             </Row>
             <Row
               className="vertical-align-outer"
