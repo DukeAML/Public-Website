@@ -1,0 +1,58 @@
+li {
+  list-style-type: none;
+}
+
+.footpanel{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.3em;
+  font: 17px "open sans", Helvetica, Sans-Serif; 
+  background: rgba(0,0,0,0.6);
+}
+
+.title {
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+#date {
+  font: 15px "open sans", Helvetica, Sans-Serif; 
+  color: rgb(208, 208, 208);;
+  /* display: inline-block; */
+  /* line-height: 20px; */
+}
+
+.general-panel {
+  display: grid;
+  grid-auto-rows: 250px ;
+}
+
+div[id="3"]{
+  display: grid;
+  grid-auto-rows: 510px;
+}
+
+#nohover:hover{
+  color:white;
+  text-decoration: none;
+}
+
+.article {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  flex: 1;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+img {
+  position: relative;
+  float: left;
+}
