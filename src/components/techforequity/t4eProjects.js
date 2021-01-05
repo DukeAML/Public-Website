@@ -54,6 +54,17 @@ const projects = [
     fellows: "1",
     position: "Data Analytics",
     link: "https://realityministriesinc.org/",
+  },
+  {
+    uid: 6,
+    title: "Joyce Ivy Foundation",
+    description:
+      "The Joyce Ivy Foundation is a non-profit, 501c3 organization committed to the academic advancement and leadership development of young women from the Midwest. Support their mission by working closely with their team on website design and alumni donor database management.",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1609868927/joyce_ivy_exmeqr.png",
+    fellows: "2",
+    position: "Web Design, Data Analytics",
+    link: "https://www.joyceivyfoundation.org/",
   }
 ];
 
