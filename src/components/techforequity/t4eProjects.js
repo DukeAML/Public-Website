@@ -24,12 +24,12 @@ const projects = [
   },
   {
     uid: 3,
-    title: "Duke Computer Science Department",
+    title: "Duke Computer Science Department & CS+",
     description:
-      "Interested in racial equity in computing? Dr. Nicki Washington, a national leader in identity and cultural competence in computing, is looking for a research fellow to support her new research publication on areas of cultural competence in computing, identity, broadening participating in computing, K-12 computing standards, curriculum, and educator professional development.",
+      "Interested in racial equity in computing? Dr. Nicki Washington, a national leader in identity and cultural competence in computing, is looking for 3-4 research fellows to support her new research publication on areas of cultural competence in computing, identity, broadening participating in computing, K-12 computing standards, curriculum, and educator professional development. We're partnering with Duke CS+ program to run this project team.",
     image:
       "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024476/techforequity/dukecs_raoipd.jpg",
-    fellows: "1",
+    fellows: "3-4",
     position: "Data Science",
     link: "https://www.cs.duke.edu/news/articles/3915",
   },
