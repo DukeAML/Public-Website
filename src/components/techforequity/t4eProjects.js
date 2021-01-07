@@ -72,7 +72,7 @@ const projects = [
     description:
       "An initiative by non-profit Don't Waste Durham, GreenToGo is a reusable take-out container service that reduces the amount of trash that goes to our landfills and improve quality of life for the Durham community. They are looking for software engineers to rebuild their app and database to streamline their service.",
     image:
-      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1610058910/greentogo_ke6wwm.png",
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1610059275/greentogo_mbigsj.svg",
     fellows: "2-3",
     position: "SWE, Mobile App Development, UI/UX, Database Management",
     link: "https://durhamgreentogo.com/",
