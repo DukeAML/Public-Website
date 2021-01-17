@@ -6,7 +6,7 @@ import "./Join.scss";
 import Navigation from "../tools/Navigation";
 const Logo = require("../homepage/images/DAML_Picture_Grey_Transparent.svg");
 
-class Join extends React.Component {
+class Join extends React.Component {  
   state = { redirect: false };
 
   handleProjectsClick = () => {
