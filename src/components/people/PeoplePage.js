@@ -33,6 +33,7 @@ class PeoplePage extends React.Component {
     details: {},
     collapse: false,
     members: { EXEC: [], CRM: [], DS: [], PS: [] }
+    //add HW
   };
 
   componentDidMount = async () => {
@@ -85,12 +86,15 @@ class PeoplePage extends React.Component {
   }
 
   render() {
-    const { EXEC, CRM, DS, PS } = this.state.members;
+    const { EXEC, CRM, DS, PS, HW } = this.state.members;
 
     let CRMgrid = this.makePeopleGrid(CRM, this.props.windowWidth);
     let DSgrid = this.makePeopleGrid(DS, this.props.windowWidth);
     let PSgrid = this.makePeopleGrid(PS, this.props.windowWidth);
     let EXECgrid = this.makePeopleGrid(EXEC, this.props.windowWidth);
+    
+    //let HWgrid = this.makePeopleGrid(HW, this.props.windowWidth);
+
     let window = this.props.windowWidth;
     let padding;
 
@@ -111,18 +115,19 @@ class PeoplePage extends React.Component {
 
     // center titles on mobile
 
-    let EXECtitle, DStitle, PStitle, CRMtitle;
+    let EXECtitle, DStitle, PStitle, CRMtitle, HWtitle;
 
     if (window <= 576) {
       EXECtitle = <center> Leadership Team </center>;
       DStitle = <center> Data Science Team </center>;
-      PStitle = <center> Implementation Team </center>;
-      CRMtitle = <center> Business Team </center>;
+      PStitle = <center> Software Team </center>;
+      CRMtitle = <center> Project Management Team </center>;
     } else {
-      EXECtitle = "Leadership Team";
+      EXECtitle = "Exec";
       DStitle = "Data Science Team";
-      PStitle = "Implementation Team";
-      CRMtitle = "Business Team";
+      PStitle = "Software Team";
+      CRMtitle = "Project Management Team";
+    
     }
 
     return (
@@ -154,6 +159,9 @@ class PeoplePage extends React.Component {
             <hr />
           </div>
           <center>{CRMgrid}</center>
+
+
+
         </div>
 
         <Footer />
