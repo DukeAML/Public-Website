@@ -1,6 +1,5 @@
 import { getMembers } from "../../api/api";
 
-
 export const getMemberData = async () => {
   const members = await getMembers();
 
@@ -9,17 +8,20 @@ export const getMemberData = async () => {
   let DS = [];
   let PS = [];
 
-  members.forEach(member => {
-    const team = member.get("Team");
-    if (team == "EXEC") {
-      CRM.push(member);
-    }
-    else if (team == "CRM") {
-      CRM.push(member);
-    } else if (team == "DS") {
-      DS.push(member);
-    } else if (team == "PS") {
-      PS.push(member);
+  console.log(members);
+  members.forEach((member) => {
+    // console.log(member.Name);
+    if (member.status == "Current Member") {
+      const team = member.Role; // Role Values: Product Manager, Software Engineer, Hardware Engineer
+      if (team == "EXEC") {
+        CRM.push(member);
+      } else if (team == "CRM") {
+        CRM.push(member);
+      } else if (team == "Data Science Manager") {
+        DS.push(member);
+      } else if (team == "PS") {
+        PS.push(member);
+      }
     }
   });
 

@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require("airtable");
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
-  apiKey: "", // Removed to push to git
+  apiKey: "keyUmEfz6dpBYWIXI", // Removed to push to git
 });
 var base = Airtable.base("app7oThcZBwecbqqS"); // Code specific the the test base
 
@@ -18,29 +18,21 @@ export const getProjects = async () => {
 };
 
 export const getMembers = async () => {
-  const { data } = await client.get("/users");
-  console.log(data);
+  // const { data } = await client.get("/users");
+  // console.log(data);
   // return data; // Old CMS Integration
 
   // Testing airtable API
-  let members = [];
-  base("Full Roster")
-    .select({ view: "Roster [Internal]" })
-    .eachPage(
-      (records, nextPage) => {
-        records.forEach((record) => {
-          console.log(record.get("Name"));
-        });
-        members = members.concat(records);
-        nextPage();
-      },
-      (err) => {
-        if (err) {
-          console.log(err);
-        }
-      }
-    );
 
+  let members = [];
+
+  const records = await base("Full Roster")
+    .select({ view: "Roster [Internal]" })
+    .all();
+  records.map((record) => {
+    members.push(record._rawJson.fields);
+  });
+  
   return members;
 };
 
