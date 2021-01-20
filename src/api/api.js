@@ -7,9 +7,9 @@ const client = axios.create({
 const Airtable = require("airtable");
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
-  apiKey: "", // Removed to push to git
+  apiKey: "", // Remove to push to git
 });
-var base = Airtable.base("app7oThcZBwecbqqS"); // Code specific the the test base
+var base = Airtable.base("app7oThcZBwecbqqS");
 
 export const getProjects = async () => {
   const { data } = await client.get("/projects");
@@ -18,11 +18,10 @@ export const getProjects = async () => {
 };
 
 export const getMembers = async () => {
+  // Old CMS Integration
   // const { data } = await client.get("/users");
   // console.log(data);
-  // return data; // Old CMS Integration
-
-  // Testing airtable API
+  // return data; 
 
   let members = [];
 
