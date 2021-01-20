@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require('airtable');
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
-	apiKey: 'keyF6lKZWNkqR9j3I', // Remove to push to git
+	apiKey: '', // Remove to push to git
 });
 var base = Airtable.base('app7oThcZBwecbqqS');
 

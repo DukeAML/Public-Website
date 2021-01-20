@@ -142,21 +142,25 @@ class PeoplePage extends React.Component {
 					</div>
 					<center>{EXECgrid}</center>
 					<div className='team' style={{ padding: `1rem ${padding}%` }}>
+						{PMtitle}
+						<hr />
+					</div>
+					<center>{PMgrid}</center>
+					<div className='team' style={{ padding: `1rem ${padding}%` }}>
 						{DStitle}
 						<hr />
 					</div>
 					<center>{DSgrid}</center>
 					<div className='team' style={{ padding: `1rem ${padding}%` }}>
-						{PStitle}
+						{SWEtitle}
 						<hr />
 					</div>
-					<center>{PSgrid}</center>
-
+					<center>{SWEgrid}</center>
 					<div className='team' style={{ padding: `1rem ${padding}%` }}>
-						{CRMtitle}
+						{HRDtitle}
 						<hr />
 					</div>
-					<center>{CRMgrid}</center>
+					<center>{HRDgrid}</center>
 				</div>
 
 				<Footer />
