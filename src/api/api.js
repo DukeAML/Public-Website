@@ -9,7 +9,7 @@ Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   apiKey: "", // Removed to push to git
 });
-var base = Airtable.base("appPFfRhukcpW7O8M"); // Code specific the the test base
+var base = Airtable.base("app7oThcZBwecbqqS"); // Code specific the the test base
 
 export const getProjects = async () => {
   const { data } = await client.get("/projects");
@@ -24,8 +24,8 @@ export const getMembers = async () => {
 
   // Testing airtable API
   let members = [];
-  base("API Test Table")
-    .select() // Maybe make query more specific?
+  base("Full Roster")
+    .select({ view: "Roster [Internal]" })
     .eachPage(
       (records, nextPage) => {
         records.forEach((record) => {
