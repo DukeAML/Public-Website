@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require("airtable");
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
-  apiKey: "keyUmEfz6dpBYWIXI", // Removed to push to git
+  apiKey: "", // Removed to push to git
 });
 var base = Airtable.base("app7oThcZBwecbqqS"); // Code specific the the test base
 
@@ -32,7 +32,7 @@ export const getMembers = async () => {
   records.map((record) => {
     members.push(record._rawJson.fields);
   });
-  
+
   return members;
 };
 
