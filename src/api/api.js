@@ -1,8 +1,15 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://dukeappml.herokuapp.com"
+  baseURL: "https://dukeappml.herokuapp.com",
 });
+
+const Airtable = require("airtable");
+Airtable.configure({
+  endpointUrl: "https://api.airtable.com",
+  apiKey: "", // Remove to push to git
+});
+var base = Airtable.base("app7oThcZBwecbqqS");
 
 export const getProjects = async () => {
   const { data } = await client.get("/projects");
@@ -11,9 +18,21 @@ export const getProjects = async () => {
 };
 
 export const getMembers = async () => {
-  const { data } = await client.get("/users");
-  console.log(data);
-  return data;
+  // Old CMS Integration
+  // const { data } = await client.get("/users");
+  // console.log(data);
+  // return data; 
+
+  let members = [];
+
+  const records = await base("Full Roster")
+    .select({ view: "Roster [Internal]" })
+    .all();
+  records.map((record) => {
+    members.push(record._rawJson.fields);
+  });
+
+  return members;
 };
 
 export const getPapers = async () => {

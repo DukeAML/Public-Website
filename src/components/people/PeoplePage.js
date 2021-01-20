@@ -32,8 +32,7 @@ class PeoplePage extends React.Component {
     loading: true,
     details: {},
     collapse: false,
-    members: { EXEC: [], CRM: [], DS: [], PS: [] }
-    //add HW
+    members: { EXEC: [], CRM: [], DS: [], PS: [], HRD: [] }
   };
 
   componentDidMount = async () => {
@@ -86,14 +85,13 @@ class PeoplePage extends React.Component {
   }
 
   render() {
-    const { EXEC, CRM, DS, PS, HW } = this.state.members;
+    const { EXEC, CRM, DS, PS, HRD } = this.state.members;
 
     let CRMgrid = this.makePeopleGrid(CRM, this.props.windowWidth);
     let DSgrid = this.makePeopleGrid(DS, this.props.windowWidth);
     let PSgrid = this.makePeopleGrid(PS, this.props.windowWidth);
     let EXECgrid = this.makePeopleGrid(EXEC, this.props.windowWidth);
-    
-    //let HWgrid = this.makePeopleGrid(HW, this.props.windowWidth);
+    let HRDgrid = this.makePeopleGrid(HRD, this.props.windowWidth);
 
     let window = this.props.windowWidth;
     let padding;
@@ -115,19 +113,20 @@ class PeoplePage extends React.Component {
 
     // center titles on mobile
 
-    let EXECtitle, DStitle, PStitle, CRMtitle, HWtitle;
+    let EXECtitle, DStitle, PStitle, CRMtitle, HRDtitle; 
 
     if (window <= 576) {
-      EXECtitle = <center> Leadership Team </center>;
+      EXECtitle = <center> Exec </center>;
       DStitle = <center> Data Science Team </center>;
       PStitle = <center> Software Team </center>;
       CRMtitle = <center> Project Management Team </center>;
+      HRDtitle = <center> Hardware Team </center>;
     } else {
       EXECtitle = "Exec";
       DStitle = "Data Science Team";
       PStitle = "Software Team";
       CRMtitle = "Project Management Team";
-    
+      HRDtitle = "Hardware Team";
     }
 
     return (
@@ -153,17 +152,19 @@ class PeoplePage extends React.Component {
             <hr />
           </div>
           <center>{PSgrid}</center>
-
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
             {CRMtitle}
             <hr />
           </div>
           <center>{CRMgrid}</center>
 
-
+          <div className="team" style={{ padding: `1rem ${padding}%` }}>
+            {HRDtitle}
+            <hr />
+          </div>
+          <center>{HRDgrid}</center>
 
         </div>
-
         <Footer />
       </Container>
     );
