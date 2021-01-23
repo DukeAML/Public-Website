@@ -135,11 +135,39 @@ class TechForEquity extends React.Component {
               {projectCards}
             </Row>
           </Container>
+
+          <Container>
+          <center className="title"> Sponsors </center>
+          <br />
+          <center > A huge thank you to all of our sponsors! </center>
+          <br />
+          <div class="row" style={{display: 'flex', justifyContent: 'center'}}>
+            <div class = "column" >
+            <center>
+              <img src = "https://res.cloudinary.com/drrvlrtpl/image/upload/v1611431645/dara-logo_yf39z1.png" width = "175" style={{marginRight: '20px'}}></img>
+              <img src = "https://res.cloudinary.com/drrvlrtpl/image/upload/v1611437088/duke-law-logo_sia7tq.png" width = "375"></img>
+              </center>
+              </div>
+            </div>
+            <br />
+            <div class="row" style={{display: 'flex', justifyContent: 'center'}}>
+            <div class = "column">
+              <img src = "https://res.cloudinary.com/drrvlrtpl/image/upload/v1611438310/duke_comp_sci_logoo_stetec.png" width = "230" style={{marginRight: '20px'}}></img>
+            </div>
+            <div class = "column">
+              <img src = "https://res.cloudinary.com/drrvlrtpl/image/upload/v1611438033/p_rgft4c.png" width = "175" style={{marginRight: '20px'}}></img>
+            </div>
+            <div class = "column">
+              <img src = "https://res.cloudinary.com/drrvlrtpl/image/upload/v1611437210/i_elogo-original_kelbsl.png" width = "300"></img>
+            </div>
+            </div>
+          </Container>
+          
           <Footer style={{ margin: "2rem 0 0 0" }} />
+          
         </Container>
       </div>
     );
   }
 }
-
 export default withWindowDimensions(TechForEquity);
