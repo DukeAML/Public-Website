@@ -32,7 +32,7 @@ class PeoplePage extends React.Component {
 		loading: true,
 		details: {},
 		collapse: false,
-		members: { EXEC: [], CRM: [], DS: [], PS: [] },
+		members: { EXEC: [], PM: [], DS: [], SWE: [], HRD: [] },
 	};
 
 	componentDidMount = async () => {

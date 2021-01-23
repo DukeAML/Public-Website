@@ -77,11 +77,11 @@ class PeopleRow extends React.Component {
     return people.map((person, key, index) => (
       <Person
         key={key}
-        name={`${person.firstName} ${person.lastName}`}
-        team={person.team}
-        linkedin={person.linkedIn}
+        name={person.Name}
+        team={person.Role}
+        linkedin={person.LinkedIn}
         github={person.githubLink}
-        img={person.photoString}
+        img={person.Photo}
         onClick={() => this.handleShowDetails(person, key)}
       />
     ));
@@ -137,7 +137,7 @@ class PeopleRow extends React.Component {
           ""
         );
       bio = current.biography;
-      name = `${current.firstName} ${current.lastName}`;
+      name = current.Name;
     } else {
       team = "";
       school = "";

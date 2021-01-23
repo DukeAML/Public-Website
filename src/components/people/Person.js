@@ -21,12 +21,39 @@ function Person(props) {
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
       <div className="person-image">
         <img
-          src={props.img ? props.img : placeholder}
+          src={
+            props.img
+              ? props.img[0].thumbnails
+                ? props.img[0].thumbnails.small.url
+                : placeholder
+              : placeholder
+          }
+          style={{
+            height: "120px",
+            width: "120px",
+            position:"absolute",
+            objectFit: "cover",
+            borderRadius: "100%",
+            zIndex: -1,
+            filter: "blur(2px)",
+            WebkitFilter: "blur(2px)",
+          }}
+          onClick={props.onClick}
+        />
+
+        <img
+          src={
+            props.img
+              ? props.img[0].thumbnails
+                ? props.img[0].thumbnails.large.url
+                : props.img[0].url
+              : placeholder
+          }
           style={{
             height: "120px",
             width: "120px",
             objectFit: "cover",
-            borderRadius: "100%"
+            borderRadius: "100%",
           }}
           onClick={props.onClick}
         />

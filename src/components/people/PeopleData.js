@@ -11,7 +11,7 @@ export const getMemberData = async () => {
 
   console.log(members);
   members.forEach((member) => {
-    if (member.status === "Current Member") {
+    if (member["Member Status"] === "Current Member") {
       const team = member.Role;
       if (member.Exec) {
         EXEC.push(member);
