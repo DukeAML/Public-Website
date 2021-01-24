@@ -76,6 +76,17 @@ const projects = [
     fellows: "2-3",
     position: "SWE, Mobile App Development, UI/UX, Database Management",
     link: "https://durhamgreentogo.com/",
+  },
+  {
+    uid: 8,
+    title: "Duke Innovation and Entrepreneurship",
+    description:
+      "An initiative of Duke I&E, s a collaborative of students, faculty, staff, and community partners from Durham and across North Carolina who are building opportunities to learn the theory and praxis of open design while solving complex, real-world problems together. Work with Professor Aria Chernik on furthering her research and development with K-12 technology education curriculum development to be implemented in North Carolina schools, with special focus on ethical Artificial Intelligence. ",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1611509085/I_E_xlvktn.png",
+    fellows: "2",
+    position: "Education Research, understanding of ML, SWE, UI/UX",
+    link: "https://sites.duke.edu/ods/",
   }
 ];
 
