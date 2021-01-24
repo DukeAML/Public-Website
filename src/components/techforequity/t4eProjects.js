@@ -24,12 +24,12 @@ const projects = [
   },
   {
     uid: 3,
-    title: "Duke Computer Science Department",
+    title: "Duke Computer Science Department & CS+",
     description:
-      "Interested in racial equity in computing? Dr. Nicki Washington, a national leader in identity and cultural competence in computing, is looking for a research fellow to support her new research publication on areas of cultural competence in computing, identity, broadening participating in computing, K-12 computing standards, curriculum, and educator professional development.",
+      "Interested in racial equity in computing? Dr. Nicki Washington, a national leader in identity and cultural competence in computing, is looking for 3-4 research fellows to support her new research publication on areas of cultural competence in computing, identity, broadening participating in computing, K-12 computing standards, curriculum, and educator professional development. We're partnering with Duke CS+ program to run this project team.",
     image:
       "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024476/techforequity/dukecs_raoipd.jpg",
-    fellows: "1",
+    fellows: "3-4",
     position: "Data Science",
     link: "https://www.cs.duke.edu/news/articles/3915",
   },
@@ -54,6 +54,39 @@ const projects = [
     fellows: "1",
     position: "Data Analytics",
     link: "https://realityministriesinc.org/",
+  },
+  {
+    uid: 6,
+    title: "Joyce Ivy Foundation",
+    description:
+      "The Joyce Ivy Foundation is a non-profit, 501c3 organization committed to the academic advancement and leadership development of young women from the Midwest. Support their mission by working closely with their team on website design and alumni donor database management.",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1609868927/joyce_ivy_exmeqr.png",
+    fellows: "2",
+    position: "Web Design, Data Analytics",
+    link: "https://www.joyceivyfoundation.org/",
+  },
+  {
+    uid: 7,
+    title: "Durham Green To Go",
+    description:
+      "An initiative by non-profit Don't Waste Durham, GreenToGo is a reusable take-out container service that reduces the amount of trash that goes to our landfills and improve quality of life for the Durham community. They are looking for software engineers to rebuild their app and database to streamline their service.",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1610059275/greentogo_mbigsj.svg",
+    fellows: "2-3",
+    position: "SWE, Mobile App Development, UI/UX, Database Management",
+    link: "https://durhamgreentogo.com/",
+  },
+  {
+    uid: 8,
+    title: "Duke Innovation and Entrepreneurship",
+    description:
+      "An initiative of Duke I&E, s a collaborative of students, faculty, staff, and community partners from Durham and across North Carolina who are building opportunities to learn the theory and praxis of open design while solving complex, real-world problems together. Work with Professor Aria Chernik on furthering her research and development with K-12 technology education curriculum development to be implemented in North Carolina schools, with special focus on ethical Artificial Intelligence. ",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1611509085/I_E_xlvktn.png",
+    fellows: "2",
+    position: "Education Research, understanding of ML, SWE, UI/UX",
+    link: "https://sites.duke.edu/ods/",
   }
 ];
 
