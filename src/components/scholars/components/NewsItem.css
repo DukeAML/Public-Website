@@ -2,7 +2,7 @@ li {
   list-style-type: none;
 }
 
-.footpanel{
+.footpanelScholars{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -12,7 +12,7 @@ li {
   background: rgba(0,0,0,0.6);
 }
 
-.title {
+.titleScholars {
   color: white;
   letter-spacing: 0.1em;
 }

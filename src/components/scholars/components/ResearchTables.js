@@ -5,20 +5,22 @@ import axios from 'axios';
 
 const { TabPane } = Tabs;
 export default class ResearchTables extends React.Component{
-  state = {ml: [], dl: [], nn: []};
-  articles = ['machine_learning', 'deep_learning', 'neural_networks'];
+  state = {topic:{ml:[], dl:[], nn:[]}};
+  articles = {ml:'machine_learning', dl:'deep_learning', nn:'neural_networks'};
   
   getArticle = () => {
-    for(var i = 0; i<this.articles.length; i++){
-      axios.get('http://localhost:8080/'+this.articles[i])
+    Object.keys(this.state.topic).map(
+      i => (
+        axios.get('http://localhost:8080/' + this.articles[i])
         .then((response) => {
           console.log('grabbing data from server');
-          this.setState({ ml: response.data});
+          this.setState({[i]: response.data});
         })
         .catch(() => {
           console.log('Error while trying to reach server.');
-        });
-    }
+        })
+        )
+    );
   }
 
   componentDidMount(){

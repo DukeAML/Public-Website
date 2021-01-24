@@ -9,6 +9,8 @@ import ReactDOM from 'react-dom';
 import news from '../api/news';
 import database from '../api/database';
 import axios from 'axios'
+import { Container, Row, Col, Image } from "react-bootstrap";
+import Navigation from "../../tools/Navigation";
 // import paper from '../articles.db';
 
 
@@ -37,9 +39,11 @@ class App extends React.Component{
   render(){
 
     return (
-      <div className="body">
+      <div>
+        <Navigation />
+        
         <Layout>
-          <h1 className="ui dividing header" id = "fonts"> Duke@Scholars </h1>
+          <h1 className="ui dividing header" id = "title"> Current Research at Duke </h1>
           <Tabs tabBarStyle={{ 
             display: 'flex', 
             justifyContent: 'left',

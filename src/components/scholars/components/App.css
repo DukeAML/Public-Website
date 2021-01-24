@@ -63,5 +63,10 @@ background-color: #000;
 body #fonts {
   font-family: Arial;
   font-size: 40px;
-  }
+}
 
+body #title {
+  font-family: "Lora", monospace !important;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
