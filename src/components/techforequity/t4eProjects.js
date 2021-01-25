@@ -1,4 +1,5 @@
 const projects = [
+  /*
   {
     uid: 1,
     title: "Duke Center on Law & Tech",
@@ -11,8 +12,9 @@ const projects = [
       "Project Management, Data Science, Policy Research, Software Engineering",
     link: "https://law.duke.edu/dclt/",
   },
+  */
   {
-    uid: 2,
+    uid: 1,
     title: "Wilson Center for Science and Justice",
     description:
       "Interested in studying the criminal justice system? Wilson Center for Science and Justice, which just received a 5 million dollar grant, is looking for a team of fellows to work on data visualization, dashboard/interface creation, and general research projects. For instance, projects can include using jail/police datasets to analyze patterns of bias.",
@@ -22,6 +24,7 @@ const projects = [
     position: "Data Science, Software Engineering",
     link: "https://wcsj.law.duke.edu/",
   },
+  /*
   {
     uid: 3,
     title: "Duke Computer Science Department & CS+",
@@ -33,8 +36,9 @@ const projects = [
     position: "Data Science",
     link: "https://www.cs.duke.edu/news/articles/3915",
   },
+  */
   {
-    uid: 4,
+    uid: 2,
     title: "Road to Hire",
     description:
       "Road to Hire believes everyone - regardless of their background or zip code – should have a path to a prosperous future. By providing paid professional development and technical training, Road to Hire opens alternative pathways to high-earning careers. Passionate about their mission? Help support their mission as a software developer, and work on projects with amazing software developers in a Go, JavaScript, GraphQL shop.",
@@ -45,7 +49,7 @@ const projects = [
     link: "https://roadtohire.org/",
   },
   {
-    uid: 5,
+    uid: 3,
     title: "Reality Ministries",
     description:
       "Reality Ministries creates opportunities for adults with and without developmental disabilities to experience belonging, kinship and the life-changing reality of Christ’s love. Support this rapidly-growing, local Durham initiative (right off of East Campus!) on creating impactful, end-to-end solutions, which include integrating donor database from quickbooks to Salesforce, developing Salesforce to be more user-friendly for their communities, and integrating volunteer sign-up between their SalesForce database and their website.",
@@ -56,7 +60,7 @@ const projects = [
     link: "https://realityministriesinc.org/",
   },
   {
-    uid: 6,
+    uid: 4,
     title: "Joyce Ivy Foundation",
     description:
       "The Joyce Ivy Foundation is a non-profit, 501c3 organization committed to the academic advancement and leadership development of young women from the Midwest. Support their mission by working closely with their team on website design and alumni donor database management.",
@@ -67,7 +71,7 @@ const projects = [
     link: "https://www.joyceivyfoundation.org/",
   },
   {
-    uid: 7,
+    uid: 5,
     title: "Durham Green To Go",
     description:
       "An initiative by non-profit Don't Waste Durham, GreenToGo is a reusable take-out container service that reduces the amount of trash that goes to our landfills and improve quality of life for the Durham community. They are looking for software engineers to rebuild their app and database to streamline their service.",
@@ -78,7 +82,7 @@ const projects = [
     link: "https://durhamgreentogo.com/",
   },
   {
-    uid: 8,
+    uid: 6,
     title: "Duke Innovation and Entrepreneurship",
     description:
       "An initiative of Duke I&E, s a collaborative of students, faculty, staff, and community partners from Durham and across North Carolina who are building opportunities to learn the theory and praxis of open design while solving complex, real-world problems together. Work with Professor Aria Chernik on furthering her research and development with K-12 technology education curriculum development to be implemented in North Carolina schools, with special focus on ethical Artificial Intelligence. ",
