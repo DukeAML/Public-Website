@@ -116,15 +116,15 @@ class PeoplePage extends React.Component {
 
 		if (window <= 576) {
 			EXECtitle = <center> Executive Team </center>;
-			PMtitle = <center> Product Manager Team</center>;
-			DStitle = <center> Data Science Team </center>;
 			SWEtitle = <center> Software Engineer Team </center>;
+			DStitle = <center> Data Science Team </center>;
+			PMtitle = <center> Product Manager Team</center>;
 			HRDtitle = <center> Hardware Engineer Team </center>;
 		} else {
 			EXECtitle = 'Executive Team';
-			PMtitle = 'Product Manager Team';
 			DStitle = 'Data Science Team';
 			SWEtitle = 'Software Engineer Team';
+			PMtitle = 'Product Manager Team';
 			HRDtitle = 'Hardware Engineer Team';
 		}
 
@@ -142,11 +142,6 @@ class PeoplePage extends React.Component {
 					</div>
 					<center>{EXECgrid}</center>
 					<div className='team' style={{ padding: `1rem ${padding}%` }}>
-						{PMtitle}
-						<hr />
-					</div>
-					<center>{PMgrid}</center>
-					<div className='team' style={{ padding: `1rem ${padding}%` }}>
 						{DStitle}
 						<hr />
 					</div>
@@ -156,6 +151,12 @@ class PeoplePage extends React.Component {
 						<hr />
 					</div>
 					<center>{SWEgrid}</center>
+					<div className='team' style={{ padding: `1rem ${padding}%` }}>
+						{PMtitle}
+						<hr />
+					</div>
+					<center>{PMgrid}</center>
+
 					<div className='team' style={{ padding: `1rem ${padding}%` }}>
 						{HRDtitle}
 						<hr />
