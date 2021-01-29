@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require('airtable');
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
-	apiKey: 'keyYCxYPJrPb0uEya', // Remove to push to git
+	apiKey: '', // Remove to push to git
 });
 var base = Airtable.base('app7oThcZBwecbqqS');
 
@@ -27,7 +27,7 @@ export const getProjects = async () => {
 	pRecords.map((record) => {
 		record = record._rawJson.fields;
 
-		if (record['Status'] == 'Active/In progress') {
+		if (record['Status'] === 'Active/In progress') {
 			projects.push(record);
 		}
 	});

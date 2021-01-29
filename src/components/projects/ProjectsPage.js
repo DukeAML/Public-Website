@@ -27,6 +27,7 @@ class ProjectsPage extends React.Component {
 
 	componentDidMount = async () => {
 		const projects = await getProjects();
+		console.log(projects)
 		this.setState({ projects: projects, loading: false });
 	};
 
@@ -63,9 +64,9 @@ class ProjectsPage extends React.Component {
 							key={key}
 							uid={project.uid}
 							link={project.uid}
-							title={project.title}
+							title={project["Project Name"]}
 							description={project.description}
-							img={project.imageLink}
+							img={project.logo ? project.logo[0].url : ""}
 						/>
 					</Col>
 			  ))
