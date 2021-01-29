@@ -19,8 +19,6 @@ import ProjectCard from './ProjectCard';
 import withWindowDimensions from '../people/withWindowDimensions';
 import { getProjects } from '../../api/api.js';
 
-const projects = require('./projectsData');
-
 class ProjectsPage extends React.Component {
 	constructor() {
 		super();

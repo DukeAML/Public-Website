@@ -16,12 +16,21 @@ export const getProjects = async () => {
 	// console.log(data);
 	// return data;
 
-	const projects = await base('Projects')
+	let projects = [];
+
+	const pRecords = await base('Projects')
 		.select({
 			// Selecting the first 3 records in Projects [Internal]:
 			view: 'Projects [Internal]',
 		})
 		.all();
+	pRecords.map((record) => {
+		record = record._rawJson.fields;
+
+		if (record['Status'] == 'Active/In progress') {
+			projects.push(record);
+		}
+	});
 	console.log(projects);
 	return projects;
 };
