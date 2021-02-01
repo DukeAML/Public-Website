@@ -82,23 +82,27 @@ class TechForEquity extends React.Component {
                 <Col lg={8} sm={12} align="left">
                   <div className="title"> Tech For Equity </div>
                   <p>
-                    Interested in a summer internship, tech, social justice—or
-                    all of the above? The Technology for Equity Fellowship, an
-                    initiative by Duke Applied Machine Learning, is a summer
-                    internship program that seeks to bridge the gap between
-                    young, enthusiastic technologists and organizations doing
-                    social good. The program will provide a remote tech summer
-                    internship with competitive stipend at established
-                    policy/social justice organizations and summer programming
-                    with speaker series and chances to connect with tech and
-                    policy leaders at ACLU, Vera Institute of Justice, etc.
-                    <br />
-                    <br />
-                    As of 10/18, we’ve secured 15+ fellowship positions with
-                    $75,000+ of funding for our inaugural year of 2021.
+                    Are you a student engineer passionate about social justice issues? Are you an organizer
+                    seeking technical skills to support your local organization's work?
 
                     <br />
 
+                    Duke Tech for Equity, an initiative by Duke Applied Machine Learning, is a new summer fellowship program 
+                    that aims to match talented Duke student engineers with social equity and policy-oriented 
+                    organizations.
+                    Tech for Equity supplies organizations with talented technologists to help
+                    organizers meet their technical needs, and it provides student fellows with a paid internship 
+                    opportunity to use their technical skills for values that they are passionate about.
+                    Tech for Equity seeks to strengthen an existing community of socially-conscious 
+                    Duke student technologists and provide them with opportunities to connect with 
+                    the broader, growing community of tech and policy industry leaders through speaker series of
+                    leaders at ACLU, Vera Institute of Justice, etc.
+                    <br />
+                    <br />
+                    So far, we’ve secured 15+ fellowship positions with $75,000+ of funding for our inaugural year of 2021.
+ 
+                    <br />
+    
                     <Button className="theme-button" style={{ marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here!</a> 
                     </Button>
