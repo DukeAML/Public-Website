@@ -82,12 +82,8 @@ class TechForEquity extends React.Component {
                 <Col lg={8} sm={12} align="left">
                   <div className="title"> Tech For Equity </div>
                   <p>
-                    Are you a student engineer passionate about social justice issues? Are you an organizer
-                    seeking technical skills to support your local organization's work?
 
-                    <br />
-
-                    The Technology for Equity Fellowship, an initiative by Duke Applied Machine Learning, is a summer internship program that seeks to bridge the gap between young, enthusiastic technologists and organizations doing social good. The program will provide a remote tech summer internship with competitive stipend at established policy/social justice organizations and summer programming with speaker series and chances to connect with tech and policy leaders at ACLU, Vera Institute of Justice, etc.
+                    The Technology for Equity Fellowship, an initiative by Duke Applied Machine Learning, is a summer internship program that seeks to bridge the gap between enthusiastic student technologists and equitable organizations. The program will provide students a remote tech summer internship with competitive stipend at established community organizations/research centers and summer programming with speaker series and chances to connect with tech and policy leaders at ACLU, Vera Institute of Justice, and more.
                     <br />
                     <br />
                     So far, we’ve secured 15+ fellowship positions with $75,000+ of funding for our inaugural year of 2021.
