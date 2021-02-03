@@ -111,6 +111,12 @@ class TechForEquity extends React.Component {
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://docs.google.com/document/d/1oVhkHs8VLgYR5StEo8r9QPVfHXw3_-2MoyNj8DflFdY/edit?usp=sharing" target="_blank" style={{ color: "white" }}> Client FAQ</a> 
                     </Button>
+
+                    <br />
+
+                    <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
+                    <a href="https://calendly.com/albertsun/tech-for-equity" target="_blank" style={{ color: "white" }}> Prospective Client? Schedule at 15 minute meeting.</a> 
+                    </Button>
                   </p>
                 </Col>
               </Row>
