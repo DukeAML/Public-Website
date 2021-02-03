@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require('airtable');
 Airtable.configure({
 	endpointUrl: 'https://api.airtable.com',
-	apiKey: '', // Remove to push to git
+	apiKey: 'keyYCxYPJrPb0uEya', // Remove to push to git
 });
 var base = Airtable.base('app7oThcZBwecbqqS');
 
@@ -36,12 +36,7 @@ export const getProjects = async () => {
 };
 
 export const getMembers = async () => {
-	// Old CMS Integration
-	// const { data } = await client.get("/users");
-	// console.log(data);
-	// return data;
-
-	let members = [];
+	const members = [];
 
 	// Pull all member records
 	const records = await base('Full Roster')
@@ -74,9 +69,8 @@ export const getMembers = async () => {
 			record['Tech Interests'][interestLength - 1] ===
 			'Other (specify in "Additional Information" section)'
 		) {
-			console.log(record['Tech Interests']);
 			record['Tech Interests'].pop();
-			if (record['Tech Interests'].length === 0)
+			if (interestLength === 1)
 				record['Tech Interests'] = null;
 		}
 

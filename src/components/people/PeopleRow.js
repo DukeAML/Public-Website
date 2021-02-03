@@ -69,8 +69,7 @@ class PeopleRow extends React.Component {
         lastClicked: key,
       });
     }
-
-    console.log(this.state);
+    // console.log(this.state); // Print current person
   }
 
   makePeopleRow(people) {
@@ -80,7 +79,7 @@ class PeopleRow extends React.Component {
         name={person.Name}
         team={person.Role}
         linkedin={person.LinkedIn}
-        github={person.githubLink}
+        github={person.Github}
         img={person.Photo}
         onClick={() => this.handleShowDetails(person, key)}
       />
@@ -108,6 +107,7 @@ class PeopleRow extends React.Component {
       padding = 5;
     }
 
+    // Generate details section
     let { current } = this.state;
 
     let name, team, joined, studying, interests, bio;
@@ -147,7 +147,7 @@ class PeopleRow extends React.Component {
           ""
         );
 
-      bio = current["Additional Information"];
+      // bio = current["Additional Information"]; // Bio Section
     } else {
       name = "";
       team = "";
@@ -159,9 +159,7 @@ class PeopleRow extends React.Component {
 
     let marginLeft = this.props.colWidth * this.state.currIndex;
 
-    console.log(
-      "col width" + this.props.colWidth + "index " + this.state.currIndex
-    );
+    // console.log("col width" + this.props.colWidth + "index " + this.state.currIndex);
 
     return (
       <div>
