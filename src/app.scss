@@ -48,6 +48,23 @@ header {
   margin: 0;
 }
 
+.team button {
+  font-size: 1rem;
+  float: right;
+  background-color: $main-white;
+  color: $main-grey;
+  border: 0;
+  & :hover {
+    background-color: $main-white;
+    border: 0;
+  }
+  & :focus {
+    background-color: $main-white;
+    border: 0;
+  }
+}
+
+
 a.contact {
   color: $light-grey !important;
   & :hover {
