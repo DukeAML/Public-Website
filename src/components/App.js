@@ -22,6 +22,8 @@ import { getProjects } from "../api/api.js";
 import PhoenixAlert from "./tools/PhoenixAlert";
 import PhoenixProjectsPage from "./phoenixprojects/ProjectsPage";
 import Initiatives from "./initiatives/Initiatives";
+import Scholars from "./scholars/components/App";
+
 const projects = require("./phoenixprojects/projectsData");
 
 class App extends React.Component {
@@ -42,6 +44,7 @@ class App extends React.Component {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/people" component={PeoplePage} />
         <Route exact path="/courses" component={CoursesPage} />
+        <Route exact path="/scholars" component={Scholars} />
         <Route
           exact
           path="/thephoenixproject"
