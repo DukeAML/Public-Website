@@ -109,8 +109,10 @@ class PeoplePage extends React.Component {
     }
 
     // center titles on mobile
+    //  and define collapse text
 
     let EXECtitle, PMtitle, DStitle, SWEtitle, HRDtitle;
+    let collapseText;
 
     if (window <= 576) {
       EXECtitle = <center> Executive Team </center>;
@@ -118,12 +120,22 @@ class PeoplePage extends React.Component {
       DStitle = <center> Data Science Team </center>;
       PMtitle = <center> Product Manager Team</center>;
       HRDtitle = <center> Hardware Engineer Team </center>;
+
+      collapseText = {
+        isOpen: "-",
+        isClosed: "+",
+      };
     } else {
       EXECtitle = "Executive Team";
       DStitle = "Data Science Team";
       SWEtitle = "Software Engineer Team";
       PMtitle = "Product Manager Team";
       HRDtitle = "Hardware Engineer Team";
+
+      collapseText = {
+        isOpen: "Collapse",
+        isClosed: "Expand",
+      };
     }
 
     return (
@@ -137,14 +149,16 @@ class PeoplePage extends React.Component {
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
             {EXECtitle}
             <Button
+              variant="light"
               onClick={() =>
                 this.setState({
                   open: { ...this.state.open, EXEC: !this.state.open.EXEC },
                 })
               }
-              className=""
             >
-              Collapse
+              {this.state.open.EXEC
+                ? collapseText.isOpen
+                : collapseText.isClosed}
             </Button>
             <hr />
           </div>
