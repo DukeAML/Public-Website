@@ -3,7 +3,7 @@ const projects = [
     uid: 1,
     title: "Duke Center on Law & Tech",
     description:
-      "Interested in environmental justice, healthcare, data confidentiality, and the general intersection between technology and law? Duke Center on Law & Tech, housed at Duke Law, prepares students for the growing landscape of technology in the legal profession through collaboration with Duke’s innovative and entrepreneurial initiatives, engagement with local entrepreneurs, and by providing educational opportunities at the intersection of technology and the law. They are looking for at least 4 teams of 3, with roles ranging from policy research to data analytics. We are also looking for project managers who can effectively communicate between DCL&T and our fellows.",
+      "Interested in environmental justice, healthcare, data confidentiality, and the general intersection between technology and law? Duke Center on Law & Tech, housed at Duke Law, prepares students for the growing landscape of technology in the legal profession through collaboration with Duke’s innovative and entrepreneurial initiatives, engagement with local entrepreneurs, and by providing educational opportunities at the intersection of technology and the law. They are looking for 4 teams of 3, with roles ranging from policy research to data analytics. We are also looking for project managers who can effectively communicate between DCL&T and our fellows.",
     image:
       "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024398/techforequity/dclt_hrcjl5.jpg",
     fellows: "12+ (4 teams of 3)",
@@ -15,7 +15,7 @@ const projects = [
     uid: 2,
     title: "Wilson Center for Science and Justice",
     description:
-      "Interested in studying the criminal justice system? Wilson Center for Science and Justice, which just received a 5 million dollar grant, is looking for a team of fellows to work on data visualization, dashboard/interface creation, and general research projects. For instance, projects can include using jail/police datasets to analyze patterns of bias.",
+      "Interested in studying the criminal justice system? Wilson Center for Science and Justice, which just received a 5 million dollar grant, is looking for a team of fellows to work on data visualization, dashboard/interface creation, and general research projects. For instance, projects can include using jail/police datasets to analyze patterns of bias for community grantees/partners.",
     image:
       "https://res.cloudinary.com/dukeaml-com/image/upload/v1604024485/techforequity/wilson_wlphto.jpg",
     fellows: "2+",
@@ -83,12 +83,23 @@ const projects = [
     uid: 7,
     title: "Duke Innovation and Entrepreneurship",
     description:
-      "An initiative of Duke I&E, s a collaborative of students, faculty, staff, and community partners from Durham and across North Carolina who are building opportunities to learn the theory and praxis of open design while solving complex, real-world problems together. Work with Professor Aria Chernik on furthering her research and development with K-12 technology education curriculum development to be implemented in North Carolina schools, with special focus on ethical Artificial Intelligence. ",
+      "An initiative of Duke I&E, Open Design Studio is a collaborative of students, faculty, staff, and community partners from Durham and across North Carolina who are building opportunities to learn the theory and praxis of open design while solving complex, real-world problems together. Work with Professor Aria Chernik on furthering her research and development with K-12 technology education curriculum development to be implemented in North Carolina schools, with special focus on ethical Artificial Intelligence. ",
     image:
       "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1611509085/I_E_xlvktn.png",
     fellows: "2",
     position: "Education Research, understanding of ML, SWE, UI/UX",
     link: "https://sites.duke.edu/ods/",
+  },
+  {
+    uid: 8,
+    title: "The Samuel DuBois Cook Center for Social Equity",
+    description:
+      "The Samuel DuBois Cook Center on Social Equity is a scholarly collaborative that studies the causes and consequences of inequality and develops remedies for these disparities and their adverse effects. Work with researchers Dr. Adam Hollowell and Dr. Omar Ali to study issues such as improving social mobility, expanding quality education, and enhancing opportunities for wealth and asset building.",
+    image:
+      "https://res.cloudinary.com/dt6n5gnrh/image/upload/v1612586723/samuel_dubois_cook_center_hojbnv.png",
+    fellows: "2",
+    position: "Data Analytics, Research",
+    link: "https://socialequity.duke.edu/",
   }
 ];
 
