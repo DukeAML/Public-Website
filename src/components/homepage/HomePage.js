@@ -7,6 +7,7 @@ import {
   Col,
   Image,
   Card,
+  Alert,
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import AnimationWrapper from "./AnimationWrapper.js";
@@ -22,7 +23,7 @@ import "./HomePage.scss";
 const DtcLogo = require("./dtc-logo-tag.png");
 
 class HomePage extends React.Component {
-  state = { redirect: false };
+  state = { redirect: false, showWIP: true };
 
   handleSignUpClick = () => {
     var link =
@@ -39,6 +40,10 @@ class HomePage extends React.Component {
     this.setState({ redirect: true });
   };
 
+  handleWIPAlertClose = () => {
+    this.setState({ showWIP: false });
+  };
+
   componentDidMount() {
     this.setState({ redirect: false });
   }
@@ -50,6 +55,25 @@ class HomePage extends React.Component {
 
     return (
       <div>
+        {this.state.showWIP && (
+          <Alert
+            variant="warning"
+            onClose={() => this.handleWIPAlertClose(false)}
+            dismissible
+            style={{
+              textAlign: "center",
+            }}
+          >
+            <Alert.Heading>
+              Our website is currently under development!
+            </Alert.Heading>
+            <hr />
+            <p>
+              Different content on the site may not load. Come back later to
+              check out the new design and content.
+            </p>
+          </Alert>
+        )}
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
           <center>
