@@ -80,13 +80,6 @@ class PeoplePage extends React.Component {
   }
 
   render() {
-    //const { EXEC, PM, DS, SWE, HRD } = this.state.teamData;
-
-    /*let EXECgrid = this.makePeopleGrid(EXEC.members, this.props.windowWidth);
-    let PMgrid = this.makePeopleGrid(PM.members, this.props.windowWidth);
-    let DSgrid = this.makePeopleGrid(DS.members, this.props.windowWidth);
-    let SWEgrid = this.makePeopleGrid(SWE.members, this.props.windowWidth);
-    let HRDgrid = this.makePeopleGrid(HRD.members, this.props.windowWidth);*/
     let window = this.props.windowWidth;
     let padding;
 
@@ -125,9 +118,10 @@ class PeoplePage extends React.Component {
       };
     }
 
-    // initialize
+    // initialize list of teams
     const teamList = Object.entries(this.state.teamData).map((team, index) => {
       const grid = this.makePeopleGrid(team[1].members, this.props.windowWidth);
+
       return (
         <div key={index}>
           {" "}
@@ -159,11 +153,11 @@ class PeoplePage extends React.Component {
     return (
       <Container fluid style={{ padding: 0 }}>
         <Navigation />
-
         <div style={{ minHeight: "85vh" }}>
           <div className="title">
             <center>Our Members</center>
           </div>
+
           {teamList}
         </div>
         <Footer />
