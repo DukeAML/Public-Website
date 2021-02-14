@@ -7,7 +7,7 @@ const client = axios.create({
 const Airtable = require("airtable");
 Airtable.configure({
   endpointUrl: "https://api.airtable.com",
-  apiKey: "", // Remove to push to git
+  apiKey: "keyoXHwmrHzfwZaZo", // Remove to push to git
 });
 var base = Airtable.base("app7oThcZBwecbqqS");
 
@@ -40,7 +40,7 @@ export const getMembers = async () => {
 
   // Pull all member records
   const records = await base("Full Roster")
-    .select({ view: "Roster [Internal]" })
+    .select({ view: "Internal" })
     .all();
 
   // Pull all degrees
