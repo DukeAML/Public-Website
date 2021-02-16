@@ -9,6 +9,7 @@ try {
   base = require("airtable").base("app7oThcZBwecbqqS");
   console.log("airtable success");
 } catch (e) {
+  console.log("airtable failure");
   console.log(e);
 }
 
