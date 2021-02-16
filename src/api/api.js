@@ -4,12 +4,10 @@ const client = axios.create({
   baseURL: "https://dukeappml.herokuapp.com",
 });
 
-const Airtable = require("airtable");
+var base;
 try {
-  Airtable.configure({
-    endpointUrl: "https://api.airtable.com",
-  });
-  var base = Airtable.base("app7oThcZBwecbqqS");
+  base = require("airtable").base("app7oThcZBwecbqqS");
+  console.log("airtable success");
 } catch (e) {
   console.log(e);
 }
