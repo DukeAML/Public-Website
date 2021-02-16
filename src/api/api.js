@@ -1,8 +1,18 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://dukeappml.herokuapp.com"
+  baseURL: "https://dukeappml.herokuapp.com",
 });
+
+const Airtable = require("airtable");
+try {
+  Airtable.configure({
+    endpointUrl: "https://api.airtable.com",
+  });
+  var base = Airtable.base("app7oThcZBwecbqqS");
+} catch (e) {
+  console.log(e);
+}
 
 export const getProjects = async () => {
   const { data } = await client.get("/projects");
