@@ -99,9 +99,9 @@ class TechForEquity extends React.Component {
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://techforequityinitiative.substack.com/" target="_blank" style={{ color: "white" }}> Subscribe to our Newsletter!</a> 
                     </Button>
-                    
+                    </p>
                     <br />
-                      
+                    /*  
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://docs.google.com/document/d/1knBaok7z-VxGnhrPdWKBfIkvYL4QRepggdpMg9CXlsU/edit?usp=sharing" target="_blank" style={{ color: "white" }}> Student FAQ</a> 
                     </Button>
@@ -117,7 +117,7 @@ class TechForEquity extends React.Component {
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://calendly.com/albertsun/tech-for-equity" target="_blank" style={{ color: "white" }}> Prospective Client? Schedule at 15 minute meeting.</a> 
                     </Button>
-                  </p>
+                    */
                 </Col>
               </Row>
               <div className="title"> Projects </div>
