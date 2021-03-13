@@ -29,7 +29,7 @@ class ProjectCard extends React.Component {
       : "";
     */
 
-    const imageSrc = this.props.img;
+    const imageSrc = this.props.img ? this.props.img:require("./images/DAML_Full_Grey_Transparent.svg");
 
     return (
       <div
