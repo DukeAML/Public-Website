@@ -4,15 +4,6 @@ const client = axios.create({
   baseURL: "https://dukeappml.herokuapp.com",
 });
 
-var base;
-try {
-  base = require("airtable").base("app7oThcZBwecbqqS");
-  console.log("airtable success");
-} catch (e) {
-  console.log("airtable failure");
-  console.log(e);
-}
-
 export const getProjects = async () => {
   const { data } = await client.get("/projects");
   console.log(data);
