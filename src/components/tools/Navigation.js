@@ -54,10 +54,10 @@ class Navigation extends React.Component {
 
     if (window >= 1200) {
       //xl
-      padding = 30;
+      padding = 28;
     } else if (window >= 992) {
       // lg
-      padding = 25;
+      padding = 22;
     } else if (window >= 768) {
       // m
       padding = 10;
@@ -65,8 +65,7 @@ class Navigation extends React.Component {
       // s
       padding = 2;
     } else {
-      // xs
-      padding = 1;
+      // Return the mobile nav
       return <MobileNavigation />;
     }
 
@@ -87,7 +86,13 @@ class Navigation extends React.Component {
             maxWidth: "100vw",
           }}
         >
-          <Row style={{ padding: 0, margin: 0, justifyContent: "center" }}>
+          <Row
+            style={{
+              padding: 0,
+              margin: 0,
+              justifyContent: "center",
+            }}
+          >
             <Col xs="1" style={verticalAlign}>
               <Link to="/">
                 <img
@@ -103,7 +108,7 @@ class Navigation extends React.Component {
                 Initiatives
               </Link>
             </Col>
-            <Col xs="3" style={verticalAlign}>
+            <Col xs="2" style={verticalAlign}>
               <Link to="/join" className="nav-link-col">
                 Join the Team
               </Link>
@@ -118,12 +123,12 @@ class Navigation extends React.Component {
                 People
               </Link>
             </Col>
-            <Col xs="2 " style={verticalAlign}>
+            <Col xs="2" style={verticalAlign}>
               <Link to="/courses" className="nav-link-col">
                 Courses
               </Link>
             </Col>
-            <Col xs="2 " style={verticalAlign}>
+            <Col xs="1" style={verticalAlign}>
               <Link to="/scholars" className="nav-link-col">
                 Scholars
               </Link>
