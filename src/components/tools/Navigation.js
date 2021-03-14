@@ -14,6 +14,8 @@ import {
 import { Link } from "react-router-dom";
 import withWindowDimensions from "../people/withWindowDimensions";
 
+import MobileNavigation from "./MobileNavigation";
+
 class Navigation extends React.Component {
   constructor() {
     super();
@@ -65,6 +67,7 @@ class Navigation extends React.Component {
     } else {
       // xs
       padding = 1;
+      return <MobileNavigation />;
     }
 
     const verticalAlign = {
@@ -108,6 +111,11 @@ class Navigation extends React.Component {
             <Col xs="2" style={verticalAlign}>
               <Link to="/projects" className="nav-link-col">
                 Projects
+              </Link>
+            </Col>
+            <Col xs="2" style={verticalAlign}>
+              <Link to="/people" className="nav-link-col">
+                People
               </Link>
             </Col>
             <Col xs="2 " style={verticalAlign}>

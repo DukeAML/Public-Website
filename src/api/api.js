@@ -5,13 +5,13 @@ const client = axios.create({
 });
 
 export const getProjects = async () => {
-  const { data } = await client.get("/projects");
+  const {data} = await client.get("./projects");
   console.log(data);
   return data;
 };
 
 export const getMembers = async () => {
-  const { data } = await client.get("/users");
+  const {data} = await client.get("/people");
   console.log(data);
   return data;
 };
