@@ -39,28 +39,29 @@ function Person(props) {
   };
 
   return (
-    <Col
-      xs={12}
-      sm={6}
-      md={4}
-      lg={3}
-      style={{ padding: "1rem", border: "2px solid red" }}
-    >
-      <center className="person-image">
-        <img
-          src={thumbnail}
-          style={{
-            ...imageStyle,
-            position: "absolute",
-            zIndex: -1,
-            filter: "blur(2px)",
-            WebkitFilter: "blur(2px)",
-          }}
-          onClick={props.onClick}
-        />
-
-        <img src={fullImage} style={imageStyle} onClick={props.onClick} />
-      </center>
+    <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
+      <Row>
+        <div style={{ margin: "auto" }}>
+          <div className="person-image" style={{ display: "grid" }}>
+            <img
+              src={thumbnail}
+              style={{
+                ...imageStyle,
+                position: "absolute",
+                zIndex: -1,
+                filter: "blur(2px)",
+                WebkitFilter: "blur(2px)",
+              }}
+              onClick={props.onClick}
+            />
+            <img
+              src={fullImage}
+              style={{ ...imageStyle }}
+              onClick={props.onClick}
+            />
+          </div>
+        </div>
+      </Row>
       <Row style={{ display: "inline-block" }}>
         <Col xl={12}>
           <center>
