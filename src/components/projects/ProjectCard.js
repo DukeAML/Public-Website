@@ -10,7 +10,7 @@ import {
   thead,
   tr,
   Button,
-  Card
+  Card,
 } from "react-bootstrap";
 
 import Navigation from "../tools/Navigation";
@@ -29,20 +29,24 @@ class ProjectCard extends React.Component {
       : "";
     */
 
-    const imageSrc = this.props.img ? this.props.img:require("./images/DAML_Full_Grey_Transparent.svg");
+    const imageSrc = this.props.img
+      ? this.props.img
+      : require("./images/DAML_Full_Grey_Transparent.svg");
 
     return (
       <div
         style={{ display: "flex", justifyContent: "center", height: "100%" }}
       >
         <Card style={{ width: "100%" }}>
-          <div style={{ padding: " 1rem" }}>
-            <center>
-              <img
-                src={imageSrc}
-                style={{ maxWidth: "15rem", maxHeight: "10rem" }}
-              />
-            </center>
+          <div style={{ padding: "1rem", margin: "auto" }}>
+            <img
+              src={imageSrc}
+              style={{
+                maxWidth: "15rem",
+                maxHeight: "10rem",
+                width: "100%",
+              }}
+            />
           </div>
           <Card.Body className="project-card">
             <Card.Title style={{ padding: 0 }}>
