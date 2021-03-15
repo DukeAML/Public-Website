@@ -39,8 +39,14 @@ function Person(props) {
   };
 
   return (
-    <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
-      <div className="person-image">
+    <Col
+      xs={12}
+      sm={6}
+      md={4}
+      lg={3}
+      style={{ padding: "1rem", border: "2px solid red" }}
+    >
+      <center className="person-image">
         <img
           src={thumbnail}
           style={{
@@ -54,8 +60,8 @@ function Person(props) {
         />
 
         <img src={fullImage} style={imageStyle} onClick={props.onClick} />
-      </div>
-      <Row>
+      </center>
+      <Row style={{ display: "inline-block" }}>
         <Col xl={12}>
           <center>
             <div style={{ display: "inline-block", padding: "0.5rem 0 0 0" }}>
@@ -66,7 +72,9 @@ function Person(props) {
         </Col>
       </Row>
       <div>
-        <div style={{ fontSize: "1.5rem" }}>{props.name} </div>
+        <div style={{ display: "inline-block", fontSize: "1.5rem" }}>
+          {props.name}{" "}
+        </div>
       </div>
     </Col>
   );
