@@ -12,7 +12,7 @@ class CustomCarousel extends React.Component {
   componentDidMount = async () => {
     const news = await getNews();
 
-    this.setState({ news: news, loading: !(news.length > 0) });
+    this.setState({ news: news, loading: false });
   };
 
   handleSelect = (selectedIndex, e) => {
@@ -41,7 +41,7 @@ class CustomCarousel extends React.Component {
         style={{
           width: "100%",
           justifyContent: "center",
-          alignItems: "middle",
+          alignItems: "middle"
         }}
       >
         <center>
@@ -53,13 +53,21 @@ class CustomCarousel extends React.Component {
               onSelect={this.handleSelect}
               style={{ alignItems: "top" }}
             >
-              {slides}
+              <div>
+                <p>Hundreds of Duke students have lost internships. Now they’re creating their own.</p>
+                <a href="https://www.newsobserver.com/news/business/article242197741.html">Read more about the Phoenix Project here!</a>
+                <br/>
+                <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities">and here</a>
+              </div>
             </Carousel>
           )}
-        </center>
+          
+        </center>  
       </Container>
     );
   }
 }
 
 export default CustomCarousel;
+
+
