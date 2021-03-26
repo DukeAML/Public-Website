@@ -67,7 +67,7 @@ class Initiatives extends React.Component {
                     src={require("../homepage/images/phoenix.png")}
                     width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>
+                  <h3 style={{ paddingTop: "25%" }}>
                     Check Out the Phoenix Project Here{" "}
                   </h3>
                 </Link>
@@ -90,12 +90,12 @@ class Initiatives extends React.Component {
                 }}
               >
                 <Link to="/innovationstudio" style={{ textAlign: "center" }}>
-                  <img
+                  <img style={{ paddingLeft: "10%"}}
                     alt="Innovation Studio"
                     src={require("../homepage/images/innovationstudio.png")}
                     width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>
+                  <h3 style={{ paddingTop: "19%", paddingLeft: "5%" }}>
                     Read More About Innovation Studio
                   </h3>
                 </Link>
@@ -154,12 +154,12 @@ class Initiatives extends React.Component {
                 }}
               >
                 <Link to="/techforequity" style={{ textAlign: "center" }}>
-                  <img
+                  <img style={{ paddingRight: "5%" }}
                     alt="Tech for Equity"
                     src={require("../homepage/images/techforequity.png")}
                     width="70%"
                   />
-                  <h3 style={{ paddingTop: "10%" }}>
+                  <h3 style={{ paddingTop: "23%" }}>
                     Check out Tech for Equity Here
                   </h3>
                 </Link>

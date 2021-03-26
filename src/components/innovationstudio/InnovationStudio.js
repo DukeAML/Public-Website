@@ -62,12 +62,24 @@ class PhoenixProjectPage extends React.Component {
         >
           <center>
             <div className="title">DAML Innovation Studio</div>
+            <br />
             <img
               src={Logo}
               alt="The Phoenix Project"
-              style={{ height: "15rem", margin: "2rem" }}
+              style={{ height: "15rem", paddingLeft: "35%" }}
             />{" "}
           </center>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
           <div style={{ marginTop: "1rem" }}>
             <Accordion>
               <Accordion.Title
@@ -82,15 +94,16 @@ class PhoenixProjectPage extends React.Component {
                 </span>
               </Accordion.Title>
               <Accordion.Content active={activeIndex.includes(1)}>
-                <p>
+                
                   The Innovation Studio is a Duke Applied Machine Learning (DAML) initiative to provide Duke Student entrepreneurs who seek to develop novel businesses and innovations with the necessary platform and support system to enable success in their venture. We are partnered with Duke I&E and other on-campus organizations, such as DTech and Contrary Capital, to create a great community to help founders capitalize on their ideas. 
  
                   <br />
                   <br />
                   Ultimately, the goal is to take an innovative idea sourced from the Duke community and provide the engineering talent and business-side support to launch a pilot by the end of the program, setting you on the path to scale and secure funding.
 
-                </p>
+                  
               </Accordion.Content>
+
               <Accordion.Title
                 active={activeIndex.includes(2)}
                 index={2}
@@ -103,10 +116,9 @@ class PhoenixProjectPage extends React.Component {
                 </span>
               </Accordion.Title>
               <Accordion.Content active={activeIndex.includes(2)}>
-                <p>
                 The Innovation Studio takes places throughout a semester-long cohort every Spring, with our first cohort in Spring 2021. Applications for the upcoming cohort will close November 18th. We’ll have an information session coming up on November 1st and a pitch deck workshop early-to-mid November (date TBD).
-                </p>
               </Accordion.Content>
+
               <Accordion.Title
                 active={activeIndex.includes(3)}
                 index={3}
@@ -118,7 +130,6 @@ class PhoenixProjectPage extends React.Component {
                   <hr />
                 </span>
               </Accordion.Title>
-
               <Accordion.Content active={activeIndex.includes(3)}>
                 Fill out this{" "}
                 <a

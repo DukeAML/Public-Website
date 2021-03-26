@@ -53,10 +53,13 @@ class CustomCarousel extends React.Component {
               onSelect={this.handleSelect}
               style={{ alignItems: "top" }}
             >
-              {slides}
+              <div>
+                <p>The success of the Phoenix project in creating summer internships for those lost to COVID</p>
+              </div>
             </Carousel>
           )}
-        </center>
+          
+        </center>  
       </Container>
     );
   }
