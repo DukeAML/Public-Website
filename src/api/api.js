@@ -4,23 +4,14 @@ const client = axios.create({
   baseURL: "https://dukeappml.herokuapp.com",
 });
 
-var base;
-try {
-  base = require("airtable").base("app7oThcZBwecbqqS");
-  console.log("airtable success");
-} catch (e) {
-  console.log("airtable failure");
-  console.log(e);
-}
-
 export const getProjects = async () => {
-  const { data } = await client.get("/projects");
+  const {data} = await client.get("./projects");
   console.log(data);
   return data;
 };
 
 export const getMembers = async () => {
-  const { data } = await client.get("/users");
+  const {data} = await client.get("/people");
   console.log(data);
   return data;
 };

@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link, Redirect } from "react-router-dom";
-
 import { Row, Col, Image } from "react-bootstrap";
 import placeholder from "./headshots/profile-placeholder.svg";
 import Icon from "../tools/Icon";
@@ -17,21 +16,53 @@ function Person(props) {
       ""
     );
 
+  let thumbnail;
+  let fullImage;
+
+  if (props.img) {
+    if (props.img[0].thumbnails) {
+      thumbnail = props.img[0].thumbnails.small.url;
+      fullImage = props.img[0].thumbnails.large.url;
+    } else {
+      thumbnail = placeholder;
+      fullImage = props.img[0].url;
+    }
+  } else {
+    fullImage = thumbnail = placeholder;
+  }
+
+  let imageStyle = {
+    height: "120px",
+    width: "120px",
+    objectFit: "cover",
+    borderRadius: "100%",
+  };
+
   return (
     <Col xs={12} sm={6} md={4} lg={3} style={{ padding: "1rem" }}>
-      <div className="person-image">
-        <img
-          src={props.img ? props.img : placeholder}
-          style={{
-            height: "120px",
-            width: "120px",
-            objectFit: "cover",
-            borderRadius: "100%"
-          }}
-          onClick={props.onClick}
-        />
-      </div>
       <Row>
+        <div style={{ margin: "auto" }}>
+          <div className="person-image" style={{ display: "grid" }}>
+            <img
+              src={thumbnail}
+              style={{
+                ...imageStyle,
+                position: "absolute",
+                zIndex: -1,
+                filter: "blur(2px)",
+                WebkitFilter: "blur(2px)",
+              }}
+              onClick={props.onClick}
+            />
+            <img
+              src={fullImage}
+              style={{ ...imageStyle }}
+              onClick={props.onClick}
+            />
+          </div>
+        </div>
+      </Row>
+      <Row style={{ display: "inline-block" }}>
         <Col xl={12}>
           <center>
             <div style={{ display: "inline-block", padding: "0.5rem 0 0 0" }}>
@@ -42,7 +73,9 @@ function Person(props) {
         </Col>
       </Row>
       <div>
-        <div style={{ fontSize: "1.5rem" }}>{props.name} </div>
+        <div style={{ display: "inline-block", fontSize: "1.5rem" }}>
+          {props.name}{" "}
+        </div>
       </div>
     </Col>
   );

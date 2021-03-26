@@ -16,7 +16,7 @@ class PeopleRow extends React.Component {
       in: false,
       current: null,
       lastClicked: null,
-      currIndex: null
+      currIndex: null,
     };
   }
 
@@ -28,7 +28,7 @@ class PeopleRow extends React.Component {
     document.removeEventListener("mousedown", this.handleClickAway, false);
   }
 
-  handleClickAway = e => {
+  handleClickAway = (e) => {
     if (
       this.detailsBox.contains(e.target) ||
       this.peopleDisplay.contains(e.target)
@@ -41,7 +41,7 @@ class PeopleRow extends React.Component {
       current: null,
       currIndex: null,
       in: false,
-      lastClicked: null
+      lastClicked: null,
     });
   };
 
@@ -52,36 +52,35 @@ class PeopleRow extends React.Component {
         current: null,
         currIndex: null,
         in: false,
-        lastClicked: null
+        lastClicked: null,
       });
     } else if (this.state.lastClicked != null) {
       // replace info in details panel with new info
       this.setState({
         current: person,
         currIndex: key,
-        lastClicked: key
+        lastClicked: key,
       });
     } else {
       this.setState({
         current: person,
         in: true,
         currIndex: key,
-        lastClicked: key
+        lastClicked: key,
       });
     }
-
-    console.log(this.state);
+    // console.log(this.state); // Print current person
   }
 
   makePeopleRow(people) {
     return people.map((person, key, index) => (
       <Person
         key={key}
-        name={`${person.firstName} ${person.lastName}`}
-        team={person.team}
-        linkedin={person.linkedIn}
-        github={person.githubLink}
-        img={person.photoString}
+        name={person.Name}
+        team={person.Role}
+        linkedin={person.LinkedIn}
+        github={person.Github}
+        img={person.Photo}
         onClick={() => this.handleShowDetails(person, key)}
       />
     ));
@@ -108,58 +107,69 @@ class PeopleRow extends React.Component {
       padding = 5;
     }
 
+    // Generate details section
     let { current } = this.state;
-    let school, studying, name, team, bio;
+
+    let name, team, joined, studying, interests, bio;
 
     if (current != null) {
+      name = current.Name;
       team =
-        current.team != null ? (
+        current.Role != null ? (
           <div>
-            <b>Team</b>: {current.team}{" "}
+            <b>Team</b>: {current.Role}{" "}
           </div>
         ) : (
           ""
         );
-      school =
-        current.school != null ? (
+      joined =
+        current.Joined != null ? (
           <div>
-            <b>School</b>: {current.school}{" "}
+            <b>Joined</b>: {current.Joined}{" "}
           </div>
         ) : (
           ""
         );
       studying =
-        current.major != null ? (
+        current.Degree != null ? (
           <div>
-            <b>Studying</b>: {current.major.split(",").join(", ")}{" "}
+            <b>Studying</b>: {current.Degree.join(", ")}{" "}
           </div>
         ) : (
           ""
         );
-      bio = current.biography;
-      name = `${current.firstName} ${current.lastName}`;
+      interests =
+        current["Tech Interests"] != null ? (
+          <div>
+            <b>Interested in</b>: {current["Tech Interests"].join(", ")}{" "}
+          </div>
+        ) : (
+          ""
+        );
+
+      // bio = current["Additional Information"]; // Bio Section
     } else {
-      team = "";
-      school = "";
-      studying = "";
       name = "";
+      team = "";
+      joined = "";
+      studying = "";
+      interests = "";
+      bio = "";
     }
 
     let marginLeft = this.props.colWidth * this.state.currIndex;
 
-    console.log(
-      "col width" + this.props.colWidth + "index " + this.state.currIndex
-    );
+    // console.log("col width" + this.props.colWidth + "index " + this.state.currIndex);
 
     return (
       <div>
         <Row
-          ref={node => (this.peopleDisplay = node)}
+          ref={(node) => (this.peopleDisplay = node)}
           style={{ margin: `0 ${padding}%` }}
         >
           {columns}
         </Row>
-        <Row ref={node => (this.detailsBox = node)}>
+        <Row ref={(node) => (this.detailsBox = node)}>
           <Col xs={12}>
             <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
               <div className="person-details box-shadowed">
@@ -167,13 +177,14 @@ class PeopleRow extends React.Component {
                   className="person-details-text"
                   style={{
                     textAlign: "left",
-                    padding: `0 ${padding}%`
+                    padding: `0 ${padding}%`,
                   }}
                 >
                   <div className="details-title">{name}</div>
                   {team}
-                  {school}
+                  {joined}
                   {studying}
+                  {interests}
                   <br />
                   {bio}
                 </div>
