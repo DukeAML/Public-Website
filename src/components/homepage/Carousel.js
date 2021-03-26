@@ -48,20 +48,48 @@ class CustomCarousel extends React.Component {
           {this.state.loading ? (
             <Spinner animation="grow" size="lg" style={{ margin: "2rem" }} />
           ) : (
-            <Carousel
-              activeIndex={this.state.index}
-              onSelect={this.handleSelect}
-              style={{ alignItems: "top" }}
-            >
-              <div>
-                <p>Hundreds of Duke students have lost internships. Now they’re creating their own.</p>
-                <a href="https://www.newsobserver.com/news/business/article242197741.html">Read more about the Phoenix Project here!</a>
-                <br/>
-                <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities">and here</a>
-              </div>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  alt="Home"
+                  src={require("../homepage/images/phoenix.png")}
+                  width="10%"
+                />
+                <Carousel.Caption>
+                  <p>Phoenix Project: Hundreds of Duke students have lost internships. Now they’re creating their own.</p>
+                  <a href="https://www.newsobserver.com/news/business/article242197741.html">Read more about the Phoenix Project here!</a>
+                  <br/>
+                  <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities">and here</a>
+                </Carousel.Caption>
+                
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="holder.js/800x400?text=Second slide&bg=282c34"
+                  alt="Second slide"
+                />
+                <Carousel.Caption>
+                  <h3>Second slide label</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="holder.js/800x400?text=Third slide&bg=20232a"
+                  alt="Third slide"
+                />
+                <Carousel.Caption>
+                  <h3>Third slide label</h3>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+              </Carousel.Item>
             </Carousel>
+            
           )}
-          
         </center>  
       </Container>
     );
