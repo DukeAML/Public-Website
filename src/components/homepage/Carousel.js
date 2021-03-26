@@ -12,7 +12,7 @@ class CustomCarousel extends React.Component {
   componentDidMount = async () => {
     const news = await getNews();
 
-    this.setState({ news: news, loading: false });
+    this.setState({ news: news, loading: !(news.length > 0) });
   };
 
   handleSelect = (selectedIndex, e) => {
@@ -41,7 +41,7 @@ class CustomCarousel extends React.Component {
         style={{
           width: "100%",
           justifyContent: "center",
-          alignItems: "middle"
+          alignItems: "middle",
         }}
       >
         <center>
@@ -53,13 +53,10 @@ class CustomCarousel extends React.Component {
               onSelect={this.handleSelect}
               style={{ alignItems: "top" }}
             >
-              <div>
-                <p>The success of the Phoenix project in creating summer internships for those lost to COVID</p>
-              </div>
+              {slides}
             </Carousel>
           )}
-          
-        </center>  
+        </center>
       </Container>
     );
   }
