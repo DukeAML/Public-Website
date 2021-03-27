@@ -83,17 +83,11 @@ class TechForEquity extends React.Component {
                   <div className="title"> Tech For Equity </div>
                   <p>
 
-                    The Technology for Equity Fellowship, an initiative by Duke Applied Machine Learning, is a summer internship program that seeks to bridge the gap between enthusiastic student technologists and equitable organizations. The program will provide students a remote tech summer internship with competitive stipend at established community organizations/research centers and summer programming with speaker series and chances to connect with tech and policy leaders at ACLU, Vera Institute of Justice, and more.
+                    Tech for Equity, an initiative by Duke Applied Machine Learning, aims to bridge the gap between student technologists and equitable organizations. This summer, Tech for Equity will be running its inaugural fellowship program, which will provide students a remote tech summer internship with competitive stipend at established community organizations/research centers and summer programming with speaker series and chances to connect with tech and policy leaders at ACLU, Vera Institute of Justice, and more.
                     <br />
+                    2021 Fellowship Dates: May 24-July 30, 2021
                     <br />
-                    So far, we’ve secured 15+ fellowship positions with $75,000+ of funding for our inaugural year of 2021.
- 
-                    <br />
-    
-                    <Button className="theme-button" style={{ marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
-                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here!</a> 
-                    </Button>
-      
+                    The Application for the 2021 Fellowship is now closed. Look out for new opportunities during the school year and future summers.
                     <br />
 
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
