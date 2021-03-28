@@ -91,6 +91,7 @@ class TechForEquity extends React.Component {
                     <br />
                     The Application for the 2021 Fellowship is now closed. Be sure to out for new opportunities during the school year and future summers!
                     <br />
+                    <br />
 
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
                     <a href="https://techforequityinitiative.substack.com/" target="_blank" style={{ color: "white" }}> Subscribe to our Newsletter!</a> 
