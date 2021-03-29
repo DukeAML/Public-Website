@@ -80,8 +80,11 @@ class ProjectsPage extends React.Component {
                 <Col lg={8} sm={12} align="left">
                   <div className="title"> The Phoenix Project </div>
                   <p>
-                    The Duke University Phoenix Project brings together 200 Duke
-                    students who have recently lost internships to work on
+                    <b>The Phoenix Project will be running again in Summer 2021!</b>
+                    <br />
+                    <br />
+                    The Duke University Phoenix Project brought together 200 Duke
+                    students who had recently lost internships to work on
                     end-to-end technical solutions for companies during Summer
                     2020 (May 26-August 7).
                     <br />
