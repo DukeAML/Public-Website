@@ -51,7 +51,7 @@ class Initiatives extends React.Component {
                 brought together 200 Duke students and 73 paying companies,
                 organizations, and sponsors to deliver an opportunity for both
                 businesses and students to progress in a world that felt stuck.
-                <br/>
+                <br />
                 <b>The Phoenix Project will be running again in Summer 2021!</b></p>
               </Col>
               <Col
