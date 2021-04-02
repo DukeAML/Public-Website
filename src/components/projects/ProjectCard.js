@@ -34,13 +34,16 @@ class ProjectCard extends React.Component {
       ? this.props.img
       : require("./images/DAML_Full_Grey_Transparent.svg");
 
-    let teamButtons = this.props.teams.map((team, index) => {
-      return (
-        <div class={"team-button"} key={index}>
-          {team === "Hardware" ? "HRD" : team}
-        </div>
-      );
-    });
+    let teamButtons = [];
+    if (this.props.teams) {
+      teamButtons = this.props.teams.map((team, index) => {
+        return (
+          <div class={"team-button"} key={index}>
+            {team === "Hardware" ? "HRD" : team}
+          </div>
+        );
+      });
+    }
 
     return (
       <div
@@ -48,8 +51,7 @@ class ProjectCard extends React.Component {
       >
         <Card style={{ width: "100%" }}>
           <Card.Body className="project-card">
-            <img
-              src={imageSrc}
+            <div
               style={{
                 width: "48px",
                 height: "48px",
@@ -57,8 +59,21 @@ class ProjectCard extends React.Component {
                 position: "absolute",
                 left: "1rem",
                 top: "1rem",
+                justifyContent:"center",
+                flexDirection:"column",
+                display:"flex"
               }}
-            />
+            >
+              {" "}
+              <img
+                src={imageSrc}
+                style={{
+                  maxWidth: "48px",
+                  maxHeight: "48px",
+                }}
+              />
+            </div>
+
             <Card.Title
               style={{
                 padding: 0,
@@ -76,8 +91,8 @@ class ProjectCard extends React.Component {
             <hr />
 
             <Card.Text style={{ padding: "1rem 0 3rem 0" }}>
-              {this.props.description
-                ? this.props.description
+              {this.props.shortDescription
+                ? this.props.shortDescription
                 : "Check out 'See More' for more information."}
             </Card.Text>
             <div class="team-buttons">{teamButtons}</div>
