@@ -21,15 +21,9 @@ import { Link } from "react-router-dom";
 const projects = [];
 
 class ProjectCard extends React.Component {
-  state = {};
+  state = { featureText: "" };
 
   render() {
-    /* To use hard coded images stored locally
-    const imageSrc = this.props.img
-      ? require(`./images/${this.props.img}.png`)
-      : "";
-    */
-
     const imageSrc = this.props.img
       ? this.props.img
       : require("./images/DAML_Full_Grey_Transparent.svg");
@@ -45,11 +39,24 @@ class ProjectCard extends React.Component {
       });
     }
 
+    if (this.props.isFeatured) {
+      setTimeout(
+        () => this.setState({ featureText: this.props.description }),
+        500
+      );
+    } else if (this.state.featureText) {
+      setTimeout(() => this.setState({ featureText: "" }), 500);
+    }
+
+    let cardStyle = {
+      width: "100%",
+    };
+
     return (
       <div
         style={{ display: "flex", justifyContent: "center", height: "100%" }}
       >
-        <Card style={{ width: "100%" }}>
+        <Card style={cardStyle}>
           <Card.Body className="project-card">
             <div
               style={{
@@ -59,9 +66,9 @@ class ProjectCard extends React.Component {
                 position: "absolute",
                 left: "1rem",
                 top: "1rem",
-                justifyContent:"center",
-                flexDirection:"column",
-                display:"flex"
+                justifyContent: "center",
+                flexDirection: "column",
+                display: "flex",
               }}
             >
               {" "}
@@ -90,18 +97,30 @@ class ProjectCard extends React.Component {
             </Card.Title>
             <hr />
 
-            <Card.Text style={{ padding: "1rem 0 3rem 0" }}>
+            <Card.Text style={{ padding: "1rem 0 0 0" }}>
               {this.props.shortDescription
                 ? this.props.shortDescription
                 : "Check out 'See More' for more information."}
+            </Card.Text>
+
+            <Card.Text
+              style={{
+                padding: "1rem 0 3rem 0",
+                overflow: "hidden",
+              }}
+            >
+              {this.state.featureText}
             </Card.Text>
             <div class="team-buttons">{teamButtons}</div>
             <div
               style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
             >
-              <Link to={this.props.link}>
-                <Button className="theme-button">See more</Button>
-              </Link>
+              <Button
+                className="theme-button"
+                onClick={() => this.props.callback(this.props.index)}
+              >
+                See more
+              </Button>
             </div>
           </Card.Body>
         </Card>
