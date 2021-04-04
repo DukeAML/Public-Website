@@ -50,6 +50,7 @@ class ProjectCard extends React.Component {
 
     let cardStyle = {
       width: "100%",
+      maxHeight: "480px",
       
     };
 
@@ -106,9 +107,11 @@ class ProjectCard extends React.Component {
 
             <Card.Text
               style={{
-                padding: "1rem 0 3rem 0",
+                padding: "1rem 0 1rem 0",
                 overflow: "hidden",
                 whiteSpace: "pre-wrap",
+                maxHeight: "280px",
+                overflowY: "auto",
               }}
             >
               {this.state.featureText}
