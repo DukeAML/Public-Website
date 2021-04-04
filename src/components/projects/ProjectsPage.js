@@ -57,7 +57,14 @@ class ProjectsPage extends React.Component {
     const projectCards = this.state.projects
       ? this.state.projects.map((project, key) => (
           <Col
-            lg={4 + (key === this.state.selectedKey ? 4 : 0)}
+            lg={
+              4 +
+              (key === this.state.selectedKey ||
+              (key + 1 === this.state.selectedKey && key + (1 % 3)) === 2
+                ? 4
+                : 0)
+              // This logic sucks but basically it handles overflow cases
+            }
             md={6 + (key === this.state.selectedKey ? 6 : 0)}
             style={{
               padding: "1rem",
@@ -88,6 +95,8 @@ class ProjectsPage extends React.Component {
           <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
             <center>
               <div className="title"> DAML Projects </div>
+              <br />
+              <hr />
             </center>
             <Row
               style={{

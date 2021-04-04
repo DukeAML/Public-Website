@@ -45,11 +45,12 @@ class ProjectCard extends React.Component {
         500
       );
     } else if (this.state.featureText) {
-      setTimeout(() => this.setState({ featureText: "" }), 500);
+      this.setState({ featureText: "" });
     }
 
     let cardStyle = {
       width: "100%",
+      
     };
 
     return (
@@ -107,6 +108,7 @@ class ProjectCard extends React.Component {
               style={{
                 padding: "1rem 0 3rem 0",
                 overflow: "hidden",
+                whiteSpace: "pre-wrap",
               }}
             >
               {this.state.featureText}
@@ -119,7 +121,7 @@ class ProjectCard extends React.Component {
                 className="theme-button"
                 onClick={() => this.props.callback(this.props.index)}
               >
-                See more
+                {this.props.isFeatured ? "Close" : "See more"}
               </Button>
             </div>
           </Card.Body>
