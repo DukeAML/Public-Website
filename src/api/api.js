@@ -11,7 +11,7 @@ export const getProjects = async () => {
 };
 
 export const getMembers = async () => {
-  const {data} = await client.get("/people");
+  const {data} = await client.get("./people");
   console.log(data);
   return data;
 };

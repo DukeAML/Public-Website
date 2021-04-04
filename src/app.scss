@@ -233,10 +233,16 @@ a.homepage-link {
 }
 
 .card-body.project-card {
-  background-color: $lightest-grey;
+  background-color: #fff;
+  border: 1px solid #a4a4a4;
+  border-radius: 4px;
   padding: 1rem;
+  padding-bottom: 4rem;
   align-content: center;
   vertical-align: center;
+  &hover {
+    box-shadow: 1px;
+  }
 }
 
 .card,
@@ -247,6 +253,48 @@ a.homepage-link {
 
 .card-body.individual-project-card {
   background-color: $lightest-grey;
+}
+
+.team-buttons {
+  z-index: 1;
+  position: absolute;
+  bottom: 3.2rem;
+  left: 1rem;
+}
+
+.team-button {
+  border-radius: 100%;
+  color: #050404;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 100%;
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  &:hover{
+    transform: translate(0%, -25%);
+  }
+}
+
+.team-button:nth-child(1) {
+  background-color: #D0F0FD;
+}
+
+.team-button:nth-child(2) {
+  left: 3rem;
+  background-color: #D1F7C4;
+}
+
+.team-button:nth-child(3) {
+  left: 6rem;
+  background-color: #CFDFFF;
+}
+
+.team-button:nth-child(4) {
+  left: 9rem;
+  background-color: #e8e8e8;
 }
 
 .nav-link-col {
