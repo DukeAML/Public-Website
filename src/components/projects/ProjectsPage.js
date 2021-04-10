@@ -80,6 +80,7 @@ class ProjectsPage extends React.Component {
               description={project["Project Description"]}
               shortDescription={project["Short Description"]}
               teams={project.Division}
+              members={project.members}
               img={project.logo ? project.logo[0].url : ""}
               isFeatured={key === this.state.selectedKey}
               callback={this.selectedCallback}

@@ -1,20 +1,8 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Image,
-  Button,
-  Card,
-} from "react-bootstrap";
+import { Container, Row, Button, Card } from "react-bootstrap";
 
-import Navigation from "../tools/Navigation";
+import withWindowDimensions from "../people/withWindowDimensions";
+import Person from "./ProjectPerson";
 
 import { Link } from "react-router-dom";
 
@@ -22,6 +10,12 @@ const projects = [];
 
 class ProjectCard extends React.Component {
   state = { featureText: "" };
+
+  makePeopleRow(people) {
+    return people.map((person, key, index) => (
+      <Person key={key} name={person.name} img={person.img} />
+    ));
+  }
 
   render() {
     const imageSrc = this.props.img
@@ -45,14 +39,27 @@ class ProjectCard extends React.Component {
         500
       );
     } else if (this.state.featureText) {
-      this.setState({ featureText: "" });
+      setTimeout(() => this.setState({ featureText: "" }), 400);
     }
 
     let cardStyle = {
       width: "100%",
-      maxHeight: "480px",
-      
+      //maxHeight: "480px", // Implemented for slide modality, fucks up with person icons
     };
+
+    let window = this.props.windowWidth;
+    let padding;
+
+    // dynamically determine left and right padding around people grid
+    if (window >= 992) {
+      // lg or xl
+      padding = 2;
+    } else {
+      // xs
+      padding = 1;
+    }
+
+    let columns = this.makePeopleRow(this.props.members);
 
     return (
       <div
@@ -116,13 +123,31 @@ class ProjectCard extends React.Component {
             >
               {this.state.featureText}
             </Card.Text>
+            {this.state.featureText && (
+              <div style={{ paddingBottom: ".4rem" }}>
+                {" "}
+                <div style={{ marginBottom: ".8rem", fontSize: "1.2rem" }}>
+                  Team Members:
+                </div>
+                <Row
+                  ref={(node) => (this.peopleDisplay = node)}
+                  style={{ margin: `0 ${padding}%` }}
+                >
+                  {columns}
+                </Row>
+              </div>
+            )}
+
             <div class="team-buttons">{teamButtons}</div>
             <div
               style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
             >
               <Button
                 className="theme-button"
-                onClick={() => this.props.callback(this.props.index)}
+                onClick={() => {
+                  console.log(this.props.members);
+                  this.props.callback(this.props.index);
+                }}
               >
                 {this.props.isFeatured ? "Close" : "See more"}
               </Button>
@@ -134,4 +159,4 @@ class ProjectCard extends React.Component {
   }
 }
 
-export default ProjectCard;
+export default withWindowDimensions(ProjectCard);
