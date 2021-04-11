@@ -44,7 +44,7 @@ class ProjectCard extends React.Component {
               />
             </center>
           </div>
-          <Card.Body className="project-card">
+          <Card.Body className="tfe-project-card">
             <Card.Title style={{ padding: 0 }}>
               <h4>{this.props.title}</h4>
             </Card.Title>

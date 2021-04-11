@@ -5,13 +5,19 @@ const client = axios.create({
 });
 
 export const getProjects = async () => {
-  const {data} = await client.get("./projects");
+  const { data } = await client.get("./projects");
   console.log(data);
   return data;
 };
 
 export const getMembers = async () => {
-  const {data} = await client.get("./people");
+  const { data } = await client.get("./people");
+  console.log(data);
+  return data;
+};
+
+export const getTFEProjects = async () => {
+  const { data } = await client.get("./techforequity");
   console.log(data);
   return data;
 };
@@ -28,4 +34,4 @@ export const getNews = async () => {
   return data;
 };
 
-export default { getProjects, getPapers, getNews, getMembers };
+export default { getProjects, getPapers, getTFEProjects, getNews, getMembers };

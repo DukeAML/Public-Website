@@ -245,6 +245,13 @@ a.homepage-link {
   }
 }
 
+.card-body.tfe-project-card {
+  background-color: $lightest-grey;
+  padding: 1rem;
+  align-content: center;
+  vertical-align: center;
+}
+
 .card,
 .card-body,
 .image {
