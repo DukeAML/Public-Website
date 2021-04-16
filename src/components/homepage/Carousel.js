@@ -49,42 +49,58 @@ class CustomCarousel extends React.Component {
             <Spinner animation="grow" size="lg" style={{ margin: "2rem" }} />
           ) : (
             <Carousel>
+              
               <Carousel.Item>
-                <img
+                <Carousel.Caption>
+                  <img
+                    alt="Home"
+                    src={require("../homepage/images/phoenix.png")}
+                    width="10%"
+                  />
+                  <center style={{ color: "#617489" }}>Looking for a full-time tech internship this summer?</center>
+                  <br/>
+                  <center style={{ color: "#617489" }}>
+                    The Phoenix Project is running again summer 2021 and the applications are now
+                    <a href="https://airtable.com/shrU5TWqjCCFRlu77"> LIVE!</a>
+                    </center>
+                    
+                </Carousel.Caption>
+              </Carousel.Item>
+              
+              <Carousel.Item>
+                <Carousel.Caption>
+                <img 
+                    alt="Innovation Studio"
+                    src={require("../homepage/images/innovationstudio.png")}
+                    width="10%"
+                  />
+                  <center style={{ color: "#617489" }}>DAML's Innovation Studio is excited to introduce their
+                  <a href="https://medium.com/aml-group/introducing-the-duke-innovation-studio-spring-21-cohort-7739551c3511"> Spring 2021 Cohort!</a>
+                  </center>
+                  <br/>
+                  <center style={{ color: "#617489" }}>
+                    Also check out a progress update and learn more about their upcoming Demo Day  
+                    <a href="https://dukeinnovationstudio.medium.com/duke-innovation-studio-spring-21-cohort-progress-updates-7e4075aee0c1"> here!</a>
+                    
+                  </center>
+                </Carousel.Caption>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <Carousel.Caption>
+                <img 
                   alt="Home"
                   src={require("../homepage/images/phoenix.png")}
                   width="10%"
                 />
-                <Carousel.Caption>
-                  <p>Phoenix Project: Hundreds of Duke students have lost internships. Now they’re creating their own.</p>
-                  <a href="https://www.newsobserver.com/news/business/article242197741.html">Read more about the Phoenix Project here!</a>
+                  <center style={{ color: "#617489" }}>The Phoenix Project: Hundreds of Duke students have lost internships. Now they’re creating their own.</center>
                   <br/>
-                  <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities">and here</a>
-                </Carousel.Caption>
-                
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="holder.js/800x400?text=Second slide&bg=282c34"
-                  alt="Second slide"
-                />
-                <Carousel.Caption>
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="holder.js/800x400?text=Third slide&bg=20232a"
-                  alt="Third slide"
-                />
-                <Carousel.Caption>
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  <center style={{ color: "#617489" }}>
+                    Read more about The Phoenix Project 
+                    <a href="https://www.newsobserver.com/news/business/article242197741.html"> here </a>
+                    and 
+                    <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities"> here!</a>
+                  </center>  
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
