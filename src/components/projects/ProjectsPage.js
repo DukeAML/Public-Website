@@ -15,6 +15,7 @@ import {
 
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
+import Loading from "../tools/Loading";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
 import { getProjects } from "../../api/api.js";
@@ -28,7 +29,7 @@ class ProjectsPage extends React.Component {
   componentDidMount = async () => {
     const projects = await getProjects();
     console.log(projects);
-    this.setState({ projects: projects, loading: false });
+    //this.setState({ projects: projects, loading: false });
   };
 
   selectedCallback = (key) => {
@@ -109,7 +110,7 @@ class ProjectsPage extends React.Component {
                 <div
                   style={{ height: "10rem", padding: "10rem", margin: "auto" }}
                 >
-                  <Spinner animation="grow" size="md" />
+                  <Loading />
                 </div>
               ) : (
                 projectCards

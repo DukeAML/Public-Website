@@ -168,6 +168,15 @@ class TechForEquity extends React.Component {
           </Container>
 
           <Container>
+            <center className="title"> Team Members </center>
+            <br />
+            <div
+              class="row"
+              style={{ display: "flex", justifyContent: "center" }}
+            ></div>
+          </Container>
+
+          <Container>
             <center className="title"> Sponsors </center>
             <br />
             <center> A huge thank you to all of our sponsors! </center>

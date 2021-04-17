@@ -126,7 +126,7 @@ class ProjectCard extends React.Component {
             {this.state.featureText && (
               <div style={{ paddingBottom: ".4rem" }}>
                 {" "}
-                <div style={{ marginBottom: ".8rem", fontSize: "1.2rem" }}>
+                <div style={{ marginBottom: ".8rem", fontSize: "1rem" }}>
                   Team Members:
                 </div>
                 <Row

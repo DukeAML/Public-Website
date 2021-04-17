@@ -280,23 +280,23 @@ a.homepage-link {
   border: none;
   border-radius: 100%;
   transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
-  &:hover{
+  &:hover {
     transform: translate(0%, -25%);
   }
 }
 
 .team-button:nth-child(1) {
-  background-color: #D0F0FD;
+  background-color: #d0f0fd;
 }
 
 .team-button:nth-child(2) {
   left: 3rem;
-  background-color: #D1F7C4;
+  background-color: #d1f7c4;
 }
 
 .team-button:nth-child(3) {
   left: 6rem;
-  background-color: #CFDFFF;
+  background-color: #cfdfff;
 }
 
 .team-button:nth-child(4) {
@@ -384,6 +384,49 @@ p.nav-link-col:hover {
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loading {
+  background-image: url("./components/tools/Loading/sinusoidal.svg");
+  background-repeat: repeat-x;
+
+  transition: ease-in;
+  animation: slide 0s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+
+.bar-left {
+  background-image: url("./components/tools/Loading/bar-left.svg");
+
+  transition: ease-in;
+  animation: sinusoidal 0s infinite;
+  animation-direction: alternate;
+}
+
+.bar-right {
+  background-image: url("./components/tools/Loading/bar-right.svg");
+
+  transition: ease-in;
+  animation: sinusoidal 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sinusoidal {
+  0% {
+    transform: translateY(-5rem);
+  }
+  100% {
+    transform: translateY(5rem);
+  }
 }
 
 div.container-fluid {
