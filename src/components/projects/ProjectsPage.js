@@ -29,7 +29,7 @@ class ProjectsPage extends React.Component {
   componentDidMount = async () => {
     const projects = await getProjects();
     console.log(projects);
-    //this.setState({ projects: projects, loading: false });
+    this.setState({ projects: projects, loading: false });
   };
 
   selectedCallback = (key) => {
@@ -110,7 +110,7 @@ class ProjectsPage extends React.Component {
                 <div
                   style={{ height: "10rem", padding: "10rem", margin: "auto" }}
                 >
-                  <Loading />
+                  <Spinner animation="grow" size="md" />
                 </div>
               ) : (
                 projectCards

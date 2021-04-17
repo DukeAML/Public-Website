@@ -112,51 +112,45 @@ class PeopleRow extends React.Component {
 
     let name, team, joined, studying, interests, bio, role;
 
-    if (current != null) {
+    if (current) {
       name = current.Name;
-      team =
-        current.Role != null ? (
-          <div>
-            <b>Team</b>: {current.Role}{" "}
-          </div>
-        ) : (
-          ""
-        );
-      joined =
-        current.Joined != null ? (
-          <div>
-            <b>Joined</b>: {current.Joined}{" "}
-          </div>
-        ) : (
-          ""
-        );
-      studying =
-        current.Degree != null ? (
-          <div>
-            <b>Studying</b>: {current.Degree.join(", ")}{" "}
-          </div>
-        ) : (
-          ""
-        );
+      team = current.Role ? (
+        <div>
+          <b>Team</b>: {current.Role}{" "}
+        </div>
+      ) : (
+        ""
+      );
+      joined = current.Joined ? (
+        <div>
+          <b>Joined</b>: {current.Joined}{" "}
+        </div>
+      ) : (
+        ""
+      );
+      studying = current.Degree ? (
+        <div>
+          <b>Studying</b>: {current.Degree.join(", ")}{" "}
+        </div>
+      ) : (
+        ""
+      );
+      interests = current["Tech Interests"] ? (
+        <div>
+          <b>Interested in</b>: {current["Tech Interests"].join(", ")}{" "}
+        </div>
+      ) : (
+        ""
+      );
       // For Tech for Equity page
-      role =
-        current.Role != null ? (
-          <div>
-            <b>Studying</b>: {current.Role}{" "}
-          </div>
-        ) : (
-          ""
-        );
-      interests =
-        current["Tech Interests"] != null ? (
-          <div>
-            <b>Interested in</b>: {current["Tech Interests"].join(", ")}{" "}
-          </div>
-        ) : (
-          ""
-        );
-
-      // bio = current["Additional Information"]; // Bio Section
+      role = current.Role ? (
+        <div>
+          <b>Studying</b>: {current.Role}{" "}
+        </div>
+      ) : (
+        ""
+      );
+      bio = current.Bio ? current.Bio : ""; // Bio Section
     } else {
       name = "";
       team = "";

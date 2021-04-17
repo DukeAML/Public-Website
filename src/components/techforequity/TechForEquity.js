@@ -44,10 +44,8 @@ class TechForEquity extends React.Component {
     const members = await getTFEMembers();
     let pkey = {
       Headshot: "Photo",
-      "Degree Programs": "Degree",
     };
     members.forEach((member) => {
-      delete member.Degree;
       for (const [key, val] of Object.entries(member)) {
         member[pkey[key] || key] = val;
       }
@@ -231,16 +229,11 @@ class TechForEquity extends React.Component {
             </Row>
           </Container>
 
-          <Container>
-            <center className="title"> Team Members </center>
-            <br />
-            <div
-              class="row"
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              {grid}
-            </div>
-          </Container>
+          <center className="title"> Team Members </center>
+          <br />
+          <center style={{ width: "100vw", padding: 0, margin: 0 }}>
+            {grid}
+          </center>
 
           <Container>
             <center className="title"> Sponsors </center>
