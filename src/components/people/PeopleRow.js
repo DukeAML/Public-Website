@@ -110,7 +110,7 @@ class PeopleRow extends React.Component {
     // Generate details section
     let { current } = this.state;
 
-    let name, team, joined, studying, interests, bio;
+    let name, team, joined, studying, interests, bio, role;
 
     if (current != null) {
       name = current.Name;
@@ -138,6 +138,15 @@ class PeopleRow extends React.Component {
         ) : (
           ""
         );
+      // For Tech for Equity page
+      role =
+        current.Role != null ? (
+          <div>
+            <b>Studying</b>: {current.Role}{" "}
+          </div>
+        ) : (
+          ""
+        );
       interests =
         current["Tech Interests"] != null ? (
           <div>
@@ -154,6 +163,7 @@ class PeopleRow extends React.Component {
       joined = "";
       studying = "";
       interests = "";
+      role = "";
       bio = "";
     }
 
@@ -185,6 +195,7 @@ class PeopleRow extends React.Component {
                   {joined}
                   {studying}
                   {interests}
+                  {role}
                   <br />
                   {bio}
                 </div>

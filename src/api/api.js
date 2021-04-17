@@ -22,6 +22,12 @@ export const getTFEProjects = async () => {
   return data;
 };
 
+export const getTFEMembers = async () => {
+  const { data } = await client.get("./techforequity/people");
+  console.log(data);
+  return data;
+};
+
 export const getPapers = async () => {
   const { data } = await client.get("./papers");
   console.log(data);

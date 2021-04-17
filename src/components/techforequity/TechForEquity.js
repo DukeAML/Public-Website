@@ -18,7 +18,10 @@ import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
+import PeopleRow from "../people/PeopleRow";
+import Person from "../people/Person";
 import { getTFEProjects } from "../../api/api.js";
+import { getTFEMembers } from "../../api/api.js";
 import { faTruckMonster } from "@fortawesome/free-solid-svg-icons";
 
 const Logo = require("../homepage/images/techforequity.png");
@@ -28,13 +31,69 @@ class TechForEquity extends React.Component {
   state = {
     projects: [],
     loading: true,
+    members: [],
   };
 
   componentDidMount = async () => {
+    // Load and update projects
     const projects = await getTFEProjects();
     console.log(projects);
     this.setState({ projects: projects, loading: false });
+
+    // Load, clean, and update members
+    const members = await getTFEMembers();
+    let pkey = {
+      Headshot: "Photo",
+      "Degree Programs": "Degree",
+    };
+    members.forEach((member) => {
+      delete member.Degree;
+      for (const [key, val] of Object.entries(member)) {
+        member[pkey[key] || key] = val;
+      }
+      console.log(member.Degree);
+    });
+    this.setState({ members: members });
   };
+
+  // From ../people/PeoplePage.js
+  makePeopleGrid(people, window) {
+    // determine number of people per row based on bootstrap screen breakpoints
+    let cols;
+    if (window >= 992) {
+      // lg or xl; 4 people per row
+      cols = 4;
+    } else if (window >= 768) {
+      // m; 4 people per row
+      cols = 3;
+    } else if (window >= 576) {
+      // xs; 2 people per row
+      cols = 2;
+    } else {
+      //xs; 1 person per row
+      cols = 1;
+    }
+
+    const numRows = Math.ceil(people.length / cols);
+    let rowArrays = [];
+
+    // make each row, add details section below
+    for (let i = 0; i < numRows * cols; i += cols) {
+      rowArrays[i] = people.slice(i, i + cols);
+    }
+
+    let result = rowArrays.map((row, index) => (
+      <PeopleRow people={row} key={index} />
+    ));
+
+    return this.state.loading ? (
+      <div style={{ height: "10rem", padding: "3rem" }}>
+        <Spinner animation="grow" size="md" />
+      </div>
+    ) : (
+      result
+    );
+  }
 
   render() {
     let window = this.props.windowWidth;
@@ -54,6 +113,11 @@ class TechForEquity extends React.Component {
       // xs
       padding = 10;
     }
+
+    const grid = this.makePeopleGrid(
+      this.state.members,
+      this.props.windowWidth
+    );
 
     const projectCards = this.state.projects.map((project, key) => (
       <Col lg={4} md={6} style={{ padding: "1rem" }}>
@@ -173,7 +237,9 @@ class TechForEquity extends React.Component {
             <div
               class="row"
               style={{ display: "flex", justifyContent: "center" }}
-            ></div>
+            >
+              {grid}
+            </div>
           </Container>
 
           <Container>
