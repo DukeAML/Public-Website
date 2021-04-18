@@ -83,17 +83,14 @@ class TechForEquity extends React.Component {
                   <div className="title"> Tech For Equity </div>
                   <p>
 
-                    The Technology for Equity Fellowship, an initiative by Duke Applied Machine Learning, is a summer internship program that seeks to bridge the gap between enthusiastic student technologists and equitable organizations. The program will provide students a remote tech summer internship with competitive stipend at established community organizations/research centers and summer programming with speaker series and chances to connect with tech and policy leaders at ACLU, Vera Institute of Justice, and more.
+                    The Tech for Equity Fellowship, an initiative by Duke Applied Machine Learning, is a student-run summer internship program that aims to bridge the gap between student technologists and non-profit organizations. The program provides Duke students with the opportunity to engage with community-based organizations, develop tech-driven solutions to pressing social issues, and connect with tech-for-social-change leaders at the ACLU, Vera Institute of Justice, and more.                    
                     <br />
                     <br />
-                    So far, we’ve secured 15+ fellowship positions with $75,000+ of funding for our inaugural year of 2021.
- 
+                    2021 Fellowship Dates: May 24 - July 30, 2021
                     <br />
-    
-                    <Button className="theme-button" style={{ marginTop: "1rem", marginBottom: "1rem", backgroundColor: "#2e755d" }}> 
-                    <a href="https://forms.gle/q3ZMAhVQg2VUe6GV6" target="_blank" style={{ color: "white" }}> Apply Here!</a> 
-                    </Button>
-      
+                    <br />
+                    The Application for the 2021 Fellowship is now closed. Be sure to out for new opportunities during the school year and future summers!
+                    <br />
                     <br />
 
                     <Button className="theme-button" style={{ marginBottom: "1rem", backgroundColor: "#2e755d" }}> 

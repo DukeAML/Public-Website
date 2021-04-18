@@ -43,6 +43,7 @@ class Initiatives extends React.Component {
                   padding: "5%",
                 }}
               >
+                <p class="font-weight-normal">
                 The Phoenix Project was launched in the Summer of 2020 to meet
                 the growing facet of students who lost opportunities due to
                 COVID-19 as the US Economy lost 22.4 Million and hundreds of
@@ -50,6 +51,8 @@ class Initiatives extends React.Component {
                 brought together 200 Duke students and 73 paying companies,
                 organizations, and sponsors to deliver an opportunity for both
                 businesses and students to progress in a world that felt stuck.
+                <br />
+                <b>The Phoenix Project will be running again in Summer 2021!</b></p>
               </Col>
               <Col
                 md={6}
