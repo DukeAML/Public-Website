@@ -55,7 +55,7 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        {this.state.showWIP && (
+        {/*{this.state.showWIP && (
           <Alert
             variant="warning"
             onClose={() => this.handleWIPAlertClose(false)}
@@ -74,6 +74,7 @@ class HomePage extends React.Component {
             </p>
           </Alert>
         )}
+          */}
         {/**INTRODUCTION SECTION */}
         <Container fluid style={{ padding: 0 }}>
           <center>

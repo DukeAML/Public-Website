@@ -94,11 +94,11 @@ class Initiatives extends React.Component {
               >
                 <Link to="/innovationstudio" style={{ textAlign: "center" }}>
                   <img style={{ paddingLeft: "10%"}}
-                    alt="Innovation Studio"
+                    alt="Innovation Studio" 
                     src={require("../homepage/images/innovationstudio.png")}
                     width="70%"
                   />
-                  <h3 style={{ paddingTop: "19%", paddingLeft: "5%" }}>
+                  <h3 style={{ paddingTop: "15%", paddingLeft: "5%" }}>
                     Read More About Innovation Studio
                   </h3>
                 </Link>
