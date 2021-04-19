@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { Row, Col, Image } from "react-bootstrap";
 import placeholder from "./headshots/profile-placeholder.svg";
 import Icon from "../tools/Icon";
+import { OmitProps } from "antd/lib/transfer/ListBody";
 
 function Person(props) {
   const github =
@@ -43,6 +44,7 @@ function Person(props) {
       <Row>
         <div style={{ margin: "auto" }}>
           <div className="person-image" style={{ display: "grid" }}>
+          
             <img
               src={thumbnail}
               style={{
@@ -53,7 +55,7 @@ function Person(props) {
                 WebkitFilter: "blur(2px)",
               }}
               onClick={props.onClick}
-            />
+            />{" "}
             <img
               src={fullImage}
               style={{ ...imageStyle }}

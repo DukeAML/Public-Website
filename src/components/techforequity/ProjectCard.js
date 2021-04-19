@@ -14,21 +14,16 @@ import {
 } from "react-bootstrap";
 
 import Navigation from "../tools/Navigation";
+import withWindowDimensions from "../people/withWindowDimensions";
 
 import { Link } from "react-router-dom";
 
 const projects = [];
 
 class ProjectCard extends React.Component {
-  state = {};
+  state = { expanded: false };
 
   render() {
-    /* To use hard coded images stored locally
-    const imageSrc = this.props.img
-      ? require(`./images/${this.props.img}.png`)
-      : "";
-    */
-
     const imageSrc = this.props.img;
 
     return (
@@ -44,23 +39,29 @@ class ProjectCard extends React.Component {
               />
             </center>
           </div>
-          <Card.Body className="project-card">
+          <Card.Body className="tfe-project-card">
             <Card.Title style={{ padding: 0 }}>
               <h4>{this.props.title}</h4>
             </Card.Title>
-            <Card.Text style={{ paddingBottom: "2rem" }}>
+            <Card.Text
+              style={{
+                padding: "1rem 0",
+                overflow: "auto",
+                height: "14rem",
+              }}
+            >
               {this.props.description}
             </Card.Text>
             <div
               style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
             ></div>
-            <Card.Text style={{ paddingBottom: "2rem" }}>
+            <Card.Text style={{ padding: "1rem 0" }}>
               <b>Fellows: </b>
               {this.props.fellows}
             </Card.Text>
-            <Card.Text style={{ paddingBottom: "2rem" }}>
+            <Card.Text style={{ paddingBottom: "1rem" }}>
               <b>Positions Available: </b>
-              {this.props.position}
+              {this.props.position.join(", ")}
             </Card.Text>
           </Card.Body>
         </Card>

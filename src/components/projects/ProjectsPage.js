@@ -15,6 +15,7 @@ import {
 
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
+import Loading from "../tools/Loading";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
 import { getProjects } from "../../api/api.js";
@@ -37,7 +38,8 @@ class ProjectsPage extends React.Component {
 
   render() {
     let window = this.props.windowWidth;
-    let padding;
+    let padding,
+      renderPeople = true;
 
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
@@ -49,9 +51,11 @@ class ProjectsPage extends React.Component {
     } else if (window >= 576) {
       // s
       padding = 10;
+      renderPeople = false;
     } else {
       // xs
       padding = 10;
+      renderPeople = false;
     }
 
     const projectCards = this.state.projects
@@ -80,6 +84,7 @@ class ProjectsPage extends React.Component {
               description={project["Project Description"]}
               shortDescription={project["Short Description"]}
               teams={project.Division}
+              members={renderPeople ? project.members : []}
               img={project.logo ? project.logo[0].url : ""}
               isFeatured={key === this.state.selectedKey}
               callback={this.selectedCallback}
