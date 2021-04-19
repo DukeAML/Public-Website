@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import placeholder from "./headshots/profile-placeholder.svg";
 import Icon from "../tools/Icon";
+import { Link } from "react-router-dom";
 
 function Person(props) {
   const github =
@@ -41,22 +42,24 @@ function Person(props) {
       <Row>
         <div style={{ margin: "auto" }}>
           <div style={{ display: "grid" }}>
-            <img
-              src={thumbnail}
-              style={{
-                ...imageStyle,
-                position: "absolute",
-                zIndex: -1,
-                filter: "blur(2px)",
-                WebkitFilter: "blur(2px)",
-              }}
-              onClick={props.onClick}
-            />
-            <img
-              src={fullImage}
-              style={{ ...imageStyle }}
-              onClick={props.onClick}
-            />
+            <Link to={"/people"}>
+              <img
+                src={thumbnail}
+                style={{
+                  ...imageStyle,
+                  position: "absolute",
+                  zIndex: -1,
+                  filter: "blur(2px)",
+                  WebkitFilter: "blur(2px)",
+                }}
+                onClick={props.onClick}
+              />
+              <img
+                src={fullImage}
+                style={{ ...imageStyle }}
+                onClick={props.onClick}
+              />
+            </Link>
           </div>
         </div>
       </Row>

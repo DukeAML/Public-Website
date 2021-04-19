@@ -49,7 +49,6 @@ class TechForEquity extends React.Component {
       for (const [key, val] of Object.entries(member)) {
         member[pkey[key] || key] = val;
       }
-      console.log(member.Degree);
     });
     this.setState({ members: members });
   };

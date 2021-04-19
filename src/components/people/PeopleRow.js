@@ -145,7 +145,7 @@ class PeopleRow extends React.Component {
       // For Tech for Equity page
       role = current.Role ? (
         <div>
-          <b>Studying</b>: {current.Role}{" "}
+          <b>Role</b>: {current.Role}{" "}
         </div>
       ) : (
         ""

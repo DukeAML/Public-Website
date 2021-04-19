@@ -12,6 +12,9 @@ class ProjectCard extends React.Component {
   state = { featureText: "" };
 
   makePeopleRow(people) {
+    if (!people) {
+      return;
+    }
     return people.map((person, key, index) => (
       <Person key={key} name={person.name} img={person.img} />
     ));
@@ -126,9 +129,11 @@ class ProjectCard extends React.Component {
             {this.state.featureText && (
               <div style={{ paddingBottom: ".4rem" }}>
                 {" "}
-                <div style={{ marginBottom: ".8rem", fontSize: "1rem" }}>
-                  Team Members:
-                </div>
+                {this.props.members && (
+                  <div style={{ marginBottom: ".8rem", fontSize: "1rem" }}>
+                    Team Members:
+                  </div>
+                )}
                 <Row
                   ref={(node) => (this.peopleDisplay = node)}
                   style={{ margin: `0 ${padding}%` }}
