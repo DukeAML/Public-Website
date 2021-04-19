@@ -38,7 +38,8 @@ class ProjectsPage extends React.Component {
 
   render() {
     let window = this.props.windowWidth;
-    let padding, renderPeople = true;
+    let padding,
+      renderPeople = true;
 
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
@@ -83,7 +84,7 @@ class ProjectsPage extends React.Component {
               description={project["Project Description"]}
               shortDescription={project["Short Description"]}
               teams={project.Division}
-              members={renderPeople && project.members}
+              members={renderPeople ? project.members : []}
               img={project.logo ? project.logo[0].url : ""}
               isFeatured={key === this.state.selectedKey}
               callback={this.selectedCallback}

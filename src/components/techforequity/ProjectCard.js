@@ -47,7 +47,7 @@ class ProjectCard extends React.Component {
               style={{
                 padding: "1rem 0",
                 overflow: "auto",
-                height: "12rem",
+                height: "14rem",
               }}
             >
               {this.props.description}
