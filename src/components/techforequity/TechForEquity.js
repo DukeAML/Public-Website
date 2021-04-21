@@ -122,6 +122,7 @@ class TechForEquity extends React.Component {
           key={key}
           title={project.Organization}
           description={project.Project_Details}
+          proj_title={project.Project_Title}
           fellows={project["Team Size"]}
           position={project.Position}
           img={project.Picture}

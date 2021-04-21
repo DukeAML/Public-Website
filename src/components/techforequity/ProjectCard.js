@@ -43,6 +43,17 @@ class ProjectCard extends React.Component {
             <Card.Title style={{ padding: 0 }}>
               <h4>{this.props.title}</h4>
             </Card.Title>
+
+            <Card.Text
+              style={{
+                padding: "1rem 0 0 0",
+                overflow: "auto",
+              }}
+            >
+              <a style={{ fontWeight: "bold" }}>Project Title: </a>
+              {this.props.proj_title}
+            </Card.Text>
+
             <Card.Text
               style={{
                 padding: "1rem 0",

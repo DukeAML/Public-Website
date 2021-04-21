@@ -26,10 +26,20 @@ class ProjectCard extends React.Component {
       : require("./images/DAML_Full_Grey_Transparent.svg");
 
     let teamButtons = [];
+    let teamColors = {
+      SWE: "#d0f0fd",
+      DS: "#d1f7c4",
+      PM: "#cfdfff",
+      Hardware: "#e8e8e8",
+    };
     if (this.props.teams) {
       teamButtons = this.props.teams.map((team, index) => {
         return (
-          <div class={"team-button"} key={index}>
+          <div
+            class={"team-button"}
+            key={index}
+            style={{ backgroundColor: teamColors[team] }}
+          >
             {team === "Hardware" ? "HRD" : team}
           </div>
         );
