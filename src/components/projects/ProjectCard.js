@@ -57,7 +57,7 @@ class ProjectCard extends React.Component {
 
     let cardStyle = {
       width: "100%",
-      //maxHeight: "480px", // Implemented for slide modality, fucks up with person icons
+      //maxHeight: "480px", // Implemented for slide modality, messes up with person icons
     };
 
     let window = this.props.windowWidth;

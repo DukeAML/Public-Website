@@ -8,8 +8,8 @@ import {
   Table,
   td,
   thead,
-  tr,
-  Button,
+  OverlayTrigger,
+  Tooltip,
   Card,
 } from "react-bootstrap";
 
@@ -18,13 +18,77 @@ import withWindowDimensions from "../people/withWindowDimensions";
 
 import { Link } from "react-router-dom";
 
-const projects = [];
-
 class ProjectCard extends React.Component {
   state = { expanded: false };
 
   render() {
     const imageSrc = this.props.img;
+
+    let fellows = [];
+    let pWidth = 12 / this.props.maxFellows;
+    for (let i = 0; i < this.props.maxFellows; i++) {
+      fellows.push(
+        <Col
+          xl={pWidth}
+          sm={pWidth}
+          xs={pWidth}
+          md={pWidth}
+          style={{
+            backgroundColor: i < this.props.fellows ? "#d0f0fd" : "#d1d1d1",
+            width: "100%",
+            borderRight:
+              i < this.props.maxFellows - 1 ? "1px dashed black" : "",
+          }}
+        >
+          <center>{i + 1}</center>
+        </Col>
+      );
+    }
+
+    let teamButtons = [];
+    let teamAbrv = {
+      "Data Analytics/Science": "DS",
+      "Software Engineering/Technology": "SWE",
+      Design: "De",
+      "Project Management": "PM",
+      Research: "Re",
+    };
+    let teamColors = {
+      SWE: "#d0f0fd",
+      DS: "#d1f7c4",
+      PM: "#cfdfff",
+      Re: "#f7dfd3",
+      De: "#FFF",
+    };
+    if (this.props.position) {
+      teamButtons = this.props.position.map((team, index) => {
+        return (
+          <OverlayTrigger
+            key={team}
+            placement={"top"}
+            overlay={<Tooltip id={`tooltip-top`}>{team}</Tooltip>}
+          >
+            <div
+              key={index}
+              style={{
+                backgroundColor: teamColors[teamAbrv[team]],
+                borderRadius: "100%",
+                color: "#050404",
+                display: "grid",
+                placeItems: "center",
+                width: "2.5rem",
+                height: "2.5rem",
+                border: "none",
+                marginRight: ".5rem",
+              }}
+              overlay={<Tooltip id="tooltip-disabled">Tooltip!</Tooltip>}
+            >
+              {teamAbrv[team]}
+            </div>
+          </OverlayTrigger>
+        );
+      });
+    }
 
     return (
       <div
@@ -58,7 +122,7 @@ class ProjectCard extends React.Component {
               style={{
                 padding: "1rem 0",
                 overflow: "auto",
-                height: "14rem",
+                maxHeight: "14rem",
               }}
             >
               {this.props.description}
@@ -70,9 +134,17 @@ class ProjectCard extends React.Component {
               <b>Fellows: </b>
               {this.props.fellows}
             </Card.Text>
-            <Card.Text style={{ paddingBottom: "1rem" }}>
-              <b>Positions Available: </b>
-              {this.props.position.join(", ")}
+            <Card.Text style={{ padding: ".5rem 0" }}>
+              <b>Positions: </b>
+              <div
+                style={{
+                  marginTop: ".5rem",
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                {teamButtons}
+              </div>
             </Card.Text>
           </Card.Body>
         </Card>

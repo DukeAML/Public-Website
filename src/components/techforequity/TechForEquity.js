@@ -127,6 +127,7 @@ class TechForEquity extends React.Component {
           position={project.Position}
           img={project.Picture}
           link={project.link}
+          maxFellows={3} // Maximum number of fellows per project in this class
         />
         {/* <ProjectCard
           key={key}
@@ -195,7 +196,8 @@ class TechForEquity extends React.Component {
                   <br />
                 </Col>
               </Row>
-              <div className="title"> Projects </div>
+              <div className="title"> 2021 Projects </div>
+              <br />
             </center>
 
             <Row
@@ -216,12 +218,14 @@ class TechForEquity extends React.Component {
             </Row>
           </Container>
 
+          <br />
           <center className="title"> Team Members </center>
           <br />
           <center style={{ width: "100vw", padding: 0, margin: 0 }}>
             {grid}
           </center>
 
+          <br />
           <Container>
             <center className="title"> Sponsors </center>
             <br />
