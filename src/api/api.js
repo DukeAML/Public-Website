@@ -28,6 +28,12 @@ export const getTFEMembers = async () => {
   return data;
 };
 
+export const getTFEFellows = async () => {
+  const { data } = await client.get("./techforequity/fellows");
+  console.log(data);
+  return data;
+};
+
 export const getPapers = async () => {
   const { data } = await client.get("./papers");
   console.log(data);
@@ -40,4 +46,12 @@ export const getNews = async () => {
   return data;
 };
 
-export default { getProjects, getPapers, getTFEProjects, getNews, getMembers };
+export default {
+  getProjects,
+  getPapers,
+  getTFEProjects,
+  getTFEMembers,
+  getTFEFellows,
+  getNews,
+  getMembers,
+};

@@ -1,37 +1,22 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Accordion,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Button,
-  Card,
-} from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
+import { Container, Row, Col, Spinner, Button } from "react-bootstrap";
+
 import Navigation from "../tools/Navigation";
 import Footer from "../tools/Footer";
+
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
 import PeopleRow from "../people/PeopleRow";
-import Person from "../people/Person";
-import { getTFEProjects } from "../../api/api.js";
-import { getTFEMembers } from "../../api/api.js";
-import { faTruckMonster } from "@fortawesome/free-solid-svg-icons";
 
+import { getTFEProjects, getTFEMembers, getTFEFellows } from "../../api/api.js";
 const Logo = require("../homepage/images/techforequity.png");
-//const projects = require("./t4eProjects.js");
 
 class TechForEquity extends React.Component {
   state = {
     projects: [],
     loading: true,
     members: [],
+    fellows: [],
   };
 
   componentDidMount = async () => {
@@ -40,17 +25,18 @@ class TechForEquity extends React.Component {
     console.log(projects);
     this.setState({ projects: projects, loading: false });
 
-    // Load, clean, and update members
+    // Load, clean, and update members and fellows
     const members = await getTFEMembers();
+    const fellows = await getTFEFellows();
     let pkey = {
       Headshot: "Photo",
     };
-    members.forEach((member) => {
+    members.concat(fellows).forEach((member) => {
       for (const [key, val] of Object.entries(member)) {
         member[pkey[key] || key] = val;
       }
     });
-    this.setState({ members: members });
+    this.setState({ members: members, fellows: fellows });
   };
 
   // From ../people/PeoplePage.js
@@ -111,8 +97,13 @@ class TechForEquity extends React.Component {
       padding = 10;
     }
 
-    const grid = this.makePeopleGrid(
+    const memberGrid = this.makePeopleGrid(
       this.state.members,
+      this.props.windowWidth
+    );
+
+    const fellowGrid = this.makePeopleGrid(
+      this.state.fellows,
       this.props.windowWidth
     );
 
@@ -219,10 +210,25 @@ class TechForEquity extends React.Component {
           </Container>
 
           <br />
-          <center className="title"> Team Members </center>
+          <Container>
+            <center className="title"> Team Members </center>
+            <hr />
+          </Container>
+
           <br />
           <center style={{ width: "100vw", padding: 0, margin: 0 }}>
-            {grid}
+            {memberGrid}
+          </center>
+
+          <br />
+          <br />
+          <Container>
+            <center className="title"> Fellows </center>
+            <hr />
+          </Container>
+          <br />
+          <center style={{ width: "100vw", padding: 0, margin: 0 }}>
+            {fellowGrid}
           </center>
 
           <br />
