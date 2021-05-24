@@ -125,31 +125,33 @@ class ProjectCard extends React.Component {
                 : "Check out 'See More' for more information."}
             </Card.Text>
 
-            <Card.Text
-              style={{
-                padding: "1rem 0 1rem 0",
-                overflow: "hidden",
-                whiteSpace: "pre-wrap",
-                maxHeight: "280px",
-                overflowY: "auto",
-              }}
-            >
-              {this.state.featureText}
-            </Card.Text>
             {this.state.featureText && (
               <div style={{ paddingBottom: ".4rem" }}>
-                {" "}
-                {this.props.members && (
-                  <div style={{ marginBottom: ".8rem", fontSize: "1rem" }}>
-                    Team Members:
+                <Card.Text
+                  style={{
+                    padding: "1rem 0 1rem 0",
+                    overflow: "hidden",
+                    whiteSpace: "pre-wrap",
+                    maxHeight: "280px",
+                    overflowY: "auto",
+                  }}
+                >
+                  {this.state.featureText}
+                </Card.Text>{" "}
+                {this.props.members && window >= 992 && (
+                  <div>
+                    <div style={{ marginBottom: ".8rem", fontSize: "1rem" }}>
+                      Team Members:
+                    </div>
+
+                    <Row
+                      ref={(node) => (this.peopleDisplay = node)}
+                      style={{ margin: `0 ${padding}%` }}
+                    >
+                      {columns}
+                    </Row>
                   </div>
                 )}
-                <Row
-                  ref={(node) => (this.peopleDisplay = node)}
-                  style={{ margin: `0 ${padding}%` }}
-                >
-                  {columns}
-                </Row>
               </div>
             )}
 
