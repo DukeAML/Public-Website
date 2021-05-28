@@ -19,6 +19,7 @@ import Loading from "../tools/Loading";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
 import { getProjects } from "../../api/api.js";
+import ProjectRow from "./ProjectRow";
 
 class ProjectsPage extends React.Component {
   constructor() {
@@ -36,10 +37,56 @@ class ProjectsPage extends React.Component {
     this.setState({ selectedKey: key === this.state.selectedKey ? -1 : key });
   };
 
+  // Adapted from ../peoplepage/PeoplePage
+  makeProjectGrid(projects, window) {
+    // determine number of projects per row based on bootstrap screen breakpoints
+    let cols,
+      renderPeople = true;
+    if (window >= 992) {
+      // lg or xl; 4 projects per row
+      cols = 3;
+    } else if (window >= 768) {
+      // m; 4 projects per row
+      cols = 2;
+    } else if (window >= 576) {
+      // xs; 2 projects per row
+      cols = 2;
+      renderPeople = false;
+    } else {
+      //xs; 1 projects per row
+      cols = 1;
+      renderPeople = false;
+    }
+
+    console.log("Cols: ", cols);
+    console.log(projects.length);
+
+    const numRows = Math.ceil(projects.length / cols);
+    console.log("rows: ", numRows);
+
+    let rowArrays = [];
+    // make each row, add details section below
+
+    for (let i = 0; i < numRows * cols; i += cols) {
+      rowArrays[i] = projects.slice(i, i + cols);
+    }
+
+    let result = rowArrays.map((row, index) => (
+      <ProjectRow projects={row} key={index} renderPeople={renderPeople} />
+    ));
+
+    return this.state.loading ? (
+      <div style={{ height: "10rem", padding: "3rem" }}>
+        <Spinner animation="grow" size="md" />
+      </div>
+    ) : (
+      result
+    );
+  }
+
   render() {
     let window = this.props.windowWidth;
-    let padding,
-      renderPeople = true;
+    let padding;
 
     // dynamically determine left and right padding around projects grid
     if (window >= 992) {
@@ -51,47 +98,12 @@ class ProjectsPage extends React.Component {
     } else if (window >= 576) {
       // s
       padding = 10;
-      renderPeople = false;
     } else {
       // xs
       padding = 10;
-      renderPeople = false;
     }
 
-    const projectCards = this.state.projects
-      ? this.state.projects.map((project, key) => (
-          <Col
-            lg={
-              4 +
-              (key === this.state.selectedKey ||
-              (key + 1 === this.state.selectedKey && key + (1 % 3)) === 2
-                ? 4
-                : 0)
-              // This logic sucks but basically it handles overflow cases
-            }
-            md={6 + (key === this.state.selectedKey ? 6 : 0)}
-            style={{
-              padding: "1rem",
-              transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
-            }}
-          >
-            <ProjectCard
-              key={key}
-              index={key}
-              uid={project.uid}
-              link={project.uid}
-              title={project["Project Name"]}
-              description={project["Project Description"]}
-              shortDescription={project["Short Description"]}
-              teams={project.Division}
-              members={renderPeople ? project.members : []}
-              img={project.logo ? project.logo[0].url : ""}
-              isFeatured={key === this.state.selectedKey}
-              callback={this.selectedCallback}
-            />
-          </Col>
-        ))
-      : "";
+    const projectGrid = this.makeProjectGrid(this.state.projects, window);
 
     return (
       <div>
@@ -103,22 +115,21 @@ class ProjectsPage extends React.Component {
               <br />
               <hr />
             </center>
-            <Row
-              style={{
-                display: "flex",
-                justifyContent: "start",
-              }}
-            >
-              {this.state.loading ? (
-                <div
-                  style={{ height: "10rem", padding: "10rem", margin: "auto" }}
-                >
-                  <Spinner animation="grow" size="md" />
-                </div>
-              ) : (
-                projectCards
-              )}
-            </Row>
+            {this.state.loading ? (
+              <center
+                style={{ height: "40rem", padding: "10rem", margin: "auto" }}
+              >
+                <Spinner animation="grow" size="md" />
+                <Spinner
+                  animation="grow"
+                  size="md"
+                  style={{ margin: "0 2rem" }}
+                />
+                <Spinner animation="grow" size="md" />
+              </center>
+            ) : (
+              projectGrid
+            )}
           </Container>
           <Footer style={{ margin: "2rem 0 0 0" }} />
         </Container>

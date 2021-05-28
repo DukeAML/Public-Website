@@ -163,7 +163,7 @@ class ProjectCard extends React.Component {
                 className="theme-button"
                 onClick={() => {
                   console.log(this.props.members);
-                  this.props.callback(this.props.index);
+                  this.props.callback();
                 }}
               >
                 {this.props.isFeatured ? "Close" : "See more"}

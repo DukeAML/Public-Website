@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Row, Col, Container, Grid } from "react-bootstrap";
-import AnimateHeight from "react-animate-height";
 import withWindowDimensions from "../people/withWindowDimensions";
 
 import ProjectCard from "./ProjectCard";
@@ -37,6 +36,7 @@ class ProjectRow extends React.Component {
   };
 
   handleSeeMore(project, key) {
+    console.log(key);
     if (key == this.state.currIndex) {
       // close the see more panel
       this.setState({
@@ -52,65 +52,134 @@ class ProjectRow extends React.Component {
   }
 
   makeProjectRow(projects) {
-    // Set state.selected card to ref to selected card
-    return projects.map((project, key) => (
-      <Col
-        lg={
-          4 +
-          (key === this.state.selectedKey ||
-          (key + 1 === this.state.selectedKey && key + (1 % 3)) === 2
-            ? 4
-            : 0)
-          // This logic sucks but basically it handles overflow cases
-        }
-        md={6 + (key === this.state.selectedKey ? 6 : 0)}
-        style={{
-          padding: "1rem",
-          transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
-        }}
-      >
-        <ProjectCard
-          key={key}
-          index={key}
-          uid={project.uid}
-          link={project.uid}
-          title={project["Project Name"]}
-          description={project["Project Description"]}
-          shortDescription={project["Short Description"]}
-          teams={project.Division}
-          members={renderPeople ? project.members : []}
-          img={project.logo ? project.logo[0].url : ""}
-          isFeatured={key === this.state.selectedKey}
-          callback={this.selectedCallback}
-        />
-      </Col>
-    ));
+    if (this.state.open) {
+      let ind = this.state.currIndex % 3;
+      let others = [0, 1];
+      if (ind === 1) {
+        others[1]++;
+      } else {
+        others[0]++;
+        others[1]++;
+      }
+      return (
+        <Row>
+          <Col
+            lg={8}
+            md={12}
+            style={{
+              padding: "1rem",
+              transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
+            }}
+            ref={(node) => (this.selectedCard = node)}
+          >
+            <ProjectCard
+              key={ind}
+              index={ind}
+              uid={projects[ind].uid}
+              link={projects[ind].uid}
+              title={projects[ind]["Project Name"]}
+              description={projects[ind]["Project Description"]}
+              shortDescription={projects[ind]["Short Description"]}
+              teams={projects[ind].Division}
+              members={this.props.renderPeople ? projects[ind].members : []}
+              img={projects[ind].logo ? projects[ind].logo[0].url : ""}
+              isFeatured={1}
+              callback={() => this.handleSeeMore(projects[ind], ind)}
+            />
+          </Col>
+          <Col
+            lg={4}
+            md={12}
+            style={{
+              padding: "1rem",
+              transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
+            }}
+          >
+            <Row>
+              <ProjectCard
+                key={others[0]}
+                index={others[0]}
+                uid={projects[others[0]].uid}
+                link={projects[others[0]].uid}
+                title={projects[others[0]]["Project Name"]}
+                description={projects[others[0]]["Project Description"]}
+                shortDescription={projects[others[0]]["Short Description"]}
+                teams={projects[others[0]].Division}
+                members={
+                  this.props.renderPeople ? projects[others[0]].members : []
+                }
+                img={
+                  projects[others[0]].logo
+                    ? projects[others[0]].logo[0].url
+                    : ""
+                }
+                callback={() =>
+                  this.handleSeeMore(projects[others[0]], others[0])
+                }
+              />
+            </Row>
+            <Row>
+              <ProjectCard
+                key={others[1]}
+                index={others[1]}
+                uid={projects[others[1]].uid}
+                link={projects[others[1]].uid}
+                title={projects[others[1]]["Project Name"]}
+                description={projects[others[1]]["Project Description"]}
+                shortDescription={projects[others[1]]["Short Description"]}
+                teams={projects[others[1]].Division}
+                members={
+                  this.props.renderPeople ? projects[others[1]].members : []
+                }
+                img={
+                  projects[others[1]].logo
+                    ? projects[others[1]].logo[0].url
+                    : ""
+                }
+                callback={() =>
+                  this.handleSeeMore(projects[others[1]], others[1])
+                }
+              />
+            </Row>
+          </Col>
+        </Row>
+      );
+    } else {
+      return projects.map((project, key) => (
+        <Col
+          lg={4}
+          md={6}
+          style={{
+            padding: "1rem",
+            transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
+          }}
+          ref={(node) => (this.selectedCard = node)}
+        >
+          <ProjectCard
+            key={key}
+            index={key}
+            uid={project.uid}
+            link={project.uid}
+            title={project["Project Name"]}
+            description={project["Project Description"]}
+            shortDescription={project["Short Description"]}
+            teams={project.Division}
+            members={this.props.renderPeople ? project.members : []}
+            img={project.logo ? project.logo[0].url : ""}
+            isFeatured={key === this.state.selectedKey}
+            callback={() => this.handleSeeMore(project, key)}
+          />
+        </Col>
+      ));
+    }
   }
 
   render() {
     let columns = this.makeProjectRow(this.props.projects);
 
-    let window = this.props.windowWidth;
-    let padding;
-
-    // dynamically determine left and right padding around grid
-    if (window >= 992) {
-      // lg or xl
-      padding = 20;
-    } else if (window >= 768) {
-      // m
-      padding = 5;
-    } else if (window >= 576) {
-      // s
-      padding = 10;
-    } else {
-      // xs
-      padding = 5;
-    }
-
     return (
       <div>
-        <Row style={{ margin: `0 ${padding}%` }}>{columns}</Row>
+        <Row style={{ margin: 0, width: "100%" }}>{columns}</Row>
       </div>
     );
   }
