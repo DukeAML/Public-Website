@@ -45,21 +45,6 @@ class ProjectCard extends React.Component {
         );
       });
     }
-
-    if (this.props.isFeatured) {
-      setTimeout(
-        () => this.setState({ featureText: this.props.description }),
-        500
-      );
-    } else if (this.state.featureText) {
-      setTimeout(() => this.setState({ featureText: "" }), 400);
-    }
-
-    let cardStyle = {
-      width: "100%",
-      //maxHeight: "480px", // Implemented for slide modality, messes up with person icons
-    };
-
     let window = this.props.windowWidth;
     let padding;
 
@@ -76,9 +61,14 @@ class ProjectCard extends React.Component {
 
     return (
       <div
-        style={{ display: "flex", justifyContent: "center", height: "100%" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100%",
+          width: "100%",
+        }}
       >
-        <Card style={cardStyle}>
+        <Card style={{ width: "100%" }}>
           <Card.Body className="project-card">
             <div
               style={{
@@ -125,7 +115,7 @@ class ProjectCard extends React.Component {
                 : "Check out 'See More' for more information."}
             </Card.Text>
 
-            {this.state.featureText && (
+            {this.props.isFeatured && (
               <div style={{ paddingBottom: ".4rem" }}>
                 <Card.Text
                   style={{
@@ -136,7 +126,7 @@ class ProjectCard extends React.Component {
                     overflowY: "auto",
                   }}
                 >
-                  {this.state.featureText}
+                  {this.props.description}
                 </Card.Text>{" "}
                 {this.props.members && window >= 992 && (
                   <div>
@@ -159,13 +149,7 @@ class ProjectCard extends React.Component {
             <div
               style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
             >
-              <Button
-                className="theme-button"
-                onClick={() => {
-                  console.log(this.props.members);
-                  this.props.callback();
-                }}
-              >
+              <Button className="theme-button" onClick={this.props.callback}>
                 {this.props.isFeatured ? "Close" : "See more"}
               </Button>
             </div>

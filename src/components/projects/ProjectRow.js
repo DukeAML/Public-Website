@@ -9,6 +9,7 @@ class ProjectRow extends React.Component {
   constructor() {
     super();
     this.selectedCard = React.createRef();
+    this.selectedRow = React.createRef();
     this.state = {
       open: false,
       currIndex: null,
@@ -24,10 +25,14 @@ class ProjectRow extends React.Component {
   }
 
   handleClickAway = (e) => {
-    if (this.selectedCard.contains(e.target)) {
+    if (
+      this.selectedCard.contains(e.target) ||
+      this.selectedRow.contains(e.target)
+    ) {
       // click is inside this component or within a row; do not close it
       return;
     }
+
     // close the component if user clicks away
     this.setState({
       open: false,
@@ -36,7 +41,8 @@ class ProjectRow extends React.Component {
   };
 
   handleSeeMore(project, key) {
-    console.log(key);
+    // [bug] this isnt always called when a project in a different row is selected
+    console.log("ahhh", key);
     if (key == this.state.currIndex) {
       // close the see more panel
       this.setState({
@@ -53,16 +59,29 @@ class ProjectRow extends React.Component {
 
   makeProjectRow(projects) {
     if (this.state.open) {
-      let ind = this.state.currIndex % 3;
-      let others = [0, 1];
-      if (ind === 1) {
-        others[1]++;
-      } else {
-        others[0]++;
-        others[1]++;
+      let selectedIndex = this.state.currIndex % 3;
+
+      // Decide positions of different cards when focused
+      let topRightIndex = 1,
+        bottomRightIndex = 2;
+      if (selectedIndex === 1) {
+        topRightIndex = 0;
+        bottomRightIndex = 2;
+      } else if (selectedIndex === 2) {
+        topRightIndex = 0;
+        bottomRightIndex = 1;
       }
+
+      // Remove projects for bottom row
+      if (projects.length <= 2) {
+        bottomRightIndex = null;
+      }
+      if (projects.length == 1) {
+        topRightIndex = null;
+      }
+
       return (
-        <Row>
+        <Row ref={(node) => (this.selectedRow = node)}>
           <Col
             lg={8}
             md={12}
@@ -73,18 +92,26 @@ class ProjectRow extends React.Component {
             ref={(node) => (this.selectedCard = node)}
           >
             <ProjectCard
-              key={ind}
-              index={ind}
-              uid={projects[ind].uid}
-              link={projects[ind].uid}
-              title={projects[ind]["Project Name"]}
-              description={projects[ind]["Project Description"]}
-              shortDescription={projects[ind]["Short Description"]}
-              teams={projects[ind].Division}
-              members={this.props.renderPeople ? projects[ind].members : []}
-              img={projects[ind].logo ? projects[ind].logo[0].url : ""}
+              key={selectedIndex}
+              index={selectedIndex}
+              uid={projects[selectedIndex].uid}
+              link={projects[selectedIndex].uid}
+              title={projects[selectedIndex]["Project Name"]}
+              description={projects[selectedIndex]["Project Description"]}
+              shortDescription={projects[selectedIndex]["Short Description"]}
+              teams={projects[selectedIndex].Division}
+              members={
+                this.props.renderPeople ? projects[selectedIndex].members : []
+              }
+              img={
+                projects[selectedIndex].logo
+                  ? projects[selectedIndex].logo[0].url
+                  : ""
+              }
               isFeatured={1}
-              callback={() => this.handleSeeMore(projects[ind], ind)}
+              callback={() =>
+                this.handleSeeMore(projects[selectedIndex], selectedIndex)
+              }
             />
           </Col>
           <Col
@@ -93,54 +120,74 @@ class ProjectRow extends React.Component {
             style={{
               padding: "1rem",
               transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            <Row>
-              <ProjectCard
-                key={others[0]}
-                index={others[0]}
-                uid={projects[others[0]].uid}
-                link={projects[others[0]].uid}
-                title={projects[others[0]]["Project Name"]}
-                description={projects[others[0]]["Project Description"]}
-                shortDescription={projects[others[0]]["Short Description"]}
-                teams={projects[others[0]].Division}
-                members={
-                  this.props.renderPeople ? projects[others[0]].members : []
-                }
-                img={
-                  projects[others[0]].logo
-                    ? projects[others[0]].logo[0].url
-                    : ""
-                }
-                callback={() =>
-                  this.handleSeeMore(projects[others[0]], others[0])
-                }
-              />
-            </Row>
-            <Row>
-              <ProjectCard
-                key={others[1]}
-                index={others[1]}
-                uid={projects[others[1]].uid}
-                link={projects[others[1]].uid}
-                title={projects[others[1]]["Project Name"]}
-                description={projects[others[1]]["Project Description"]}
-                shortDescription={projects[others[1]]["Short Description"]}
-                teams={projects[others[1]].Division}
-                members={
-                  this.props.renderPeople ? projects[others[1]].members : []
-                }
-                img={
-                  projects[others[1]].logo
-                    ? projects[others[1]].logo[0].url
-                    : ""
-                }
-                callback={() =>
-                  this.handleSeeMore(projects[others[1]], others[1])
-                }
-              />
-            </Row>
+            {topRightIndex != null && (
+              <Row style={{ flexGrow: 1, marginBottom: "1rem" }}>
+                <ProjectCard
+                  key={topRightIndex}
+                  index={topRightIndex}
+                  uid={projects[topRightIndex].uid}
+                  link={projects[topRightIndex].uid}
+                  title={projects[topRightIndex]["Project Name"]}
+                  description={projects[topRightIndex]["Project Description"]}
+                  shortDescription={
+                    projects[topRightIndex]["Short Description"]
+                  }
+                  teams={projects[topRightIndex].Division}
+                  members={
+                    this.props.renderPeople
+                      ? projects[topRightIndex].members
+                      : []
+                  }
+                  img={
+                    projects[topRightIndex].logo
+                      ? projects[topRightIndex].logo[0].url
+                      : ""
+                  }
+                  callback={() =>
+                    this.handleSeeMore(projects[topRightIndex], topRightIndex)
+                  }
+                />
+              </Row>
+            )}
+            {bottomRightIndex != null && (
+              <Row style={{ flexGrow: 1, width: "100%" }}>
+                <ProjectCard
+                  key={bottomRightIndex}
+                  index={bottomRightIndex}
+                  uid={projects[bottomRightIndex].uid}
+                  link={projects[bottomRightIndex].uid}
+                  title={projects[bottomRightIndex]["Project Name"]}
+                  description={
+                    projects[bottomRightIndex]["Project Description"]
+                  }
+                  shortDescription={
+                    projects[bottomRightIndex]["Short Description"]
+                  }
+                  teams={projects[bottomRightIndex].Division}
+                  members={
+                    this.props.renderPeople
+                      ? projects[bottomRightIndex].members
+                      : []
+                  }
+                  img={
+                    projects[bottomRightIndex].logo
+                      ? projects[bottomRightIndex].logo[0].url
+                      : ""
+                  }
+                  callback={() =>
+                    this.handleSeeMore(
+                      projects[bottomRightIndex],
+                      bottomRightIndex
+                    )
+                  }
+                />
+              </Row>
+            )}
           </Col>
         </Row>
       );
@@ -179,7 +226,12 @@ class ProjectRow extends React.Component {
 
     return (
       <div>
-        <Row style={{ margin: 0, width: "100%" }}>{columns}</Row>
+        <Row
+          ref={(node) => (this.selectedRow = node)}
+          style={{ margin: 0, width: "100%" }}
+        >
+          {columns}
+        </Row>
       </div>
     );
   }
