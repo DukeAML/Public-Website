@@ -114,9 +114,9 @@ class PeopleRow extends React.Component {
 
     if (current) {
       name = current.Name;
-      team = current.Role ? (
+      team = current.Team ? (
         <div>
-          <b>Team</b>: {current.Role}{" "}
+          <b>Team</b>: {current.Team}{" "}
         </div>
       ) : (
         ""

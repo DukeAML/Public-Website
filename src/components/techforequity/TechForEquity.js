@@ -14,29 +14,49 @@ const Logo = require("../homepage/images/techforequity.png");
 class TechForEquity extends React.Component {
   state = {
     projects: [],
-    loading: true,
+    loadingProjects: true,
     members: [],
+    loadingMembers: true,
     fellows: [],
+    loadingFellows: true,
   };
 
   componentDidMount = async () => {
     // Load and update projects
     const projects = await getTFEProjects();
     console.log(projects);
-    this.setState({ projects: projects, loading: false });
+    this.setState({ projects: projects, loadingProjects: false });
 
-    // Load, clean, and update members and fellows
+    // Load, clean, and update member
     const members = await getTFEMembers();
-    const fellows = await getTFEFellows();
     let pkey = {
       Headshot: "Photo",
     };
-    members.concat(fellows).forEach((member) => {
+    members.forEach((member) => {
       for (const [key, val] of Object.entries(member)) {
         member[pkey[key] || key] = val;
       }
     });
-    this.setState({ members: members, fellows: fellows });
+    this.setState({ members: members, loadingMembers: false });
+
+    // Load, append, and update fellows
+    const fellows = await getTFEFellows();
+
+    // Projects as key value
+    let projectTable = {};
+    projects.forEach((project) => {
+      projectTable[project.id] = project.Project_Title;
+    });
+    console.log(fellows);
+    // Add project to user description
+    fellows.forEach((fellow) => {
+      for (const [key, val] of Object.entries(fellow)) {
+        fellow[pkey[key] || key] = val;
+      }
+      fellow["Team"] = projectTable[fellow.Team[0]];
+    });
+
+    this.setState({ fellows: fellows, loadingFellows: false });
   };
 
   // From ../people/PeoplePage.js
@@ -69,7 +89,7 @@ class TechForEquity extends React.Component {
       <PeopleRow people={row} key={index} />
     ));
 
-    return this.state.loading ? (
+    return this.state.loadingProjects ? (
       <div style={{ height: "10rem", padding: "3rem" }}>
         <Spinner animation="grow" size="md" />
       </div>
@@ -197,7 +217,7 @@ class TechForEquity extends React.Component {
                 justifyContent: "center",
               }}
             >
-              {this.state.loading ? (
+              {this.state.loadingProjects ? (
                 <div
                   style={{ height: "10rem", padding: "10rem", margin: "auto" }}
                 >
