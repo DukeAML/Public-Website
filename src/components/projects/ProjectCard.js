@@ -152,7 +152,11 @@ class ProjectCard extends React.Component {
             <div
               style={{ position: "absolute", right: "1rem", bottom: "1rem" }}
             >
-              <Button className="theme-button" onClick={this.props.callback}>
+              <Button
+                className="theme-button"
+                onClick={this.props.callback}
+                id={this.props.title}
+              >
                 {this.props.isFeatured ? "Close" : "See more"}
               </Button>
             </div>

@@ -44,7 +44,6 @@ function Person(props) {
       <Row>
         <div style={{ margin: "auto" }}>
           <div className="person-image" style={{ display: "grid" }}>
-          
             <img
               src={thumbnail}
               style={{
