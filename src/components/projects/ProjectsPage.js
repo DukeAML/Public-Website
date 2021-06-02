@@ -18,19 +18,47 @@ import Footer from "../tools/Footer";
 import Loading from "../tools/Loading";
 import ProjectCard from "./ProjectCard";
 import withWindowDimensions from "../people/withWindowDimensions";
-import { getProjects } from "../../api/api.js";
+import { getProjects, getProjectsMembers } from "../../api/api.js";
 import ProjectRow from "./ProjectRow";
 
 class ProjectsPage extends React.Component {
   constructor() {
     super();
-    this.state = { projects: [], loading: true, selectedKey: -1 };
+    this.state = {
+      projects: [],
+      loading: true,
+      peopleLoading: true,
+      selectedKey: -1,
+    };
   }
 
   componentDidMount = async () => {
+    // Load projects
     const projects = await getProjects();
     console.log(projects);
     this.setState({ projects: projects, loading: false });
+
+    // Load people
+    const people = await getProjectsMembers();
+
+    // Convert from list to key value
+    let peopleTable = {};
+    people.map((person) => {
+      peopleTable[person.id] = {
+        name: person["Name"],
+        img: person["Photo"],
+      };
+    });
+
+    for (let project of this.state.projects) {
+      project.members = [];
+      // Add member info to project objects
+      for (let teamMember of project["Current Engineers"]) {
+        project.members.push(peopleTable[teamMember]);
+      }
+    }
+
+    this.setState({ loadingPeople: false });
   };
 
   selectedCallback = (key) => {
@@ -72,7 +100,11 @@ class ProjectsPage extends React.Component {
     }
 
     let result = rowArrays.map((row, index) => (
-      <ProjectRow projects={row} key={index} renderPeople={renderPeople} />
+      <ProjectRow
+        projects={row}
+        key={index}
+        renderPeople={renderPeople && this.state.peopleLoading}
+      />
     ));
 
     return this.state.loading ? (

@@ -57,7 +57,10 @@ class ProjectCard extends React.Component {
       padding = 1;
     }
 
-    let columns = this.makePeopleRow(this.props.members);
+    let columns;
+    if (this.props.members) {
+      columns = this.makePeopleRow(this.props.members);
+    }
 
     return (
       <div
