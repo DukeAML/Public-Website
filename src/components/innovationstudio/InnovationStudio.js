@@ -15,7 +15,7 @@ import EmbeddedForm from "./EmbeddedForm";
 const Logo = require("../homepage/images/innovationstudio.png");
 
 class PhoenixProjectPage extends React.Component {
-  state = { activeIndex: [1, 5], files: [] };
+  state = { activeIndex: [1, 4], files: [] };
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps;
@@ -60,25 +60,36 @@ class PhoenixProjectPage extends React.Component {
             fontfamily: "Nora",
           }}
         >
-          <center>
-            <div className="title">DAML Innovation Studio</div>
-            <br />
-            <img
-              src={Logo}
-              alt="The Phoenix Project"
-              style={{ height: "15rem", paddingLeft: "35%" }}
-            />{" "}
-          </center>
-
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <Row style={{ marginTop: 20 }}>
+            <Col lg={4} sm={12} style={{ width: "100%" }}>
+              <div style={{ display: "flex" }}>
+                <img
+                  src={Logo}
+                  alt="Innovation Studio Logo"
+                  style={{ height: "15rem", margin: "auto", marginTop: "1rem" }}
+                />
+              </div>
+            </Col>
+            <Col lg={8} sm={12} align="left">
+              <div className="title"> DAML Innovation Studio </div>
+              <p>
+                The Innovation Studio is a Duke Applied Machine Learning (DAML)
+                initiative to provide Duke Student entrepreneurs who seek to
+                develop novel businesses and innovations with the necessary
+                platform and support system to enable success in their venture.
+                We are partnered with Duke I&E and other on-campus
+                organizations, such as DTech and Contrary Capital, to create a
+                great community to help founders capitalize on their ideas.
+                <br />
+                <br />
+                Ultimately, the goal is to take an innovative idea sourced from
+                the Duke community and provide the engineering talent and
+                business-side support to launch a pilot by the end of the
+                program, setting you on the path to scale and secure funding.
+              </p>
+              <br />
+            </Col>
+          </Row>
 
           <div style={{ marginTop: "1rem" }}>
             <Accordion>
@@ -89,19 +100,16 @@ class PhoenixProjectPage extends React.Component {
               >
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
-                  What is this?
+                  When is this?
                   <hr />
                 </span>
               </Accordion.Title>
               <Accordion.Content active={activeIndex.includes(1)}>
-                
-                  The Innovation Studio is a Duke Applied Machine Learning (DAML) initiative to provide Duke Student entrepreneurs who seek to develop novel businesses and innovations with the necessary platform and support system to enable success in their venture. We are partnered with Duke I&E and other on-campus organizations, such as DTech and Contrary Capital, to create a great community to help founders capitalize on their ideas. 
- 
-                  <br />
-                  <br />
-                  Ultimately, the goal is to take an innovative idea sourced from the Duke community and provide the engineering talent and business-side support to launch a pilot by the end of the program, setting you on the path to scale and secure funding.
-
-                  
+                The Innovation Studio takes places throughout a semester-long
+                cohort every Spring, with our first cohort in Spring 2021.
+                Applications for the upcoming cohort will close November 18th.
+                We’ll have an information session coming up on November 1st and
+                a pitch deck workshop early-to-mid November (date TBD).
               </Accordion.Content>
 
               <Accordion.Title
@@ -111,12 +119,22 @@ class PhoenixProjectPage extends React.Component {
               >
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
-                  When is this?
+                  I’m a start-up or student with an idea. What’s next?
                   <hr />
                 </span>
               </Accordion.Title>
               <Accordion.Content active={activeIndex.includes(2)}>
-                The Innovation Studio takes places throughout a semester-long cohort every Spring, with our first cohort in Spring 2021. Applications for the upcoming cohort will close November 18th. We’ll have an information session coming up on November 1st and a pitch deck workshop early-to-mid November (date TBD).
+                Fill out this{" "}
+                <a target="_blank" href="http://bit.ly/DukeFounders">
+                  form
+                </a>{" "}
+                and a member of our executive committee will reach out for
+                interviews and next steps.
+                <Row style={{ justifyContent: "center" }}>
+                  <Col xs={12} xl={10}>
+                    <EmbeddedForm questions={companyForm} />
+                  </Col>
+                </Row>
               </Accordion.Content>
 
               <Accordion.Title
@@ -126,39 +144,12 @@ class PhoenixProjectPage extends React.Component {
               >
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
-                  I’m a start-up or student with an idea. What’s next?
+                  I’m an engineer and I want to get involved. What’s next?
                   <hr />
                 </span>
               </Accordion.Title>
+
               <Accordion.Content active={activeIndex.includes(3)}>
-                Fill out this{" "}
-                <a
-                  target="_blank"
-                  href="http://bit.ly/DukeFounders"
-                >
-                  form
-                </a>{" "}
-                and a member of our executive committee will reach out for interviews and next steps.
-                <Row style={{ justifyContent: "center" }}>
-                  <Col xs={12} xl={10}>
-                    <EmbeddedForm questions={companyForm} />
-                  </Col>
-                </Row>
-              </Accordion.Content>
-
-              <Accordion.Title
-                active={activeIndex.includes(4)}
-                index={4}
-                onClick={this.handleClick}
-              >
-                <Icon name="dropdown" />
-                <span className="Phoenix-header">
-                I’m an engineer and I want to get involved. What’s next?
-                  <hr />
-                </span>
-              </Accordion.Title>
-
-              <Accordion.Content active={activeIndex.includes(4)}>
                 Please fill out this{" "}
                 <a target="_blank" href="https://bit.ly/DukeEngineerPM">
                   form
@@ -172,8 +163,8 @@ class PhoenixProjectPage extends React.Component {
               </Accordion.Content>
 
               <Accordion.Title
-                active={activeIndex.includes(5)}
-                index={5}
+                active={activeIndex.includes(4)}
+                index={4}
                 onClick={this.handleClick}
               >
                 <Icon name="dropdown" />
@@ -183,12 +174,13 @@ class PhoenixProjectPage extends React.Component {
                 </span>
               </Accordion.Title>
 
-              <Accordion.Content active={activeIndex.includes(5)}>
+              <Accordion.Content active={activeIndex.includes(4)}>
                 If you have questions beyond what is covered on this page,
-                please email <a href="mailto:choonghwan.lee@duke.edu">choonghwan.lee@duke.edu</a>
+                please email{" "}
+                <a href="mailto:choonghwan.lee@duke.edu">
+                  choonghwan.lee@duke.edu
+                </a>
               </Accordion.Content>
-
-              
             </Accordion>
           </div>
         </Container>
