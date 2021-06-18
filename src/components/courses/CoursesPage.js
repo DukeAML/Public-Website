@@ -1,23 +1,11 @@
 import React from "react";
-import {
-  Container,
-  Jumbotron,
-  Button,
-  Row,
-  Col,
-  Image,
-  Card,
-  Carousel,
-  Accordion,
-  Collapse,
-  Form
-} from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 import { Graph } from "react-d3-graph";
 
 import Footer from "../tools/Footer";
 import Navigation from "../tools/Navigation";
+import withWindowDimensions from "../people/withWindowDimensions";
 
 import CoursesDetailsTab from "./CoursesDetailsTab";
 import shortestPath from "./shortestPath";
@@ -31,8 +19,6 @@ const skillConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 900,
-  width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
   minZoom: 0.0001,
@@ -44,20 +30,20 @@ const skillConfig = {
     labelProperty: "label",
     fontColor: "#1e2c3a",
     fontSize: 14,
-    highlightFontSize: 14
+    highlightFontSize: 14,
   },
   link: {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
-    color: "#BCC4CD"
+    color: "#BCC4CD",
   },
   d3: {
     alphaTarget: 1,
     gravity: -400,
     linkLength: 350,
-    linkStrength: 0.5
-  }
+    linkStrength: 0.5,
+  },
 };
 
 const prereqConfig = {
@@ -66,8 +52,6 @@ const prereqConfig = {
   directed: true,
   focusAnimationDuration: 0.75,
   focusZoom: 2,
-  height: 900,
-  width: 1200,
   highlightDegree: 1,
   maxZoom: 4,
   minZoom: 0.001,
@@ -79,21 +63,21 @@ const prereqConfig = {
     labelProperty: "label",
     fontColor: "#1e2c3a",
     fontSize: 14,
-    highlightFontSize: 14
+    highlightFontSize: 14,
   },
   link: {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
     iterations: 20,
-    color: "#BCC4CD"
+    color: "#BCC4CD",
   },
   d3: {
     alphaTarget: 0.5,
     gravity: -800,
     linkLength: 200,
-    linkStrength: 1
-  }
+    linkStrength: 1,
+  },
 };
 
 class CoursesPage extends React.Component {
@@ -106,10 +90,10 @@ class CoursesPage extends React.Component {
         links: data_v2.edges,
         nodes: data_v2.nodes,
         // TODO: make adjacenices from data_v2
-        adjacencies: data_v2.adjacencies
+        adjacencies: data_v2.adjacencies,
       },
       focusedNodeId: null,
-      prereqChecked: true
+      prereqChecked: true,
     };
   }
 
@@ -120,38 +104,38 @@ class CoursesPage extends React.Component {
   };
 
   // need to use arrow function to bind to this class
-  onClickNode = node => {
+  onClickNode = (node) => {
     if (node) console.log(node);
     this.setState({
       selectedNode: data_v2.nodesObject[node],
       tabDisplayed: true,
-      focusedNodeId: node
+      focusedNodeId: node,
     });
   };
 
-  onClickLink = link => {
+  onClickLink = (link) => {
     console.log(link);
   };
 
-  onMouseOverNode = e => {
+  onMouseOverNode = (e) => {
     console.log(e);
   };
 
-  onClickGraph = e => {
+  onClickGraph = (e) => {
     this.setState({
-      selectedNode: null
+      selectedNode: null,
     });
     this.setState({
       focusedNodeId: null,
-      tabDisplayed: false
+      tabDisplayed: false,
     });
   };
 
-  handleDataTypeChange = e => {
+  handleDataTypeChange = (e) => {
     console.log(e);
     this.setState({
       prereqChecked: !this.state.prereqChecked,
-      focusedNodeId: null
+      focusedNodeId: null,
     });
   };
 
@@ -163,6 +147,9 @@ class CoursesPage extends React.Component {
     const subtitle = this.state.prereqChecked
       ? "Hover over a course to highlight the courses it leads to. Click on any course for more information."
       : "Hover over a course node to highlight skills it contributes to. Hover over a skill to see highlight courses that use that skill. Click on any course or skill for more information.";
+
+    const graphWidth = Math.min(1200, Math.trunc(this.props.windowWidth * 0.8));
+
     const graph = (
       <Graph
         data={
@@ -170,26 +157,34 @@ class CoursesPage extends React.Component {
             ? {
                 nodes: data_v2.prereqNodes,
                 links: data_v2.prereqEdges,
-                focusedNodeId: this.state.focusedNodeId
+                focusedNodeId: this.state.focusedNodeId,
               }
             : {
                 nodes: data_v2.skillNodes,
                 links: data_v2.skillEdges,
-                focusedNodeId: this.state.focusedNodeId
+                focusedNodeId: this.state.focusedNodeId,
               }
         }
-        config={this.state.prereqChecked ? prereqConfig : skillConfig}
+        config={{
+          ...(this.state.prereqChecked ? prereqConfig : skillConfig),
+          height: Math.max(
+            Math.trunc(graphWidth * 0.75),
+            this.props.windowHeight - 400
+          ),
+          width: graphWidth,
+        }}
         id="graph-id"
-        onClickNode={e => this.onClickNode(e)}
-        onClickGraph={e => this.onClickGraph(e)}
-        onClickLink={e => this.onClickLink(e)}
-        onMouseOverNode={e => this.onMouseOverNode(e)}
+        onClickNode={(e) => this.onClickNode(e)}
+        onClickGraph={(e) => this.onClickGraph(e)}
+        onClickLink={(e) => this.onClickLink(e)}
+        onMouseOverNode={(e) => this.onMouseOverNode(e)}
+        style={{ maxWidth: "300px" }}
       />
     );
+
     return (
       <div>
-        <Navigation />
-        <center></center>
+        <Navigation style={{ padding: 0 }} />
 
         <Container fluid style={{ padding: 0 }} justify="center">
           <CoursesDetailsTab
@@ -209,7 +204,7 @@ class CoursesPage extends React.Component {
             <Col xl={12}>
               <div
                 style={{ fontSize: "1rem", padding: "1rem" }}
-                onChange={e => this.handleDataTypeChange(e)}
+                onChange={(e) => this.handleDataTypeChange(e)}
               >
                 <div class="selectView">
                   <input
@@ -245,4 +240,4 @@ class CoursesPage extends React.Component {
   }
 }
 
-export default CoursesPage;
+export default withWindowDimensions(CoursesPage);
