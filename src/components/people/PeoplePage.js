@@ -20,7 +20,7 @@ class PeoplePage extends React.Component {
       HRD: { open: true, members: [], title: "Hardware Engineer Team" },
     },
   };
-
+ 
   componentDidMount = async () => {
     const members = await getMemberData();
     console.log("Members", members);
