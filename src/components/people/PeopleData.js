@@ -1,4 +1,4 @@
-import { getMembers } from "../../api/api";
+import { getMembers } from '../../api/api';
 
 export const getMemberData = async () => {
   const members = await getMembers();
@@ -11,17 +11,17 @@ export const getMemberData = async () => {
 
   console.log(members);
   members.forEach((member) => {
-    if (member["Member Status"] === "Current Member") {
+    if (member['Member Status'] === 'Current Member') {
       const team = member.Role;
       if (member.Exec) {
         EXEC.push(member);
-      } else if (team === "Product Manager") {
+      } else if (team === 'Product Manager') {
         PM.push(member);
-      } else if (team === "Data Science Engineer") {
+      } else if (team === 'Data Science Engineer') {
         DS.push(member);
-      } else if (team === "Software Engineer") {
+      } else if (team === 'Software Engineer') {
         SWE.push(member);
-      } else if (team === "Hardware Engineer") {
+      } else if (team === 'Hardware Engineer') {
         HRD.push(member);
       }
     }

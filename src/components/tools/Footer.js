@@ -1,13 +1,13 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Icon from "./Icon";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Icon from './Icon';
 
 class Footer extends React.Component {
   render() {
     const linkedin = (
       <Icon
         type="linkedin-light"
-        href={"https://www.linkedin.com/company/dukeaml/"}
+        href={'https://www.linkedin.com/company/dukeaml/'}
       />
     );
 
@@ -20,16 +20,15 @@ class Footer extends React.Component {
         fluid
         className="footer"
         style={{
-          verticalAlign: "middle",
-          lineHeight: "2.5rem",
-          minHeight: "10rem"
-        }}
-      >
+          verticalAlign: 'middle',
+          lineHeight: '2.5rem',
+          minHeight: '10rem',
+        }}>
         <center>
           <a>Questions, comments? Contact us:</a>
           <br />
-          <Row style={{ justifyContent: "center" }}>
-            <div style={{ display: "inline-block" }}>
+          <Row style={{ justifyContent: 'center' }}>
+            <div style={{ display: 'inline-block' }}>
               <center>
                 {linkedin} {mail}
               </center>

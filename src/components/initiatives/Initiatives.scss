@@ -15,7 +15,7 @@ $main-white: #f2f4f5;
 }
 
 .homepageTitle {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -81,13 +81,13 @@ $main-white: #f2f4f5;
   background-image: none;
 }
 .carousel-control-next-icon:after {
-  content: ">";
+  content: '>';
   font-size: 50px;
   color: $dark-grey;
   margin-left: 4rem;
 }
 .carousel-control-prev-icon:after {
-  content: "<";
+  content: '<';
   font-size: 50px;
   color: $dark-grey;
   margin-right: 4rem;

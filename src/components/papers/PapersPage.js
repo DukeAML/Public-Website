@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Row,
@@ -10,15 +10,15 @@ import {
   thead,
   tr,
   Button,
-  Card
-} from "react-bootstrap";
+  Card,
+} from 'react-bootstrap';
 
-import PaperCard from "./PaperCard";
-import Navigation from "../tools/Navigation";
-import Footer from "../tools/Footer";
-import withWindowDimensions from "../people/withWindowDimensions";
+import PaperCard from './PaperCard';
+import Navigation from '../tools/Navigation';
+import Footer from '../tools/Footer';
+import withWindowDimensions from '../people/withWindowDimensions';
 
-import { getPapers } from "../../api/api";
+import { getPapers } from '../../api/api';
 
 class PapersPage extends React.Component {
   state = { papers: [], loading: true };
@@ -48,7 +48,7 @@ class PapersPage extends React.Component {
     }
 
     const papers = this.state.papers.map((paper, key) => (
-      <Col lg={8} md={10} style={{ padding: "1rem" }}>
+      <Col lg={8} md={10} style={{ padding: '1rem' }}>
         <PaperCard
           key={key}
           link={paper.url}
@@ -65,18 +65,17 @@ class PapersPage extends React.Component {
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <Container style={{ minHeight: "80vh", padding: `0 ${padding}%` }}>
+          <Container style={{ minHeight: '80vh', padding: `0 ${padding}%` }}>
             <center>
               <div className="title"> ML Papers </div>
             </center>
             <Row
               style={{
-                display: "flex",
-                justifyContent: "center"
-              }}
-            >
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
               {this.state.loading ? (
-                <div style={{ height: "10rem", padding: "3rem" }}>
+                <div style={{ height: '10rem', padding: '3rem' }}>
                   <Spinner animation="grow" size="md" />
                 </div>
               ) : (
@@ -84,7 +83,7 @@ class PapersPage extends React.Component {
               )}
             </Row>
           </Container>
-          <Footer style={{ margin: "2rem 0 0 0" }} />
+          <Footer style={{ margin: '2rem 0 0 0' }} />
         </Container>
       </div>
     );

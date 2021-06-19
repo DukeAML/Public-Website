@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Navbar,
   Nav,
@@ -10,11 +10,11 @@ import {
   Row,
   Col,
   Image,
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
-import withWindowDimensions from "../people/withWindowDimensions";
+} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import withWindowDimensions from '../people/withWindowDimensions';
 
-import MobileNavigation from "./MobileNavigation";
+import MobileNavigation from './MobileNavigation';
 
 class Navigation extends React.Component {
   constructor() {
@@ -33,14 +33,14 @@ class Navigation extends React.Component {
     event.preventDefault();
 
     this.setState({ showMenu: true }, () => {
-      document.addEventListener("click", this.closeMenu);
+      document.addEventListener('click', this.closeMenu);
     });
   }
 
   closeMenu(event) {
     if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showMenu: false }, () => {
-        document.removeEventListener("click", this.closeMenu);
+        document.removeEventListener('click', this.closeMenu);
       });
     }
   }
@@ -70,9 +70,9 @@ class Navigation extends React.Component {
     }
 
     const verticalAlign = {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     };
     return (
       <center>
@@ -81,23 +81,21 @@ class Navigation extends React.Component {
           style={{
             margin: 0,
             padding: `0 ${padding}%`,
-            paddingTop: "0.5rem",
-            backgroundColor: this.props.backgroundColor || "#f2f4f5",
-            maxWidth: "100vw",
-          }}
-        >
+            paddingTop: '0.5rem',
+            backgroundColor: this.props.backgroundColor || '#f2f4f5',
+            maxWidth: '100vw',
+          }}>
           <Row
             style={{
               padding: 0,
               margin: 0,
-              justifyContent: "center",
-            }}
-          >
+              justifyContent: 'center',
+            }}>
             <Col xs="1" style={verticalAlign}>
               <Link to="/">
                 <img
                   alt="Home"
-                  src={require("../homepage/images/DAML_Full_Grey_Transparent.svg")}
+                  src={require('../homepage/images/DAML_Full_Grey_Transparent.svg')}
                   width="50"
                   height="50"
                 />

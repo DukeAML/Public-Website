@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default class SigmaLoader extends React.PureComponent {
   constructor(props) {
@@ -18,8 +18,8 @@ export default class SigmaLoader extends React.PureComponent {
   }
 
   embedProps(elements, extraProps) {
-    return React.Children.map(elements, element =>
-      React.cloneElement(element, extraProps)
+    return React.Children.map(elements, (element) =>
+      React.cloneElement(element, extraProps),
     );
   }
 
@@ -35,8 +35,8 @@ export default class SigmaLoader extends React.PureComponent {
   _load(graph) {
     if (
       graph &&
-      typeof graph !== "undefined" &&
-      typeof this.props.sigma !== "undefined"
+      typeof graph !== 'undefined' &&
+      typeof this.props.sigma !== 'undefined'
     ) {
       this.props.sigma.graph.clear();
       this.props.sigma.graph.read(graph);

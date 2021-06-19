@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // type prop: "github", "linkedin", "", etc...
 
@@ -9,10 +9,9 @@ function Icon(props) {
   return (
     <a
       className={`${props.type}-icon button`}
-      style={{ float: "left" }}
-      target={props.type === "mail" ? "" : "_blank"}
-      href={props.href}
-    ></a>
+      style={{ float: 'left' }}
+      target={props.type === 'mail' ? '' : '_blank'}
+      href={props.href}></a>
   );
 }
 

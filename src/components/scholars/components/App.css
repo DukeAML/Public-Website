@@ -10,7 +10,7 @@
 }
 
 .header {
-  background-color: #F2F5F5;
+  background-color: #f2f5f5;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   color: #10375c;
 }
 .body {
-  background-color:#F2F5F5;
+  background-color: #f2f5f5;
   color: black;
   padding: 40px;
   font-family: Arial;
@@ -34,21 +34,24 @@
 }
 
 .Cell {
-  border: 1px solid #F2F5F5;
+  border: 1px solid #f2f5f5;
   padding: 4px;
   text-align: left;
 }
-.pagination .page-item.active .page-link { 
-  display: inline-block; 
-  background-color: #000; 
-  color: green; 
-  border-radius: 5px; 
-  disabled: true; 
+.pagination .page-item.active .page-link {
+  display: inline-block;
+  background-color: #000;
+  color: green;
+  border-radius: 5px;
+  disabled: true;
 }
 
-
-div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item.active .page-link:focus {
-background-color: #000;
+div.dataTables_wrapper
+  div.dataTables_paginate
+  ul.pagination
+  .page-item.active
+  .page-link:focus {
+  background-color: #000;
 }
 .center {
   text-align: center;
@@ -66,7 +69,7 @@ body #fonts {
 }
 
 body #title {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 2rem;
   margin-top: 1rem;
 }

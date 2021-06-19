@@ -1,6 +1,6 @@
-import React from "react";
-import Canvas from "./Canvas";
-import { Container, Row, Col, Button, Jumbotron } from "react-bootstrap";
+import React from 'react';
+import Canvas from './Canvas';
+import { Container, Row, Col, Button, Jumbotron } from 'react-bootstrap';
 
 class Animation extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Animation extends React.Component {
   }
 
   updateAnimationState() {
-    this.setState(prevState => ({ angle: prevState.angle + 1 }));
+    this.setState((prevState) => ({ angle: prevState.angle + 1 }));
     this.rAF = requestAnimationFrame(this.updateAnimationState);
   }
 

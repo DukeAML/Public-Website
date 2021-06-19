@@ -1,7 +1,7 @@
-import React from "react";
-import * as VANTA from "vanta";
-import DOTS from "vanta/dist/vanta.dots.min";
-import * as THREE from "three";
+import React from 'react';
+import * as VANTA from 'vanta';
+import DOTS from 'vanta/dist/vanta.dots.min';
+import * as THREE from 'three';
 //mport BIRDS from 'vanta/dist/vanta.birds.min'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
@@ -16,8 +16,8 @@ class AnimationWrapper extends React.Component {
       el: this.vantaRef.current,
       THREE: { ...THREE },
       showLines: false,
-      color: "#1e2c3a",
-      backgroundColor: "#f2f4f5"
+      color: '#1e2c3a',
+      backgroundColor: '#f2f4f5',
     });
   }
   componentWillUnmount() {

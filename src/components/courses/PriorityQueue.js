@@ -6,7 +6,7 @@ export default class PriorityQueue {
   push(value, priority = 0) {
     return this.data.push({
       value: value,
-      priority: priority
+      priority: priority,
     });
   }
 

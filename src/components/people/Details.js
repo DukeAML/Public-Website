@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Collapse } from "react-bootstrap";
+import { Collapse } from 'react-bootstrap';
 
 class Details extends React.Component {
   state = { people: [], current: null };
@@ -13,8 +13,7 @@ class Details extends React.Component {
     return (
       <Collapse
         in={this.props.display}
-        style={{ padding: "0 !important", margin: "0 !important" }}
-      >
+        style={{ padding: '0 !important', margin: '0 !important' }}>
         <div style={{ margin: 0 }} className="person-details inset">
           {this.state.current}
         </div>

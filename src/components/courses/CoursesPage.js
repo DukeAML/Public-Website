@@ -1,17 +1,17 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import { Graph } from "react-d3-graph";
+import { Graph } from 'react-d3-graph';
 
-import Footer from "../tools/Footer";
-import Navigation from "../tools/Navigation";
-import withWindowDimensions from "../people/withWindowDimensions";
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import withWindowDimensions from '../people/withWindowDimensions';
 
-import CoursesDetailsTab from "./CoursesDetailsTab";
-import shortestPath from "./shortestPath";
-import "./courses.scss";
+import CoursesDetailsTab from './CoursesDetailsTab';
+import shortestPath from './shortestPath';
+import './courses.scss';
 //const data = require("./Data");
-import data_v2 from "./Data-v2";
+import data_v2 from './Data-v2';
 
 const skillConfig = {
   nodeHighlightBehavior: true,
@@ -25,10 +25,10 @@ const skillConfig = {
   panAndZoom: true,
   highlightOpacity: 0.1,
   node: {
-    color: "#1e2c3a",
+    color: '#1e2c3a',
     size: 300,
-    labelProperty: "label",
-    fontColor: "#1e2c3a",
+    labelProperty: 'label',
+    fontColor: '#1e2c3a',
     fontSize: 14,
     highlightFontSize: 14,
   },
@@ -36,7 +36,7 @@ const skillConfig = {
     renderLabel: false,
     semanticStrokeWidth: false,
     strokeWidth: 2,
-    color: "#BCC4CD",
+    color: '#BCC4CD',
   },
   d3: {
     alphaTarget: 1,
@@ -58,10 +58,10 @@ const prereqConfig = {
   panAndZoom: true,
   highlightOpacity: 0.1,
   node: {
-    color: "#1e2c3a",
+    color: '#1e2c3a',
     size: 200,
-    labelProperty: "label",
-    fontColor: "#1e2c3a",
+    labelProperty: 'label',
+    fontColor: '#1e2c3a',
     fontSize: 14,
     highlightFontSize: 14,
   },
@@ -70,7 +70,7 @@ const prereqConfig = {
     semanticStrokeWidth: false,
     strokeWidth: 2,
     iterations: 20,
-    color: "#BCC4CD",
+    color: '#BCC4CD',
   },
   d3: {
     alphaTarget: 0.5,
@@ -141,12 +141,12 @@ class CoursesPage extends React.Component {
 
   render() {
     const title = this.state.prereqChecked
-      ? "Viewing pre-req based connections"
-      : "Viewing skill-based connections";
+      ? 'Viewing pre-req based connections'
+      : 'Viewing skill-based connections';
 
     const subtitle = this.state.prereqChecked
-      ? "Hover over a course to highlight the courses it leads to. Click on any course for more information."
-      : "Hover over a course node to highlight skills it contributes to. Hover over a skill to see highlight courses that use that skill. Click on any course or skill for more information.";
+      ? 'Hover over a course to highlight the courses it leads to. Click on any course for more information.'
+      : 'Hover over a course node to highlight skills it contributes to. Hover over a skill to see highlight courses that use that skill. Click on any course or skill for more information.';
 
     const graphWidth = Math.min(1200, Math.trunc(this.props.windowWidth * 0.8));
 
@@ -169,7 +169,7 @@ class CoursesPage extends React.Component {
           ...(this.state.prereqChecked ? prereqConfig : skillConfig),
           height: Math.max(
             Math.trunc(graphWidth * 0.75),
-            this.props.windowHeight - 400
+            this.props.windowHeight - 400,
           ),
           width: graphWidth,
         }}
@@ -178,7 +178,7 @@ class CoursesPage extends React.Component {
         onClickGraph={(e) => this.onClickGraph(e)}
         onClickLink={(e) => this.onClickLink(e)}
         onMouseOverNode={(e) => this.onMouseOverNode(e)}
-        style={{ maxWidth: "300px" }}
+        style={{ maxWidth: '300px' }}
       />
     );
 
@@ -196,16 +196,15 @@ class CoursesPage extends React.Component {
           <div className="title">
             <center>{title}</center>
           </div>
-          <div style={{ fontSize: "1rem" }}>
+          <div style={{ fontSize: '1rem' }}>
             <center>{subtitle}</center>
           </div>
 
           <Row>
             <Col xl={12}>
               <div
-                style={{ fontSize: "1rem", padding: "1rem" }}
-                onChange={(e) => this.handleDataTypeChange(e)}
-              >
+                style={{ fontSize: '1rem', padding: '1rem' }}
+                onChange={(e) => this.handleDataTypeChange(e)}>
                 <div class="selectView">
                   <input
                     type="radio"

@@ -1,18 +1,18 @@
-import React from "react";
-import { Row, Col, Image } from "react-bootstrap";
-import placeholder from "./headshots/profile-placeholder.svg";
-import Icon from "../tools/Icon";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Row, Col, Image } from 'react-bootstrap';
+import placeholder from './headshots/profile-placeholder.svg';
+import Icon from '../tools/Icon';
+import { Link } from 'react-router-dom';
 
 function Person(props) {
   const github =
-    props.github != null ? <Icon type="github" href={props.github} /> : "";
+    props.github != null ? <Icon type="github" href={props.github} /> : '';
 
   const linkedin =
     props.linkedin != null ? (
       <Icon type="linkedin" href={props.linkedin} />
     ) : (
-      ""
+      ''
     );
 
   let thumbnail;
@@ -31,26 +31,26 @@ function Person(props) {
   }
 
   let imageStyle = {
-    height: "4rem",
-    width: "4rem",
-    objectFit: "cover",
-    borderRadius: "100%",
+    height: '4rem',
+    width: '4rem',
+    objectFit: 'cover',
+    borderRadius: '100%',
   };
 
   return (
-    <Col xs={12} sm={6} md={3} lg={2} style={{ padding: ".1rem" }}>
+    <Col xs={12} sm={6} md={3} lg={2} style={{ padding: '.1rem' }}>
       <Row>
-        <div style={{ margin: "auto" }}>
-          <div style={{ display: "grid" }}>
-            <Link to={"/people"}>
+        <div style={{ margin: 'auto' }}>
+          <div style={{ display: 'grid' }}>
+            <Link to={'/people'}>
               <img
                 src={thumbnail}
                 style={{
                   ...imageStyle,
-                  position: "absolute",
+                  position: 'absolute',
                   zIndex: -1,
-                  filter: "blur(2px)",
-                  WebkitFilter: "blur(2px)",
+                  filter: 'blur(2px)',
+                  WebkitFilter: 'blur(2px)',
                 }}
                 onClick={props.onClick}
               />
@@ -64,8 +64,8 @@ function Person(props) {
         </div>
       </Row>
       <center>
-        <div style={{ display: "inline-block", fontSize: ".75rem" }}>
-          {props.name}{" "}
+        <div style={{ display: 'inline-block', fontSize: '.75rem' }}>
+          {props.name}{' '}
         </div>
       </center>
     </Col>

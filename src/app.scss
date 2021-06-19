@@ -25,25 +25,25 @@ $daml-hover: url(./components/homepage/images/DAML_Picture_Grey_Transparent.svg)
 
 body,
 header {
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: 'Noto Sans', sans-serif !important;
   background-color: $main-white;
   color: $dark-grey;
 }
 
 .title {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 2rem;
   margin-top: 1rem;
 }
 
 .details-title {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 2rem;
 }
 
 .team,
 .gpu-header {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -70,7 +70,7 @@ a.contact {
 
 h3,
 h4 {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
 }
 
 hr {
@@ -210,7 +210,7 @@ a.homepage-link {
 }
 
 .footer {
-  font-family: "Lora", monospace;
+  font-family: 'Lora', monospace;
   height: 7rem;
   padding: 1rem;
   margin-top: 2rem;
@@ -357,7 +357,7 @@ p.nav-link-col:hover {
 
 .accordion-header {
   padding: 0.5rem;
-  font-family: "Roboto Mono";
+  font-family: 'Roboto Mono';
   background-color: $main-white;
   border: solid 2px $dark-grey;
   color: $dark-grey;
@@ -370,7 +370,7 @@ p.nav-link-col:hover {
 .newsletter-button {
   display: inline-block;
   vertical-align: middle;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   background-color: $light-grey;
   border: none;
@@ -386,7 +386,7 @@ p.nav-link-col:hover {
 }
 
 .loading {
-  background-image: url("./components/tools/Loading/sinusoidal.svg");
+  background-image: url('./components/tools/Loading/sinusoidal.svg');
   background-repeat: repeat-x;
 
   transition: ease-in;
@@ -404,7 +404,7 @@ p.nav-link-col:hover {
 }
 
 .bar-left {
-  background-image: url("./components/tools/Loading/bar-left.svg");
+  background-image: url('./components/tools/Loading/bar-left.svg');
 
   transition: ease-in;
   animation: sinusoidal 0s infinite;
@@ -412,7 +412,7 @@ p.nav-link-col:hover {
 }
 
 .bar-right {
-  background-image: url("./components/tools/Loading/bar-right.svg");
+  background-image: url('./components/tools/Loading/bar-right.svg');
 
   transition: ease-in;
   animation: sinusoidal 3s infinite;
@@ -439,7 +439,7 @@ div.row {
 }
 
 .gpu-sub-header {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1rem;
@@ -447,13 +447,13 @@ div.row {
 
 .gpu-header,
 .Phoenix-header {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 1.5rem;
   margin: 0;
 }
 
 .Phoenix-sub-header {
-  font-family: "Lora", monospace !important;
+  font-family: 'Lora', monospace !important;
   font-size: 1.2rem;
   font-weight: 600;
 }

@@ -1,4 +1,4 @@
-import PriorityQueue from "./PriorityQueue";
+import PriorityQueue from './PriorityQueue';
 
 /*
 An implementation of Djisktra's shortest path algorithm to find the

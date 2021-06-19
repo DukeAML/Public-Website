@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row } from "react-bootstrap";
+import React from 'react';
+import { Container, Row } from 'react-bootstrap';
 
 class GPUInfo extends React.Component {
   render() {
@@ -86,9 +86,8 @@ class GPUInfo extends React.Component {
           <br />
           <a
             target="_blank"
-            href="https://computer.howstuffworks.com/graphics-card1.htm"
-          >
-            {" "}
+            href="https://computer.howstuffworks.com/graphics-card1.htm">
+            {' '}
             https://computer.howstuffworks.com/graphics-card1.htm
           </a>
           <br />
@@ -96,8 +95,7 @@ class GPUInfo extends React.Component {
           If you want to understand cloud computing start here: <br />
           <a
             target="_blank"
-            href="https://www.fastmetrics.com/blog/tech/what-is-cloud-computing/"
-          >
+            href="https://www.fastmetrics.com/blog/tech/what-is-cloud-computing/">
             https://www.fastmetrics.com/blog/tech/what-is-cloud-computing/
           </a>
         </p>
@@ -151,12 +149,11 @@ class GPUInfo extends React.Component {
           <br />
           <a
             target="_blank"
-            href="https://pratt.duke.edu/about/news/new-dawn-duke-data-scavengers"
-          >
+            href="https://pratt.duke.edu/about/news/new-dawn-duke-data-scavengers">
             https://pratt.duke.edu/about/news/new-dawn-duke-data-scavengers
           </a>
           <br /> <br />
-          If you have questions or comments email{" "}
+          If you have questions or comments email{' '}
           <a href="mailto:lot@duke.edu">lot@duke.edu</a>
         </p>
       </div>

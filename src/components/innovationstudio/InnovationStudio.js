@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import Navigation from "../tools/Navigation";
-import Footer from "../tools/Footer";
-import { Dropdown, Accordion, Icon } from "semantic-ui-react";
-import { Col, Row, Container } from "react-bootstrap";
-import withWindowDimensions from "../people/withWindowDimensions";
+import Navigation from '../tools/Navigation';
+import Footer from '../tools/Footer';
+import { Dropdown, Accordion, Icon } from 'semantic-ui-react';
+import { Col, Row, Container } from 'react-bootstrap';
+import withWindowDimensions from '../people/withWindowDimensions';
 import {
   companyForm,
   studentForm,
   mentorForm,
   projectAssistantForm,
-} from "./faq";
-import EmbeddedForm from "./EmbeddedForm";
-const Logo = require("../homepage/images/innovationstudio.png");
+} from './faq';
+import EmbeddedForm from './EmbeddedForm';
+const Logo = require('../homepage/images/innovationstudio.png');
 
 class PhoenixProjectPage extends React.Component {
   state = { activeIndex: [1, 4], files: [] };
@@ -55,18 +55,17 @@ class PhoenixProjectPage extends React.Component {
         <Container
           fluid
           style={{
-            minHeight: "95vh",
+            minHeight: '95vh',
             padding: `0 ${padding}% 8rem ${padding}%`,
-            fontfamily: "Nora",
-          }}
-        >
+            fontfamily: 'Nora',
+          }}>
           <Row style={{ marginTop: 20 }}>
-            <Col lg={4} sm={12} style={{ width: "100%" }}>
-              <div style={{ display: "flex" }}>
+            <Col lg={4} sm={12} style={{ width: '100%' }}>
+              <div style={{ display: 'flex' }}>
                 <img
                   src={Logo}
                   alt="Innovation Studio Logo"
-                  style={{ height: "15rem", margin: "auto", marginTop: "1rem" }}
+                  style={{ height: '15rem', margin: 'auto', marginTop: '1rem' }}
                 />
               </div>
             </Col>
@@ -91,13 +90,12 @@ class PhoenixProjectPage extends React.Component {
             </Col>
           </Row>
 
-          <div style={{ marginTop: "1rem" }}>
+          <div style={{ marginTop: '1rem' }}>
             <Accordion>
               <Accordion.Title
                 active={activeIndex.includes(1)}
                 index={1}
-                onClick={this.handleClick}
-              >
+                onClick={this.handleClick}>
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
                   When is this?
@@ -115,8 +113,7 @@ class PhoenixProjectPage extends React.Component {
               <Accordion.Title
                 active={activeIndex.includes(2)}
                 index={2}
-                onClick={this.handleClick}
-              >
+                onClick={this.handleClick}>
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
                   I’m a start-up or student with an idea. What’s next?
@@ -124,13 +121,13 @@ class PhoenixProjectPage extends React.Component {
                 </span>
               </Accordion.Title>
               <Accordion.Content active={activeIndex.includes(2)}>
-                Fill out this{" "}
+                Fill out this{' '}
                 <a target="_blank" href="http://bit.ly/DukeFounders">
                   form
-                </a>{" "}
+                </a>{' '}
                 and a member of our executive committee will reach out for
                 interviews and next steps.
-                <Row style={{ justifyContent: "center" }}>
+                <Row style={{ justifyContent: 'center' }}>
                   <Col xs={12} xl={10}>
                     <EmbeddedForm questions={companyForm} />
                   </Col>
@@ -140,8 +137,7 @@ class PhoenixProjectPage extends React.Component {
               <Accordion.Title
                 active={activeIndex.includes(3)}
                 index={3}
-                onClick={this.handleClick}
-              >
+                onClick={this.handleClick}>
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
                   I’m an engineer and I want to get involved. What’s next?
@@ -150,12 +146,12 @@ class PhoenixProjectPage extends React.Component {
               </Accordion.Title>
 
               <Accordion.Content active={activeIndex.includes(3)}>
-                Please fill out this{" "}
+                Please fill out this{' '}
                 <a target="_blank" href="https://bit.ly/DukeEngineerPM">
                   form
-                </a>{" "}
+                </a>{' '}
                 to indicate your interest in Innovation Studio.
-                <Row style={{ justifyContent: "center" }}>
+                <Row style={{ justifyContent: 'center' }}>
                   <Col xs={12} xl={10}>
                     <EmbeddedForm questions={studentForm} />
                   </Col>
@@ -165,8 +161,7 @@ class PhoenixProjectPage extends React.Component {
               <Accordion.Title
                 active={activeIndex.includes(4)}
                 index={4}
-                onClick={this.handleClick}
-              >
+                onClick={this.handleClick}>
                 <Icon name="dropdown" />
                 <span className="Phoenix-header">
                   Where can I learn more?
@@ -176,7 +171,7 @@ class PhoenixProjectPage extends React.Component {
 
               <Accordion.Content active={activeIndex.includes(4)}>
                 If you have questions beyond what is covered on this page,
-                please email{" "}
+                please email{' '}
                 <a href="mailto:choonghwan.lee@duke.edu">
                   choonghwan.lee@duke.edu
                 </a>

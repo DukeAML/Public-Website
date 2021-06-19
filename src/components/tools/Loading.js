@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // type prop: "github", "linkedin", "", etc...
 
@@ -8,72 +8,66 @@ in app.scss for each new iconb*/
 function Loading(props) {
   return (
     <center>
-      {" "}
+      {' '}
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          height: "10rem",
-          width: "10rem",
-        }}
-      >
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          height: '10rem',
+          width: '10rem',
+        }}>
         <div
           style={{
-            height: "10rem",
-            width: "10rem",
+            height: '10rem',
+            width: '10rem',
 
-            position: "absolute",
-            textAlign: "center",
-          }}
-        >
+            position: 'absolute',
+            textAlign: 'center',
+          }}>
           <a
-            className={"bar-left"}
+            className={'bar-left'}
             style={{
-              float: "left",
-              height: "10rem",
-              width: "10rem",
-              position: "absolute",
+              float: 'left',
+              height: '10rem',
+              width: '10rem',
+              position: 'absolute',
               left: 0,
             }}
-            href={props.href}
-          ></a>
-          <div style={{ overflow: "hidden", height: "100%", width: "100%" }}>
+            href={props.href}></a>
+          <div style={{ overflow: 'hidden', height: '100%', width: '100%' }}>
             <a
-              className={"loading"}
+              className={'loading'}
               style={{
-                float: "left",
-                height: "100%",
-                width: "100%",
-                display: "block",
-                margin: "auto",
+                float: 'left',
+                height: '100%',
+                width: '100%',
+                display: 'block',
+                margin: 'auto',
               }}
-              href={props.href}
-            ></a>
+              href={props.href}></a>
             <a
-              className={"loading"}
+              className={'loading'}
               style={{
-                float: "left",
-                height: "100%",
-                width: "100%",
-                display: "block",
-                margin: "auto",
+                float: 'left',
+                height: '100%',
+                width: '100%',
+                display: 'block',
+                margin: 'auto',
               }}
-              href={props.href}
-            ></a>
+              href={props.href}></a>
           </div>
 
           <a
-            className={"bar-right"}
+            className={'bar-right'}
             style={{
-              float: "left",
-              height: "10rem",
-              width: "10rem",
-              position: "absolute",
+              float: 'left',
+              height: '10rem',
+              width: '10rem',
+              position: 'absolute',
               right: 0,
             }}
-            href={props.href}
-          ></a>
+            href={props.href}></a>
         </div>
       </div>
     </center>

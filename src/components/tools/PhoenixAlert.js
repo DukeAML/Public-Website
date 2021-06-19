@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Alert, Button } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Alert, Button } from 'react-bootstrap';
 
 const PhoenixAlert = () => {
   const [show, setShow] = useState(true);
@@ -7,12 +7,11 @@ const PhoenixAlert = () => {
   if (show) {
     return (
       <Alert
-        style={{ backgroundColor: "#808ea4" }}
+        style={{ backgroundColor: '#808ea4' }}
         onClose={() => setShow(false)}
-        dismissible
-      >
+        dismissible>
         <Alert.Heading>
-          An important note about the Phoenix Project{" "}
+          An important note about the Phoenix Project{' '}
         </Alert.Heading>
         <p>
           Duke Applied Machine Learning is a separate organization that is
@@ -26,9 +25,8 @@ const PhoenixAlert = () => {
   }
   return (
     <Button
-      style={{ backgroundColor: "#808ea4", border: "none" }}
-      onClick={() => setShow(true)}
-    >
+      style={{ backgroundColor: '#808ea4', border: 'none' }}
+      onClick={() => setShow(true)}>
       An important note about the Phoenix Project
     </Button>
   );

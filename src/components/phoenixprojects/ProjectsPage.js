@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Row,
@@ -12,16 +12,16 @@ import {
   tr,
   Button,
   Card,
-} from "react-bootstrap";
+} from 'react-bootstrap';
 
-import Navigation from "../tools/Navigation";
-import Footer from "../tools/Footer";
-import ProjectCard from "../projects/ProjectCard";
-import withWindowDimensions from "../people/withWindowDimensions";
-const PhoenixLogo = require("./phoenix.png");
+import Navigation from '../tools/Navigation';
+import Footer from '../tools/Footer';
+import ProjectCard from '../projects/ProjectCard';
+import withWindowDimensions from '../people/withWindowDimensions';
+const PhoenixLogo = require('./phoenix.png');
 
-const projects = require("./projectsData");
-console.log(projects, "asds");
+const projects = require('./projectsData');
+console.log(projects, 'asds');
 
 class ProjectsPage extends React.Component {
   render() {
@@ -44,7 +44,7 @@ class ProjectsPage extends React.Component {
     }
 
     const projectCards = projects.map((project, key) => (
-      <Col lg={4} md={6} style={{ padding: "1rem" }}>
+      <Col lg={4} md={6} style={{ padding: '1rem' }}>
         {/*<ProjectCard
           key={key}
           title={project.title}
@@ -67,24 +67,26 @@ class ProjectsPage extends React.Component {
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
+          <Container style={{ minHeight: '85vh', padding: `0 ${padding}%` }}>
             <center>
               <Row style={{ marginTop: 20 }}>
                 <Col lg={4} sm={12}>
                   <img
                     src={PhoenixLogo}
                     alt="The Phoenix Project"
-                    style={{ height: "15rem", margin: "2rem" }}
+                    style={{ height: '15rem', margin: '2rem' }}
                   />
                 </Col>
                 <Col lg={8} sm={12} align="left">
                   <div className="title"> The Phoenix Project </div>
                   <p>
-                    <b>The Phoenix Project will be running again in Summer 2021!</b>
+                    <b>
+                      The Phoenix Project will be running again in Summer 2021!
+                    </b>
                     <br />
                     <br />
-                    The Duke University Phoenix Project brought together 200 Duke
-                    students who had recently lost internships to work on
+                    The Duke University Phoenix Project brought together 200
+                    Duke students who had recently lost internships to work on
                     end-to-end technical solutions for companies during Summer
                     2020 (May 26-August 7).
                     <br />
@@ -102,14 +104,13 @@ class ProjectsPage extends React.Component {
 
             <Row
               style={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
               {projectCards}
             </Row>
           </Container>
-          <Footer style={{ margin: "2rem 0 0 0" }} />
+          <Footer style={{ margin: '2rem 0 0 0' }} />
         </Container>
       </div>
     );

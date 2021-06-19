@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Collapse, Col, Row, Container, Grid, Fade } from "react-bootstrap";
-import AnimateHeight from "react-animate-height";
+import { Collapse, Col, Row, Container, Grid, Fade } from 'react-bootstrap';
+import AnimateHeight from 'react-animate-height';
 
-import withWindowDimensions from "./withWindowDimensions";
+import withWindowDimensions from './withWindowDimensions';
 
-import Person from "./Person";
+import Person from './Person';
 
 class PeopleRow extends React.Component {
   constructor() {
@@ -21,11 +21,11 @@ class PeopleRow extends React.Component {
   }
 
   componentWillMount() {
-    document.addEventListener("mousedown", this.handleClickAway, false);
+    document.addEventListener('mousedown', this.handleClickAway, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickAway, false);
+    document.removeEventListener('mousedown', this.handleClickAway, false);
   }
 
   handleClickAway = (e) => {
@@ -116,49 +116,49 @@ class PeopleRow extends React.Component {
       name = current.Name;
       team = current.Team ? (
         <div>
-          <b>Team</b>: {current.Team}{" "}
+          <b>Team</b>: {current.Team}{' '}
         </div>
       ) : (
-        ""
+        ''
       );
       joined = current.Joined ? (
         <div>
-          <b>Joined</b>: {current.Joined}{" "}
+          <b>Joined</b>: {current.Joined}{' '}
         </div>
       ) : (
-        ""
+        ''
       );
       studying = current.Degree ? (
         <div>
-          <b>Studying</b>: {current.Degree.join(", ")}{" "}
+          <b>Studying</b>: {current.Degree.join(', ')}{' '}
         </div>
       ) : (
-        ""
+        ''
       );
-      interests = current["Tech Interests"] ? (
+      interests = current['Tech Interests'] ? (
         <div>
-          <b>Interested in</b>: {current["Tech Interests"].join(", ")}{" "}
+          <b>Interested in</b>: {current['Tech Interests'].join(', ')}{' '}
         </div>
       ) : (
-        ""
+        ''
       );
       // For Tech for Equity page
       role = current.Role ? (
         <div>
-          <b>Role</b>: {current.Role}{" "}
+          <b>Role</b>: {current.Role}{' '}
         </div>
       ) : (
-        ""
+        ''
       );
-      bio = current.Bio ? current.Bio : ""; // Bio Section
+      bio = current.Bio ? current.Bio : ''; // Bio Section
     } else {
-      name = "";
-      team = "";
-      joined = "";
-      studying = "";
-      interests = "";
-      role = "";
-      bio = "";
+      name = '';
+      team = '';
+      joined = '';
+      studying = '';
+      interests = '';
+      role = '';
+      bio = '';
     }
 
     let marginLeft = this.props.colWidth * this.state.currIndex;
@@ -169,21 +169,19 @@ class PeopleRow extends React.Component {
       <div>
         <Row
           ref={(node) => (this.peopleDisplay = node)}
-          style={{ margin: `0 ${padding}%` }}
-        >
+          style={{ margin: `0 ${padding}%` }}>
           {columns}
         </Row>
         <Row ref={(node) => (this.detailsBox = node)}>
           <Col xs={12}>
-            <AnimateHeight duration={300} height={this.state.in ? "auto" : 0}>
+            <AnimateHeight duration={300} height={this.state.in ? 'auto' : 0}>
               <div className="person-details box-shadowed">
                 <div
                   className="person-details-text"
                   style={{
-                    textAlign: "left",
+                    textAlign: 'left',
                     padding: `0 ${padding}%`,
-                  }}
-                >
+                  }}>
                   <div className="details-title">{name}</div>
                   {team}
                   {joined}

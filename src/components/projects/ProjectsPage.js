@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Row,
@@ -11,14 +11,14 @@ import {
   tr,
   Button,
   Card,
-} from "react-bootstrap";
+} from 'react-bootstrap';
 
-import Navigation from "../tools/Navigation";
-import Footer from "../tools/Footer";
-import Loading from "../tools/Loading";
-import ProjectCard from "./ProjectCard";
-import withWindowDimensions from "../people/withWindowDimensions";
-import { getProjects, getProjectsMembers } from "../../api/api.js";
+import Navigation from '../tools/Navigation';
+import Footer from '../tools/Footer';
+import Loading from '../tools/Loading';
+import ProjectCard from './ProjectCard';
+import withWindowDimensions from '../people/withWindowDimensions';
+import { getProjects, getProjectsMembers } from '../../api/api.js';
 
 class ProjectsPage extends React.Component {
   constructor() {
@@ -42,15 +42,15 @@ class ProjectsPage extends React.Component {
     let peopleTable = {};
     people.map((person) => {
       peopleTable[person.id] = {
-        name: person["Name"],
-        img: person["Photo"],
+        name: person['Name'],
+        img: person['Photo'],
       };
     });
 
     for (let project of this.state.projects) {
       project.members = [];
       // Add member info to project objects
-      for (let teamMember of project["Current Engineers"]) {
+      for (let teamMember of project['Current Engineers']) {
         project.members.push(peopleTable[teamMember]);
       }
     }
@@ -98,33 +98,32 @@ class ProjectsPage extends React.Component {
             }
             md={6 + (key === this.state.selectedKey ? 6 : 0)}
             style={{
-              padding: "1rem",
-              transition: "all .6s cubic-bezier(0.32, 0, 0.67, 0)",
-            }}
-          >
+              padding: '1rem',
+              transition: 'all .6s cubic-bezier(0.32, 0, 0.67, 0)',
+            }}>
             <ProjectCard
               key={key}
               index={key}
               uid={project.uid}
               link={project.uid}
-              title={project["Project Name"]}
-              description={project["Project Description"]}
-              shortDescription={project["Short Description"]}
+              title={project['Project Name']}
+              description={project['Project Description']}
+              shortDescription={project['Short Description']}
               teams={project.Division}
               members={renderPeople ? project.members : []}
-              img={project.logo ? project.logo[0].url : ""}
+              img={project.logo ? project.logo[0].url : ''}
               isFeatured={key === this.state.selectedKey}
               callback={this.selectedCallback}
             />
           </Col>
         ))
-      : "";
+      : '';
 
     return (
       <div>
         <Navigation />
         <Container fluid style={{ padding: 0 }}>
-          <Container style={{ minHeight: "85vh", padding: `0 ${padding}%` }}>
+          <Container style={{ minHeight: '85vh', padding: `0 ${padding}%` }}>
             <center>
               <div className="title"> DAML Projects </div>
               <br />
@@ -132,14 +131,12 @@ class ProjectsPage extends React.Component {
             </center>
             <Row
               style={{
-                display: "flex",
-                justifyContent: "start",
-              }}
-            >
+                display: 'flex',
+                justifyContent: 'start',
+              }}>
               {this.state.loading ? (
                 <div
-                  style={{ height: "10rem", padding: "10rem", margin: "auto" }}
-                >
+                  style={{ height: '10rem', padding: '10rem', margin: 'auto' }}>
                   <Spinner animation="grow" size="md" />
                 </div>
               ) : (
@@ -147,7 +144,7 @@ class ProjectsPage extends React.Component {
               )}
             </Row>
           </Container>
-          <Footer style={{ margin: "2rem 0 0 0" }} />
+          <Footer style={{ margin: '2rem 0 0 0' }} />
         </Container>
       </div>
     );

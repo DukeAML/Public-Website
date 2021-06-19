@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Jumbotron,
@@ -8,31 +8,31 @@ import {
   Image,
   Card,
   Alert,
-} from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
-import AnimationWrapper from "./AnimationWrapper.js";
-import Canvas from "../canvas/Canvas";
-import Animation from "../canvas/Animation";
-import Footer from "../tools/Footer";
-import Navigation from "../tools/Navigation";
-import ThemeCard from "./ThemeCard";
-import ImageAccordion from "../tools/ImageAccordion";
-import IndustryBuckets from "./IndustryBuckets";
-import Carousel from "./Carousel";
-import "./HomePage.scss";
-const DtcLogo = require("./dtc-logo-tag.png");
+} from 'react-bootstrap';
+import { Link, Redirect } from 'react-router-dom';
+import AnimationWrapper from './AnimationWrapper.js';
+import Canvas from '../canvas/Canvas';
+import Animation from '../canvas/Animation';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import ThemeCard from './ThemeCard';
+import ImageAccordion from '../tools/ImageAccordion';
+import IndustryBuckets from './IndustryBuckets';
+import Carousel from './Carousel';
+import './HomePage.scss';
+const DtcLogo = require('./dtc-logo-tag.png');
 
 class HomePage extends React.Component {
   state = { redirect: false, showWIP: true };
 
   handleSignUpClick = () => {
     var link =
-      "mailto:duke.applied.ml@gmail.com" +
-      "?cc=duke.applied.ml@gmail.com" +
-      "&subject=" +
-      escape("Add me to the Newsletter!") +
-      "&body=" +
-      escape("This is the email to add.");
+      'mailto:duke.applied.ml@gmail.com' +
+      '?cc=duke.applied.ml@gmail.com' +
+      '&subject=' +
+      escape('Add me to the Newsletter!') +
+      '&body=' +
+      escape('This is the email to add.');
     window.location.href = link;
   };
 
@@ -84,20 +84,19 @@ class HomePage extends React.Component {
           <AnimationWrapper>
             <Col
               style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "100%",
-                height: "60vh",
-              }}
-            >
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '60vh',
+              }}>
               {/**Icon */}
               {/* PUT THE ANIMATION REF(IN CONSTRUCTOR) HERE*/}
               <Image
                 fluid
                 style={{ padding: 0 }}
                 className="main-graphic parallax"
-                src={require("./images/DAML_Full_Grey_Transparent.svg")}
+                src={require('./images/DAML_Full_Grey_Transparent.svg')}
               />
             </Col>
           </AnimationWrapper>
@@ -109,14 +108,13 @@ class HomePage extends React.Component {
               <Row
                 className="vertical-align-outer"
                 style={{
-                  fontFamily: "Lora",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "#1e2c3a",
-                }}
-              >
-                <p style={{ width: "50%" }}>
+                  fontFamily: 'Lora',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  color: '#1e2c3a',
+                }}>
+                <p style={{ width: '50%' }}>
                   The Duke Applied Machine Learning Group is always looking for
                   smart and enthusiastic people, regardless of experience. For
                   most new applicants we will have a short introductory course
@@ -137,19 +135,17 @@ class HomePage extends React.Component {
           fluid
           className="boxShadowed"
           style={{
-            backgroundColor: "#e6e7e870",
-            color: "#1e2c3a",
-          }}
-        >
+            backgroundColor: '#e6e7e870',
+            color: '#1e2c3a',
+          }}>
           <Container>
             <Row
               style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <h3 className="homepageTitle" style={{ marginBottom: '20px' }}>
                 News
               </h3>
             </Row>
@@ -157,12 +153,11 @@ class HomePage extends React.Component {
               <Col
                 xs={12}
                 style={{
-                  fontFamily: "Lora",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Carousel style={{ width: "100%" }} />
+                  fontFamily: 'Lora',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Carousel style={{ width: '100%' }} />
               </Col>
             </Row>
           </Container>
@@ -173,12 +168,11 @@ class HomePage extends React.Component {
           <Container>
             <Row
               style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <h3 className="homepageTitle" style={{ marginBottom: "20px" }}>
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <h3 className="homepageTitle" style={{ marginBottom: '20px' }}>
                 About DAML
               </h3>
             </Row>
@@ -187,12 +181,11 @@ class HomePage extends React.Component {
                 md={6}
                 sm={12}
                 style={{
-                  fontFamily: "Lora",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+                  fontFamily: 'Lora',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
                 We are a group focused on building, implementing, and deploying
                 end-to-end machine learning models to solve research and
                 business problems. We establish collaborations with local
@@ -206,12 +199,11 @@ class HomePage extends React.Component {
                 md={6}
                 sm={12}
                 style={{
-                  fontFamily: "Lora",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+                  fontFamily: 'Lora',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
                 <Animation />
               </Col>
             </Row>

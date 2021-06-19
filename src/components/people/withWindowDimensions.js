@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default function withWindowDimensions(WrappedComponent) {
   return class extends Component {
@@ -6,11 +6,11 @@ export default function withWindowDimensions(WrappedComponent) {
 
     componentDidMount() {
       this.updateWindowDimensions();
-      window.addEventListener("resize", this.updateWindowDimensions);
+      window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     componentWillUnmount() {
-      window.removeEventListener("resize", this.updateWindowDimensions);
+      window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
     updateWindowDimensions = () => {

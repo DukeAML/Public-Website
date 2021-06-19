@@ -1,29 +1,29 @@
-import React from "react";
-import { Container, Button, Collapse, Spinner } from "react-bootstrap";
+import React from 'react';
+import { Container, Button, Collapse, Spinner } from 'react-bootstrap';
 
-import Footer from "../tools/Footer";
-import Navigation from "../tools/Navigation";
-import withWindowDimensions from "./withWindowDimensions";
-import { getMemberData } from "./PeopleData";
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import withWindowDimensions from './withWindowDimensions';
+import { getMemberData } from './PeopleData';
 
-import PeopleRow from "./PeopleRow";
+import PeopleRow from './PeopleRow';
 
 class PeoplePage extends React.Component {
   state = {
     loading: true,
     details: {},
     teamData: {
-      EXEC: { open: true, members: [], title: "Executive Team" },
-      DS: { open: true, members: [], title: "Data Science Team" },
-      SWE: { open: true, members: [], title: "Software Engineer Team" },
-      PM: { open: true, members: [], title: "Product Manager Team" },
-      HRD: { open: true, members: [], title: "Hardware Engineer Team" },
+      EXEC: { open: true, members: [], title: 'Executive Team' },
+      DS: { open: true, members: [], title: 'Data Science Team' },
+      SWE: { open: true, members: [], title: 'Software Engineer Team' },
+      PM: { open: true, members: [], title: 'Product Manager Team' },
+      HRD: { open: true, members: [], title: 'Hardware Engineer Team' },
     },
   };
- 
+
   componentDidMount = async () => {
     const members = await getMemberData();
-    console.log("Members", members);
+    console.log('Members', members);
     this.setState({
       loading: false,
       teamData: {
@@ -53,11 +53,11 @@ class PeoplePage extends React.Component {
       cols = 1;
     }
 
-    console.log("Cols: ", cols);
+    console.log('Cols: ', cols);
     console.log(people.length);
 
     const numRows = Math.ceil(people.length / cols);
-    console.log("rows: ", numRows);
+    console.log('rows: ', numRows);
 
     let rowArrays = [];
     // make each row, add details section below
@@ -71,7 +71,7 @@ class PeoplePage extends React.Component {
     ));
 
     return this.state.loading ? (
-      <div style={{ height: "10rem", padding: "3rem" }}>
+      <div style={{ height: '10rem', padding: '3rem' }}>
         <Spinner animation="grow" size="md" />
       </div>
     ) : (
@@ -104,17 +104,17 @@ class PeoplePage extends React.Component {
 
     if (window <= 576) {
       collapseText = {
-        isOpen: "-",
-        isClosed: "+",
+        isOpen: '-',
+        isClosed: '+',
       };
 
       collapseStyle = {
-        fontWeight: "bold",
+        fontWeight: 'bold',
       };
     } else {
       collapseText = {
-        isOpen: "Collapse",
-        isClosed: "Expand",
+        isOpen: 'Collapse',
+        isClosed: 'Expand',
       };
     }
 
@@ -124,7 +124,7 @@ class PeoplePage extends React.Component {
 
       return (
         <div key={index}>
-          {" "}
+          {' '}
           <div className="team" style={{ padding: `1rem ${padding}%` }}>
             {team[1].title}
             <Button
@@ -137,8 +137,7 @@ class PeoplePage extends React.Component {
                   },
                 })
               }
-              style={collapseStyle}
-            >
+              style={collapseStyle}>
               {team[1].open ? collapseText.isOpen : collapseText.isClosed}
             </Button>
             <hr />
@@ -153,7 +152,7 @@ class PeoplePage extends React.Component {
     return (
       <Container fluid style={{ padding: 0 }}>
         <Navigation />
-        <div style={{ minHeight: "85vh" }}>
+        <div style={{ minHeight: '85vh' }}>
           <div className="title">
             <center>Our Members</center>
           </div>

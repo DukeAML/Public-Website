@@ -2,14 +2,14 @@ li {
   list-style-type: none;
 }
 
-.footpanelScholars{
+.footpanelScholars {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 1.3em;
-  font: 17px "open sans", Helvetica, Sans-Serif; 
-  background: rgba(0,0,0,0.6);
+  font: 17px 'open sans', Helvetica, Sans-Serif;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .titleScholars {
@@ -18,24 +18,24 @@ li {
 }
 
 #date {
-  font: 15px "open sans", Helvetica, Sans-Serif; 
-  color: rgb(208, 208, 208);;
+  font: 15px 'open sans', Helvetica, Sans-Serif;
+  color: rgb(208, 208, 208);
   /* display: inline-block; */
   /* line-height: 20px; */
 }
 
 .general-panel {
   display: grid;
-  grid-auto-rows: 250px ;
+  grid-auto-rows: 250px;
 }
 
-div[id="3"]{
+div[id='3'] {
   display: grid;
   grid-auto-rows: 510px;
 }
 
-#nohover:hover{
-  color:white;
+#nohover:hover {
+  color: white;
   text-decoration: none;
 }
 
