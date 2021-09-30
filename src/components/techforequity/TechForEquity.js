@@ -8,7 +8,7 @@ import ProjectCard from './ProjectCard';
 import withWindowDimensions from '../people/withWindowDimensions';
 import PeopleRow from '../people/PeopleRow';
 
-import { getTFEProjects, getTFEMembers, getTFEFellows } from '../../api/api.js';
+import { getTFEProjects, getTFEExec, getTFEFellows } from '../../api/api.js';
 const Logo = require('../homepage/images/techforequity.png');
 
 class TechForEquity extends React.Component {
@@ -28,7 +28,7 @@ class TechForEquity extends React.Component {
     this.setState({ projects: projects, loadingProjects: false });
 
     // Load, clean, and update member
-    const members = await getTFEMembers();
+    const members = await getTFEExec();
     let pkey = {
       Headshot: 'Photo',
     };

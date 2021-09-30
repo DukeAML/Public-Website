@@ -1,8 +1,15 @@
 import axios from 'axios';
 
-const client = axios.create({
-  baseURL: 'https://dukeappml.herokuapp.com',
-});
+var client;
+if (process.env.LOCAL_DEV || setTimeout(() => process.env.LOCAL_DEV, 100)) {
+  client = axios.create({
+    baseURL: 'http://localhost:3001',
+  });
+} else {
+  client = axios.create({
+    baseURL: 'https://dukeappml.herokuapp.com',
+  });
+}
 
 export const getProjects = async () => {
   const { data } = await client.get('./projects');
@@ -28,8 +35,8 @@ export const getTFEProjects = async () => {
   return data;
 };
 
-export const getTFEMembers = async () => {
-  const { data } = await client.get('./techforequity/people');
+export const getTFEExec = async () => {
+  const { data } = await client.get('./techforequity/exec');
   console.log(data);
   return data;
 };
@@ -57,7 +64,7 @@ export default {
   getProjectsMembers,
   getPapers,
   getTFEProjects,
-  getTFEMembers,
+  getTFEExec,
   getTFEFellows,
   getNews,
   getMembers,
