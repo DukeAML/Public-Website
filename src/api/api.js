@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 var client;
-if (process.env.LOCAL_DEV || setTimeout(() => process.env.LOCAL_DEV, 100)) {
+// TODO: fix this
+if (0 && process.env.LOCAL_DEV) {
   client = axios.create({
     baseURL: 'http://localhost:3001',
   });
