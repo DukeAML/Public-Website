@@ -172,21 +172,33 @@ class TechForEquity extends React.Component {
                     Applied Machine Learning, is a student-run summer internship
                     program that aims to bridge the gap between student
                     technologists and non-profit organizations. The program
-                    provides Duke students with the opportunity to engage with
-                    community-based organizations, develop tech-driven solutions
+                    provides Duke students with the opportunity to work with
+                    community-based organizations over the summer, develop tech-driven solutions
                     to pressing social issues, and connect with
                     tech-for-social-change leaders at the ACLU, Vera Institute
                     of Justice, and more.
                     <br />
                     <br />
-                    2021 Fellowship Dates: May 24 - July 30, 2021
+                    2022 Fellowship Dates: May 23 - July 29, 2022
                     <br />
                     <br />
-                    The Application for the 2021 Fellowship is now closed. Be
-                    sure to out for new opportunities during the school year and
-                    future summers!
+                    The Application for the 2022 Fellowship is now open! Click below to apply!
                     <br />
                     <br />
+                    <Button
+                      className="theme-button"
+                      style={{
+                        marginBottom: '1rem',
+                        backgroundColor: '#2e755d',
+                      }}>
+                      <a
+                        href="https://airtable.com/shrTk1dz4VwidpwAc"
+                        target="_blank"
+                        style={{ color: 'white' }}>
+                        {' '}
+                        Apply Here!
+                      </a>
+                    </Button>
                     <Button
                       className="theme-button"
                       style={{
