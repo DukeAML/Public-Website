@@ -136,7 +136,9 @@ class ProjectsPage extends React.Component {
               }}>
               {this.state.loading ? (
                 <div
-                  style={{ height: '10rem', padding: '10rem', margin: 'auto' }}>
+                  style={{ height: '10rem', padding: '4rem', margin: 'auto' }}>
+                  <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
+                  <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
                   <Spinner animation="grow" size="md" />
                 </div>
               ) : (

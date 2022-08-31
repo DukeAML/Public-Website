@@ -192,7 +192,10 @@ class Join extends React.Component {
                   padding: '5%',
                   textAlign: 'center',
                 }}>
-                <a href="mailto:nicholas.hobart@duke.edu">Niko Hobart</a>
+                <a href="mailto:choonghwan.lee@duke.edu">Jason Lee</a>&nbsp; & &nbsp;
+                <a href="mailto:angikar.ghosal@duke.edu">
+                  Angikar Ghosal
+                </a>
               </Col>
             </Row>
             <Row
@@ -240,10 +243,9 @@ class Join extends React.Component {
                   padding: '5%',
                   textAlign: 'center',
                 }}>
-                <a href="mailto:yasa.baig@duke.edu">Yasa Baig</a>&nbsp; & &nbsp;
-                <a href="mailto:nathaniel.friedman@duke.edu">
-                  {' '}
-                  Nathaniel Friedman
+                <a href="mailto:frank.willard@duke.edu">Frankie Willard</a>&nbsp; & &nbsp;
+                <a href="mailto:nds34@duke.edu">
+                  Nick Silva
                 </a>
               </Col>
             </Row>
@@ -292,7 +294,7 @@ class Join extends React.Component {
                   padding: '5%',
                   textAlign: 'center',
                 }}>
-                <a href="wyatt.focht@duke.edu">Wyatt Focht</a>
+                <a href="mailto:swetha.sekhar@duke.edu">Swetha Sekhar</a>
               </Col>
             </Row>
             <Row
@@ -341,8 +343,7 @@ class Join extends React.Component {
                   padding: '5%',
                   textAlign: 'center',
                 }}>
-                <a href="mailto:jamila.otieno@duke.edu">Jamila Otieno</a>&nbsp;
-                & &nbsp;<a href="mailto:joshua.boss@duke.edu">Josh Boss</a>
+                <a href="mailto:connor.m.johnson@duke.edu">Connor Johnson</a>
               </Col>
             </Row>
           </Container>
