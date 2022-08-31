@@ -70,7 +70,7 @@ class PeoplePage extends React.Component {
       <PeopleRow people={row} key={index} />
     ));
 
-    return this.state.loadingFellows ? (
+    return this.state.loading ? (
       <div style={{ height: '10rem', padding: '2rem', margin: 'auto' }}>
         <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
         <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
