@@ -22,10 +22,10 @@ class CustomCarousel extends React.Component {
           alt: 'Phoenix Project Logo',
           src: require('../homepage/images/phoenix.png'),
         },
-        body: 'The Phoenix Project is running again summer 2023 and the applications are now!!',
+        body: 'The Phoenix Project is running again summer 2023 and the applications are now!',
         links: [
           {
-            text: 'Click here',
+            text: 'Apply here',
             value: 'https://airtable.com/shrU5TWqjCCFRlu77',
           },
         ],
@@ -40,12 +40,12 @@ class CustomCarousel extends React.Component {
         body: 'Also check out a progress update and learn more about their upcoming Demo Day!!',
         links: [
           {
-            text: 'Spring Cohort',
+            text: 'Spring cohort',
             value:
               'https://medium.com/aml-group/introducing-the-duke-innovation-studio-spring-21-cohort-7739551c3511',
           },
           {
-            text: 'Demo day!',
+            text: 'demo day!',
             value:
               'https://dukeinnovationstudio.medium.com/duke-innovation-studio-spring-21-cohort-progress-updates-7e4075aee0c',
           },
@@ -66,7 +66,7 @@ class CustomCarousel extends React.Component {
               'https://www.newsobserver.com/news/business/article242197741.html',
           },
           {
-            text: 'and Here',
+            text: 'here!',
             value:
               'https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities',
           },
@@ -89,29 +89,34 @@ class CustomCarousel extends React.Component {
       padding: '1.2rem',
       height: '100%',
       width: '70%',
-      textAlign:"left",
-      lineHeight: 0.6,
+      textAlign: 'left',
+      lineHeight: 0.8,
     };
 
     const slides = this.state.news.map((news, index) => (
-      <Carousel.Item>
+      <Carousel.Item style={{ height: '11rem' }}>
         <Container style={slideStyle}>
           <Row height="wrap-content">
-            <Col className="d-none d-md-block" md={3} lg={2}>
-              <img alt={news.img.alt} src={news.img.src} width="75%" />
+            <Col className="d-none d-md-block align-middle" md={3} lg={2}>
+              <img alt={news.img.alt} src={news.img.src} width="80%" />
             </Col>
-            <Col md={9} xs={12}>
+            <Col md={9} xs={12} class="align-middle">
               <p style={{ color: '#617489' }}>
                 <b>{news.title}</b>
               </p>
               <br />
               <p style={{ color: '#617489' }}>{news.body}</p>
               <br />
-              <p>
-                {news.links.map((link) => (
-                  <a href={link.value}>{link.text} </a>
+              <div>
+                {news.links.map((link, idx) => (
+                  <a>
+                    {idx > 0 && <a> and </a>}
+                    <a color="#7c9fd6" href={link.value}>
+                      {link.text}
+                    </a>
+                  </a>
                 ))}
-              </p>
+              </div>
             </Col>
           </Row>
         </Container>
