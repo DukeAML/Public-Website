@@ -99,7 +99,6 @@ class ProjectsPage extends React.Component {
             md={6 + (key === this.state.selectedKey ? 6 : 0)}
             style={{
               padding: '1rem',
-              transition: 'all .6s cubic-bezier(0.32, 0, 0.67, 0)',
             }}>
             <ProjectCard
               key={key}

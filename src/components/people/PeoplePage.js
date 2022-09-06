@@ -18,12 +18,13 @@ class PeoplePage extends React.Component {
       SWE: { open: true, members: [], title: 'Software Engineer Team' },
       PM: { open: true, members: [], title: 'Product Manager Team' },
       HRD: { open: true, members: [], title: 'Hardware Engineer Team' },
+      ALUM: { open: false, members: [], title: 'DAML Alumni' },
     },
   };
 
   componentDidMount = async () => {
     const members = await getMemberData();
-    console.log('Members', members);
+    // console.log('Members', members);
     this.setState({
       loading: false,
       teamData: {
@@ -32,6 +33,7 @@ class PeoplePage extends React.Component {
         SWE: { ...this.state.teamData.SWE, members: members.SWE },
         PM: { ...this.state.teamData.PM, members: members.PM },
         HRD: { ...this.state.teamData.HRD, members: members.HRD },
+        ALUM: { ...this.state.teamData.ALUM, members: members.ALUM },
       },
     });
   };

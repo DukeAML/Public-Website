@@ -47,16 +47,13 @@ class ProjectCard extends React.Component {
 
     if (this.props.isFeatured) {
       setTimeout(
-        () => this.setState({ featureText: this.props.description }),
-        500,
-      );
+        () => this.setState({ featureText: this.props.description }), 0);
     } else if (this.state.featureText) {
-      setTimeout(() => this.setState({ featureText: '' }), 400);
+      setTimeout(() => this.setState({ featureText: '' }), 0);
     }
 
     let cardStyle = {
       width: '100%',
-      //maxHeight: "480px", // Implemented for slide modality, messes up with person icons
     };
 
     let window = this.props.windowWidth;

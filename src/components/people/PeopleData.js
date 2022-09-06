@@ -8,12 +8,14 @@ export const getMemberData = async () => {
   let DS = [];
   let SWE = [];
   let HRD = [];
+  let ALUM = [];
 
-  console.log(members);
   members.forEach((member) => {
     if (member['Member Status'] === 'Current Member') {
       const team = member.Role;
-      if (member.Exec) {
+      if (member["Graduation Year"] < 2023){
+        ALUM.push(member);
+      } else if(member.Exec) {
         EXEC.push(member);
       } else if (team === 'Product Manager') {
         PM.push(member);
@@ -24,10 +26,12 @@ export const getMemberData = async () => {
       } else if (team === 'Hardware Engineer') {
         HRD.push(member);
       }
+    } else if (member['Member Status'] === 'Alumni') {
+      ALUM.push(member);
     }
   });
 
-  return { EXEC, PM, DS, SWE, HRD };
+  return { EXEC, PM, DS, SWE, HRD, ALUM };
 };
 
 export default { getMemberData };

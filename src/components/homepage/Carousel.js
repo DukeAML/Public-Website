@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Carousel, Row, Container, Col, Spinner } from 'react-bootstrap';
+import { Carousel, Row, Container, Col, Spinner, Card } from 'react-bootstrap';
 import { getNews } from '../../api/api';
 import './HomePage.scss';
 import { Link } from 'react-router-dom';
@@ -10,7 +10,69 @@ class CustomCarousel extends React.Component {
   state = { index: 0, news: [], loading: true };
 
   componentDidMount = async () => {
-    const news = await getNews();
+    // Currently our news endpoint doesn't serve anything meaningful
+    // In the future we want to move this content to the CDN but rn
+    // It is just stored statically here
+    //const news = await getNews();
+
+    const news = [
+      {
+        title: 'Looking for a full-time tech internship this summer?',
+        img: {
+          alt: 'Phoenix Project Logo',
+          src: require('../homepage/images/phoenix.png'),
+        },
+        body: 'The Phoenix Project is running again summer 2023 and the applications are now!!',
+        links: [
+          {
+            text: 'Click here',
+            value: 'https://airtable.com/shrU5TWqjCCFRlu77',
+          },
+        ],
+      },
+      {
+        title:
+          "DAML's Innovation Studio is excited to introduce their Spring 2021 Cohort!",
+        img: {
+          alt: 'Innovation Studio',
+          src: require('../homepage/images/innovationstudio.png'),
+        },
+        body: 'Also check out a progress update and learn more about their upcoming Demo Day!!',
+        links: [
+          {
+            text: 'Spring Cohort',
+            value:
+              'https://medium.com/aml-group/introducing-the-duke-innovation-studio-spring-21-cohort-7739551c3511',
+          },
+          {
+            text: 'Demo day!',
+            value:
+              'https://dukeinnovationstudio.medium.com/duke-innovation-studio-spring-21-cohort-progress-updates-7e4075aee0c',
+          },
+        ],
+      },
+      {
+        title:
+          'The Phoenix Project: Hundreds of Duke students have lost internships. Now they’re creating their own.',
+        img: {
+          alt: 'Phoenix Project',
+          src: require('../homepage/images/phoenix.png'),
+        },
+        body: 'Read more about the Phoenix Project!',
+        links: [
+          {
+            text: 'Here',
+            value:
+              'https://www.newsobserver.com/news/business/article242197741.html',
+          },
+          {
+            text: 'and Here',
+            value:
+              'https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities',
+          },
+        ],
+      },
+    ];
 
     this.setState({ news: news, loading: false });
   };
@@ -20,16 +82,37 @@ class CustomCarousel extends React.Component {
   };
 
   render() {
+    let slideStyle = {
+      backgroundColor: '#fff',
+      border: '1px solid #a4a4a4',
+      borderRadius: '6px',
+      padding: '1.2rem',
+      height: '100%',
+      width: '70%',
+      textAlign:"left",
+      lineHeight: 0.6,
+    };
+
     const slides = this.state.news.map((news, index) => (
-      <Carousel.Item key={index}>
-        <Container>
-          <Row>
-            <h3>
-              <a target="_blank" href={news.webLink} className="carouselLink">
-                {news.title}
-              </a>
-            </h3>
-            <p>{news.description}</p>
+      <Carousel.Item>
+        <Container style={slideStyle}>
+          <Row height="wrap-content">
+            <Col className="d-none d-md-block" md={3} lg={2}>
+              <img alt={news.img.alt} src={news.img.src} width="75%" />
+            </Col>
+            <Col md={9} xs={12}>
+              <p style={{ color: '#617489' }}>
+                <b>{news.title}</b>
+              </p>
+              <br />
+              <p style={{ color: '#617489' }}>{news.body}</p>
+              <br />
+              <p>
+                {news.links.map((link) => (
+                  <a href={link.value}>{link.text} </a>
+                ))}
+              </p>
+            </Col>
           </Row>
         </Container>
       </Carousel.Item>
@@ -47,79 +130,7 @@ class CustomCarousel extends React.Component {
           {this.state.loading ? (
             <Spinner animation="grow" size="lg" style={{ margin: '2rem' }} />
           ) : (
-            <Carousel>
-              <Carousel.Item>
-                <Carousel.Caption>
-                  <img
-                    alt="Home"
-                    src={require('../homepage/images/phoenix.png')}
-                    width="10%"
-                  />
-                  <center style={{ color: '#617489' }}>
-                    Looking for a full-time tech internship this summer?
-                  </center>
-                  <br />
-                  <center style={{ color: '#617489' }}>
-                    The Phoenix Project is running again summer 2021 and the
-                    applications are now
-                    <a href="https://airtable.com/shrU5TWqjCCFRlu77"> LIVE!</a>
-                  </center>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <Carousel.Caption>
-                  <img
-                    alt="Innovation Studio"
-                    src={require('../homepage/images/innovationstudio.png')}
-                    width="10%"
-                  />
-                  <center style={{ color: '#617489' }}>
-                    DAML's Innovation Studio is excited to introduce their
-                    <a href="https://medium.com/aml-group/introducing-the-duke-innovation-studio-spring-21-cohort-7739551c3511">
-                      {' '}
-                      Spring 2021 Cohort!
-                    </a>
-                  </center>
-                  <br />
-                  <center style={{ color: '#617489' }}>
-                    Also check out a progress update and learn more about their
-                    upcoming Demo Day
-                    <a href="https://dukeinnovationstudio.medium.com/duke-innovation-studio-spring-21-cohort-progress-updates-7e4075aee0c1">
-                      {' '}
-                      here!
-                    </a>
-                  </center>
-                </Carousel.Caption>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <Carousel.Caption>
-                  <img
-                    alt="Home"
-                    src={require('../homepage/images/phoenix.png')}
-                    width="10%"
-                  />
-                  <center style={{ color: '#617489' }}>
-                    The Phoenix Project: Hundreds of Duke students have lost
-                    internships. Now they’re creating their own.
-                  </center>
-                  <br />
-                  <center style={{ color: '#617489' }}>
-                    Read more about The Phoenix Project
-                    <a href="https://www.newsobserver.com/news/business/article242197741.html">
-                      {' '}
-                      here{' '}
-                    </a>
-                    and
-                    <a href="https://pratt.duke.edu/about/news/phoenix-project-delivers-data-rich-summer-opportunities">
-                      {' '}
-                      here!
-                    </a>
-                  </center>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
+            <Carousel>{slides}</Carousel>
           )}
         </center>
       </Container>

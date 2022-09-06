@@ -52,16 +52,17 @@ class Join extends React.Component {
                   width: '50%',
                   textAlign: 'center',
                 }}>
-                Hello all potential members! DAML is Duke’s premier project
-                based tech organization that will give you real world experience
+                Hello all potential members! DAML is Duke’s <b>premier project
+                based tech organization</b> that will give you real world experience
                 in Data Science, Software Engineering, Hardware, or Product
                 Management. We are proud to be a fully inclusive group and are
                 happy to match anyone who completes the recruitment process to a
-                project team in their desired division. To get involved, fill
-                our the application below and see the Coursework and Recruitment
+                project team in their desired division. To get involved, <b>fill
+                our the application below</b> and see the Coursework and Recruitment
                 Process document for more details on the role of your choice.
               </p>
             </Row>
+            <br/>
             <Row
               className="vertical-align-outer"
               style={{
@@ -74,6 +75,7 @@ class Join extends React.Component {
                 Apply here!
               </a>
             </Row>
+            <br/>
             <Row
               className="vertical-align-outer"
               style={{
@@ -343,7 +345,10 @@ class Join extends React.Component {
                   padding: '5%',
                   textAlign: 'center',
                 }}>
-                <a href="mailto:connor.m.johnson@duke.edu">Connor Johnson</a>
+                <a href="mailto:connor.m.johnson@duke.edu">Connor Johnson</a>&nbsp; & &nbsp;
+                <a href="mailto:nds34@duke.edu">
+                  Lihong Wu
+                </a>
               </Col>
             </Row>
           </Container>

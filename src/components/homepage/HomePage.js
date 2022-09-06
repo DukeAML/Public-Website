@@ -115,16 +115,16 @@ class HomePage extends React.Component {
                   color: '#1e2c3a',
                 }}>
                 <p style={{ width: '50%' }}>
-                  The Duke Applied Machine Learning Group is always looking for
-                  smart and enthusiastic people, regardless of experience. For
-                  most new applicants we will have a short introductory course
-                  in Machine Learning, Software Engineering, or Product
-                  Management. Following this, you will be placed in your
-                  respective group and then placed on a project that fits your
-                  interests and has people to balance your experience level.
-                  DAML is a great way to get better at technical skills as well
-                  as soft skills that will make you great at whatever you do
-                  after. Apply Here.
+                  The <b>Duke Applied Machine Learning Group</b> is always
+                  looking for smart and enthusiastic people, regardless of
+                  experience. For most new applicants we will have a short
+                  introductory course in Machine Learning, Software Engineering,
+                  or Product Management. Following this, you will be placed in
+                  your respective group and then placed on a project that fits
+                  your interests and has people to balance your experience
+                  level. DAML is a great way to get better at technical skills
+                  as well as soft skills that will make you great at whatever
+                  you do after. <b>Apply Here.</b>
                 </p>
               </Row>
             </Link>
@@ -186,14 +186,17 @@ class HomePage extends React.Component {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                We are a group focused on building, implementing, and deploying
-                end-to-end machine learning models to solve research and
-                business problems. We establish collaborations with local
-                companies and organizations to identify and solve challenges
-                they face. Through collaboration with post-graduate, graduate,
-                and undergraduate students studying data science, mathematics,
-                computer science, business, electrical engineering and more, we
-                provide an interdisciplinary approach to solving these problems.
+                <p>
+                  We are a group focused on <b>building, implementing, and deploying</b>{' '}
+                  end-to-end machine learning models to solve research and
+                  business problems. We establish collaborations with local
+                  companies and organizations to identify and <b>solve challenges</b>{' '}
+                  they face. Through collaboration with post-graduate, graduate,
+                  and undergraduate students studying data science, mathematics,
+                  computer science, business, electrical engineering and more,
+                  we provide an <b>interdisciplinary approach</b> to solving
+                  these problems.
+                </p>
               </Col>
               <Col
                 md={6}
