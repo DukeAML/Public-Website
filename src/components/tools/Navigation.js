@@ -91,7 +91,7 @@ class Navigation extends React.Component {
               margin: 0,
               justifyContent: 'center',
             }}>
-            <Col xs="1" style={verticalAlign}>
+            <Col xs="2" style={verticalAlign}>
               <Link to="/">
                 <img
                   alt="Home"
@@ -101,11 +101,11 @@ class Navigation extends React.Component {
                 />
               </Link>
             </Col>
-            <Col xs="2" style={verticalAlign}>
+            {/* <Col xs="2" style={verticalAlign}>
               <Link to="/initiatives" className="nav-link-col">
                 Initiatives
               </Link>
-            </Col>
+            </Col> */}
             <Col xs="2" style={verticalAlign}>
               <Link to="/join" className="nav-link-col">
                 Join the Team

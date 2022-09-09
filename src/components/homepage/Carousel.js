@@ -90,7 +90,7 @@ class CustomCarousel extends React.Component {
       height: '100%',
       width: '70%',
       textAlign: 'left',
-      lineHeight: 0.8,
+      lineHeight: 1,
     };
 
     const slides = this.state.news.map((news, index) => (

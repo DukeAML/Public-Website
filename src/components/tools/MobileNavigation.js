@@ -37,9 +37,9 @@ class MobileNavigation extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav>
-              <Nav.Link as={Link} to="/initiatives">
+              {/* <Nav.Link as={Link} to="/initiatives">
                 Initiatives
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link as={Link} to="/join">
                 Join the Team
               </Nav.Link>

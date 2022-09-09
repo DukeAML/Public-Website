@@ -131,7 +131,7 @@ class HomePage extends React.Component {
           </Container>
         </Container>
         {/**NEWS SECTION */}
-        <Container
+        {/* <Container
           fluid
           className="boxShadowed"
           style={{
@@ -161,7 +161,7 @@ class HomePage extends React.Component {
               </Col>
             </Row>
           </Container>
-        </Container>
+        </Container> */}
 
         {/**ABOUT SECTION */}
         <Container fluid className="boxShadowed">
