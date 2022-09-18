@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import { Redirect, Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Link, Redirect } from 'react-router-dom';
 import Footer from '../tools/Footer';
-import './Initiatives.scss';
 import Navigation from '../tools/Navigation';
+import './Initiatives.scss';
 
 class Initiatives extends React.Component {
   state = { redirect: false };

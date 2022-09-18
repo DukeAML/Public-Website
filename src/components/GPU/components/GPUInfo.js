@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
 
 class GPUInfo extends React.Component {
   render() {

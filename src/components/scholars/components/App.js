@@ -1,16 +1,12 @@
+import { ReadOutlined, TableOutlined } from '@ant-design/icons';
+import { Layout, Tabs } from 'antd';
 import React from 'react';
-import { Tabs, Layout } from 'antd';
-import { TableOutlined, ReadOutlined } from '@ant-design/icons';
+import './App.css';
 import NewsTab from './NewsTab';
 import ResearchTables from './ResearchTables';
-import './App.css';
-import ReactDOM from 'react-dom';
 // import results from '../output.json';
-import news from '../api/news';
-import database from '../api/database';
-import axios from 'axios';
-import { Container, Row, Col, Image } from 'react-bootstrap';
 import Navigation from '../../tools/Navigation';
+import news from '../api/news';
 // import paper from '../articles.db';
 
 const { TabPane } = Tabs;

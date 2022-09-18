@@ -1,15 +1,6 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Button,
+  Button, Container, Jumbotron, Row, Spinner, Table
 } from 'react-bootstrap';
 
 import axios from 'axios';

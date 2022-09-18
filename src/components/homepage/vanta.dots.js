@@ -1,5 +1,5 @@
+import { rn } from './helpers.js';
 import VantaBase, { VANTA } from './_base.js';
-import { rn, ri, sample, mobileCheck } from './helpers.js';
 
 class Effect extends VantaBase {
   static initClass() {

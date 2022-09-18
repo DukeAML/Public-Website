@@ -1,10 +1,8 @@
 import React from 'react';
-import { Card, Container, Row, Col, Button, Image } from 'react-bootstrap';
-import { Redirect } from 'react-router-dom';
+import { Card, Col, Container, Image, Row } from 'react-bootstrap';
 
 import Navigation from '../../tools/Navigation';
 
-import placeholder from '../images/placeholder.jpg';
 
 /* props:
 

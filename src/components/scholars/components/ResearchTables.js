@@ -1,7 +1,7 @@
-import React from 'react';
-import { Tabs, Layout } from 'antd';
-import Table from './Table';
+import { Layout, Tabs } from 'antd';
 import axios from 'axios';
+import React from 'react';
+import Table from './Table';
 
 const { TabPane } = Tabs;
 export default class ResearchTables extends React.Component {

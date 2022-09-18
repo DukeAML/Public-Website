@@ -3,26 +3,19 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // Bootstrap
-import { Container, Image } from 'react-bootstrap';
 // Personal Dependencies
-import HomePage from './homepage/HomePage';
-import ProjectsPage from './projects/ProjectsPage';
-import Navigation from './tools/Navigation';
-import ProjectDisplayPage from './projectdisplay/ProjectDisplayPage';
-import PeoplePage from './people/PeoplePage';
-import IndividualProject from './projects/individual-pages/IndividualProject';
-import CoursesPage from './courses/CoursesPage';
-import PapersPage from './papers/PapersPage';
-import GPUPage from './GPU/GPUPage';
-import PhoenixProjectPage from './phoenix/PhoenixProjectPage';
-import InnovationStudio from './innovationstudio/InnovationStudio';
-import TechForEquity from './techforequity/TechForEquity';
-import Join from './join/Join';
 import { getProjects } from '../api/api.js';
-import PhoenixAlert from './tools/PhoenixAlert';
-import PhoenixProjectsPage from './phoenixprojects/ProjectsPage';
+import CoursesPage from './courses/CoursesPage';
+import HomePage from './homepage/HomePage';
 import Initiatives from './initiatives/Initiatives';
+import InnovationStudio from './innovationstudio/InnovationStudio';
+import Join from './join/Join';
+import PeoplePage from './people/PeoplePage';
+import PhoenixProjectsPage from './phoenixprojects/ProjectsPage';
+import IndividualProject from './projects/individual-pages/IndividualProject';
+import ProjectsPage from './projects/ProjectsPage';
 import Scholars from './scholars/components/App';
+import TechForEquity from './techforequity/TechForEquity';
 
 const projects = require('./phoenixprojects/projectsData');
 

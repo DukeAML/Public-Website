@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { Carousel, Row, Container, Col, Spinner, Card } from 'react-bootstrap';
-import { getNews } from '../../api/api';
+import React from 'react';
+import { Carousel, Col, Container, Row, Spinner } from 'react-bootstrap';
 import './HomePage.scss';
-import { Link } from 'react-router-dom';
 
 const DtcLogo = require('./dtc-logo-tag.png');
 

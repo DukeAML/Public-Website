@@ -1,24 +1,12 @@
 import React from 'react';
 import {
-  Container,
-  Jumbotron,
-  Button,
-  Row,
-  Col,
-  Image,
-  Card,
-  Alert,
+  Col, Container, Image, Row
 } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
-import AnimationWrapper from './AnimationWrapper.js';
-import Canvas from '../canvas/Canvas';
 import Animation from '../canvas/Animation';
 import Footer from '../tools/Footer';
 import Navigation from '../tools/Navigation';
-import ThemeCard from './ThemeCard';
-import ImageAccordion from '../tools/ImageAccordion';
-import IndustryBuckets from './IndustryBuckets';
-import Carousel from './Carousel';
+import AnimationWrapper from './AnimationWrapper.js';
 import './HomePage.scss';
 const DtcLogo = require('./dtc-logo-tag.png');
 

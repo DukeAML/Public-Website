@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container, Button, Collapse, Spinner } from 'react-bootstrap';
+import { Button, Collapse, Container, Spinner } from 'react-bootstrap';
 
 import Footer from '../tools/Footer';
 import Navigation from '../tools/Navigation';
-import withWindowDimensions from './withWindowDimensions';
 import { getMemberData } from './PeopleData';
+import withWindowDimensions from './withWindowDimensions';
 
 import PeopleRow from './PeopleRow';
 

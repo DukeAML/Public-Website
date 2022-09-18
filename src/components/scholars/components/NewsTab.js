@@ -1,6 +1,6 @@
 import React from 'react';
-import './NewsTab.css';
 import NewsItem from './NewsItem';
+import './NewsTab.css';
 
 const NewsTab = (props) => {
   const articles = props.articles.map((article, index) => {

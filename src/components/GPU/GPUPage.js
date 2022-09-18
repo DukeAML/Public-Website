@@ -1,15 +1,15 @@
-import './GPUPage.css';
 import React from 'react';
+import './GPUPage.css';
 
-import Navigation from '../tools/Navigation';
-import Footer from '../tools/Footer';
 import { Spinner } from 'react-bootstrap';
-import { Container, Dropdown, Accordion, Icon } from 'semantic-ui-react';
-import GPUInfo from './components/GPUInfo';
-import StatisticsPool from './model/StatisticPool';
-import Statistic from './model/Statistic';
-import GPUChart from './components/GPUChart';
+import { Accordion, Container, Dropdown, Icon } from 'semantic-ui-react';
 import withWindowDimensions from '../people/withWindowDimensions';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import GPUChart from './components/GPUChart';
+import GPUInfo from './components/GPUInfo';
+import Statistic from './model/Statistic';
+import StatisticsPool from './model/StatisticPool';
 
 class GPUPage extends React.Component {
   state = {

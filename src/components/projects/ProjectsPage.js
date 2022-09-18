@@ -1,24 +1,14 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Button,
-  Card,
+  Col, Container,
+  Row, Spinner
 } from 'react-bootstrap';
 
-import Navigation from '../tools/Navigation';
-import Footer from '../tools/Footer';
-import Loading from '../tools/Loading';
-import ProjectCard from './ProjectCard';
-import withWindowDimensions from '../people/withWindowDimensions';
 import { getProjects, getProjectsMembers } from '../../api/api.js';
+import withWindowDimensions from '../people/withWindowDimensions';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import ProjectCard from './ProjectCard';
 
 class ProjectsPage extends React.Component {
   constructor() {

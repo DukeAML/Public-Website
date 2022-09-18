@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col, Image } from 'react-bootstrap';
-import placeholder from './headshots/profile-placeholder.svg';
-import Icon from '../tools/Icon';
+import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Icon from '../tools/Icon';
+import placeholder from './headshots/profile-placeholder.svg';
 
 function Person(props) {
   const github =

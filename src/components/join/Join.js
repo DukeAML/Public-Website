@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import { Redirect, Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 import Footer from '../tools/Footer';
-import './Join.scss';
 import Navigation from '../tools/Navigation';
+import './Join.scss';
 const Logo = require('../homepage/images/DAML_Picture_Grey_Transparent.svg');
 
 class Join extends React.Component {

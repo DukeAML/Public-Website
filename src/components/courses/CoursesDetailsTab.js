@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Container, Row, Card, Accordion, Button } from 'react-bootstrap';
 import AnimateHeight from 'react-animate-height';
+import { Accordion } from 'react-bootstrap';
 
 const AccordionHeader = (props) => {
   return (

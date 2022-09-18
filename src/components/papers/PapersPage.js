@@ -1,22 +1,13 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Button,
-  Card,
+  Col, Container,
+  Row, Spinner
 } from 'react-bootstrap';
 
-import PaperCard from './PaperCard';
-import Navigation from '../tools/Navigation';
-import Footer from '../tools/Footer';
 import withWindowDimensions from '../people/withWindowDimensions';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import PaperCard from './PaperCard';
 
 import { getPapers } from '../../api/api';
 

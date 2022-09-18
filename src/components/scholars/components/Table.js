@@ -1,12 +1,10 @@
 import React from 'react';
 // import results from '../output.json';
-import './App.css';
-import moment from 'moment';
-import { Table, Input, Space } from 'antd';
-import Highlighter from 'react-highlight-words';
 import { SearchOutlined } from '@ant-design/icons';
-import { Menu, Dropdown, Button, message } from 'antd';
-import { FileSearchOutlined } from '@ant-design/icons';
+import { Button, Input, message, Space, Table } from 'antd';
+import moment from 'moment';
+import Highlighter from 'react-highlight-words';
+import './App.css';
 // import articles from '../articles.db';
 // import SqliteToJson from 'sqlite-to-json';
 // import sqlite3 from 'sqlite3';

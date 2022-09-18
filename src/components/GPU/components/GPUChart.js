@@ -1,11 +1,11 @@
-import './GPUChart.css';
 import React from 'react';
-import { Segment, Dimmer, Loader, Button } from 'semantic-ui-react';
 import { Line } from 'react-chartjs-2';
-import StatisticsPool from './../model/StatisticPool';
-import GPUStatisticChartLegend from './GPUStatisticChartLegend';
-import GPUClusterChartLegend from './GPUClusterChartLegend';
+import { Button, Dimmer, Loader, Segment } from 'semantic-ui-react';
 import Statistic from '../model/Statistic';
+import StatisticsPool from './../model/StatisticPool';
+import './GPUChart.css';
+import GPUClusterChartLegend from './GPUClusterChartLegend';
+import GPUStatisticChartLegend from './GPUStatisticChartLegend';
 
 class GPUChart extends React.Component {
   state = { lineTypes: {}, chartData: {}, isLoaded: false };

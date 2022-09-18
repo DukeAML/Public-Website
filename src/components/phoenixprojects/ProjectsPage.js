@@ -1,23 +1,13 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Accordion,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
-  Button,
-  Card,
+  Col, Container,
+  Row
 } from 'react-bootstrap';
 
-import Navigation from '../tools/Navigation';
-import Footer from '../tools/Footer';
-import ProjectCard from '../projects/ProjectCard';
 import withWindowDimensions from '../people/withWindowDimensions';
+import ProjectCard from '../projects/ProjectCard';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
 const PhoenixLogo = require('./phoenix.png');
 
 const projects = require('./projectsData');

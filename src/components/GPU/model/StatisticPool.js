@@ -1,5 +1,5 @@
-import Statistic from './Statistic';
 import gpustatistics from '../api/gpustatistics';
+import Statistic from './Statistic';
 
 class StatisticsPool {
   constructor(statistics) {

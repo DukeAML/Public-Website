@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Container, Col, Button } from 'react-bootstrap';
-import { Redirect } from 'react-router-dom';
+import { Button, Card, Col } from 'react-bootstrap';
 
 const FeaturedProjectCard = (props) => {
   return (

@@ -1,15 +1,7 @@
 import React from 'react';
 import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  NavDropdown,
-  Container,
-  Row,
-  Col,
-  Image,
+  Col, Container,
+  Row
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import withWindowDimensions from '../people/withWindowDimensions';

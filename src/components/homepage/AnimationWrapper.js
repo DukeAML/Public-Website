@@ -1,7 +1,6 @@
 import React from 'react';
-import * as VANTA from 'vanta';
-import DOTS from 'vanta/dist/vanta.dots.min';
 import * as THREE from 'three';
+import DOTS from 'vanta/dist/vanta.dots.min';
 //mport BIRDS from 'vanta/dist/vanta.birds.min'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag

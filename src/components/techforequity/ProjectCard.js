@@ -1,22 +1,10 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  OverlayTrigger,
-  Tooltip,
-  Card,
+  Card, Col, OverlayTrigger,
+  Tooltip
 } from 'react-bootstrap';
 
-import Navigation from '../tools/Navigation';
-import withWindowDimensions from '../people/withWindowDimensions';
 
-import { Link } from 'react-router-dom';
 
 class ProjectCard extends React.Component {
   state = { expanded: false };

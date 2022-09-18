@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { Link, Redirect } from 'react-router-dom';
-import { Row, Col, Image } from 'react-bootstrap';
-import placeholder from './headshots/profile-placeholder.svg';
+import { Col, Row } from 'react-bootstrap';
 import Icon from '../tools/Icon';
-import { OmitProps } from 'antd/lib/transfer/ListBody';
+import placeholder from './headshots/profile-placeholder.svg';
 
 function Person(props) {
   const github =

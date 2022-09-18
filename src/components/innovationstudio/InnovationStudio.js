@@ -1,17 +1,15 @@
 import React from 'react';
 
-import Navigation from '../tools/Navigation';
-import Footer from '../tools/Footer';
-import { Dropdown, Accordion, Icon } from 'semantic-ui-react';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Accordion, Icon } from 'semantic-ui-react';
 import withWindowDimensions from '../people/withWindowDimensions';
+import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
+import EmbeddedForm from './EmbeddedForm';
 import {
   companyForm,
-  studentForm,
-  mentorForm,
-  projectAssistantForm,
+  studentForm
 } from './faq';
-import EmbeddedForm from './EmbeddedForm';
 const Logo = require('../homepage/images/innovationstudio.png');
 
 class PhoenixProjectPage extends React.Component {

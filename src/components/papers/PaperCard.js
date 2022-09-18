@@ -1,21 +1,10 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Spinner,
-  Jumbotron,
-  Table,
-  td,
-  thead,
-  tr,
   Button,
-  Card,
+  Card
 } from 'react-bootstrap';
 
-import Navigation from '../tools/Navigation';
 
-import { Link } from 'react-router-dom';
 
 class PaperCard extends React.Component {
   state = {};

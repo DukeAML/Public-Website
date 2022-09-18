@@ -1,13 +1,7 @@
 import React from 'react';
 
 import {
-  Container,
-  Jumbotron,
-  Button,
-  Row,
-  Col,
-  Image,
-  Card,
+  Card
 } from 'react-bootstrap';
 
 class ThemeCard extends React.Component {

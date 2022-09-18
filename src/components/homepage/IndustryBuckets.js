@@ -1,21 +1,12 @@
 import React from 'react';
 import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  ListGroup,
-  ListGroupItem,
+  Card, Col, Container, ListGroup,
+  ListGroupItem, Row
 } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 import AnimateHeight from 'react-animate-height';
 
-import Footer from '../tools/Footer';
-import Navigation from '../tools/Navigation';
 
-import placeholder from './images/placeholder.svg';
 
 import './HomePage.scss';
 

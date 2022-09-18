@@ -1,6 +1,6 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import Canvas from './Canvas';
-import { Container, Row, Col, Button, Jumbotron } from 'react-bootstrap';
 
 class Animation extends React.Component {
   constructor(props) {

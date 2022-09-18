@@ -1,10 +1,9 @@
 import React from 'react';
-import { Container, Row, Button, Card } from 'react-bootstrap';
+import { Button, Card, Row } from 'react-bootstrap';
 
 import withWindowDimensions from '../people/withWindowDimensions';
 import Person from './ProjectPerson';
 
-import { Link } from 'react-router-dom';
 
 const projects = [];
 

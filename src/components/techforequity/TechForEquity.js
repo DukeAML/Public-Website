@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Row, Col, Spinner, Button } from 'react-bootstrap';
+import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
 
-import Navigation from '../tools/Navigation';
 import Footer from '../tools/Footer';
+import Navigation from '../tools/Navigation';
 
-import ProjectCard from './ProjectCard';
-import withWindowDimensions from '../people/withWindowDimensions';
 import PeopleRow from '../people/PeopleRow';
+import withWindowDimensions from '../people/withWindowDimensions';
+import ProjectCard from './ProjectCard';
 
-import { getTFEProjects, getTFEExec, getTFEFellows } from '../../api/api.js';
+import { getTFEExec, getTFEFellows, getTFEProjects } from '../../api/api.js';
 const Logo = require('../homepage/images/techforequity.png');
 
 class TechForEquity extends React.Component {

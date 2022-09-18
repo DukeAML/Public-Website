@@ -1,15 +1,15 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import { Graph } from 'react-d3-graph';
 
+import withWindowDimensions from '../people/withWindowDimensions';
 import Footer from '../tools/Footer';
 import Navigation from '../tools/Navigation';
-import withWindowDimensions from '../people/withWindowDimensions';
 
+import './courses.scss';
 import CoursesDetailsTab from './CoursesDetailsTab';
 import shortestPath from './shortestPath';
-import './courses.scss';
 //const data = require("./Data");
 import data_v2 from './Data-v2';
 

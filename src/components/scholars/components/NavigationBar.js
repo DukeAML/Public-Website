@@ -1,7 +1,4 @@
 import React from 'react';
-import DukeSymbol from '../logo.png';
-import DukeSymbol2 from '../logo2.png';
-import SearchBar from './SearchBar';
 import MenuItem from './MenuItem';
 
 class NavigationBar extends React.Component {

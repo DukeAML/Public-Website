@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, Image } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import withWindowDimensions from '../people/withWindowDimensions';
 
