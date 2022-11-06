@@ -15,6 +15,9 @@ function Person(props) {
       ''
     );
 
+  const email =
+    props.email != null ? <Icon type="mail" href={props.email} /> : '';
+
   let thumbnail;
   let fullImage;
 
@@ -51,12 +54,14 @@ function Person(props) {
                 filter: 'blur(2px)',
                 WebkitFilter: 'blur(2px)',
               }}
+              alt=""
               onClick={props.onClick}
             />{' '}
             <img
               src={fullImage}
               style={{ ...imageStyle }}
               onClick={props.onClick}
+              alt=""
             />
           </div>
         </div>
@@ -67,6 +72,7 @@ function Person(props) {
             <div style={{ display: 'inline-block', padding: '0.5rem 0 0 0' }}>
               {linkedin}
               {github}
+              {email}
             </div>
           </center>
         </Col>

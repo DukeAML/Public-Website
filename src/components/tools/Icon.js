@@ -10,8 +10,8 @@ function Icon(props) {
     <a
       className={`${props.type}-icon button`}
       style={{ float: 'left' }}
-      target={props.type === 'mail' ? '' : '_blank'}
-      href={props.href}></a>
+      target={props.type === 'mail' ? '' : 'blank'}
+      href={props.type === 'mail' ? 'mailto:'+props.href : props.href}></a>
   );
 }
 

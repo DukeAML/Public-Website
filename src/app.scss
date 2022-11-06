@@ -17,6 +17,7 @@ $github-hover: url(./components/tools/Icons/github-hover.svg);
 $linkedin: url(./components/tools/Icons/linkedin.svg);
 $linkedin-hover: url(./components/tools/Icons/linkedin-hover.svg);
 $mail-light: url(./components/tools/Icons/mail-light.svg);
+$mail: url(./components/tools/Icons/mail.svg);
 $mail-hover: url(./components/tools/Icons/mail-hover.svg);
 $linkedin-light: url(./components/tools/Icons/linkedin-light.svg);
 
@@ -166,6 +167,11 @@ hr {
 
 .linkedin-light-icon:hover {
   background-image: $linkedin-hover !important;
+}
+
+.mail-icon {
+  @extend .icon;
+  background-image: $mail;
 }
 
 .mail-icon:hover {

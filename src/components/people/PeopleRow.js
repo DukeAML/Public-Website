@@ -80,6 +80,7 @@ class PeopleRow extends React.Component {
         team={person.Role}
         linkedin={person.LinkedIn}
         github={person.Github}
+        email={person['Duke Email']}
         img={person.Photo}
         onClick={() => this.handleShowDetails(person, key)}
       />
