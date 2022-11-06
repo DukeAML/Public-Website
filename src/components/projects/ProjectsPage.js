@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Col, Container,
-  Row, Spinner
-} from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 
 import { getProjects, getProjectsMembers } from '../../api/api.js';
 import withWindowDimensions from '../people/withWindowDimensions';
@@ -40,8 +37,10 @@ class ProjectsPage extends React.Component {
     for (let project of this.state.projects) {
       project.members = [];
       // Add member info to project objects
-      for (let teamMember of project['Current Engineers']) {
-        project.members.push(peopleTable[teamMember]);
+      if (project['Current Engineers']) {
+        for (let teamMember of project['Current Engineers']) {
+          project.members.push(peopleTable[teamMember]);
+        }
       }
     }
 
@@ -126,8 +125,16 @@ class ProjectsPage extends React.Component {
               {this.state.loading ? (
                 <div
                   style={{ height: '10rem', padding: '4rem', margin: 'auto' }}>
-                  <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
-                  <Spinner animation="grow" size="md" style={{ marginRight: '3rem' }} />
+                  <Spinner
+                    animation="grow"
+                    size="md"
+                    style={{ marginRight: '3rem' }}
+                  />
+                  <Spinner
+                    animation="grow"
+                    size="md"
+                    style={{ marginRight: '3rem' }}
+                  />
                   <Spinner animation="grow" size="md" />
                 </div>
               ) : (
