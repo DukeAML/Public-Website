@@ -1,19 +1,22 @@
-import React from 'react';
-import { Carousel, Col, Container, Row, Spinner } from 'react-bootstrap';
-import './HomePage.scss';
+import React, { useMemo } from 'react';
+import { useState, useEffect } from 'react';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
+import CarouselItem from './CarouselItem';
+import useWindowDimensions from '../tools/useWindowDimensions';
+import './Carousel.scss';
 
-const DtcLogo = require('./dtc-logo-tag.png');
+function CustomCarousel() {
+  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const { width } = useWindowDimensions();
 
-class CustomCarousel extends React.Component {
-  state = { index: 0, news: [], loading: true };
-
-  componentDidMount = async () => {
+  const news = useMemo(() => {
     // Currently our news endpoint doesn't serve anything meaningful
     // In the future we want to move this content to the CDN but rn
     // It is just stored statically here
     //const news = await getNews();
-
-    const news = [
+    setLoading(false);
+    return [
       {
         title: 'Looking for a full-time tech internship this summer?',
         img: {
@@ -71,74 +74,72 @@ class CustomCarousel extends React.Component {
         ],
       },
     ];
+  }, []);
 
-    this.setState({ news: news, loading: false });
-  };
+  useEffect(() => {
+    const carouselInterval = setInterval(() => {
+      setSelectedIndex(
+        selectedIndex === news.length - 1 ? 0 : selectedIndex + 1,
+      );
+      console.log('dd', selectedIndex);
+    }, 3000);
 
-  handleSelect = (selectedIndex, e) => {
-    this.setState({ index: selectedIndex });
-  };
+    return () => clearInterval(carouselInterval);
+  }, [selectedIndex]);
 
-  render() {
-    let slideStyle = {
-      backgroundColor: '#fff',
-      border: '1px solid #a4a4a4',
-      borderRadius: '6px',
-      padding: '1.2rem',
-      height: '100%',
-      width: '70%',
-      textAlign: 'left',
-      lineHeight: 1,
-    };
-
-    const slides = this.state.news.map((news, index) => (
-      <Carousel.Item style={{ height: '11rem' }}>
-        <Container style={slideStyle}>
-          <Row height="wrap-content">
-            <Col className="d-none d-md-block align-middle" md={3} lg={2}>
-              <img alt={news.img.alt} src={news.img.src} width="80%" />
-            </Col>
-            <Col md={9} xs={12} class="align-middle">
-              <p style={{ color: '#617489' }}>
-                <b>{news.title}</b>
-              </p>
-              <br />
-              <p style={{ color: '#617489' }}>{news.body}</p>
-              <br />
-              <div>
-                {news.links.map((link, idx) => (
-                  <a>
-                    {idx > 0 && <a> and </a>}
-                    <a color="#7c9fd6" href={link.value}>
-                      {link.text}
-                    </a>
-                  </a>
-                ))}
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Carousel.Item>
-    ));
-
-    return (
-      <Container
-        fluid
-        style={{
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'middle',
-        }}>
-        <center>
-          {this.state.loading ? (
-            <Spinner animation="grow" size="lg" style={{ margin: '2rem' }} />
-          ) : (
-            <Carousel>{slides}</Carousel>
-          )}
-        </center>
-      </Container>
-    );
+  // dont return anything if there isnt enough news >:(
+  if (!loading && news.length < 3) {
+    return;
   }
+
+  let selectedCallback = (newSelectedIndex) => {
+    setSelectedIndex(newSelectedIndex);
+  };
+
+  let generateSlides = () => {
+    if (width < 700) {
+      return (
+        <Col>
+          <CarouselItem
+            {...news[selectedIndex]}
+            index={selectedIndex}
+            position={1}
+            callback={selectedCallback}
+          />
+        </Col>
+      );
+    }
+
+    let indices = [
+      selectedIndex === 0 ? news.length - 1 : selectedIndex - 1,
+      selectedIndex,
+      selectedIndex === news.length - 1 ? 0 : selectedIndex + 1,
+    ];
+
+    return indices.map((idx, pos) => (
+      <Col>
+        <CarouselItem
+          {...news[idx]}
+          index={idx}
+          position={pos}
+          callback={selectedCallback}
+        />
+      </Col>
+    ));
+  };
+
+  const slides = generateSlides();
+
+  return (
+
+      <div>
+        {loading ? (
+          <Spinner animation="grow" size="lg" style={{ margin: '2rem' }} />
+        ) : (
+          <Row>{slides}</Row>
+        )}
+      </div>
+  );
 }
 
 export default CustomCarousel;

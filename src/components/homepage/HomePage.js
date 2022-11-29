@@ -1,12 +1,11 @@
 import React from 'react';
-import {
-  Col, Container, Image, Row
-} from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
 import Animation from '../canvas/Animation';
 import Footer from '../tools/Footer';
 import Navigation from '../tools/Navigation';
 import AnimationWrapper from './AnimationWrapper.js';
+import Carousel from '../carousel/Carousel.js';
 import './HomePage.scss';
 const DtcLogo = require('./dtc-logo-tag.png');
 
@@ -119,7 +118,7 @@ class HomePage extends React.Component {
           </Container>
         </Container>
         {/**NEWS SECTION */}
-        {/* <Container
+        <Container
           fluid
           className="boxShadowed"
           style={{
@@ -137,6 +136,7 @@ class HomePage extends React.Component {
                 News
               </h3>
             </Row>
+            </Container>
             <Row>
               <Col
                 xs={12}
@@ -148,8 +148,7 @@ class HomePage extends React.Component {
                 <Carousel style={{ width: '100%' }} />
               </Col>
             </Row>
-          </Container>
-        </Container> */}
+        </Container>
 
         {/**ABOUT SECTION */}
         <Container fluid className="boxShadowed">
@@ -175,12 +174,13 @@ class HomePage extends React.Component {
                   alignItems: 'center',
                 }}>
                 <p>
-                  We are a group focused on <b>building, implementing, and deploying</b>{' '}
-                  end-to-end machine learning models to solve research and
-                  business problems. We establish collaborations with local
-                  companies and organizations to identify and <b>solve challenges</b>{' '}
-                  they face. Through collaboration with post-graduate, graduate,
-                  and undergraduate students studying data science, mathematics,
+                  We are a group focused on{' '}
+                  <b>building, implementing, and deploying</b> end-to-end
+                  machine learning models to solve research and business
+                  problems. We establish collaborations with local companies and
+                  organizations to identify and <b>solve challenges</b> they
+                  face. Through collaboration with post-graduate, graduate, and
+                  undergraduate students studying data science, mathematics,
                   computer science, business, electrical engineering and more,
                   we provide an <b>interdisciplinary approach</b> to solving
                   these problems.
