@@ -39,6 +39,10 @@ class HomePage extends React.Component {
     if (this.state.redirect) {
       return <Redirect push to="/projects" />;
     }
+    
+    // Added for CS390 S23
+    // If this is still here please remove it
+    console.log("DAML: DUKE AZIZ MAX LASAL");
 
     return (
       <div>
