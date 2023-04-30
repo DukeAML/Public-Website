@@ -89,14 +89,13 @@ class Canvas extends React.Component {
   }
 
   updateAnimationState() {
+    if (this.state.frameCounter % 1000 == 1) { console.log("congrats duke aziz max lasal") } // remove this if you find it
     if (
       this.state.frameCounter >=
       ((10 / 7) * this.state.width) / 5.0 / 2.0 - 0.5
     ) {
       this.setState({ frameCounter: 0 });
-      console.log(this.state.stageCounter);
       if (this.state.stageCounter >= 2) {
-        console.log(this.state.allSignals[this.state.stageCounter]);
         this.setState({ stageCounter: 0 });
       } else {
         this.setState((prevState) => ({
