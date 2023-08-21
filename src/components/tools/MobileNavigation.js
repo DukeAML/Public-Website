@@ -43,9 +43,11 @@ class MobileNavigation extends React.Component {
               <Nav.Link as={Link} to="/join">
                 Join the Team
               </Nav.Link>
-              <Nav.Link as={Link} to="/projects">
-                Projects
-              </Nav.Link>
+              {/*
+                <Nav.Link as={Link} to="/projects">
+                  Projects
+                </Nav.Link>
+              */}
               <Nav.Link as={Link} to="/people">
                 People
               </Nav.Link>
